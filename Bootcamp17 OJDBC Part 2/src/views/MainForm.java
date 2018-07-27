@@ -5,17 +5,22 @@
  */
 package views;
 
+import java.sql.Connection;
+import tools.MyConnection;
+
 /**
  *
  * @author Ignatius
  */
 public class MainForm extends javax.swing.JFrame {
 
+    private final Connection connection;
     /**
      * Creates new form MainForm
      */
     public MainForm() {
         initComponents();
+        this.connection = new MyConnection().getConnection();
     }
 
     /**
@@ -32,6 +37,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mnRegion = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,11 +45,11 @@ public class MainForm extends javax.swing.JFrame {
         dskMaster.setLayout(dskMasterLayout);
         dskMasterLayout.setHorizontalGroup(
             dskMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 764, Short.MAX_VALUE)
+            .addGap(0, 1023, Short.MAX_VALUE)
         );
         dskMasterLayout.setVerticalGroup(
             dskMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 491, Short.MAX_VALUE)
+            .addGap(0, 785, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Master");
@@ -59,7 +65,12 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("About");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Developer");
+        jMenu2.add(jMenuItem1);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -79,9 +90,7 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnRegionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnRegionActionPerformed
-        RegionView regionView = new RegionView();
-        regionView.show();
-        dskMaster.add(regionView);
+        new ViewProccess().callForm(dskMaster, new RegionView(connection));
     }//GEN-LAST:event_mnRegionActionPerformed
 
     /**
@@ -124,6 +133,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem mnRegion;
     // End of variables declaration//GEN-END:variables
 }

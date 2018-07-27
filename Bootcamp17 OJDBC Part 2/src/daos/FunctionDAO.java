@@ -61,7 +61,7 @@ public class FunctionDAO implements InterfaceDAO {
             while (resultSet.next()) {
                 Object item[] = new Object[column];
                 for (int i = 0; i < column; i++) {
-                    item[i] = resultSet.getObject(i);
+                    item[i] = resultSet.getObject(i+1);
                 }
                 datas.add(item);
             }
