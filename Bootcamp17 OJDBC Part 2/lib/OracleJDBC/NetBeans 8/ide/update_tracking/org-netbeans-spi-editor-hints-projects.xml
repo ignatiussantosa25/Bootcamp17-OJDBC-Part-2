@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.spi.editor.hints.projects">
+    <module_version install_time="1475191264947" last="true" origin="installer" specification_version="1.11.1.1.7">
+        <file crc="3692722369" name="config/Modules/org-netbeans-spi-editor-hints-projects.xml"/>
+        <file crc="3004590858" name="modules/locale/org-netbeans-spi-editor-hints-projects_ja.jar"/>
+        <file crc="807771082" name="modules/locale/org-netbeans-spi-editor-hints-projects_pt_BR.jar"/>
+        <file crc="162226507" name="modules/locale/org-netbeans-spi-editor-hints-projects_ru.jar"/>
+        <file crc="2852520848" name="modules/locale/org-netbeans-spi-editor-hints-projects_zh_CN.jar"/>
+        <file crc="1195028125" name="modules/org-netbeans-spi-editor-hints-projects.jar"/>
+    </module_version>
+</module>

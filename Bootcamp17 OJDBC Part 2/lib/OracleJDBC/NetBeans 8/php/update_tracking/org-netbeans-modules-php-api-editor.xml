@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.api.editor/0">
+    <module_version install_time="1475191900619" last="true" origin="installer" specification_version="0.28.1">
+        <file crc="2175418792" name="config/Modules/org-netbeans-modules-php-api-editor.xml"/>
+        <file crc="3565678211" name="modules/locale/org-netbeans-modules-php-api-editor_ja.jar"/>
+        <file crc="2485165635" name="modules/locale/org-netbeans-modules-php-api-editor_pt_BR.jar"/>
+        <file crc="1631429737" name="modules/locale/org-netbeans-modules-php-api-editor_ru.jar"/>
+        <file crc="2861605077" name="modules/locale/org-netbeans-modules-php-api-editor_zh_CN.jar"/>
+        <file crc="1782324050" name="modules/org-netbeans-modules-php-api-editor.jar"/>
+    </module_version>
+</module>

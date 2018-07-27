@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.j2seprofiles">
+    <module_version install_time="1475191501743" last="true" origin="installer" specification_version="1.8.1">
+        <file crc="470537945" name="config/Modules/org-netbeans-modules-java-j2seprofiles.xml"/>
+        <file crc="3259286646" name="modules/locale/org-netbeans-modules-java-j2seprofiles_ja.jar"/>
+        <file crc="700821699" name="modules/locale/org-netbeans-modules-java-j2seprofiles_pt_BR.jar"/>
+        <file crc="3382885797" name="modules/locale/org-netbeans-modules-java-j2seprofiles_ru.jar"/>
+        <file crc="3972621387" name="modules/locale/org-netbeans-modules-java-j2seprofiles_zh_CN.jar"/>
+        <file crc="2721221394" name="modules/org-netbeans-modules-java-j2seprofiles.jar"/>
+    </module_version>
+</module>

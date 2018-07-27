@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.i18n.form/2">
+    <module_version install_time="1475191475867" last="true" origin="installer" specification_version="1.50.1.4.1">
+        <file crc="2006784106" name="config/Modules/org-netbeans-modules-i18n-form.xml"/>
+        <file crc="4268952546" name="modules/locale/org-netbeans-modules-i18n-form_ja.jar"/>
+        <file crc="499699754" name="modules/locale/org-netbeans-modules-i18n-form_pt_BR.jar"/>
+        <file crc="34068098" name="modules/locale/org-netbeans-modules-i18n-form_ru.jar"/>
+        <file crc="55760308" name="modules/locale/org-netbeans-modules-i18n-form_zh_CN.jar"/>
+        <file crc="459728558" name="modules/org-netbeans-modules-i18n-form.jar"/>
+    </module_version>
+</module>

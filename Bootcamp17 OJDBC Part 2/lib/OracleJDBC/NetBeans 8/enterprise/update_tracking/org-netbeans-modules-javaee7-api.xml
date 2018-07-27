@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee7.api">
+    <module_version install_time="1475191815852" last="true" origin="installer" specification_version="1.7.1">
+        <file crc="73003827" name="config/Modules/org-netbeans-modules-javaee7-api.xml"/>
+        <file crc="667856525" name="modules/ext/javaee-api-7.0-license.txt"/>
+        <file crc="1015969684" name="modules/ext/javaee-api-7.0.jar"/>
+        <file crc="901975199" name="modules/ext/javaee-web-api-7.0-license.txt"/>
+        <file crc="791108831" name="modules/ext/javaee-web-api-7.0.jar"/>
+        <file crc="2117690603" name="modules/ext/javaee7-endorsed/javax.annotation-api-license.txt"/>
+        <file crc="3606815868" name="modules/ext/javaee7-endorsed/javax.annotation-api.jar"/>
+        <file crc="2117690603" name="modules/ext/javaee7-endorsed/javax.xml.soap-api-license.txt"/>
+        <file crc="1622620206" name="modules/ext/javaee7-endorsed/javax.xml.soap-api.jar"/>
+        <file crc="325547349" name="modules/ext/javaee7-endorsed/jaxb-api-osgi-license.txt"/>
+        <file crc="2443328022" name="modules/ext/javaee7-endorsed/jaxb-api-osgi.jar"/>
+        <file crc="325547349" name="modules/ext/javaee7-endorsed/jaxws-api-license.txt"/>
+        <file crc="3435891806" name="modules/ext/javaee7-endorsed/jaxws-api.jar"/>
+        <file crc="2117690603" name="modules/ext/javaee7-endorsed/jsr181-api-license.txt"/>
+        <file crc="4271113134" name="modules/ext/javaee7-endorsed/jsr181-api.jar"/>
+        <file crc="2597554361" name="modules/locale/org-netbeans-modules-javaee7-api_ja.jar"/>
+        <file crc="1859852189" name="modules/locale/org-netbeans-modules-javaee7-api_pt_BR.jar"/>
+        <file crc="37223870" name="modules/locale/org-netbeans-modules-javaee7-api_ru.jar"/>
+        <file crc="1802963421" name="modules/locale/org-netbeans-modules-javaee7-api_zh_CN.jar"/>
+        <file crc="628843762" name="modules/org-netbeans-modules-javaee7-api.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript.cdnjs/0">
+    <module_version install_time="1475191619762" last="true" origin="installer" specification_version="0.9.1">
+        <file crc="1175428060" name="config/Modules/org-netbeans-modules-javascript-cdnjs.xml"/>
+        <file crc="1300507348" name="modules/locale/org-netbeans-modules-javascript-cdnjs_ja.jar"/>
+        <file crc="76980267" name="modules/locale/org-netbeans-modules-javascript-cdnjs_pt_BR.jar"/>
+        <file crc="555947057" name="modules/locale/org-netbeans-modules-javascript-cdnjs_ru.jar"/>
+        <file crc="2102798620" name="modules/locale/org-netbeans-modules-javascript-cdnjs_zh_CN.jar"/>
+        <file crc="3366602868" name="modules/org-netbeans-modules-javascript-cdnjs.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.websvcapi">
+    <module_version install_time="1475191738058" last="true" origin="installer" specification_version="1.34.1">
+        <file crc="3184216548" name="config/Modules/org-netbeans-modules-websvc-websvcapi.xml"/>
+        <file crc="1787541637" name="modules/locale/org-netbeans-modules-websvc-websvcapi_ja.jar"/>
+        <file crc="459780870" name="modules/locale/org-netbeans-modules-websvc-websvcapi_pt_BR.jar"/>
+        <file crc="3617468438" name="modules/locale/org-netbeans-modules-websvc-websvcapi_ru.jar"/>
+        <file crc="1545439983" name="modules/locale/org-netbeans-modules-websvc-websvcapi_zh_CN.jar"/>
+        <file crc="229829005" name="modules/org-netbeans-modules-websvc-websvcapi.jar"/>
+    </module_version>
+</module>

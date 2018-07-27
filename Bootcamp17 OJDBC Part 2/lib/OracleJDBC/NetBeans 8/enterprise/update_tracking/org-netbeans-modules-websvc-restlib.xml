@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.restlib/2">
+    <module_version install_time="1475191885584" last="true" origin="installer" specification_version="2.11.1">
+        <file crc="2279752207" name="config/Modules/org-netbeans-modules-websvc-restlib.xml"/>
+        <file crc="4019946909" name="modules/ext/jaxrs-2.0/javax.ws.rs-api-2.0.jar"/>
+        <file crc="175621367" name="modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar"/>
+        <file crc="3418204670" name="modules/ext/jersey2/ext/cglib-2.2.0-b21.jar"/>
+        <file crc="2156842641" name="modules/ext/jersey2/ext/guava-14.0.1.jar"/>
+        <file crc="1389664866" name="modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar"/>
+        <file crc="3374827290" name="modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar"/>
+        <file crc="128504340" name="modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar"/>
+        <file crc="617669532" name="modules/ext/jersey2/ext/javax.annotation-api-1.2.jar"/>
+        <file crc="3890715002" name="modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar"/>
+        <file crc="2562276200" name="modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar"/>
+        <file crc="3496225759" name="modules/ext/jersey2/ext/jaxb-api-2.2.7.jar"/>
+        <file crc="2788311459" name="modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar"/>
+        <file crc="1287291370" name="modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar"/>
+        <file crc="1958327943" name="modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar"/>
+        <file crc="3750695466" name="modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar"/>
+        <file crc="3901700564" name="modules/ext/jersey2/ext/persistence-api-1.0.jar"/>
+        <file crc="2136588422" name="modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar"/>
+        <file crc="2733889440" name="modules/ext/jersey2/jersey-client.jar"/>
+        <file crc="3415043933" name="modules/ext/jersey2/jersey-common.jar"/>
+        <file crc="579452067" name="modules/ext/jersey2/jersey-container-servlet-core.jar"/>
+        <file crc="2867428402" name="modules/ext/jersey2/jersey-container-servlet.jar"/>
+        <file crc="3764617448" name="modules/ext/jersey2/jersey-server.jar"/>
+        <file crc="2848700483" name="modules/locale/org-netbeans-modules-websvc-restlib_ja.jar"/>
+        <file crc="3128786992" name="modules/locale/org-netbeans-modules-websvc-restlib_pt_BR.jar"/>
+        <file crc="3668843146" name="modules/locale/org-netbeans-modules-websvc-restlib_ru.jar"/>
+        <file crc="3514099744" name="modules/locale/org-netbeans-modules-websvc-restlib_zh_CN.jar"/>
+        <file crc="1889039734" name="modules/org-netbeans-modules-websvc-restlib.jar"/>
+    </module_version>
+</module>

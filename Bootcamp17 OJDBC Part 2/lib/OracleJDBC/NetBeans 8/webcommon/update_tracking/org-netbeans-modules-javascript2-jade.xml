@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript2.jade/1">
+    <module_version install_time="1475191630684" last="false" origin="installer" specification_version="0.8.1">
+        <file crc="2288655960" name="config/Modules/org-netbeans-modules-javascript2-jade.xml"/>
+        <file crc="1401926597" name="modules/locale/org-netbeans-modules-javascript2-jade_ja.jar"/>
+        <file crc="2585554941" name="modules/locale/org-netbeans-modules-javascript2-jade_pt_BR.jar"/>
+        <file crc="2053021097" name="modules/locale/org-netbeans-modules-javascript2-jade_ru.jar"/>
+        <file crc="3975298936" name="modules/locale/org-netbeans-modules-javascript2-jade_zh_CN.jar"/>
+        <file crc="733980909" name="modules/org-netbeans-modules-javascript2-jade.jar"/>
+    </module_version>
+    <module_version install_time="1518892657054" last="true" origin="NetBeans Distribution" specification_version="0.8.2">
+        <file crc="2288655960" name="config/Modules/org-netbeans-modules-javascript2-jade.xml"/>
+        <file crc="951983740" name="modules/locale/org-netbeans-modules-javascript2-jade_ja.jar"/>
+        <file crc="2609131803" name="modules/locale/org-netbeans-modules-javascript2-jade_pt_BR.jar"/>
+        <file crc="729949835" name="modules/locale/org-netbeans-modules-javascript2-jade_ru.jar"/>
+        <file crc="4173811569" name="modules/locale/org-netbeans-modules-javascript2-jade_zh_CN.jar"/>
+        <file crc="3371994947" name="modules/org-netbeans-modules-javascript2-jade.jar"/>
+    </module_version>
+</module>

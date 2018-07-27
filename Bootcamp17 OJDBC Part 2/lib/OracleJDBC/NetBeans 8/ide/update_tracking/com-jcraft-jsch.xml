@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.jcraft.jsch">
+    <module_version install_time="1475191155355" last="false" origin="installer" specification_version="0.1.53">
+        <file crc="921453600" name="config/Modules/com-jcraft-jsch.xml"/>
+        <file crc="1953179757" name="modules/com-jcraft-jsch.jar"/>
+    </module_version>
+    <module_version install_time="1518892703367" last="true" origin="NetBeans Distribution" specification_version="0.1.54">
+        <file crc="469479230" name="modules/com-jcraft-jsch.jar"/>
+        <file crc="921453600" name="config/Modules/com-jcraft-jsch.xml"/>
+    </module_version>
+</module>

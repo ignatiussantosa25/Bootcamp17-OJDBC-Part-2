@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.sun.dd/1">
+    <module_version install_time="1475191714947" last="true" origin="installer" specification_version="1.36.1.1">
+        <file crc="1841007098" name="config/Modules/org-netbeans-modules-j2ee-sun-dd.xml"/>
+        <file crc="2418756684" name="modules/locale/org-netbeans-modules-j2ee-sun-dd_ja.jar"/>
+        <file crc="903673314" name="modules/locale/org-netbeans-modules-j2ee-sun-dd_pt_BR.jar"/>
+        <file crc="3995657601" name="modules/locale/org-netbeans-modules-j2ee-sun-dd_ru.jar"/>
+        <file crc="2656883709" name="modules/locale/org-netbeans-modules-j2ee-sun-dd_zh_CN.jar"/>
+        <file crc="2506546287" name="modules/org-netbeans-modules-j2ee-sun-dd.jar"/>
+    </module_version>
+</module>

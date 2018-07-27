@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cloud.amazon/0">
+    <module_version install_time="1475191669514" last="true" origin="installer" specification_version="1.15.1">
+        <file crc="3273308792" name="config/Modules/org-netbeans-modules-cloud-amazon.xml"/>
+        <file crc="461565474" name="modules/locale/org-netbeans-modules-cloud-amazon_ja.jar"/>
+        <file crc="4129910350" name="modules/locale/org-netbeans-modules-cloud-amazon_pt_BR.jar"/>
+        <file crc="865824021" name="modules/locale/org-netbeans-modules-cloud-amazon_ru.jar"/>
+        <file crc="625515633" name="modules/locale/org-netbeans-modules-cloud-amazon_zh_CN.jar"/>
+        <file crc="2449546876" name="modules/org-netbeans-modules-cloud-amazon.jar"/>
+    </module_version>
+</module>

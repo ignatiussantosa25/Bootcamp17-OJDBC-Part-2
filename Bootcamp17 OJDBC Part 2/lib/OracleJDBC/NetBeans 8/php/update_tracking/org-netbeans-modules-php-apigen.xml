@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.apigen">
+    <module_version install_time="1475191903023" last="true" origin="installer" specification_version="1.29.1">
+        <file crc="3116719856" name="config/Modules/org-netbeans-modules-php-apigen.xml"/>
+        <file crc="3908917450" name="modules/locale/org-netbeans-modules-php-apigen_ja.jar"/>
+        <file crc="584488329" name="modules/locale/org-netbeans-modules-php-apigen_pt_BR.jar"/>
+        <file crc="3207235696" name="modules/locale/org-netbeans-modules-php-apigen_ru.jar"/>
+        <file crc="3085724575" name="modules/locale/org-netbeans-modules-php-apigen_zh_CN.jar"/>
+        <file crc="2058743507" name="modules/org-netbeans-modules-php-apigen.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.latte/1">
+    <module_version install_time="1475191933942" last="true" origin="installer" specification_version="1.18.1">
+        <file crc="4112786166" name="config/Modules/org-netbeans-modules-php-latte.xml"/>
+        <file crc="1608334725" name="modules/locale/org-netbeans-modules-php-latte_ja.jar"/>
+        <file crc="135268970" name="modules/locale/org-netbeans-modules-php-latte_pt_BR.jar"/>
+        <file crc="1419512805" name="modules/locale/org-netbeans-modules-php-latte_ru.jar"/>
+        <file crc="2742951365" name="modules/locale/org-netbeans-modules-php-latte_zh_CN.jar"/>
+        <file crc="3851767330" name="modules/org-netbeans-modules-php-latte.jar"/>
+    </module_version>
+</module>

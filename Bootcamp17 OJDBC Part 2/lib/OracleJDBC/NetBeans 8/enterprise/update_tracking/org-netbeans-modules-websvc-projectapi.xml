@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.projectapi/0">
+    <module_version install_time="1475191824982" last="true" origin="installer" specification_version="1.25.1">
+        <file crc="3908823694" name="config/Modules/org-netbeans-modules-websvc-projectapi.xml"/>
+        <file crc="59875181" name="modules/locale/org-netbeans-modules-websvc-projectapi_ja.jar"/>
+        <file crc="1638721166" name="modules/locale/org-netbeans-modules-websvc-projectapi_pt_BR.jar"/>
+        <file crc="2488765486" name="modules/locale/org-netbeans-modules-websvc-projectapi_ru.jar"/>
+        <file crc="1159989396" name="modules/locale/org-netbeans-modules-websvc-projectapi_zh_CN.jar"/>
+        <file crc="168073403" name="modules/org-netbeans-modules-websvc-projectapi.jar"/>
+    </module_version>
+</module>

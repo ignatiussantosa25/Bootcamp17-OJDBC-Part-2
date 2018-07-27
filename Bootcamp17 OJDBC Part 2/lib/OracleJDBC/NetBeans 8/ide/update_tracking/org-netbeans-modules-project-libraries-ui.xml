@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.project.libraries.ui/1">
+    <module_version install_time="1475191254405" last="true" origin="installer" specification_version="1.52.1">
+        <file crc="782599371" name="config/Modules/org-netbeans-modules-project-libraries-ui.xml"/>
+        <file crc="4272756920" name="modules/locale/org-netbeans-modules-project-libraries-ui_ja.jar"/>
+        <file crc="2330966696" name="modules/locale/org-netbeans-modules-project-libraries-ui_pt_BR.jar"/>
+        <file crc="1618271891" name="modules/locale/org-netbeans-modules-project-libraries-ui_ru.jar"/>
+        <file crc="3343394008" name="modules/locale/org-netbeans-modules-project-libraries-ui_zh_CN.jar"/>
+        <file crc="352425789" name="modules/org-netbeans-modules-project-libraries-ui.jar"/>
+    </module_version>
+</module>

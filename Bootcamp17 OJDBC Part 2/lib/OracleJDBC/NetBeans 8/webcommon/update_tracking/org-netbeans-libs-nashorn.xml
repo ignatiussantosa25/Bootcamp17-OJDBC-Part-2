@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.nashorn/1">
+    <module_version install_time="1475191602653" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="250435371" name="config/Modules/org-netbeans-libs-nashorn.xml"/>
+        <file crc="2736345595" name="modules/ext/com.oracle.js.parser.jar"/>
+        <file crc="1189124277" name="modules/locale/org-netbeans-libs-nashorn_ja.jar"/>
+        <file crc="3418052664" name="modules/locale/org-netbeans-libs-nashorn_pt_BR.jar"/>
+        <file crc="3971452648" name="modules/locale/org-netbeans-libs-nashorn_ru.jar"/>
+        <file crc="2252273445" name="modules/locale/org-netbeans-libs-nashorn_zh_CN.jar"/>
+        <file crc="126428581" name="modules/org-netbeans-libs-nashorn.jar"/>
+    </module_version>
+</module>

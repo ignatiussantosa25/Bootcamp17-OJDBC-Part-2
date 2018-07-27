@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.axi">
+    <module_version install_time="1475191276732" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="807763827" name="config/Modules/org-netbeans-modules-xml-axi.xml"/>
+        <file crc="1485644942" name="modules/locale/org-netbeans-modules-xml-axi_ja.jar"/>
+        <file crc="4018407247" name="modules/locale/org-netbeans-modules-xml-axi_pt_BR.jar"/>
+        <file crc="3294523970" name="modules/locale/org-netbeans-modules-xml-axi_ru.jar"/>
+        <file crc="2049092523" name="modules/locale/org-netbeans-modules-xml-axi_zh_CN.jar"/>
+        <file crc="2736371095" name="modules/org-netbeans-modules-xml-axi.jar"/>
+    </module_version>
+</module>

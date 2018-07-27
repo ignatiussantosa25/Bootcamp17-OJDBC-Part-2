@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.openide.filesystems.nb">
+    <module_version install_time="1475191084335" last="false" origin="installer" specification_version="9.9.1">
+        <file crc="282384882" name="config/Modules/org-openide-filesystems-nb.xml"/>
+        <file crc="2914689583" name="modules/locale/org-openide-filesystems-nb_ja.jar"/>
+        <file crc="2110528928" name="modules/locale/org-openide-filesystems-nb_pt_BR.jar"/>
+        <file crc="3647147602" name="modules/locale/org-openide-filesystems-nb_ru.jar"/>
+        <file crc="2182947628" name="modules/locale/org-openide-filesystems-nb_zh_CN.jar"/>
+        <file crc="3196892028" name="modules/org-openide-filesystems-nb.jar"/>
+    </module_version>
+    <module_version install_time="1518892655466" last="true" origin="NetBeans Distribution" specification_version="9.9.2">
+        <file crc="282384882" name="config/Modules/org-openide-filesystems-nb.xml"/>
+        <file crc="2328482508" name="modules/locale/org-openide-filesystems-nb_ja.jar"/>
+        <file crc="2068013243" name="modules/locale/org-openide-filesystems-nb_pt_BR.jar"/>
+        <file crc="3174261748" name="modules/locale/org-openide-filesystems-nb_ru.jar"/>
+        <file crc="329595603" name="modules/locale/org-openide-filesystems-nb_zh_CN.jar"/>
+        <file crc="1181259300" name="modules/org-openide-filesystems-nb.jar"/>
+    </module_version>
+</module>

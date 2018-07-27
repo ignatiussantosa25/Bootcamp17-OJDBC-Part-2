@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.localhistory">
+    <module_version install_time="1475191241076" last="true" origin="installer" specification_version="1.34.1">
+        <file crc="3877869730" name="config/Modules/org-netbeans-modules-localhistory.xml"/>
+        <file crc="3412581043" name="modules/locale/org-netbeans-modules-localhistory_ja.jar"/>
+        <file crc="793964804" name="modules/locale/org-netbeans-modules-localhistory_pt_BR.jar"/>
+        <file crc="2482169441" name="modules/locale/org-netbeans-modules-localhistory_ru.jar"/>
+        <file crc="1341791606" name="modules/locale/org-netbeans-modules-localhistory_zh_CN.jar"/>
+        <file crc="3561612855" name="modules/org-netbeans-modules-localhistory.jar"/>
+    </module_version>
+</module>

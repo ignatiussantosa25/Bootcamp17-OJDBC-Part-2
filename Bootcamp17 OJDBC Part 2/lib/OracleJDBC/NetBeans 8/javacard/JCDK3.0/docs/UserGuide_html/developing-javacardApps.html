@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Developing Java Card 3 Platform Applications
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="install-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="samples-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565152_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">3</SPAN><A NAME="50565152_44097"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565152_pgfId-1001759"></A><A NAME="50565152_Developing Java Card 3 Platform Applications"></A>Developing Java Card 3 Platform Applications<A NAME="50565152_marker-1003091"></A>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565152_pgfId-1001133"></A>This chapter provides a brief description of the activities and development kit tools involved in developing applications for the Java Card 3 platform. Whether you use the development kit tools or the NetBeans IDE as your development environment, these same, basic activities apply. If you are enabling classic applets to run on Connected Edition and Classic Edition cards, see <A HREF="normalizer-connected.html#50565149_72569" CLASS="XRef">Chapter 9</A>.
+</P><H2 CLASS="Head1"><A NAME="50565152_pgfId-1001985"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>Development Steps</H2>
+<P CLASS="Paragraph"><A NAME="50565152_pgfId-1002959"></A>The steps described in <A HREF="developing-javacardApps.html#50565152_48373" CLASS="XRef">FIGURE 3-1</A> illustrate the sequence of activities completed by a developer when creating an application for the Java Card 3 platform. See the <EM CLASS="Emphasis">Application Programming Notes, Java Card Platform, Version 3.0.1, Connected Edition</EM> for additional, advanced information not provided in this guide about creating applications for the Java Card 3 platform.
+</P>
+<P CLASS="FigureCaption"><A NAME="50565152_pgfId-1002613"></A>FIGURE 3-1 	<A NAME="50565152_48373"></A>Java Card 3 Platform Application Development
+</P>
+<BR><A NAME="50565152_pgfId-1009610"></A>
+<P CLASS="FigureBox-Wide"><A NAME="50565152_pgfId-1002608"></A>
+<P><IMG SRC="figures/developing-javacardApps-4.jpg" TITLE="shows the development process from Java source files through card and browser" ALT="shows the development process from Java source files through card and browser">
+</P><A NAME="50565152_pgfId-1009606"></A><A NAME="50565152_pgfId-1009609"></A>
+<P CLASS="List1"><A NAME="50565152_pgfId-1002008"></A>1.	<STRONG CLASS="Lead-In2para">Source files</STRONG> - Write the source code and create the descriptor files.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565152_pgfId-1002053"></A>The development kit also provides sample application source code that developers can use in creating custom applications. See <A HREF="samples-connected.html#50565164_29899" CLASS="XRef">Chapter 4</A> for a description of the samples provided in the development kit.
+</P>
+<P CLASS="List1-"><A NAME="50565152_pgfId-1001787"></A>	2. 	<STRONG CLASS="Lead-In2para">Compile/build</STRONG> - Compile the source code.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565152_pgfId-1002256"></A>See <A HREF="compilertool-connected.html#50565187_10980" CLASS="XRef">Chapter 6</A> for a description of using the Java Card 3 platform Compiler tool (<A NAME="50565152_marker-1002145"></A><KBD CLASS="Filename">javacardc.bat</KBD>) as a stand-alone application.
+</P>
+<P CLASS="List1-"><A NAME="50565152_pgfId-1001924"></A>	3. 	<STRONG CLASS="Lead-In2para">Packager</STRONG> - Package the compiled source code.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565152_pgfId-1002153"></A>See <A HREF="packagertool-connected.html#50565188_10980" CLASS="XRef">Chapter 7</A> for a description of using the Packager tool to create and validate application modules.
+</P>
+<P CLASS="List1-"><A NAME="50565152_pgfId-1001789"></A>	4. 	<STRONG CLASS="Lead-In2para">Off-Card Installer</STRONG> - Load the application and create instances on the card by using the Installer tool.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565152_pgfId-1002162"></A>See <A HREF="cardinstaller-connected.html#50565189_85312" CLASS="XRef">Chapter 8</A> for a description of using the Off-Card Installer (Installer) tool and the associated on-card installer used to load an application module onto the card, create an instance of an application, delete (deactivate) an instance of an application, remove a module or application from the card, and display information about loaded applications and instances.
+</P>
+<P CLASS="List1-"><A NAME="50565152_pgfId-1001791"></A>	5. 	<STRONG CLASS="Lead-In2para">Browser/Client</STRONG> - Access the application on the card by using a client (browser or APDU tool).
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565152_pgfId-1002414"></A>See <A HREF="apdutool-connected.html#50565192_APDUtool chapter 10" CLASS="XRef">Chapter 10</A> for description of using the APDU tool to display command and response APDU commands on the console.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="install-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="samples-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

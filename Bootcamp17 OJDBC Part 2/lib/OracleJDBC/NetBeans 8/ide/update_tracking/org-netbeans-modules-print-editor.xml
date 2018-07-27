@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.print.editor">
+    <module_version install_time="1475191253663" last="true" origin="installer" specification_version="7.26.1">
+        <file crc="3826813082" name="config/Modules/org-netbeans-modules-print-editor.xml"/>
+        <file crc="1635727144" name="modules/locale/org-netbeans-modules-print-editor_ja.jar"/>
+        <file crc="3005967064" name="modules/locale/org-netbeans-modules-print-editor_pt_BR.jar"/>
+        <file crc="528157212" name="modules/locale/org-netbeans-modules-print-editor_ru.jar"/>
+        <file crc="2620988409" name="modules/locale/org-netbeans-modules-print-editor_zh_CN.jar"/>
+        <file crc="909866791" name="modules/org-netbeans-modules-print-editor.jar"/>
+    </module_version>
+</module>

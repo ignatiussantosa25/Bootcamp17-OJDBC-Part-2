@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.apisupport.paintapp">
+    <module_version install_time="1475191568709" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="1457062585" name="config/Modules/org-netbeans-modules-apisupport-paintapp.xml"/>
+        <file crc="2426555348" name="modules/locale/org-netbeans-modules-apisupport-paintapp_ja.jar"/>
+        <file crc="88916593" name="modules/locale/org-netbeans-modules-apisupport-paintapp_pt_BR.jar"/>
+        <file crc="385555135" name="modules/locale/org-netbeans-modules-apisupport-paintapp_ru.jar"/>
+        <file crc="2425198420" name="modules/locale/org-netbeans-modules-apisupport-paintapp_zh_CN.jar"/>
+        <file crc="3493543927" name="modules/org-netbeans-modules-apisupport-paintapp.jar"/>
+    </module_version>
+</module>

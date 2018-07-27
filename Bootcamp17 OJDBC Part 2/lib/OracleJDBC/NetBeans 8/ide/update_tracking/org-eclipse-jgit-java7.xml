@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.eclipse.jgit.java7">
+    <module_version install_time="1475191249576" last="true" origin="installer" specification_version="3.6.2.201501210735-r">
+        <file crc="2738461529" name="config/Modules/org-eclipse-jgit-java7.xml"/>
+        <file crc="3895343193" name="modules/org-eclipse-jgit-java7.jar"/>
+    </module_version>
+</module>

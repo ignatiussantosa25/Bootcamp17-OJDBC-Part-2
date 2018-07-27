@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.core">
+    <module_version install_time="1475191842724" last="true" origin="installer" specification_version="1.47.1.1.4">
+        <file crc="2969014844" name="config/Modules/org-netbeans-modules-websvc-core.xml"/>
+        <file crc="3873910796" name="modules/locale/org-netbeans-modules-websvc-core_ja.jar"/>
+        <file crc="1150871436" name="modules/locale/org-netbeans-modules-websvc-core_pt_BR.jar"/>
+        <file crc="2599890866" name="modules/locale/org-netbeans-modules-websvc-core_ru.jar"/>
+        <file crc="3777563549" name="modules/locale/org-netbeans-modules-websvc-core_zh_CN.jar"/>
+        <file crc="1692229125" name="modules/org-netbeans-modules-websvc-core.jar"/>
+    </module_version>
+</module>

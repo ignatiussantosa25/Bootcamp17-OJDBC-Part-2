@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.ko4j.debugging">
+    <module_version install_time="1475191817292" last="true" origin="installer" specification_version="1.4.1">
+        <file crc="1820573329" name="config/Modules/org-netbeans-modules-ko4j-debugging.xml"/>
+        <file crc="114497989" name="modules/locale/org-netbeans-modules-ko4j-debugging_ja.jar"/>
+        <file crc="1118055928" name="modules/locale/org-netbeans-modules-ko4j-debugging_pt_BR.jar"/>
+        <file crc="3382976301" name="modules/locale/org-netbeans-modules-ko4j-debugging_ru.jar"/>
+        <file crc="3678671323" name="modules/locale/org-netbeans-modules-ko4j-debugging_zh_CN.jar"/>
+        <file crc="2075152231" name="modules/org-netbeans-modules-ko4j-debugging.jar"/>
+    </module_version>
+</module>

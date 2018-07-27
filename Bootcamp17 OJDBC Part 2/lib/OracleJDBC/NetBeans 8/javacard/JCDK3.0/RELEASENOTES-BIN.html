@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional">
+<html>
+<head>
+  <title>Release Notes - Connected Edition Development Kit, Java Card 3
+Platform, v3.0.2</title>
+  <link rel="stylesheet" href="document.css" type="text/css">
+  <meta content="Binary Release" name="description">
+</head>
+<body>
+<table summary="This table is for formatting purposes only." border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td class="sun-darkblue">
+      <h1>Release Notes</h1>
+      <h2>Development Kit for the Java Card&#8482; 3 Platform<br>
+      </h2>
+      <h2>Version 3.0.2, Connected Edition</h2>
+      <h2><big>Binary Release<br>
+      </big></h2>
+      <h4>December 2009</h4>
+      </td>
+    </tr>
+    <tr>
+      <td class="sun-lightblue">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="nav-link">[<a href="#introduction">Skip TOC</a>]
+<a name="top"></a></p>
+<p>&nbsp;</p>
+<h2>Table of Contents</h2>
+<dl>
+  <dt><a href="#introduction">Introduction</a></dt>
+  <dt><a href="#supported_platforms">Requirements</a></dt>
+  <dt><a href="#contents">Contents of This Release</a></dt>
+  <dd><a href="RELEASENOTES.html#app_support">Application Support</a></dd>
+  <dd><a href="#tools">Tools</a><br>
+  </dd>
+  <dd><a href="#cjcre_feats">Java Card Runtime Environment (cjcre.exe)
+Features</a><br>
+  </dd>
+  <dd><a href="#web_feat">Web Application Features</a><br>
+  </dd>
+  <dd><a href="#extended_feat">Extended Java Card Applet Application
+Features</a><br>
+  </dd>
+  <dt><a href="#installation">Installation</a></dt>
+  <dt><a href="#setup">System Setup</a></dt>
+  <dt><a href="#uninstallingServlet">Uninstalling the Development Kit</a></dt>
+  <dt><a href="#Known_Bugs">Known Bugs</a><br>
+  </dt>
+  <dt><a href="#prod_info">Where to Find Product Information and News</a></dt>
+  <dt><a href="#prod_feedback">Sending Feedback</a></dt>
+  <dt><br>
+  </dt>
+</dl>
+<a name="introduction"></a>
+<h2>Introduction</h2>
+<p>
+These release notes describe the development kit for the Java Card&#8482;
+3 Platform,
+Version 3.0.2, Connected Edition, binary release. <br>
+</p>
+<p>Java Card technology combines a
+subset of the Java&#8482; programming
+language with a runtime environment optimized for smart cards and
+similar small-memory embedded devices. The goal of Java Card technology
+is to bring many of the benefits of the Java programming language to
+the resource-constrained world of smart cards. The Java Card API is
+compatible with international standards such as ISO 7816, and
+industry-specific standards such as Europay, Master Card, and Visa
+(EMV).</p>
+<p>
+Java Card platform version 3.0.2 is the latest evolution of Java Card
+technology. This development kit is based
+on the Version 3.0.1 of the
+Java Card Specifications, which includes their errata sheets located at
+<a
+ href="http://java.sun.com/javacard/3.0.1/jc-connected-spec-errata.html">http://java.sun.com/javacard/3.0.1/jc-connected-spec-errata.html</a>.
+The Java Card 3 Platform consists of versions
+3.0 and 3.0.1 of the specifications and versions 3.0.1 and 3.0.2 of the
+development kit.<br>
+</p>
+<p>For the first time, the Java Card platform is available in two
+editions, both
+of which are backward compatible with previous versions and share key
+security features:</p>
+<ul>
+  <li><b>Classic Edition</b> is based on an evolution of the Java Card
+Platform, Version 2.2.2, architecture. The Classic Edition targets more
+resource-constrained devices than the Connected Edition.<br>
+  </li>
+</ul>
+<ul>
+  <li><b>Connected Edition</b> contains a new architecture compared to
+the Java Card technology released in version 2.2.2, which is now known
+as the "Classic Edition." The Connected Edition enables the integration
+of smart cards within IP networks and web services architectures. To do
+so, it features a significantly enhanced runtime environment and
+virtual machine (VM), and it includes new network-oriented features,
+such as support for Java Servlet APIs and Java Card applets with
+extended and advanced capabilities. As of this release, the Connected
+Edition has a new file system. These release notes are for the
+Connected Edition.</li>
+</ul>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<a name="supported_platforms"></a>
+<h2>Requirements</h2>
+<p><b>Platform</b></p>
+<ul>
+  <li><b>Operating system</b>. This release is targeted for use on the
+Microsoft Windows XP SP2 operating system.</li>
+</ul>
+<p><b>Required Software</b></p>
+<p>The following software must be installed for the Java Card
+development kit to work:</p>
+<ul>
+  <li> <b>Java Development Kit</b>. The commercial version of Java
+Development Kit (JDK&#8482;) version 6, Update 10 or <span
+ style="font-family: monospace;"></span>later is required. You
+can download the supported JDK software, JDK 6 Update 10 or later, from
+    <a href="http://java.sun.com/javase/downloads/index.jsp"
+ target="top">http://java.sun.com/javase/downloads/index.jsp</a>.</li>
+  <li> <b>GCC compiler</b>. To build the VM, this release
+requires Minimal GNU for Windows (MinGW) version 5.1.4 or later. MinGW
+can be
+obtained from <a href="http://prdownloads.sourceforge.net/mingw"
+ target="top">http://prdownloads.sourceforge.net/mingw</a>. For
+information on
+MinGW go to <a href="http://www.mingw.org" target="top">http://www.mingw.org</a>.</li>
+  <li> <b>Apache Ant</b>. Apache Ant version 1.6.5 or later is
+required. Latest version of Apache Ant can be obtained <a
+ href="http://ant.apache.org" target="top">http://ant.apache.org</a>.</li>
+  <li><span style="font-weight: bold;">NetBeans IDE.</span> The
+NetBeans IDE Version 6.8 or later is required to run the samples.
+The NetBeans IDE is available at <a
+ href="http://www.netbeans.org/index.html">http://www.netbeans.org/index.html</a>.<br>
+  </li>
+  <li>For use with the samples, the Firefox browser is considered a
+trusted client by the RI. Firefox is available at <a
+ href="http://www.mozilla.com">http://www.mozilla.com</a>.<br>
+  </li>
+</ul>
+<p><span style="font-weight: bold;"> Note</span>&nbsp;&#8212;&nbsp;Do not
+install any software in a directory that
+contains a space in its name. For example, do not install software in
+any subdirectory of <code>c:\program files</code> because of the space
+in the <code>program files</code> element.
+</p>
+<ul>
+</ul>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<a name="contents"></a>
+<h2>Contents of This Release<br>
+</h2>
+<p>This source release contains both binary and source
+code. Note that the Java Card specifications are not included in this
+release. The specifications must
+be
+downloaded separately.
+</p>
+<p>This release contains features required to support classic applets,
+web applications,
+and extended Java Card applet applications on the card. Specifically,
+this release includes the following:</p>
+<ul>
+  <li>Java Card runtime environment (<code>cjcre.exe</code>)</li>
+  <li>File system support</li>
+  <li>Uninstaller tool<br>
+  </li>
+  <li>Normalizer tool (<span style="font-family: monospace;">normalizer.bat</span>)<br>
+  </li>
+  <li>OffCard Installer (<code>installer.bat</code>)</li>
+  <li>Packager tool (<code>packager.bat</code>)</li>
+  <li>APDU tool (<code>apdutool.bat</code>)</li>
+  <li>Debugging tool (<code>debugproxy.bat</code>)</li>
+  <li>Romizer tool (<code>romizer.bat</code>)</li>
+  <li>Converter tool (<code>converter.bat</code>)</li>
+  <li>Three Sample applications (The complete set of samples are
+available
+through the NetBeans IDE as Kenai Projects. You can also see them at <a
+ href="http://kenai.com/projects/javacard/pages/JC3Samples">http://kenai.com/projects/javacard/pages/JC3Samples</a>.)<br>
+  </li>
+  <li>User's guide for this release in <span
+ style="font-style: italic;">Development Kit User's Guide for
+the Java Card Platform, Version 3.0.2, Connected Edition</span></li>
+</ul>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<h3><a name="app_support"></a> <span style="font-weight: bold;">Application
+Support</span></h3>
+<span style="font-weight: bold;"></span> This release
+supports web applications and classic and extended Java Card
+applet-based applications. The card manager application, which is built
+in, allows the
+user to do the following:
+<ul>
+  <li><b>Load</b> - Loading classic, web-based, and extended Java Card
+applet applications onto the card</li>
+  <li><b>Create</b> - Creating instances of classic, web-based, and
+extended Java Card
+applet applications</li>
+  <li><b>List</b> - Obtaining the list of loaded applications and
+created
+instances</li>
+  <li><span style="font-weight: bold;">Delete </span>- Deleting
+instances of classic, web-based, and extended Java Card applet
+applications</li>
+  <li><span style="font-weight: bold;">Unload </span>- Unloading
+classic, web-based, and extended Java Card applet applications from the
+card<br>
+  </li>
+</ul>
+<h3><b><a name="tools"></a>Tools</b></h3>
+<ul>
+  <li>Normalizer (<span style="font-family: monospace;">normalizer.bat</span>)
+can be used for backward
+compatibility with classic applets<br>
+  </li>
+  <li>OffCard Installer (<code>installer.bat</code>) is functional</li>
+  <li>Packager (<code>packager.bat</code>) can be used to both
+validate and create classic, web and extended Java Card applets
+applications</li>
+  <li>Debugging tool (<code>debugproxy.bat</code>) can be used to debug
+applications in an IDE (such as the NetBeans&#8482; IDE)</li>
+  <li>APDU tool (<code>apdutool.bat</code>) can be used to send APDU
+scripts to the extended Java Card applet applications</li>
+  <li>Romizer (<code>romizer.bat</code>) can be used to create custom
+ROM image files to create customized Java Card runtime environment (<code>cjcre.exe</code>)</li>
+  <li>Converter (<code>converter.bat</code>) can be used to create
+classic applet application bundles</li>
+</ul>
+<h3><b><a name="cjcre_feats"></a>Java Card Runtime Environment (<code>cjcre.exe</code>)
+Features</b></h3>
+<ul>
+  <li>Support for traditional, classic Java Card applets</li>
+  <li>Package sealing</li>
+  <li>Secure hosting of web applications on static and dynamically
+assigned ports</li>
+  <li>SSL, HTTP and HTTPS connection support. (The SSL implementation
+is provided for reference&nbsp; purposes and is not recommended for
+production use in devices.) </li>
+  <li>On-card client application authentication <br>
+  </li>
+  <li>Permission-based security <br>
+  </li>
+  <li>Role-based security <br>
+  </li>
+  <li>Code and context isolation between applications <br>
+  </li>
+  <li>Transfer of object ownership support <br>
+  </li>
+  <li>Transactions <br>
+  </li>
+  <li>Extension library support <br>
+  </li>
+  <li>SIO based services <br>
+  </li>
+  <li>Events <br>
+  </li>
+  <li>Restartable tasks <br>
+  </li>
+  <li>Persistence </li>
+  <li>Resource bundle support</li>
+  <li>Evolutive Cryptography support</li>
+  <li>Enhanced firewall support (including support for throwing
+exceptions across a firewall)</li>
+  <li>Support for debugging using Java Card Debugger</li>
+  <li>Preshared secret key support</li>
+</ul>
+<h3><b><a name="web_feat"></a>Web Application Features</b></h3>
+<ul>
+  <li>All basic support for a typical web application (servlets,
+filters, listeners, etc.) </li>
+  <li> BASIC, FORM and DIGEST authentication</li>
+</ul>
+<h3><b><a name="extended_feat"></a>Extended Java Card Applet
+Application Features</b></h3>
+<ul>
+  <li>All basic support for typical Extended Java Card Applet
+Application features (logical channels, etc.)</li>
+  <li>T=0 and T=1 based APDU communication support</li>
+  <li>APIs found in the Classic Edition </li>
+</ul>
+<a name="installation"></a>
+<h2>Installation</h2>
+<p>For a more thorough description of the installation, contents and
+use of the development kit, see <span style="font-style: italic;">Development
+User's Guide, Java Card Platform, Version 3.0.2, Connected Edition</span>
+included in the download bundle for this release.</p>
+<p>An automatic installer tool can be used to unpack the download file
+containing this release. During download, you can choose to let the
+installer tool unpack the download file into a directory of your choice
+on your system or you can save the download file itself to your system.<br>
+</p>
+<p><span style="font-weight: bold;">Note</span>&nbsp;&#8212;&nbsp;Do not
+install development kit software in any
+directory that has a space in its name. For example, on a Windows
+platform, do not install software in the <code>c:\program files</code>
+directory, or any subdirectory of <code>c:\program files</code>,
+because the <code>program files</code> element contains a space.</p>
+<p>To install the Java Card development kit and associated software,
+follow these steps:</p>
+<ol>
+  <li> <b>Install the JDK version 6, Update 10 or later</b>. This JDK
+is
+available from: <a
+ href="http://java.sun.com/javase/downloads/index.jsp" target="top">http://java.sun.com/javase/downloads/index.jsp</a>.
+  </li>
+  <li> <b>Install Apache Ant version 1.6.5 or later</b>. The latest
+version is available at: <a href="http://ant.apache.org" target="top">http://ant.apache.org/</a>.
+  </li>
+  <li><span style="font-weight: bold;">Install the GCC compiler</span>.
+The compiler Minimal GNU for Windows (MinGW), version 5.1.4 is
+required.&nbsp; It is available at <a
+ href="http://sourceforge.net/projects/mingw">http://sourceforge.net/projects/mingw</a>,
+while its installation information is at <a href="http://www.mingw.org">http://www.mingw.org</a>.</li>
+  <li><span style="font-weight: bold;">Install NetBeans IDE. The
+NetBeans IDE</span> version 6.8 is required to run the samples. It is
+available at <a href="http://www.netbeans.org">http://www.netbeans.org</a>.<br>
+  </li>
+  <li><b>Download the Java Card development kit</b>. Download and
+store the development kit Java Archive (JAR) file in a
+directory of your choice. </li>
+  <li> <b>Run the development kit installer or use the command line</b>.
+Double click the JAR file on your system. <font
+ style="color: rgb(0, 0, 0);" color="#ff0000">If the
+JDK is installed correctly, the jar file is recognized as an executable
+jar and t</font>he automatic installer will
+launch to step you through the remainder of the installation process. <code><br>
+    </code> </li>
+</ol>
+<p style="margin-left: 40px;">Alternatively, you can use the command
+line to unpack the JAR file using the following command:</p>
+<blockquote>
+  <div style="margin-left: 40px;"><code>java -jar</code> <i>Bundle-Filename</i><br>
+  <br>
+  </div>
+Where <i>Bundle-Filename</i> is the downloaded development kit
+JAR file. </blockquote>
+<p> By default, the development kit is installed in <code>c:\jcdk3.0.2_ConnectedEdition</code>
+and its associated sub-directories. You can specify a different
+directory if you wish. <br>
+</p>
+<ol>
+</ol>
+<p>The directory <code>c:\jcdk3.0.2_ConnectedEdition</code> (or
+the alternate directory you specify during installation) is referred to
+as <code style="font-style: italic;">JC_CONNECTED_HOME</code> in these
+release notes. When the development
+kit installation is complete, <code style="font-style: italic;">JC_CONNECTED_HOME</code>
+contains the following:</p>
+<table summary="top-level file and
+
+
+directory structure" border="0"
+ cellpadding="3" width="100%">
+  <tbody>
+    <tr>
+      <td width="15%"> <code style="font-style: italic;">JC_CONNECTED_HOME</code>
+      </td>
+      <td width="85%"> <code>RELEASENOTES-BIN.html</code> - These
+release
+notes. <code></code><br>
+      <span style="font-family: monospace;">platform.properties</span>
+-&nbsp; contains information about the Java Card
+Platform for use by developer tools such as the NetBeans IDE.<br>
+Copyright files.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs</code></td>
+      <td style="vertical-align: top;"><a
+ href="docs/JCDevKitUG-Connected-3_0_2.pdf"><code>JCDevKitUG-Connected-3_0_2.pdf</code></a>&nbsp;
+- <span style="font-style: italic;">Development Kit User's Guide for
+the Java Card Platform, Version 3.0.2, Connected Edition.</span><span
+ style="font-family: monospace;"></span><br>
+      <span style="font-family: monospace;">UserGuide_html\index.html</span>
+- HTML version of the user's guide.<span style="font-family: monospace;"></span><br>
+      <code></code><span style="font-family: monospace;"></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\api</code></td>
+      <td style="vertical-align: top;">The development kit's API files.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\apduio</code></td>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;"></span>Javadoc<small><small><sup>TM</sup></small></small>
+tool files for use with APDU I/O described in the user's guide.<span
+ style="font-family: monospace;"></span><span
+ style="font-style: italic;"></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>api_export_files</code></td>
+      <td style="vertical-align: top;">Contains <span
+ style="font-family: monospace;">java</span>, <span
+ style="font-family: monospace;">javacard</span>, and <span
+ style="font-family: monospace;">javacardx </span>directories of API
+export files.<br>
+      </td>
+    </tr>
+    <tr>
+      <td> <code>bin</code> </td>
+      <td>Development kit executable files. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>samples\classic_applets</code></td>
+      <td style="vertical-align: top;">HelloWorld sample using a
+classic applet. The complete set of samples is
+available through the
+NetBeans IDE, each as a Kenai Project. Running this sample requires the
+NetBeans IDE and its Java Card technology-specific plugin. <code></code>
+      </td>
+    </tr>
+    <tr>
+      <td> <code>samples\extended_applets</code> </td>
+      <td>HelloWorld sample using an extended applet.<code></code> The
+complete set of samples is available through the NetBeans IDE, each as
+a Kenai
+Project. Running this sample requires the NetBeans IDE and its Java
+Card technology-specific plugin. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>samples\keystore</code></td>
+      <td style="vertical-align: top;">Keystore and certificate files
+for use by the samples.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>samples\web</code></td>
+      <td style="vertical-align: top;">HelloWorld sample using a
+servlet. The complete set of samples is
+available through the NetBeans
+IDE, each as a Kenai Project. Running this sample requires the NetBeans
+IDE and its Java Card technology-specific plugin.<code></code> </td>
+    </tr>
+    <tr>
+      <td> <code>lib</code> </td>
+      <td>Configuration and JAR files for the API, tools.<br>
+Third-party
+libraries. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>Uninstaller\uninstaller.jar</code><br>
+      </td>
+      <td style="vertical-align: top;">Deletes the development kit.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>legal</code></td>
+      <td style="vertical-align: top;">License files.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<a name="setup"></a>
+<h2>System Setup</h2>
+<p><span style="font-weight: bold;">Set System Variables and Paths</span><br>
+System variables and paths must be set before
+running the development kit. See the <span style="font-style: italic;">Development
+Kit User's Guide</span> more details on how to set them.
+Note that if you choose to set the variables
+and paths each time you run the development kit rather than
+permanently in your system, you can place the appropriate commands in a
+batch file.</p>
+<ul>
+  <li><b><code>JAVA_HOME</code></b>. You must set the <code>JAVA_HOME</code>
+system variable to the JDK root directory before running the
+development kit.
+    <ul>
+      <li> To temporarily set <code>JAVA_HOME</code> from the command
+line, enter the
+command: <code>set JAVA_HOME=c:\<i>path</i></code> before running the
+development kit. For example, if the Java platform software is stored
+in your <code>c:\jdk6</code> directory, enter <code>set </code><code></code><code>JAVA_HOM</code><code>E</code><code>=c:\jdk6</code>
+before running the development kit.</li>
+    </ul>
+    <span class="moz-txt-verticalline"><span
+ class="moz-txt-verticalline"><span class="moz-txt-verticalline"><span
+ class="moz-txt-verticalline"><span class="moz-txt-star"></span></span></span></span></span><br>
+    <b><code></code></b></li>
+  <li><b><code>JC_CONNECTED_HOME</code></b>.&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000">You must set the&nbsp; </font><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font><code><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;">JC_CONNECTED_HOME</span></font></code><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font><font
+ style="color: rgb(0, 0, 0);" color="#ff0000">
+system variable to the directory in which the development kit is
+installed before running the development kit.&nbsp;</font>&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font></li>
+  <ul>
+    <li> To temporarily set <code>JC_CONNECTED_HOME</code> from the
+command
+line, enter the
+command: <code>set JC_CONNECTED_HOME=c:\<i>path</i></code> before
+running the
+development kit. For example, if the Java Card development kit is
+stored
+in your <code>c:\</code><code>jcdk3.0.2_ConnectedEdition</code><code></code>
+directory, enter <code>set </code><code></code><code>JC_CONNECTED_HOM</code><code>E</code><code>=c:\</code><code>jcdk3.0.2_ConnectedEdition</code><code></code>
+before running the development kit.&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font></li>
+  </ul>
+</ul>
+<ul>
+  <li><span style="font-weight: bold;">Apache Ant. </span>You
+must set the <span style="font-family: monospace;">ANT_HOME</span>
+system variable to the Apache Ant directory
+before running the samples.<br>
+  </li>
+  <ul>
+    <li> To temporarily set <code>ANT_HOME</code> from the command
+line, enter the
+command: <code>set PATH=c:\<i>path</i></code> before running the
+development kit. For example, if Apache Ant is stored
+in your <code>c:\</code><code>ant\apache-ant1.6.5</code><code></code>
+directory, enter <code>set </code><code></code><code>ANT_HOM</code><code>E</code><code>=</code><code>c:\</code><code>ant\apache-ant1.6.5</code><code></code><code></code><code></code>
+before running the development kit. <br>
+    </li>
+  </ul>
+</ul>
+<ul>
+  <li><span style="font-weight: bold;">MinGW</span>. You must set the
+path to the location of <code>MinGW </code>before running the
+development kit. Note that the path has to
+point to the <code>\bin</code> subdirectory of the <code>MinGW </code>installation
+directory where the <code>gcc.exe</code> file is located.&nbsp;
+    <ul>
+      <li>To temporarily set the path to MinGW, enter the command <code>set
+PATH=c:\<i>MinGW_path</i>;%PATH%</code>. For example, if MinGW is
+installed in <code>c:\MinGW</code>, enter the command <code>set
+PATH=c:\MinGW\bin;%PATH%</code> before running the development kit.</li>
+    </ul>
+  </li>
+</ul>
+<p><span style="font-weight: bold;">Configure the Java Card Runtime
+Environment for the Samples<br>
+</span></p>
+<p>Note that the Java Card RE (<span style="font-family: monospace;">cjcre</span>)
+implementation is not optimized for memory or performance and,
+therefore, requires more memory than an actual optimized implementation
+on a card. To run the samples provided with the development kit, the
+Java Card RE must be configured with at least 1M of RAM, 4M of
+EEPROM, and 4K of COR (Clear-On_Reset). These parameters can be
+provided to the Java Card RE using the
+Java Card RE command line as follows:<br>
+</p>
+<p><tt>cjcre.exe -ramsize 1M -e2psize 4M -corsize 4K</tt><br>
+<span style="font-family: monospace;"></span><br>
+For details see the Java Card RE command reference in the<span
+ style="font-style: italic;"> Development Kit User's Guide for
+the Java Card Platform, Version 3.0.2, Connected Edition.</span><span
+ style="font-weight: bold;"><br>
+</span></p>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<h2><a name="uninstallingServlet"></a>Uninstalling the Development Kit</h2>
+<p>To remove this development kit, an automatic uninstaller tool is
+provided in the directory Uninstaller. You can also completely remove
+the development kit by deleting the <code style="font-style: italic;">JC_CONNECTED_HOME</code>
+directory along with all of its contents.</p>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<h2><a name="Known_Bugs"></a>Known Bugs</h2>
+This section describes known bugs and issues in the reference
+implementation.<br>
+<br>
+<table style="width: 100%;">
+  <thead><tr>
+    <th class="sun-verylightblue" scope="col"
+ style="text-align: left; vertical-align: top;">BUG ID</th>
+    <th class="sun-verylightblue" scope="col"
+ style="text-align: left; vertical-align: top;">DESCRIPTION</th>
+  </tr>
+  <tr>
+    <td style="text-align: left; vertical-align: top;">6906665 </td>
+    <td style="text-align: left; vertical-align: top;">Error msg is
+incorrect when instance with already existing name is being created. </td>
+  </tr>
+  <tr>
+    <td style="text-align: left; vertical-align: top;">6903372 </td>
+    <td style="text-align: left; vertical-align: top;">Package visible
+shareable interfaces should not be included into SIO Proxy classes </td>
+  </tr>
+  <tr>
+    <td style="text-align: left; vertical-align: top;">6902985 </td>
+    <td style="text-align: left; vertical-align: top;">In some cases
+incorrect 0x6700
+(wrong length) status is returned for T1 case 4E </td>
+  </tr>
+  </thead> <tfoot> </tfoot>
+</table>
+<br>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<a name="prod_info"></a>
+<h2>Where to Find Product Information and News </h2>
+<p>The public Java Card technology web site is <a
+ href="http://java.sun.com/javacard">http://java.sun.com/javacard</a>.
+The developer collaboration web site also contains information about
+Java Card technology at <a
+ href="http://kenai.com/projects/javacard/pages/HOME">http://kenai.com/projects/javacard/pages/HOME</a>.<br>
+</p>
+<p>If you are a Licensee, visit the product web site at <a
+ href="https://java-partner.sun.com/portal/service/ent/platform/javacardgroup"
+ target="top">https://java-partner.sun.com/portal/service/ent/platform/javacardgroup</a>
+This site has the most up-to-date information on the following: </p>
+<ul>
+  <li>Product news and reviews </li>
+  <li>Release notes and product documentation </li>
+  <li>Technical support contact information </li>
+</ul>
+<p class="nav-link">[<a href="#top">Top</a>] </p>
+<a name="prod_feedback"></a>
+<h2>Sending Feedback</h2>
+<p>We greatly appreciate your feedback on
+the reference Implementation. Please send all feedback to <a
+ href="mailto:jc3-ri-feedback@sun.com">jc3-ri-feedback@sun.com</a>.</p>
+<p class="nav-link">[<a href="#top">Top</a>]</p>
+<hr class="pHr">
+<p class="copyright"><a href="COPYRIGHT-docs.html">Copyright</a>
+&copy; 2009 Sun Microsystems, Inc. All rights reserved.<br>
+</p>
+<p class="copyright">Sun Microsystems, Inc. has intellectual property
+rights relating to
+technology embodied in the product that is described in this
+document. In particular, and without limitation, these intellectual
+property rights may include one or more of the U.S. patents listed at
+<a href="http://www.sun.com/patents">http://www.sun.com/patents</a>
+and one or more additional patents or pending patent applications in
+the U.S. and in other countries. <br>
+<br>
+U.S. Government Rights - Commercial Software. Government users are
+subject to the Sun Microsystems, Inc. standard license agreement and
+applicable provisions of the FAR and its supplements. <br>
+</p>
+<p style="margin-bottom: 0in;"><small>Use is subject to license terms.
+Sun, Sun Microsystems, the Sun logo, Java, Solaris, Javadoc, Java Card
+and NetBeans are trademarks or registered trademarks of Sun
+Microsystems, Inc. or its subsidiaries, in the U.S. and other
+countries. <br>
+<br>
+UNIX is a registered trademark in the U.S. and other countries,
+exclusively licensed through X/Open Company, Ltd. </small><br>
+<br>
+</p>
+</body>
+</html>

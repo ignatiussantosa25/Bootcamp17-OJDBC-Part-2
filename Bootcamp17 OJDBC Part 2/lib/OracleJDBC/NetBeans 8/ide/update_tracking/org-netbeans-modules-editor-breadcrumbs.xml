@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.breadcrumbs/0">
+    <module_version install_time="1475191165722" last="true" origin="installer" specification_version="1.17.1">
+        <file crc="1320881006" name="config/Modules/org-netbeans-modules-editor-breadcrumbs.xml"/>
+        <file crc="3900336867" name="modules/locale/org-netbeans-modules-editor-breadcrumbs_ja.jar"/>
+        <file crc="786148347" name="modules/locale/org-netbeans-modules-editor-breadcrumbs_pt_BR.jar"/>
+        <file crc="390651844" name="modules/locale/org-netbeans-modules-editor-breadcrumbs_ru.jar"/>
+        <file crc="2013020842" name="modules/locale/org-netbeans-modules-editor-breadcrumbs_zh_CN.jar"/>
+        <file crc="4179372603" name="modules/org-netbeans-modules-editor-breadcrumbs.jar"/>
+    </module_version>
+</module>

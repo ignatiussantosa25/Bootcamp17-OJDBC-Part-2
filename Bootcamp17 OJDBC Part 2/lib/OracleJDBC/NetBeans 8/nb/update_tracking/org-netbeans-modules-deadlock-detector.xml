@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.deadlock.detector">
+    <module_version install_time="1475191958945" last="true" origin="installer" specification_version="1.6.1">
+        <file crc="3388246380" name="config/Modules/org-netbeans-modules-deadlock-detector.xml"/>
+        <file crc="2976189858" name="modules/locale/org-netbeans-modules-deadlock-detector_ja.jar"/>
+        <file crc="2842657900" name="modules/locale/org-netbeans-modules-deadlock-detector_pt_BR.jar"/>
+        <file crc="28943684" name="modules/locale/org-netbeans-modules-deadlock-detector_ru.jar"/>
+        <file crc="1617995237" name="modules/locale/org-netbeans-modules-deadlock-detector_zh_CN.jar"/>
+        <file crc="996676710" name="modules/org-netbeans-modules-deadlock-detector.jar"/>
+    </module_version>
+</module>

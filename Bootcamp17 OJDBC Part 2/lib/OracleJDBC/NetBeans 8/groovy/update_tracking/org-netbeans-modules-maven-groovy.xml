@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.groovy">
+    <module_version install_time="1475191549871" last="true" origin="installer" specification_version="1.14.1">
+        <file crc="341544524" name="config/Modules/org-netbeans-modules-maven-groovy.xml"/>
+        <file crc="3966033909" name="modules/locale/org-netbeans-modules-maven-groovy_ja.jar"/>
+        <file crc="1590513573" name="modules/locale/org-netbeans-modules-maven-groovy_pt_BR.jar"/>
+        <file crc="2664577451" name="modules/locale/org-netbeans-modules-maven-groovy_ru.jar"/>
+        <file crc="544945199" name="modules/locale/org-netbeans-modules-maven-groovy_zh_CN.jar"/>
+        <file crc="1339890722" name="modules/org-netbeans-modules-maven-groovy.jar"/>
+    </module_version>
+</module>

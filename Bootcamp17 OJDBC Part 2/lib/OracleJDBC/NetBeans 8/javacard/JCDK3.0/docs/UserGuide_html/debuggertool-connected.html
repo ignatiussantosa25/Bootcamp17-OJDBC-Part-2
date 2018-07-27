@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Debugging Applications
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="apdutool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="part2.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565190_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">11</SPAN><A NAME="50565190_16869"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565190_pgfId-1003475"></A><A NAME="50565190_Debugging Applications"></A>Debugging Applications
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1005042"></A><A NAME="50565190_marker-1007138"></A>This chapter describes the Debugger tool (debugproxy) for Java Card 3 platform application developers and how to use it as a separate tool with any Java technology-enabled IDE. Using the Debugger, developers can debug their applications in any Java technology-enabled IDE.
+</P><H2 CLASS="Head1"><A NAME="50565190_pgfId-1005548"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>Debugger Architecture</H2>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1005549"></A>The following diagram illustrates the <A NAME="50565190_marker-1007139"></A>debugger architecture for <KBD CLASS="Command">cjcre</KBD>. 
+</P>
+<P CLASS="FigureCaption-Wide"><A NAME="50565190_pgfId-1008611"></A>FIGURE 11-1 	Debugger Architecture
+</P>
+<BR><A NAME="50565190_pgfId-1015172"></A>
+<P CLASS="FigureBox-Wide"><A NAME="50565190_pgfId-1008615"></A>
+<P><IMG SRC="figures/debuggertool-connected-4.jpg" TITLE="Debugger Architecture" ALT="Debugger Architecture" ALIGN="BASELINE">
+</P><A NAME="50565190_pgfId-1015168"></A><A NAME="50565190_pgfId-1015171"></A>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1006236"></A>The <A NAME="50565190_marker-1007141"></A>Java Debug Wire Protocol (<A NAME="50565190_marker-1007142"></A>JDWP) used by the IDE is heavy for a small VM such as that provided by <KBD CLASS="Command">cjcre</KBD>. Consequently, <KBD CLASS="Command">cjcre</KBD> uses <A NAME="50565190_marker-1007140"></A>KVM Debug Wire Protocol (KDWP) to provide a minimum set of debugging capabilities. The Debugger tool, <KBD CLASS="Command">debugproxy</KBD>, translates and sends the translated JDWP commands from the IDE to <KBD CLASS="Command">cjcre</KBD> in KDWP format. Responses from <KBD CLASS="Command">cjcre</KBD> are converted into JDWP format by <KBD CLASS="Command">debugproxy</KBD> before it sends them to the IDE.
+</P>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1006371"></A>The communication between <KBD CLASS="Command">cjcre</KBD>, <KBD CLASS="Command">debugproxy</KBD>, and the IDE happens through sockets. Socket-based communication enables developers to debug <KBD CLASS="Command">cjcre</KBD> from remote hosts. For example, <KBD CLASS="Command">cjcre</KBD> could run on <I CLASS="Variable">machine1</I>, <KBD CLASS="Command">debugproxy</KBD> could run on <I CLASS="Variable">machine2</I>, and the IDE could run on <I CLASS="Variable">machine3</I>. Developers can also run <KBD CLASS="Command">cjcre</KBD>, <KBD CLASS="Command">debugproxy</KBD>, and the IDE on same host.
+</P>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1005973"></A>Ports used by IDE communication to and from <KBD CLASS="Command">debugproxy</KBD>, and <KBD CLASS="Command">debugproxy</KBD> communication to and from <KBD CLASS="Command">cjcre</KBD>, are distinguished by the names “listen port” and “remote port” respectively.
+</P><H2 CLASS="Head1"><A NAME="50565190_pgfId-1005949"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>Running the Debugger From the Command Line</H2>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1007855"></A>Use the Debugger tool’s functionality by starting <KBD CLASS="Command">debugproxy</KBD> (<KBD CLASS="Filename">debugproxy.bat</KBD>), then attaching it to a Java technology-enabled IDE, and then starting <KBD CLASS="Command">cjcre</KBD> with the <KBD CLASS="Command">-debug</KBD> option. The file <KBD CLASS="Command">debugproxy.bat</KBD> is located in the directory <I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Command">&#92;bin</KBD>. <A NAME="50565190_marker-1007950"></A>Various command line options are available to configure the Debugger and <KBD CLASS="Command">cjcre</KBD>. See <A HREF="ri-connected.html#50565186_89236" CLASS="XRef">cjcre.exe Command Line Options</A> for additional details on the <KBD CLASS="Command">cjcre</KBD> commands.
+</P>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008308"></A>The command line interface for the Debugger has the following syntax:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565190_pgfId-1008180"></A>debugger.bat <KBD CLASS="Command">subcommand</KBD> [<KBD CLASS="Command">option</KBD>]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008182"></A><A NAME="50565190_subcommands"></A>The following is a list of the subcommands for the Debugger:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565190_pgfId-1008183"></A><KBD CLASS="Command">debug</KBD> - Debugs the specified file
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565190_pgfId-1008184"></A><KBD CLASS="Command">copyright</KBD> - Displays detailed copyright notice
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565190_pgfId-1008185"></A><KBD CLASS="Command">help</KBD> - Displays information about the Debugger command
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565190_pgfId-1008250"></A><KBD CLASS="Command">debug</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008186"></A>Use the <KBD CLASS="Command">debug</KBD> subcommand to debug a file at a specified location.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565190_pgfId-1008191"> </A> TABLE 11-1 	 <KBD CLASS="Command"> debug </KBD> <A NAME="50565190_48369"> </A>  Subcommand Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565190_pgfId-1008195"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565190_pgfId-1008197"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008199"></A><KBD CLASS="Command">-c</KBD> <I CLASS="Variable">filelocation</I>
+</P>
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008200"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008201"></A><KBD CLASS="Command">--classpath</KBD> <I CLASS="Variable">filelocation</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008203"></A>Specifies the path of the class files to be debugged.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008205"></A><KBD CLASS="Command">-</KBD>C <I CLASS="Variable">command-options-file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008206"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008207"></A><KBD CLASS="Command">--</KBD>commandoptionsfile <I CLASS="Variable">command-options-file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565190_pgfId-1008209"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H3 CLASS="Head2"><A NAME="50565190_pgfId-1008267"></A><KBD CLASS="Command">copyright</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008268"></A>The <KBD CLASS="Command">copyright</KBD> subcommand displays the detailed copyright notice. There are no options associated with this subcommand.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1008269"></A><KBD CLASS="Command">help</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008270"></A>The <KBD CLASS="Command">help</KBD> subcommand displays information about the Debugger command. Options are used with the <KBD CLASS="Command">help</KBD> subcommand to specify the information that is displayed about each subcommand. For example, to display detailed help about the <KBD CLASS="Command">debug</KBD> subcommand, type:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565190_pgfId-1008279"></A>debugproxy.bat help debug
+</PRE><H2 CLASS="Head1"><A NAME="50565190_pgfId-1006410"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565190_15456"></A>Debugging a Java Card 3 Platform Application</H2>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008426"></A>This section describes how to debug an application using the development kit command line tools.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1006411"></A>Compile the Source Code</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008456"></A><A NAME="50565190_marker-1008455"></A>To fully utilize the capabilities of the Debugger, the application’s class files must first be compiled with debug information. This is done by specifying the <KBD CLASS="Command">-g</KBD> flag for <KBD CLASS="Command">javac</KBD> when compiling the source files. These class files must be available to <KBD CLASS="Command">debugproxy</KBD> so the line number information can be retrieved while stepping through the code. All source files must be compiled using the <KBD CLASS="Command">-g</KBD> option to generate the debug information in the class files. If the <KBD CLASS="Command">-g</KBD> option is not used, it is not possible to set breakpoints in the source code.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1008457"></A>Start the Debugger</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008458"></A>The Debugger needs to know the location of class files being debugged. The <KBD CLASS="Command">Debugger </KBD>can be run from the command line using the following syntax, for example:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565190_pgfId-1008385"></A><KBD CLASS="Command">debugproxy.bat debug -c myapp.war</KBD>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1007921"></A>When starting <KBD CLASS="Command">debugproxy</KBD>, you can include the <KBD CLASS="Command">-c</KBD> (or <KBD CLASS="Command">--classpath</KBD>) option in the command line to <KBD CLASS="Command">s</KBD>pecify the path of the class files to be debugged. In this example, <KBD CLASS="Filename">myapp.war</KBD> is the location of the class files to be debugged.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1007916"></A>Attach the Debugger to the IDE</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1007610"></A>This procedure is performed from within the IDE and so the details depend on the IDE used. If your IDE requires the Debugger to be attached, refer to the documentation provided with the IDE.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1005806"></A>Run <KBD CLASS="Command">cjcre.exe</KBD> With <KBD CLASS="Command">-debug</KBD> Option</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1006678"></A>This <KBD CLASS="Command">-debug</KBD> option of <KBD CLASS="Command">cjcre</KBD> enables debugging functionality in <KBD CLASS="Command">cjcre</KBD>. Without this option, debugging functionality is disabled in <KBD CLASS="Command">cjcre</KBD>. See <A HREF="ri-connected.html#50565186_89236" CLASS="XRef">cjcre.exe Command Line Options</A> for additional details on the <KBD CLASS="Command">cjcre</KBD> commands.
+</P><H3 CLASS="Head2"><A NAME="50565190_pgfId-1006688"></A>Set Break Points</H3>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1007039"></A>Break points must be set in the application source code. The exact procedure depends on the IDE used. The following steps are typical for most IDEs. Refer to the documentation provided with your IDE for specific instructions.
+</P>
+<P CLASS="Step1"><A NAME="50565190_pgfId-1006713"></A>	1.	Display the source code of the application in the IDE.
+</P>
+<P CLASS="Step1-"><A NAME="50565190_pgfId-1006714"></A>	2.	With the source code displayed in the IDE, open any file and set break points where required. 
+</P>
+<P CLASS="StepPara1"><A NAME="50565190_pgfId-1006757"></A>Break points can be set at any time, even before attaching the Debugger.
+</P>
+<P CLASS="Step1-"><A NAME="50565190_pgfId-1006711"></A>	3.	Step through the code by executing the application from within the IDE.
+</P>
+<P CLASS="StepPara1"><A NAME="50565190_pgfId-1006766"></A>When a break point is hit, the IDE stops execution and highlights the current line. Depending on the IDE being used, there are various options available to developers for stepping over or stepping into the code.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565190_pgfId-1006813"></A>Various IDE windows are available to monitor items such as local variables and threads. Refer to the documentation provided by the IDE for additional information about the windows used in monitoring debugger and application execution.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008023"></A><KBD CLASS="Command"></KBD>&nbsp;
+</P>
+<P CLASS="Paragraph"><A NAME="50565190_pgfId-1008176"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="apdutool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="part2.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

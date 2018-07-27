@@ -1,0 +1,733 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Backwards Compatibility for Classic Applets
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="cardinstaller-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="apdutool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565149_pgfId-1001790"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">9</SPAN><A NAME="50565149_72569"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565149_pgfId-1001793"></A><A NAME="50565149_Backwards Compatibility for Classic Applets"></A>Backwards Compatibility for Classic Applets
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1001717"></A>This chapter describes how to generate application modules for classic applets by using the Normalizer tool (Normalizer). These application modules contain classic CAP files and provide backwards compatibility for the Java Card 3 platform by enabling classic applets to run on Connected Edition and Classic Edition cards.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003226"></A>This chapter contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003189"></A><A HREF="normalizer-connected.html#50565149_98548" CLASS="XRef">Generating Application Modules From Classic Applets</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003295"></A><A HREF="normalizer-connected.html#50565149_62050" CLASS="XRef">Converting Class Files to CAP Files</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565149_pgfId-1001774"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565149_marker-1002580"></A><A NAME="50565149_98548"></A>Generating Application Modules From Classic Applets</H2>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1004241"></A>Developers use the Normalizer to generate application modules for applets created for previous version of the Java Card platform. The Normalizer can generate application module from existing modules when there is no source is available. These application modules contain CAP files and are downloadable on both the Java Card 3 platform Classic Edition and Connected Edition cards.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1004242"></A>The output from the tool is a classic module that contains the class files, the CAP components of the CAP file, SIO proxies for classic SIOs (if used), and associated classic application descriptors. The input to the tool must be classic CAP files and associated EXP files. If the input files are not classic CAP files, the normalization will fail. See <A HREF="cap-manifest-connected.html#50565145_83529" CLASS="XRef">Appendix A</A> for a description of the application module and library formats supported by the Java Card 3 platform card manager. <A HREF="normalizer-connected.html#50565149_46706" CLASS="XRef">FIGURE 9-1</A> illustrates the process of generating application modules from classic applets and deploying them on both the Java Card 3 platform Classic Edition and Connected Edition cards.
+</P>
+<P CLASS="FigureCaption-Wide"><A NAME="50565149_pgfId-1004887"></A>FIGURE 9-1 	<A NAME="50565149_46706"></A>Generating Application Modules From Classic Applets
+</P>
+<BR><A NAME="50565149_pgfId-1011526"></A>
+<P CLASS="FigureBox-Wide"><A NAME="50565149_pgfId-1004896"></A>
+<P><IMG SRC="figures/normalizer-connected-4.jpg" TITLE="diagram of generating application modules" ALT="diagram of generating application modules" ALIGN="BASELINE">
+</P><A NAME="50565149_pgfId-1011522"></A><A NAME="50565149_pgfId-1011525"></A><H3 CLASS="Head2"><A NAME="50565149_pgfId-1004890"></A><A NAME="50565149_16532"></A>Running the Normalizer From the Command Line</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002458"></A>The command line interface for the Normalizer has the following syntax:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1002459"></A>normalizer.bat <I CLASS="Variable">subcommand</I> [options]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002460"></A><A NAME="50565149_subcommands"></A>The following is a list of the subcommands for the Normalizer:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1002461"></A><KBD CLASS="Command">normalize</KBD> - Creates the package class files
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1002462"></A><KBD CLASS="Command">copyright</KBD> - Displays detailed copyright notice
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1002463"></A><KBD CLASS="Command">help</KBD> - Displays information about the Normalizer command
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H4 CLASS="Head3"><A NAME="50565149_pgfId-1002464"></A><KBD CLASS="Command">normalize</KBD> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002465"></A>Use the <A NAME="50565149_options"></A><KBD CLASS="Command">normalize</KBD> subcommand and its options to create the package class files. Options are used with the <KBD CLASS="Command">normalize</KBD> subcommand to specify input files, export paths, export file names, and output directories.
+</P><H5 CLASS="Head4"><A NAME="50565149_pgfId-1002466"></A><KBD CLASS="Command">normalize</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002470"></A><A HREF="normalizer-connected.html#50565149_48369" CLASS="XRef">TABLE 9-1</A> identifies the <KBD CLASS="Command">normalize</KBD> subcommand options and provides their descriptions.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565149_pgfId-1002474"> </A> TABLE 9-1 	 <KBD CLASS="Command"> normalize </KBD> <A NAME="50565149_48369"> </A>  Subcommand Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565149_pgfId-1002478"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565149_pgfId-1002480"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004531"></A><KBD CLASS="Command">-</KBD>C <I CLASS="Variable">command-options-file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004532"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004533"></A><KBD CLASS="Command">--</KBD>commandoptionsfile <I CLASS="Variable">command-options-file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004535"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002482"></A><KBD CLASS="Command">-i </KBD><I CLASS="Variable">file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002483"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002484"></A><KBD CLASS="Command">--in </KBD><I CLASS="Variable">file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002486"></A>Specifies the input CAP file name.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004913"></A><KBD CLASS="Filename">-k</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004914"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004909"></A><KBD CLASS="Filename">--keepall</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004923"></A> Specifies the directory to keep class files, proxy classes, and CAP components. The output format is as follows:
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004924"></A>&lt;<KBD CLASS="Filename">directory</KBD>&gt;
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004925"></A>     / &lt;<KBD CLASS="Filename">application classes</KBD>&gt;
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004926"></A>          / <KBD CLASS="Filename">proxy</KBD>/ <KBD CLASS="Filename">[proxy classes]</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004911"></A>          / <KBD CLASS="Filename">javacard</KBD>/ <KBD CLASS="Filename">*.cap</KBD>
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002488"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">path</I>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002489"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002490"></A><KBD CLASS="Command">--exportpath </KBD><I CLASS="Variable">path</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002492"></A>Specifies the path of the export files used by the tool.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004460"></A><KBD CLASS="Command">-f </KBD><I CLASS="Variable">file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004473"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004475"></A><KBD CLASS="Command">--exportfile</KBD> <I CLASS="Variable">file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004462"></A>Specifies the name of the export file.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002500"></A><KBD CLASS="Command">-o </KBD><I CLASS="Variable">directory</I>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002501"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002502"></A><KBD CLASS="Command">--out </KBD><I CLASS="Variable">directory</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1002504"></A>(Optional) This the default setting and does not have to be explicitly set. Specifies the output directory that contains the export file.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565149_pgfId-1002505"></A><KBD CLASS="Command">normalize</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002506"></A>The following is the format of the <KBD CLASS="Command">normalize</KBD> subcommand. Options in the subcommand are used in the sequence that are presented in <A HREF="normalizer-connected.html#50565149_48369" CLASS="XRef">TABLE 9-1</A>. In this format example, an input file and an output directory are specified as options:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1002510"></A>normalizer.bat normalize  --in <I CLASS="Variable">file</I> <KBD CLASS="Command">--exportpath</KBD> <I CLASS="Variable">path</I> --out <I CLASS="Variable">directory</I>
+</PRE><H5 CLASS="Head4"><A NAME="50565149_pgfId-1002511"></A><KBD CLASS="Command">normalize</KBD> Subcommand Example</H5>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002512"></A>The following is an example of the <KBD CLASS="Command">normalize</KBD> subcommand in which an input file (myCAP.cap) is specified as an option:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1002513"></A>normalizer.bat normalize -i myCAP.cap
+</PRE><H4 CLASS="Head3"><A NAME="50565149_pgfId-1002514"></A><KBD CLASS="Command">copyright</KBD> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002515"></A>The <KBD CLASS="Command">copyright</KBD> subcommand displays the detailed copyright notice. There are no options associated with this subcommand.
+</P><H4 CLASS="Head3"><A NAME="50565149_pgfId-1002516"></A><KBD CLASS="Command">help</KBD> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002517"></A>The <KBD CLASS="Command">help</KBD> subcommand displays information about the Normalizer command. Options are used with the <KBD CLASS="Command">help</KBD> subcommand to specify the information that is displayed about each sub-command.
+</P><H5 CLASS="Head4"><A NAME="50565149_pgfId-1002518"></A>Normalizer Summary Help</H5>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002519"></A>The following command displays summary help about the Normalizer:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1002520"></A>normalizer.bat help
+</PRE><H5 CLASS="Head4"><A NAME="50565149_pgfId-1002521"></A><KBD CLASS="Command">normalize</KBD> Subcommand Help</H5>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1002522"></A>The following command displays help about the <KBD CLASS="Command">normalize</KBD> subcommand:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1002523"></A>normalizer.bat help normalize
+</PRE><H2 CLASS="Head1"><A NAME="50565149_pgfId-1004934"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565149_62050"></A>Converting Class Files to CAP Files</H2>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1004935"></A>This section describes using the Converter tool (Converter) provided for the Connected Edition as a stand-alone tool. When run as a stand-alone tool, the Converter can take class files from <KBD CLASS="Filename">javac</KBD> and convert them into CAP files that can be loaded by the Connected Edition platform.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565149_pgfId-1004295"></A>If you are developing a classic applet application you want to deploy using the classic development kit, create your CAP file as described in this chapter. Then you can take your CAP file to the classic development kit to deploy it on the classic Java Card VM.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003435"></A><A NAME="50565149_marker-1003434"></A>The Converter is part of the Developer Kit tool chain and is also used by the Normalizer to create application modules for classic applets. The Normalizer can generate application module from existing modules when there is no source is available. See <A HREF="normalizer-connected.html#50565149_72569" CLASS="XRef">Chapter 9</A> for a description of using the Normalizer to create application modules from classic applets.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003442"></A>The CAP file is a JAR-format file which contains the executable binary representation of the classes in a Java package. The CAP file also contains a manifest file that provides human-readable information regarding the package that the CAP file represents. For more information on the CAP file and its format, see Chapter 6 of the <EM CLASS="Emphasis">Virtual Machine Specification, Java Card Platform, Version 3.0.1, Connected Edition</EM>.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003449"></A>When running the Converter as a stand-alone tool, developers can use the command line options described in <A HREF="normalizer-connected.html#50565149_28257" CLASS="XRef">TABLE 9-2</A> to:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003453"></A>Specify the root directory where the Converter looks for classes.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003454"></A>Specify the root directories where the Converter looks for export files.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003455"></A>Use the token mapping from a pre-defined export file of the package being converted. The Converter will look for the export file in the export path.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003456"></A>Set the applet AID and the class that defines the install method for the applet.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003457"></A>Specify the root directories where the Converter outputs files.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003458"></A>Specify that the Converter output one or more of the following:
+</LI>
+<P CLASS="Linebreak">
+</P>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565149_pgfId-1003459"></A>CAP file
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565149_pgfId-1003460"></A>JCA file
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565149_pgfId-1003461"></A>EXP export file
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003462"></A>Identify that the package is used as a mask. 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565149_pgfId-1003463"></A>When a package is used as a mask, restrictions on native methods are relaxed.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003464"></A>Specify support for the 32-bit integer type.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003465"></A>Enable generation of debugging information.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003466"></A>Turn off verification (the default of input and output files. Verification is default.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003467"></A>Conversion Process Sequence</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1004633"></A>When the Converter runs, it performs the conversion process in the following sequence:
+</P>
+<P CLASS="Step1"><A NAME="50565149_pgfId-1003468"></A>	1.	<STRONG CLASS="Lead-In2para">Loads the package</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004575"></A>If the <KBD CLASS="Command">exportmap</KBD> option is set, the converter loads the package from the export path (see <A HREF="normalizer-connected.html#50565149_45924" CLASS="XRef">Specifying an Export Map</A>). Loads the class files of the Java package and creates a data structure to represent the package.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003472"></A>	2.	<STRONG CLASS="Lead-In2para">Subset checking</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004577"></A>Checks for unsupported Java features in class files.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003473"></A>	3.	<STRONG CLASS="Lead-In2para">Conversion</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004579"></A>Checks for consistency between the applet AIDs and the imported package AIDs.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003474"></A>	4.	<STRONG CLASS="Lead-In2para">Reference Checking</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004581"></A>Checks that all references are valid, internal referenced items are defined in the package, import items are declared in the export files (see <A HREF="normalizer-connected.html#50565149_36413" CLASS="XRef">Loading Export Files</A>).
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003478"></A>	5.	The Converter creates the <KBD CLASS="Command">JcImportTokenTable</KBD> to store tokens for import items (class, methods, and fields). 
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004582"></A>If the Converter only generates an export file, it does not check private APIs and byte code. Also included is a second round of subset checking that operations do not exceed the limitations set by the <I CLASS="Title">Virtual Machine Specification, Java Card Platform, Version 3.0.1, Connected Edition</I>.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003479"></A>	6.	<STRONG CLASS="Lead-In2para">Optimization</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004583"></A>Optimizes the bytecode.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003480"></A>	7.	<STRONG CLASS="Lead-In2para">Generates output</STRONG>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004585"></A>Builds and outputs the EXP export file and the JCA file, checks the package version in the export file of the current package against the package version specified in the command line. If the <KBD CLASS="Command">-exportmap</KBD> option is used in the command line, the export file specified in the command line must represent the same version as that of the package. The converter does not support upgrading the export file version.
+</P>
+<P CLASS="Step1-"><A NAME="50565149_pgfId-1003481"></A>	8.	Before writing the export and JCA files, the Converter determines the output file path. 
+</P>
+<P CLASS="StepPara1"><A NAME="50565149_pgfId-1004586"></A>The Converter assumes the output files are written into the director: <I CLASS="Variable">root_dir</I><KBD CLASS="Filename">&#92;</KBD><I CLASS="Variable">package_dir</I><KBD CLASS="Filename">&#92;javacard. </KBD>By default the <I CLASS="Variable">root_dir</I> is the classroot directory specified by <KBD CLASS="Command">-classdir</KBD> option. Users can specify a different <I CLASS="Variable">root_dir</I> by using <KBD CLASS="Command">-d</KBD> option.
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003483"></A><A NAME="50565149_45924"></A>Specifying an Export Map</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003485"></A><A NAME="50565149_marker-1003484"></A>You can request that the Converter convert a package using the tokens in a pre-defined export file of the package being converted. Use the <KBD CLASS="Filename">-exportmap</KBD> command option to do this. The Converter loads the pre-defined export file in the same way that it loads other export files.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003486"></A>There are two distinct cases when using the <KBD CLASS="Filename">-exportmap</KBD> flag is desired: 
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003487"></A>When the minor version of the package is the same as the version given in the export file (this case is called package reimplementation).
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565149_pgfId-1003488"></A>During package reimplementation, the API of the package (exportable classes, interfaces, fields and methods) must remain exactly the same. 
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003489"></A>When the minor version increases (package upgrading). 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565149_pgfId-1003490"></A>During a package upgrade, changes that do not break binary compatibility with preexisting packages are allowed (See “Binary Compatibility” in Section 4.4 of the <EM CLASS="Emphasis">Virtual Machine Specification, Java Card Platform, Version 3.0.1, Connected Edition</EM>).
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003495"></A><A NAME="50565149_marker-1003494"></A>For example, you must use the <KBD CLASS="Filename">-exportmap</KBD> option to preserve binary compatibility with already existing packages that use the package when reimplementing a method (package reimplementation) in an existing package or upgrading an existing package by adding new API elements (new exportable classes or new public or protected methods or fields to already existing exportable classes).
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003497"></A><A NAME="50565149_36413"></A>Loading Export Files</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003499"></A><A NAME="50565149_marker-1003498"></A>A Java Card technology-based export file (export file) contains the public API linking information of classes in an entire package. The Unicode string names of classes, methods and fields are assigned unique numeric tokens.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003500"></A>Export files are not used directly on a device that implements a Java Card virtual machine. However, the information in an export file is critical to the operation of the virtual machine on a device. An export file is produced by the Converter when a package is converted. This package's export file can be used later to convert another package that imports classes from the first package. Information in the export file is included in the CAP file of the second package, then is used on the device to link the contents of the second package to items imported from the first package.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003501"></A>During the conversion, when the code in the currently-converted package references a different package, the Converter loads the export file of the different package. An applet package is linked with the <KBD CLASS="Filename">java.lang</KBD>, the <KBD CLASS="Filename">javacard.framework</KBD> and <KBD CLASS="Filename">javacard.security</KBD> packages via their export files.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003502"></A>You can use the <KBD CLASS="Filename">-exportpath</KBD> command option to specify the locations of export files. The path consists of a list of root directories in which the Converter looks for export files. Export files must be named as the last portion of the package name followed by the extension <KBD CLASS="Filename">.exp</KBD>. Export files are located in a subdirectory called <KBD CLASS="Filename">javacard</KBD>, following the Java Card platform’s directory naming convention.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003503"></A>For example, to load the export file of the package <KBD CLASS="Filename">java.lang</KBD>, if you specify 
+<BR><KBD CLASS="Filename">-exportpath</KBD> as <KBD CLASS="Filename">c:&#92;myexportfiles</KBD>, the Converter searches the directory 
+<BR><KBD CLASS="Filename">JCDK3.0.2_ConnectedEdition&#92;api_export_files&#92;java&#92;lang&#92;javacard</KBD> for the export file <KBD CLASS="Filename">lang.exp</KBD>.
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003505"></A>Creating a <KBD CLASS="Filename">debug.msk</KBD> Output File<A NAME="50565149_marker-1003504"></A></H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003506"></A>If you select the <KBD CLASS="Filename">-mask</KBD> and <KBD CLASS="Filename">-debug</KBD> options, the file <KBD CLASS="Filename">debug.msk</KBD> is created in the same directory as the other output files. (Refer to <A HREF="normalizer-connected.html#50565149_71926" CLASS="XRef">converter Command Options</A>.)
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003511"></A><A NAME="50565149_31454"></A>Verification of Input and Output Files</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003513"></A><A NAME="50565149_marker-1003512"></A>By default, the converter invokes the off-card verifier for every input EXP file and on the output CAP and EXP files.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003514"></A>If any of the input EXP files do not pass verification, then no output files are created.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565149_pgfId-1003515"></A>If the output CAP or EXP files do not pass verification, then the output EXP and CAP files are deleted.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003517"></A><A NAME="50565149_marker-1003516"></A>If you want to bypass verification of your input and output files, use the <KBD CLASS="Filename">-noverify</KBD> command line option. Note that if the converter finds any errors, output files will not be produced.
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003519"></A><A NAME="50565149_40554"></A>File and Directory Naming Conventions</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003520"></A>This section describes the naming conventions used for the input and output files of the Converter, and gives the correct location for these files. With some exceptions, the Converter follows the Java programming language naming conventions for default directories for input and output files. These naming conventions are also in accordance with the definitions in Section 4.1 of the <EM CLASS="Emphasis">Virtual Machine Specification, Java Card Platform, Version 3.0.1, Connected Edition</EM>.
+</P><H4 CLASS="Head3"><A NAME="50565149_pgfId-1003524"></A>Input File Naming Conventions</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003526"></A><A NAME="50565149_marker-1003525"></A>The files input to the Converter are Java class files named with the <KBD CLASS="Filename">.class</KBD> suffix. Generally, there are several class files making up a package. All class files for a package must be located in the same directory under the root directory, following the Java programming language naming conventions. The root directory can be set from the command line using the <KBD CLASS="Filename">-classdir</KBD> option. If this option is not specified, the root directory defaults to be the directory from which the user invoked the Converter.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003527"></A>For example, the following command line would be used to convert the package <KBD CLASS="Filename">java.lang</KBD>, use the <KBD CLASS="Filename">-classdir</KBD> flag to specify the root directory as <KBD CLASS="Filename">C:&#92;mywrk</KBD>:
+</P>
+<PRE CLASS="Codeline1"><A NAME="50565149_pgfId-1003528"></A>converter -classdir C:&#92;mywrk java.lang package_AID package_version
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003529"></A>In the example, <I CLASS="Variable">package_AID</I> is the application ID of the package and <I CLASS="Variable">package_version</I> is the user-defined version of the package. The Converter will look for all class files in the <KBD CLASS="Filename">java.lang</KBD> package in the directory <KBD CLASS="Filename">C:&#92;mywrk&#92;java&#92;lang</KBD>.
+</P><H4 CLASS="Head3"><A NAME="50565149_pgfId-1003530"></A>Output File Naming Conventions</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003532"></A><A NAME="50565149_marker-1003531"></A>The name of the CAP file, export (EXP) file, and the Java Card Assembly (JCA) file must be the last portion of the package specification followed by the extensions <KBD CLASS="Filename">.cap</KBD>, <KBD CLASS="Filename">.exp</KBD>, and <KBD CLASS="Filename">.jca</KBD>, respectively. By default, the files output from the Converter are written to a directory called <KBD CLASS="Filename">javacard</KBD>, a subdirectory of the input package's directory. In the previous example, the output files are written by default to the directory <KBD CLASS="Filename">C:&#92;mywrk&#92;java&#92;lang&#92;javacard</KBD>. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003533"></A>The <KBD CLASS="Filename">-d</KBD> flag is used to specify a different root directory for output.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003534"></A>In the previous example, using the <KBD CLASS="Filename">-d</KBD> flag to specify the root directory for output to be <KBD CLASS="Filename">C:&#92;myoutput</KBD> would cause, the Converter to write the output files to the directory <KBD CLASS="Filename">C:&#92;myoutput&#92;java&#92;lang&#92;javacard</KBD>.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003536"></A><A NAME="50565149_marker-1003535"></A>When generating a CAP file, the Converter creates a JCA file in the output directory as an intermediate result. If you do not want a JCA file to be produced, do not use the option <KBD CLASS="Filename">-out</KBD> <KBD CLASS="Filename">JCA.</KBD>The Converter deletes the JCA file at the end of the conversion when the option <KBD CLASS="Filename">-out</KBD> <KBD CLASS="Filename">JCA</KBD> is not used.
+</P><H3 CLASS="Head2"><A NAME="50565149_pgfId-1003538"></A><A NAME="50565149_29871"></A>Running the Converter From the Command Line</H3>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003539"></A>The command line interface for running the Converter takes one of the following forms:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1003540"></A>converter.bat <I CLASS="Variable">options</I> <I CLASS="Variable">package_name</I>  <I CLASS="Variable">package_aid</I>  <I CLASS="Variable">major_version</I>.<I CLASS="Variable">minor_version</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003541"></A>or
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1003542"></A>converter.bat -config <I CLASS="Variable">filename</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003543"></A>Use the <KBD CLASS="Command">-config</KBD> subcommand and the associated configuration file to provide the options and parameters to the Converter. See <A HREF="normalizer-connected.html#50565149_73998" CLASS="XRef">Using a Command Configuration File</A>.
+</P><H4 CLASS="Head3"><A NAME="50565149_pgfId-1003548"></A><KBD CLASS="Command">converter</KBD><A NAME="50565149_71926"></A> Command Options</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003550"></A>Use the <A NAME="50565149_options"></A><KBD CLASS="Command">converter</KBD> command options to specify input files, an export path, an export map, names, and output directories.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003554"></A><A HREF="normalizer-connected.html#50565149_28257" CLASS="XRef">TABLE 9-2</A> identifies the <KBD CLASS="Command">converter</KBD> command options and provides their description.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565149_pgfId-1003561"> </A> TABLE 9-2 	 <KBD CLASS="Command"> converter </KBD> <A NAME="50565149_28257"> </A>  Command Options  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565149_pgfId-1003565"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565149_pgfId-1003567"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003569"></A><KBD CLASS="Command">-classdir</KBD> <I CLASS="Variable">root- directory-of-class-hierarch</I>y
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003571"></A>Specifies the root directory where the Converter looks for classes.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004947"></A>:<KBD CLASS="Command">-keepproxysource</KBD> <I CLASS="Variable">directory</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004951"></A>Cannot be used with <KBD CLASS="Command">-useproxyclass</KBD>. Creates the proxy source files and other stub files in the specified directory. The Converter also builds CAP files as usual in the specified output directory. Supports customizing the proxy files generated by the Converter. Requests the Converter retain the intermediate proxy class source code in the specified directory and the source code of the associated stub classes representing the dependent external classes using the hierarchical directory structure of the Java package name(s).
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004943"></A><KBD CLASS="Command">-usecapcomponents </KBD><I CLASS="Variable">component</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004963"></A>:User-supplied cap components
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004939"></A><KBD CLASS="Command">-useproxyclass </KBD><I CLASS="Variable">classpath</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004999"></A>User-supplied proxy classes (proxy classes not generated by converter)
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003573"></A><KBD CLASS="Command">-i</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003575"></A>Specifies support the 32-bit integer type.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003577"></A><KBD CLASS="Command">-exportpath</KBD> <I CLASS="Variable">list-of-directories</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003579"></A>Specifies the root directories where the Converter looks for export files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003581"></A><KBD CLASS="Command">-exportmap</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003583"></A>Uses the token mapping from the pre-defined export file of the package being converted. The converter will look for the export file in the exportpath.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003585"></A><KBD CLASS="Command">-applet</KBD> <I CLASS="Variable">AID</I> <I CLASS="Variable">class-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003587"></A>Sets the applet AID and the class that defines the install method for the applet.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003589"></A><KBD CLASS="Command">-d</KBD> <I CLASS="Variable">root-directory-for-output</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003591"></A>Specifies the root directories where the Converter outputs the files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003593"></A><KBD CLASS="Command">-out [CAP] [EXP] [JCA]</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003595"></A>Specifies that the Converter output the <KBD CLASS="Command">CAP</KBD> file, and/or the <KBD CLASS="Command">JCA</KBD> file, and/or the <KBD CLASS="Command">EXP</KBD> export file.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003597"></A><KBD CLASS="Command">-V</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003598"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003599"></A><KBD CLASS="Command">-version</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003601"></A>Displays the Converter version number.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003603"></A><KBD CLASS="Command">-v</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003604"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003605"></A><KBD CLASS="Command">-verbose</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003607"></A>Enables verbose output.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003609"></A><KBD CLASS="Command">-help</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003611"></A>Displays the contents of this table.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003613"></A><KBD CLASS="Command">-nowarn</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003615"></A>Instructs the Converter to not report warning messages.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003617"></A><KBD CLASS="Command">-mask</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003619"></A>Identifies this package is used for a mask. Restrictions on native methods are relaxed.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003621"></A><KBD CLASS="Command">-debug</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003623"></A>Enables generation of debugging information.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003625"></A><KBD CLASS="Command">-nobanner</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003627"></A>Suppresses standard output messages.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003629"></A><KBD CLASS="Command">-noverify</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1003631"></A>Turns off verification. Verification is default.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004326"></A><KBD CLASS="Command">-sign</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004328"></A>Signs the output CAP file.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004322"></A><KBD CLASS="Command">-keystore</KBD> <I CLASS="Variable">keystore</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004324"></A>Specifies the keystore to use in signing.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004318"></A><KBD CLASS="Command">-storepass</KBD> <I CLASS="Variable">storepass</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004320"></A>Specifies the keystore password.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004314"></A><KBD CLASS="Command">-alias</KBD> <I CLASS="Variable">alias</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004316"></A>Specifies the keystore alias to use in signing.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004310"></A><KBD CLASS="Command">-passkey</KBD> <I CLASS="Variable">passkey</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565149_pgfId-1004312"></A>Specifies alias password.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H4 CLASS="Head3"><A NAME="50565149_pgfId-1003633"></A><A NAME="50565149_73998"></A>Using a Command Configuration File</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003635"></A><A NAME="50565149_marker-1003634"></A>Instead of entering all of the command line arguments and options on the command line, you can include them in a text-format configuration file. This is convenient if you frequently use the same set of arguments and options. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003636"></A>The syntax to specify a configuration file is:
+</P>
+<PRE CLASS="Codeline1"><A NAME="50565149_pgfId-1003637"></A>converter -config <I CLASS="Variable">filename</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003638"></A>The <I CLASS="Variable">filename</I> argument contains the file path and file name of the configuration file.
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1004863"></A>You must use double quote (“) delimiters for the command line options that require arguments in the configuration file. For example, if the options from the command line example used in <A HREF="normalizer-connected.html#50565149_84264" CLASS="XRef">Using Delimiters with Command Line Options</A> were placed in a configuration file, the result would look like this:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1004867"></A>-exportpath &quot;.&#92;export files;.;%<I CLASS="Variable">JC_CONNECTED_HOME</I>%&#92;
+<A NAME="50565149_pgfId-1004868"></A>api_export_files&quot; MyWallet 0xa0:0x00:0x00:0x00:0x62:0x12:0x34 1.0
+</PRE><H4 CLASS="Head3"><A NAME="50565149_pgfId-1003645"></A><A NAME="50565149_84264"></A>Using Delimiters with Command Line Options</H4>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003646"></A>If the command line option argument contains a space symbol, you must use delimiters with this argument. The delimiter is a double quote (“ ”).
+</P>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003647"></A>In the following sample command line, the Converter will check for export files in the <KBD CLASS="Filename">.&#92;export</KBD> files, <KBD CLASS="Filename">%</KBD><I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">%&#92;api_export_files</KBD>, and current directories.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565149_pgfId-1003648"></A>converter -exportpath &quot;.&#92;export files;.;%<I CLASS="Variable">JC_CONNECTED_HOME</I>%&#92;
+<A NAME="50565149_pgfId-1004808"></A>api_export_files&quot; MyWallet 0xa0:0x00:0x00:0x00:0x62:0x12:0x34 1.0
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565149_pgfId-1003422"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="cardinstaller-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="apdutool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

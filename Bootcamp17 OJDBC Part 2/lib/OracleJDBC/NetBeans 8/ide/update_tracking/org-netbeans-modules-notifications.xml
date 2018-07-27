@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.notifications">
+    <module_version install_time="1475191245654" last="true" origin="installer" specification_version="1.8.1">
+        <file crc="3812408449" name="config/Modules/org-netbeans-modules-notifications.xml"/>
+        <file crc="210536865" name="modules/locale/org-netbeans-modules-notifications_ja.jar"/>
+        <file crc="988476935" name="modules/locale/org-netbeans-modules-notifications_pt_BR.jar"/>
+        <file crc="1338579146" name="modules/locale/org-netbeans-modules-notifications_ru.jar"/>
+        <file crc="3479087686" name="modules/locale/org-netbeans-modules-notifications_zh_CN.jar"/>
+        <file crc="3435857941" name="modules/org-netbeans-modules-notifications.jar"/>
+    </module_version>
+</module>

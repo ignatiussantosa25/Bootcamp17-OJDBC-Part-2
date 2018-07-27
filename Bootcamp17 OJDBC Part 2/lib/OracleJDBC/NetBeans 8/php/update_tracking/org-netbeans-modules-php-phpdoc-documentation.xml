@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.phpdoc.documentation">
+    <module_version install_time="1475191937568" last="true" origin="installer" specification_version="0.21.1">
+        <file crc="1487672427" name="config/Modules/org-netbeans-modules-php-phpdoc-documentation.xml"/>
+        <file crc="3189369369" name="docs/phpdocdesc.zip"/>
+        <file crc="3420418358" name="modules/locale/org-netbeans-modules-php-phpdoc-documentation_ja.jar"/>
+        <file crc="2695462702" name="modules/locale/org-netbeans-modules-php-phpdoc-documentation_pt_BR.jar"/>
+        <file crc="4127172056" name="modules/locale/org-netbeans-modules-php-phpdoc-documentation_ru.jar"/>
+        <file crc="2900071007" name="modules/locale/org-netbeans-modules-php-phpdoc-documentation_zh_CN.jar"/>
+        <file crc="969264418" name="modules/org-netbeans-modules-php-phpdoc-documentation.jar"/>
+    </module_version>
+</module>

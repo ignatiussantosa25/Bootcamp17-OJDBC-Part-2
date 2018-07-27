@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.php.phpunit/0">
+    <module_version install_time="1475191938909" last="false" origin="installer" specification_version="0.26.1">
+        <file crc="1409978273" name="config/Modules/org-netbeans-modules-php-phpunit.xml"/>
+        <file crc="4136165652" name="modules/locale/org-netbeans-modules-php-phpunit_ja.jar"/>
+        <file crc="4160479718" name="modules/locale/org-netbeans-modules-php-phpunit_pt_BR.jar"/>
+        <file crc="1003282213" name="modules/locale/org-netbeans-modules-php-phpunit_ru.jar"/>
+        <file crc="2554055935" name="modules/locale/org-netbeans-modules-php-phpunit_zh_CN.jar"/>
+        <file crc="1060487037" name="modules/org-netbeans-modules-php-phpunit.jar"/>
+        <file crc="2919502619" name="phpunit/NetBeansSuite.php"/>
+    </module_version>
+    <module_version install_time="1518892641330" last="true" origin="NetBeans Distribution" specification_version="0.26.2">
+        <file crc="1409978273" name="config/Modules/org-netbeans-modules-php-phpunit.xml"/>
+        <file crc="1896045460" name="modules/locale/org-netbeans-modules-php-phpunit_ja.jar"/>
+        <file crc="935185782" name="modules/locale/org-netbeans-modules-php-phpunit_pt_BR.jar"/>
+        <file crc="855775790" name="modules/locale/org-netbeans-modules-php-phpunit_ru.jar"/>
+        <file crc="938976668" name="modules/locale/org-netbeans-modules-php-phpunit_zh_CN.jar"/>
+        <file crc="2418148608" name="modules/org-netbeans-modules-php-phpunit.jar"/>
+        <file crc="2919502619" name="phpunit/NetBeansSuite.php"/>
+    </module_version>
+</module>

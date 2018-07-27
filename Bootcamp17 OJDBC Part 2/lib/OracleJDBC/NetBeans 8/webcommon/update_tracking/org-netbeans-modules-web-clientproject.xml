@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.clientproject">
+    <module_version install_time="1475191616554" last="true" origin="installer" specification_version="1.88.1">
+        <file crc="735898173" name="config/Modules/org-netbeans-modules-web-clientproject.xml"/>
+        <file crc="451217721" name="modules/locale/org-netbeans-modules-web-clientproject_ja.jar"/>
+        <file crc="380752413" name="modules/locale/org-netbeans-modules-web-clientproject_pt_BR.jar"/>
+        <file crc="3760375424" name="modules/locale/org-netbeans-modules-web-clientproject_ru.jar"/>
+        <file crc="3716355985" name="modules/locale/org-netbeans-modules-web-clientproject_zh_CN.jar"/>
+        <file crc="3806881404" name="modules/org-netbeans-modules-web-clientproject.jar"/>
+    </module_version>
+</module>

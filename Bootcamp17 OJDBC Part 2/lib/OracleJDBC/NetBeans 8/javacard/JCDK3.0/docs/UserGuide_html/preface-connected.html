@@ -1,0 +1,594 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="en-US">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="GENERATOR"
+ content="Adobe FrameMaker 7.0/HTML Export Filter">
+  <link rel="STYLESHEET" href="unx_unstr_styles.css"
+ charset="ISO-8859-1" type="text/css">
+  <meta name="dc.title"
+ content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+  <meta name="description"
+ content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+  <meta name="identifier" content="12-14-09">
+  <meta name="date" content="December 2009">
+  <meta name="issued" content="2009-12-07">
+  <meta name="revision" content="Revision 04">
+  <meta name="collection" content="reference">
+  <meta name="publisher" content="Sun Microsystems, Inc.">
+  <meta name="robots" content="noindex, follow">
+  <title>Preface</title>
+</head>
+<body bgcolor="#ffffff">
+<div>
+<div class="navbar" align="center">
+<table
+ summary="Navigation bar, includes the book title and navigation buttons"
+ border="0" cellpadding="0" cellspacing="0" dir="ltr" width="100%">
+  <colgroup span="2"><col id="1" span="1" width="50%"><col id="2"
+ span="1" width="50%"></colgroup><tbody>
+    <tr bgcolor="#cccccc">
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="ChapTitle"
+ align="left">Development Kit User’s Guide, Java Card 3 Platform,
+Version 3.0.2, Connected Edition
+      </td>
+      <td rowspan="1" colspan="1" abbr="NavButtons" align="right"
+ valign="top"><a href="index.html"><img src="shared/toc01.gif"
+ title="Table Of Contents" alt="Table Of Contents" border="0"
+ height="26" width="30"></a><a href="connectedUGLOT.html"><img
+ src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter"
+ border="0" height="26" width="30"></a><a href="part.html"><img
+ src="shared/next01.gif" title="Next Chapter" alt="Next Chapter"
+ border="0" height="26" width="30"></a><a href="ix.html"><img
+ src="shared/index01.gif" title="Book Index" alt="Book Index" border="0"
+ height="26" width="30"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8"
+ src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</div>
+<table summary="Chapter Title" abbr="ChapTitle" border="0" dir="ltr"
+ width="100%">
+  <colgroup span="1"><col id="1" span="1" width="100%"></colgroup><tbody>
+    <tr>
+      <td class="ChapTitle" align="right">
+      <hr noshade="noshade" size="7"><a name="50565181_pgfId-4401"></a><a
+ name="50565181_Preface"></a>Preface
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="AbstractPara"><a name="50565181_pgfId-7844"></a>This document
+describes how to use the development kit for the Java Card 3 Platform,
+Connected Edition, Version 3.0.2, to develop applet applications, web
+applications, servlets, and extended applets. The Java Card 3 Platform
+currently includes Versions 3.0, 3.0.1, and 3.0.2 of Java Card
+technology.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10838"></a>The Connected
+Edition architecture uses a new virtual machine and a substantially
+different runtime environment from that of the classic platform (an
+update of the Java Card technology released in the 2.2.2 release). Java
+Card technology for the Connected Edition targets devices that are less
+resource-constrained than previous Java Card technology devices. The
+Connected Edition includes new network-oriented features, such as
+support for web applications, including the Java Servlet APIs, and
+support for applets with extended and advanced capabilities.
+</p>
+<br>
+<hr noshade="noshade" size="1">
+<table class="TipNote" summary="TipNote" dir="ltr" width="100%">
+  <colgroup span="1"></colgroup><tbody>
+    <tr align="left" valign="top">
+      <td rowspan="1" colspan="1" abbr="TipNoteText"><b class="TipNote">Note
+- </b><a name="50565181_pgfId-10619"></a>The Java Card 3 platform
+development kit is released in both binary and source bundles. Some
+bundles include cryptography extensions. Portions of this document are
+targeted toward specific release bundles and are identified as such
+throughout this book.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr noshade="noshade" size="1">
+<br>
+<p class="Paragraph"><a name="50565181_pgfId-10872"></a>Refer to the <i
+ class="Title">Runtime Environment Specification, Java Card Platform,
+Version 3.0.1, Connected Edition</i> and <i class="Title">Programming
+Notes, Java Card 3 Platform, Connected Edition</i> for additional
+information about creating extended applets. You must download the Java
+Card specifications bundle and the Programming Notes book separately
+from the Sun Microsystems web site at:
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-7899"></a><kbd class="URL"><a
+ href="http://java.sun.com/javacard" class="URL"></a><a
+ href="java.sun.com/products/javacard" class="URL">http://java.sun.com/javacard</a></kbd>
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-7900"></a>Apache Ant (Ant)
+tasks in the development kit are required to install and run the
+development kit tools from the command line. The NetBeans IDE, Version
+6.8 or higher, is required to run the samples and is suggested as your
+development environment.
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-6079"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Who Should Use This Document</h2>
+<p class="Paragraph"><a name="50565181_pgfId-8558"></a>The <i
+ class="Title">Development Kit User’s Guide, Java Card 3 Platform,
+Version 3.0.2, Connected Edition</i> is written for developers who are:
+</p>
+<ul>
+  <li class="Bullet1"><a name="50565181_pgfId-8563"></a>Creating Java
+Card 3 web and servlet applications or extended applet applications for
+the Connected Edition.
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10790"></a>Creating
+classic applet applications for the Classic or Connected Editions.
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-8564"></a>Creating a
+vendor-specific framework based on the specifications for the Connected
+Edition.
+  </li>
+  <p class="Linebreak">
+  </p>
+</ul>
+<h2 class="Head1P"><a name="50565181_pgfId-10809"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Before You Read This Document</h2>
+<p class="Paragraph"><a name="50565181_pgfId-10810"></a>Before reading
+this guide, you should become familiar with the Java<img
+ src="shared/chars/tm.gif" title="trademark" alt="trademark">
+programming language, object-oriented programming, the specifications
+for the Connected Edition, and smart card technology. A good resource
+for becoming familiar with Java and Java Card technology is the Java
+Developer Connection<img src="shared/chars/tm.gif" title="trademark"
+ alt="trademark"> web site located at <kbd class="URL"><a
+ href="http://java.sun.com" class="URL">http://java.sun.com</a></kbd>.
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-96"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+How This Book Is Organized</h2>
+<p class="Paragraph"><a name="50565181_pgfId-10666"></a>The guide is
+divided into two parts. The Part I describes how to set up the
+development kit, how to use the samples, and how to use the development
+kit tools. Part II describes various programming issues for the Java
+Card 3 platform.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10670"></a><a
+ href="part.html#50565154_16610" class="XRef">P A R T I - Setup,
+Samples and Tools</a>
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6950"></a><a
+ href="intro-connected.html#50565182_42788" class="XRef">Chapter 1</a>,
+provides an overview of the development kit for the Connected Edition.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6954"></a><a
+ href="install-connected.html#50565183_99743" class="XRef">Chapter 2</a>
+describes the procedures for installing the tools required for this
+release.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-9939"></a><a
+ href="developing-javacardApps.html#50565152_44097" class="XRef">Chapter
+3</a> provides a brief description of the steps involved in Java Card
+application development.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10109"></a><a
+ href="samples-connected.html#50565164_29899" class="XRef">Chapter 4</a>
+describes where to find the entire set of samples designed for the Java
+Card 3 platform, with further details for the set of samples included
+in this development kit. To run the samples, the NetBeans IDE, Version
+6.8, is required.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6962"></a><a
+ href="ri-connected.html#50565186_81304" class="XRef">Chapter 5</a>
+describes the reference implementation of the Connected Edition and
+provides the procedures used to start it.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-8210"></a><a
+ href="compilertool-connected.html#50565187_10980" class="XRef">Chapter
+6</a> describes how to compile source files outside of an IDE by using
+the Compiler tool included with the development kit.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10687"></a><a
+ href="packagertool-connected.html#50565188_10980" class="XRef">Chapter
+7</a> describes how to use the Packager tool to create and validate a
+Java Card technology-based application module.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10691"></a><a
+ href="cardinstaller-connected.html#50565189_85312" class="XRef">Chapter
+8</a> describes how to use the Installer tool to perform card
+management tasks.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10766"></a><a
+ href="normalizer-connected.html#50565149_72569" class="XRef">Chapter 9</a>
+describes how to use the tools provided by the development kit to
+modify classic applets to run on the Java Card 3 platform.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10695"></a><a
+ href="apdutool-connected.html#50565192_APDUtool%20chapter%2010"
+ class="XRef">Chapter 10</a> describes the APDU tool and how it is used
+when installing and running applets on a smart card.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-9932"></a><a
+ href="debuggertool-connected.html#50565190_16869" class="XRef">Chapter
+11</a> describes how to install and to use the Debugger tool in Java
+Card 3 platform applications development.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10714"></a><a
+ href="part2.html#50565156_57319" class="XRef">P A R T II - Programming
+With the Development Kit</a>
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10707"></a><a
+ href="configuringRI-connected.html#50565159_83714" class="XRef">Chapter
+12</a> describes the options used to configure the RI, including how to
+generate and install SSL keys.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10711"></a><a
+ href="buildCJCRE-connected.html#50565146_85012" class="XRef">Chapter 13</a>
+describes how developers can modify or add to source files of the RI
+including VM code, and all tools (such as the Packager and Installer)
+and build a customized Java Card 3 platform RI according to their
+specific requirements.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-10735"></a><a
+ href="apduio-classic.html#50565158_42333" class="XRef">Chapter 14</a>
+describes the <a name="50565181_marker-10740"></a>APDU I/O API, which
+is a library used by development kit components, such as <kbd
+ class="Filename">apdutool</kbd>.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-9807"></a><a
+ href="cap-manifest-connected.html#50565145_83529" class="XRef">Appendix
+A</a> describes the application module and library formats supported by
+the Java Card 3 platform card manager.
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-9360"></a><a
+ href="jcgloss.html#50565195_58117" class="XRef">Glossary</a> describes
+key terms used in this document.
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-6829"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+<a name="50565181_18930"></a>Related Documents</h2>
+<p class="Paragraph"><a name="50565181_pgfId-6830"></a>References to
+various documents or products are made in this manual. Have the
+following documents available:
+</p>
+<ul>
+  <li class="Bullet1"><a name="50565181_pgfId-10624"></a><i
+ class="Title">Application Programming Interface, Java Card Platform,
+Version 3.0.1,Connected Edition</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10658"></a><i
+ class="Title">Runtime Environment Specification, Java Card Platform,
+Version 3.0.1, Connected Edition</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10661"></a><i
+ class="Title">Virtual Machine Specification, Java Card Platform,
+Version 3.0.1, Connected Edition</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10178"></a><i
+ class="Title">Application Programming Notes, Java Card Platform,
+Version 3.0.1, Connected Edition</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10236"></a><i
+ class="Title">ISO 7816 Specification</i> Parts 1-6
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10281"></a><i
+ class="Title">Java Card Platform, Version 3.0, White Paper</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10201"></a><i
+ class="Title">Java Card Technology for Smart Cards: Architecture and
+Programmer’s Guide </i>by Zhiqun Chen (Addison-Wesley, 2000)
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10207"></a><i
+ class="Title">Java Servlet Specification, Java Card Platform, Version
+3.0.1, Connected Edition</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10259"></a><i
+ class="Title">Off-Card Verifier, Java Card 2.2.2, White Paper</i>
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10222"></a><i
+ class="Title">The Java Programming Language (Java Series), Fourth
+Edition </i>by James Gosling, Ken Arnold, and David Holmes
+(Addison-Wesley, 2005)
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-10223"></a><i
+ class="Title">The Java Virtual Machine Specification (Java Series),
+Second Edition</i> by Tim Lindholm and Frank Yellin (Addison-Wesley,
+1999)
+  </li>
+  <p class="Linebreak">
+  </p>
+</ul>
+<h2 class="Head1P"><a name="50565181_pgfId-10118"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Specifications, Standards, Protocols and Technologies</h2>
+<p class="Paragraph"><a name="50565181_pgfId-7607"></a>The Connected
+Edition supports the following specifications, standards, protocols,
+and technologies:
+</p>
+<ul>
+  <li class="Bullet1"><a name="50565181_pgfId-7667"></a>ETSI SCP and
+UICC specification for 3G mobile phones.
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-7668"></a>ISO 7816-4:1995
+Identification cards - Integrated circuit cards with contacts part 4,
+inter-industry commands for interchange.
+  </li>
+  <p class="Linebreak">
+  </p>
+</ul>
+<p class="ParaIndent1"><a name="50565181_pgfId-7669"></a>These
+specifications describe the communication transport and application
+protocol layer between the terminal and the card.
+</p>
+<ul>
+  <li class="Bullet1"><a name="50565181_pgfId-7670"></a>ISO 7816-4:2004
+Identification cards - Integrated circuit cards with contacts part 4,
+inter-industry commands for interchange.
+  </li>
+  <p class="Linebreak">
+  </p>
+  <li class="Bullet1"><a name="50565181_pgfId-7671"></a>EMV 2000
+Integrated Circuit Card specifications for payment systems.
+  </li>
+  <p class="Linebreak">
+  </p>
+</ul>
+<p class="ParaIndent1"><a name="50565181_pgfId-7672"></a>These
+standards enable the correct operation and interoperability of payment
+applications on terminals and smart cards.
+</p>
+<ul>
+  <li class="Bullet1"><a name="50565181_pgfId-7673"></a>GlobalPlatform
+card specification
+  </li>
+  <p class="Linebreak">
+  </p>
+</ul>
+<p class="ParaIndent1"><a name="50565181_pgfId-7674"></a>These card
+specifications are built on top of the Java Card specifications to
+provide interoperable content and lifecycle management for
+multifunction payment cards.
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-9371"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Typographic Conventions</h2>
+<p class="Paragraph"><a name="50565181_pgfId-9411"></a>&nbsp;
+</p>
+<br>
+<table class="Untitled" summary="Table that is not numbered or titled"
+ border="1" cellpadding="5" cellspacing="0" dir="ltr">
+  <thead>
+  <tr>
+    <th scope="col" rowspan="1" colspan="1" bgcolor="#cccccc">
+    <p class="TableHead"><a name="50565181_pgfId-9374"></a>Typeface
+    </p>
+    </th>
+    <th scope="col" rowspan="1" colspan="1" bgcolor="#cccccc">
+    <p class="TableHead"><a name="50565181_pgfId-9376"></a>Meaning
+    </p>
+    </th>
+    <th scope="col" rowspan="1" colspan="1" bgcolor="#cccccc">
+    <p class="TableHead"><a name="50565181_pgfId-9378"></a>Examples
+    </p>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row" rowspan="1" colspan="1">
+      <pre class="TableTextCode"><a name="50565181_pgfId-9380"></a><kbd
+ class="Filename">AaBbCc123</kbd>
+      </pre>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9382"></a>The names
+of commands, files, and directories; on-screen computer output
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9383"></a>&nbsp;
+      </p>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9385"></a>Edit your <kbd
+ class="Filename">.login</kbd> file.
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9386"></a>Use <kbd
+ class="Command">ls -a</kbd> to list all files.
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9387"></a><kbd
+ class="Command">% You have mail</kbd>.
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row" rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9389"></a><kbd
+ class="UserType">AaBbCc123</kbd>
+      </p>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9391"></a>What you
+type, when contrasted with on-screen computer output
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9392"></a>Procedural
+steps
+      </p>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9394"></a><kbd
+ class="Command">% </kbd><kbd class="UserType">su</kbd>
+      </p>
+      <pre class="TableTextCode"><a name="50565181_pgfId-9395"></a><kbd
+ class="Command">Password:</kbd>
+      </pre>
+      <p class="TableText"><a name="50565181_pgfId-9396"></a>&nbsp;
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9397"></a><strong>1.
+Run</strong> c<kbd class="Command">j</kbd><kbd class="Filename">cre</kbd>
+      <strong>in a new window.</strong>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row" rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9399"></a><i
+ class="Variable">AaBbCc123</i>
+      </p>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9401"></a>Book
+titles, new words or terms, words to be emphasized
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9402"></a>&nbsp;
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9403"></a>&nbsp;
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9404"></a>Command-line
+variable; replace with a real name or value
+      </p>
+      </td>
+      <td rowspan="1" colspan="1">
+      <p class="TableText"><a name="50565181_pgfId-9406"></a>Read
+Chapter 6 in the <i class="Title">User’s Guide</i>.
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9407"></a>These are
+called <em class="Emphasis">class</em> options.
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9408"></a>You <em
+ class="Emphasis">must</em> be superuser to do this.
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9409"></a>&nbsp;
+      </p>
+      <p class="TableText"><a name="50565181_pgfId-9410"></a>To delete
+a file, type <kbd class="Command">rm</kbd> <i class="Variable">filename</i>.
+      </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h2 class="Head1P"><a name="50565181_pgfId-9412"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Accessing Documentation Online</h2>
+<p class="Paragraph"><a name="50565181_pgfId-6788"></a>The Java
+Developer Connection<img src="shared/chars/tm.gif" title="trademark"
+ alt="trademark"> program web site enables you to access Java platform
+technical documentation on the web at
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6790"></a><kbd class="URL"><a
+ href="http://java.sun.com/reference/docs" class="URL">http://java.sun.com/reference/docs</a></kbd>
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-8126"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Third-Party Web Sites</h2>
+<p class="Paragraph"><a name="50565181_pgfId-8127"></a>Sun is not
+responsible for the availability of third-party web sites mentioned in
+this document. Sun does not endorse and is not responsible or liable
+for any content, advertising, products, or other materials that are
+available on or through such sites or resources. Sun will not be
+responsible or liable for any actual or alleged damage or loss caused
+by or in connection with the use of or reliance on any such content,
+goods, or services that are available on or through such sites or
+resources.
+</p>
+<h2 class="Head1P"><a name="50565181_pgfId-6138"></a>
+<div>
+<hr align="left" noshade="noshade" size="6" width="15%"></div>
+Sun Welcomes Your Comments</h2>
+<p class="Paragraph"><a name="50565181_pgfId-6139"></a>We are
+interested in improving our documentation and welcome your comments and
+suggestions. You can submit your comments about this document to the
+following address:
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-8722"></a><kbd class="URL"><a
+ href="mailto:jc3-ri-feedback@sun.com" class="URL">jc3-ri-feedback@sun.com</a></kbd>
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6810"></a>Please include
+the following title of this document with your feedback:
+</p>
+<p class="Paragraph"><a name="50565181_pgfId-6814"></a><i class="Title">Development
+Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition</i>
+</p>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script><!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center"><br>
+<br>
+<table
+ summary="Navigation bar, includes the book title and navigation buttons"
+ border="0" cellpadding="0" cellspacing="0" dir="ltr" width="100%">
+  <colgroup span="3"><col id="1" span="1" width="45%"><col id="2"
+ span="1" width="25%"><col id="3" span="1" width="30%"></colgroup><tbody>
+    <tr bgcolor="#cccccc">
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="ChapTitle"
+ align="left">Development Kit User’s Guide, Java Card 3 Platform,
+Version 3.0.2, Connected Edition
+      </td>
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="PartNum"
+ align="right">12-14-09
+      </td>
+      <td rowspan="1" colspan="1" abbr="NavButtons" align="right"
+ valign="top"><a href="index.html"><img src="shared/toc01.gif"
+ title="Table Of Contents" alt="Table Of Contents" border="0"
+ height="26" width="30"></a><a href="connectedUGLOT.html"><img
+ src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter"
+ border="0" height="26" width="30"></a><a href="part.html"><img
+ src="shared/next01.gif" title="Next Chapter" alt="Next Chapter"
+ border="0" height="26" width="30"></a><a href="ix.html"><img
+ src="shared/index01.gif" title="Book Index" alt="Book Index" border="0"
+ height="26" width="30"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<p class="copyrightlink"><a href="copyright.html">Copyright</a> © 2009
+Sun Microsystems, Inc. All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.twig/1">
+    <module_version install_time="1475191945640" last="true" origin="installer" specification_version="1.26.1">
+        <file crc="405156563" name="config/Modules/org-netbeans-modules-php-twig.xml"/>
+        <file crc="701542253" name="modules/locale/org-netbeans-modules-php-twig_ja.jar"/>
+        <file crc="3658938679" name="modules/locale/org-netbeans-modules-php-twig_pt_BR.jar"/>
+        <file crc="883234964" name="modules/locale/org-netbeans-modules-php-twig_ru.jar"/>
+        <file crc="2288659522" name="modules/locale/org-netbeans-modules-php-twig_zh_CN.jar"/>
+        <file crc="2165148898" name="modules/org-netbeans-modules-php-twig.jar"/>
+    </module_version>
+</module>

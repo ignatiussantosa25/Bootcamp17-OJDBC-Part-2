@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.indent">
+    <module_version install_time="1475191181593" last="true" origin="installer" specification_version="1.20.1">
+        <file crc="3344998336" name="config/Modules/org-netbeans-modules-web-indent.xml"/>
+        <file crc="1799481681" name="modules/locale/org-netbeans-modules-web-indent_ja.jar"/>
+        <file crc="2765068775" name="modules/locale/org-netbeans-modules-web-indent_pt_BR.jar"/>
+        <file crc="2474149591" name="modules/locale/org-netbeans-modules-web-indent_ru.jar"/>
+        <file crc="584240199" name="modules/locale/org-netbeans-modules-web-indent_zh_CN.jar"/>
+        <file crc="2837686144" name="modules/org-netbeans-modules-web-indent.jar"/>
+    </module_version>
+</module>

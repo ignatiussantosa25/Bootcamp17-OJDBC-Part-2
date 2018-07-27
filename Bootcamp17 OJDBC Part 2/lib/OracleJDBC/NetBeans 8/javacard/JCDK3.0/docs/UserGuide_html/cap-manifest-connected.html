@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Application Module and Library Formats
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="apduio-classic.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="jcgloss.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565145_pgfId-1003601"></A>A P P E N D I X  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">A</SPAN><A NAME="50565145_83529"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565145_pgfId-1003603"></A><A NAME="50565145_Application Module and Library Formats"></A>Application Module and Library Formats
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003604"></A>This appendix describes the application module and library formats supported by the Java Card 3 platform card manager. Applications are distributed and deployed as <A NAME="50565145_marker-1003605"></A>application module JAR files. The application module distribution format JAR file contains one application. Libraries are distributed and deployed as standard library JAR files containing the library classes.
+</P>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003606"></A>There are two types of library formats:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003607"></A>The extension library JAR file is a standard library JAR format containing Java class files. Extension library classes are accessible to all applications on the card. Instances of classes instantiated from the extension library are placed in the owner context of the application which creates the instance.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003608"></A>The classic library JAR file is a standard JAR library format containing Java class files. Classic library classes are only accessible to the classic applications on the card. Instances of classes instantiated from the classic library are placed in the owner context of the classic application which creates the instance.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003609"></A>This appendix contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003613"></A><A HREF="cap-manifest-connected.html#50565145_36165" CLASS="XRef">Web Application Module Format</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003617"></A><A HREF="cap-manifest-connected.html#50565145_23455" CLASS="XRef">Extended Applet Application Module Distribution Format</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003621"></A><A HREF="cap-manifest-connected.html#50565145_26510" CLASS="XRef">Classic Applet Application Module Format</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003625"></A><A HREF="cap-manifest-connected.html#50565145_56857" CLASS="XRef">Extension Library Format</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003629"></A><A HREF="cap-manifest-connected.html#50565145_38025" CLASS="XRef">Classic Library Format</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1A"><A NAME="50565145_pgfId-1003631"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565145_36165"></A>Web Application Module Format</H2>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003635"></A><A HREF="cap-manifest-connected.html#50565145_88416" CLASS="XRef">FIGURE A-1</A> shows the directory structure of the web application module distribution format. The structure must be that of the web archive (<KBD CLASS="Filename">.war</KBD>) file with the following differences:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003636"></A>No support for application private library directory <KBD CLASS="Command">WEB-INF&#92;lib</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003637"></A>An additional Java Card 3 platform-specific application descriptor file <KBD CLASS="Command">javacard.xml</KBD> is supported. The format of this descriptor is specified in <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition.</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="FigureCaptionA"><A NAME="50565145_pgfId-1004847"></A>FIGURE A-1 	<A NAME="50565145_88416"></A>Web Application Module Format
+</P>
+<BR><A NAME="50565145_pgfId-1011529"></A>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1004878"></A>
+<P><IMG SRC="figures/cap-manifest-connected-4.jpg" TITLE="diagram of web application module format." ALT="diagram of web application module format." ALIGN="BASELINE">
+</P><A NAME="50565145_pgfId-1011497"></A><A NAME="50565145_pgfId-1011528"></A>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1004866"></A>See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details about the web application module format.
+</P><H2 CLASS="Head1A"><A NAME="50565145_pgfId-1003654"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565145_23455"></A>Extended Applet Application Module Distribution Format</H2>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003659"></A><A HREF="cap-manifest-connected.html#50565145_16927" CLASS="XRef">FIGURE A-2</A> shows the directory structure of the<A NAME="50565145_marker-1003658"></A> extended applet application module format. See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details.
+</P>
+<P CLASS="FigureCaptionA"><A NAME="50565145_pgfId-1003673"></A>FIGURE A-2 	<A NAME="50565145_16927"></A>Extended Applet Application Module
+</P>
+<BR><A NAME="50565145_pgfId-1011523"></A>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1004897"></A>
+<P><IMG SRC="figures/cap-manifest-connected-5.jpg" TITLE="diagram of extended applet application module." ALT="diagram of extended applet application module." ALIGN="BASELINE">
+</P><A NAME="50565145_pgfId-1011502"></A><A NAME="50565145_pgfId-1011522"></A>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1004889"></A>See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details about the extended applet application module format.
+</P><H2 CLASS="Head1A"><A NAME="50565145_pgfId-1003676"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565145_26510"></A>Classic Applet Application Module Format</H2>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003680"></A><A HREF="cap-manifest-connected.html#50565145_14017" CLASS="XRef">FIGURE A-3</A> shows the directory structure of the <A NAME="50565145_marker-1003778"></A>classic applet application module distribution format. The structure is similar to that of the extended applet application module with the following differences:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003681"></A>The <KBD CLASS="Command">classes</KBD> directory contains only one package and optionally a subpackage named <KBD CLASS="Command">proxy</KBD> containing SIO proxy classes.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003683"></A>The Classic Edition’s <A NAME="50565145_marker-1003682"></A>CAP file components, <KBD CLASS="Command">*.cap</KBD>, are included in the JAR file. 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1004937"></A>See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details about the requirements of the classic applet application module format.
+</P>
+<P CLASS="FigureCaptionA"><A NAME="50565145_pgfId-1003694"></A>FIGURE A-3 	<A NAME="50565145_14017"></A>Classic Applet Application Module
+</P>
+<BR><A NAME="50565145_pgfId-1011527"></A>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1004920"></A>
+<P><IMG SRC="figures/cap-manifest-connected-6.jpg" TITLE="diagram of classic applet application module." ALT="diagram of classic applet application module." ALIGN="BASELINE">
+</P><A NAME="50565145_pgfId-1011507"></A><A NAME="50565145_pgfId-1011526"></A><H2 CLASS="Head1A"><A NAME="50565145_pgfId-1003697"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565145_56857"></A>Extension Library Format</H2>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1003699"></A>The <A NAME="50565145_marker-1003698"></A>extension library distribution format uses the Java Platform Standard Edition library JAR file structure. <A HREF="cap-manifest-connected.html#50565145_87063" CLASS="XRef">FIGURE A-4</A> shows the format of a Java Platform Standard Edition library JAR file format.
+</P>
+<P CLASS="FigureCaptionA"><A NAME="50565145_pgfId-1004824"></A>FIGURE A-4 	<A NAME="50565145_87063"></A>Java Platform Standard Edition Library JAR File Format
+</P>
+<BR><A NAME="50565145_pgfId-1011521"></A>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1004828"></A>
+<P><IMG SRC="figures/cap-manifest-connected-7.jpg" TITLE="Java SE Library JAR format." ALT="Java SE Library JAR format." ALIGN="BASELINE">
+</P><A NAME="50565145_pgfId-1011512"></A><A NAME="50565145_pgfId-1011520"></A>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1003712"></A>See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details about the extension library format.
+</P><H2 CLASS="Head1A"><A NAME="50565145_pgfId-1003715"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565145_38025"></A>Classic Library Format</H2>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1004775"></A><A HREF="cap-manifest-connected.html#50565145_64901" CLASS="XRef">FIGURE A-5</A> shows the format of a <A NAME="50565145_marker-1004774"></A>classic library distribution format. The classic library distribution format uses the Java Platform Standard Edition library JAR file format (see <A HREF="cap-manifest-connected.html#50565145_87063" CLASS="XRef">FIGURE A-4</A>) with the following restrictions and additions:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003723"></A>It contains only one package and, optionally, a subpackage <KBD CLASS="Command">proxy</KBD> containing SIO proxy classes.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565145_pgfId-1003724"></A>It includes the classic CAP file components, <KBD CLASS="Command">*.cap</KBD>, in a directory named <KBD CLASS="Filename">javacard</KBD> that is in a subdirectory representing the library package directory as described in Virtual Machine Specification, Java Card Platform, Version 3.0.1, Classic Edition. The format of the CAP file components are described in Virtual Machine Specification, Java Card Platform, Version 3.0.1, Classic Edition.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1004790"></A>See the <I CLASS="Title">Runtime Environment Specification, Java Card Platform, Version 3.0.1, Connected Edition </I>for specific details about the classic library format.
+</P>
+<P CLASS="FigureCaptionA"><A NAME="50565145_pgfId-1004687"></A>FIGURE A-5 	<A NAME="50565145_64901"></A>Classic Library Distribution Format
+</P>
+<BR><A NAME="50565145_pgfId-1011525"></A>
+<P CLASS="FigureBox"><A NAME="50565145_pgfId-1004691"></A>
+<P><IMG SRC="figures/cap-manifest-connected-8.jpg" TITLE="Classic Library Format" ALT="Classic Library Format" ALIGN="BASELINE">
+</P><A NAME="50565145_pgfId-1011517"></A><A NAME="50565145_pgfId-1011524"></A>
+<P CLASS="Paragraph"><A NAME="50565145_pgfId-1002866"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="apduio-classic.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="jcgloss.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

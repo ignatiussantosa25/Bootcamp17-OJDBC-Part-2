@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.ant.debugger/1">
+    <module_version install_time="1475191387225" last="true" origin="installer" specification_version="1.37.1.2">
+        <file crc="658153027" name="config/Modules/org-netbeans-modules-ant-debugger.xml"/>
+        <file crc="2504298800" name="modules/locale/org-netbeans-modules-ant-debugger_ja.jar"/>
+        <file crc="1274827526" name="modules/locale/org-netbeans-modules-ant-debugger_pt_BR.jar"/>
+        <file crc="1319888813" name="modules/locale/org-netbeans-modules-ant-debugger_ru.jar"/>
+        <file crc="1302103022" name="modules/locale/org-netbeans-modules-ant-debugger_zh_CN.jar"/>
+        <file crc="1109668941" name="modules/org-netbeans-modules-ant-debugger.jar"/>
+    </module_version>
+</module>

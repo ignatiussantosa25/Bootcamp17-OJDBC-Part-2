@@ -1,0 +1,710 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="en-US">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="GENERATOR"
+ content="Adobe FrameMaker 7.0/HTML Export Filter">
+  <link rel="STYLESHEET" href="unx_unstr_styles.css"
+ charset="ISO-8859-1" type="text/css">
+  <meta name="dc.title"
+ content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+  <meta name="description"
+ content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+  <meta name="identifier" content="12-14-09">
+  <meta name="date" content="December 2009">
+  <meta name="issued" content="2009-12-07">
+  <meta name="revision" content="Revision 04">
+  <meta name="collection" content="reference">
+  <meta name="publisher" content="Sun Microsystems, Inc.">
+  <meta name="robots" content="noindex, follow">
+  <title>Contents</title>
+</head>
+<body bgcolor="#ffffff">
+<div>
+<div class="navbar" align="center">
+<table
+ summary="Navigation bar, includes the book title and navigation buttons"
+ border="0" cellpadding="0" cellspacing="0" dir="ltr" width="100%">
+  <colgroup span="2"><col id="1" span="1" width="50%"><col id="2"
+ span="1" width="50%"></colgroup><tbody>
+    <tr bgcolor="#cccccc">
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="ChapTitle"
+ align="left">Development Kit User’s Guide, Java Card 3 Platform,
+Version 3.0.2, Connected Edition </td>
+      <td rowspan="1" colspan="1" abbr="NavButtons" align="right"
+ valign="top"><a href="index.html"><img src="shared/toc01.gif"
+ title="Table Of Contents" alt="Table Of Contents" border="0"
+ height="26" width="30"></a><a href="copyright.html"><img
+ src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter"
+ border="0" height="26" width="30"></a><a href="connectedUGLOF.html"><img
+ src="shared/next01.gif" title="Next Chapter" alt="Next Chapter"
+ border="0" height="26" width="30"></a><a href="ix.html"><img
+ src="shared/index01.gif" title="Book Index" alt="Book Index" border="0"
+ height="26" width="30"></a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8"
+ src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</div>
+<p class="HTMLOnly-LogoTitle"><a name="50565121_pgfId-996992"></a>
+</p>
+<div><img src="shared/SunLogo.gif" title="Sun Logo" alt="Sun Logo"><br>
+<br>
+<br>
+<p class="booktitlehere" align="center">Development Kit User’s Guide<br>
+</p>
+<p class="subtitlehere" align="center">Java Card<img
+ src="shared/chars/tm.gif" title="trademark" alt="trademark"> 3
+Platform, Version 3.0.2 <br>
+</p>
+<p class="subtitlehere" align="center">Connected Edition
+</p>
+<p class="partnumberhere" align="center">12-14-09
+</p>
+<br>
+</div>
+<table summary="Chapter Title" abbr="ChapTitle" border="0" dir="ltr"
+ width="100%">
+  <colgroup span="1"><col id="1" span="1" width="100%"></colgroup><tbody>
+    <tr>
+      <td class="ChapTitle" align="right">
+      <hr noshade="noshade" size="7"><a name="50565121_pgfId-1103724"></a>Contents
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="ChapTitleTOC"><a href="connectedUGLOF.html">Figures</a></p>
+<p class="ChapTitleTOC"><a href="connectedUGLOT.html">Tables</a></p>
+<p class="ChapTitlePTOC"><a name="50565121_pgfId-1096906"></a><a
+ href="preface-connected.html#50565181_pgfId-4401" class="Index">Preface
+<span class="Z-PageNumber"></span></a></p>
+<p class="PartTitleTOC"><a name="50565121_pgfId-1096908"></a><a
+ href="part.html#50565154_pgfId-3388" class="Index">Part I Setup,
+Samples and Tools</a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096910"></a><a
+ href="intro-connected.html#50565182_pgfId-1009016" class="Index"> 1.
+Introduction <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096912"></a><a
+ href="intro-connected.html#50565182_pgfId-1009637" class="Index">Platform
+Architecture <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096914"></a><a
+ href="intro-connected.html#50565182_pgfId-1001441" class="Index">Development
+Kit Description <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096916"></a><a
+ href="intro-connected.html#50565182_pgfId-1006511" class="Index">Connected
+Edition Features <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1096918"></a><a
+ href="intro-connected.html#50565182_pgfId-1001444" class="Index">Connected
+Edition Security Model <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1096920"></a><a
+ href="intro-connected.html#50565182_pgfId-1008073" class="Index">Application
+Models <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096922"></a><a
+ href="intro-connected.html#50565182_pgfId-1004054" class="Index">Development
+Kit Contents <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1096924"></a><a
+ href="intro-connected.html#50565182_pgfId-1008165" class="Index">Reference
+Implementation <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1096926"></a><a
+ href="intro-connected.html#50565182_pgfId-1001449" class="Index">Command
+Line Tools <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1096928"></a><a
+ href="intro-connected.html#50565182_pgfId-1003885" class="Index">Samples
+<span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096930"></a><a
+ href="intro-connected.html#50565182_pgfId-1002390" class="Index">System
+Requirements <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096932"></a><a
+ href="intro-connected.html#50565182_pgfId-1001452" class="Index">Additional
+Software <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096934"></a><a
+ href="intro-connected.html#50565182_pgfId-1001454" class="Index">Java
+Card TCK <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096936"></a><a
+ href="install-connected.html#50565183_pgfId-1005465" class="Index"> 2.
+Installation <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096938"></a><a
+ href="install-connected.html#50565183_pgfId-1001996" class="Index">Prerequisites
+to Installing the Development Kit <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096940"></a><a
+ href="install-connected.html#50565183_pgfId-1009194" class="Index">Install
+and Setup the Development Kit <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096942"></a><a
+ href="install-connected.html#50565183_pgfId-1009199" class="Index">Installing
+the Development Kit <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096944"></a><a
+ href="install-connected.html#50565183_pgfId-1010351" class="Index">Setting
+Up the System Variables <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096946"></a><a
+ href="install-connected.html#50565183_pgfId-1010376" class="Index">Installed
+Directories and Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096948"></a><a
+ href="install-connected.html#50565183_pgfId-1011020" class="Index">Directories
+and Files Installed From All Bundles <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096950"></a><a
+ href="install-connected.html#50565183_pgfId-1010510" class="Index">Subdirectories
+and Files Installed in the <kbd class="Filename">src</kbd> Directory <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096952"></a><a
+ href="install-connected.html#50565183_pgfId-1010382" class="Index">Uninstall
+the Development Kit <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096954"></a><a
+ href="install-connected.html#50565183_pgfId-1010373" class="Index">Install
+and Setup the NetBeans IDE <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096956"></a><a
+ href="install-connected.html#50565183_pgfId-1010081" class="Index">Installing
+the NetBeans IDE <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096958"></a><a
+ href="install-connected.html#50565183_pgfId-1009972" class="Index">Setting
+Up the Java Card Platform <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096960"></a><a
+ href="developing-javacardApps.html#50565152_pgfId-1001759"
+ class="Index"> 3. Developing Java Card 3 Platform Applications <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096962"></a><a
+ href="developing-javacardApps.html#50565152_pgfId-1001985"
+ class="Index">Development Steps <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096964"></a><a
+ href="samples-connected.html#50565164_pgfId-999553" class="Index"> 4.
+Using the Samples <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096966"></a><a
+ href="samples-connected.html#50565164_pgfId-1013843" class="Index">Running
+the Samples <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096968"></a><a
+ href="samples-connected.html#50565164_pgfId-1011700" class="Index">Running
+the Samples from the NetBeans IDE <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096970"></a><a
+ href="samples-connected.html#50565164_pgfId-1029895" class="Index">Accepting
+an Untrusted Certificate <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096972"></a><a
+ href="samples-connected.html#50565164_pgfId-1020477" class="Index">Using
+the Web Application Sample <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096974"></a><a
+ href="samples-connected.html#50565164_pgfId-1016514" class="Index">Using
+the <kbd class="Filename">HelloWorld</kbd> Sample <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1096976"></a><a
+ href="samples-connected.html#50565164_pgfId-1016523" class="Index">Run
+<kbd class="Filename">HelloWorld </kbd> <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096978"></a><a
+ href="samples-connected.html#50565164_pgfId-1037870" class="Index">Using
+the Classic Applet Sample <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096980"></a><a
+ href="samples-connected.html#50565164_pgfId-1038092" class="Index">Using
+the Extended Applet Sample <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096982"></a><a
+ href="ri-connected.html#50565186_pgfId-999553" class="Index"> 5.
+Starting the Java Card Runtime Environment <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096984"></a><a
+ href="ri-connected.html#50565186_pgfId-1008403" class="Index">Starting
+<kbd class="Filename">cjcre.exe</kbd> from the Command Line <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096986"></a><a
+ href="ri-connected.html#50565186_pgfId-1002615" class="Index"><kbd
+ class="Filename">cjcre.exe</kbd> Command Line Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096988"></a><a
+ href="ri-connected.html#50565186_pgfId-1008590" class="Index">Java
+Card Runtime Environment Configuration Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096990"></a><a
+ href="ri-connected.html#50565186_pgfId-1008597" class="Index">Adding
+Proprietary Packages <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1096992"></a><a
+ href="compilertool-connected.html#50565187_pgfId-999553" class="Index">
+6. Compiling Source Code <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1096994"></a><a
+ href="compilertool-connected.html#50565187_pgfId-1002648" class="Index">Running
+the Compiler Tool from the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096996"></a><a
+ href="compilertool-connected.html#50565187_pgfId-1003826" class="Index">Compiler
+Tool Options <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1096998"></a><a
+ href="compilertool-connected.html#50565187_pgfId-1004122" class="Index">Format
+<span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097000"></a><a
+ href="compilertool-connected.html#50565187_pgfId-1005054" class="Index">Examples
+<span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097002"></a><a
+ href="packagertool-connected.html#50565188_pgfId-999553" class="Index">
+7. Creating and Validating Application Modules <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097004"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002648" class="Index">Packager
+Operation <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097006"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002430" class="Index">Options
+<span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097008"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002433" class="Index">Basic
+Packaging Sequence <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097010"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002435" class="Index">Use
+Cases <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097012"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002463" class="Index">Signing
+<span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097014"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002466" class="Index">Use
+Cases <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097016"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1007022" class="Index">Running
+the Packager From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097018"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1003052" class="Index"><kbd
+ class="Command">create</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097020"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1008331" class="Index"><kbd
+ class="Command">create</kbd> Subcommand Format <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097022"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004338" class="Index"><kbd
+ class="Command">create</kbd> Subcommand Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097024"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004292" class="Index"><kbd
+ class="Command">create</kbd> Subcommand Examples <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097026"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002545" class="Index"><kbd
+ class="Command">validate</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097028"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1008314" class="Index"><kbd
+ class="Command">validate</kbd> Subcommand Format <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097030"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004319" class="Index"><kbd
+ class="Command">validate</kbd> Subcommand Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097032"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004331" class="Index"><kbd
+ class="Command">validate</kbd> Subcommand Example <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097034"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1003823" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097036"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1008351" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand Format <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097038"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004399" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097040"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004405" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand Example <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097042"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1003825" class="Index"><kbd
+ class="Command">help</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097044"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1008366" class="Index"><kbd
+ class="Command">help</kbd> Subcommand Format <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097046"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004451" class="Index"><kbd
+ class="Command">help</kbd> Subcommand Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097048"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1004456" class="Index"><kbd
+ class="Command">help</kbd> Subcommand Example <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097050"></a><a
+ href="packagertool-connected.html#50565188_pgfId-1002558" class="Index">Use
+Cases <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097052"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1008731"
+ class="Index"> 8. Loading and Managing Applications <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097054"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1001436"
+ class="Index">Description of the On-Card Installer <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097056"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002551"
+ class="Index">On-card Installer Operation <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097058"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1005461"
+ class="Index">On-card Installer Functionality <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097060"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1001457"
+ class="Index">Description of the Installer Tool <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097062"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002846"
+ class="Index">Running the Installer Tool From the Command Line <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097064"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1003051"
+ class="Index"><kbd class="Command">load</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097066"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1003366"
+ class="Index"><kbd class="Command">create</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097068"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1003883"
+ class="Index"><kbd class="Command">delete</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097070"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1003635"
+ class="Index"><kbd class="Command">unload</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097072"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1004255"
+ class="Index"><kbd class="Command">list</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097074"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1004251"
+ class="Index"><kbd class="Command">help</kbd> Subcommand <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097076"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002600"
+ class="Index">Card Installer Use Case <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097078"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1004578"
+ class="Index">Load an Application <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097080"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002603"
+ class="Index">Pre-Conditions <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097082"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002607"
+ class="Index">Post-Conditions <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097084"></a><a
+ href="cardinstaller-connected.html#50565189_pgfId-1002609"
+ class="Index">Sequence of Events <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097086"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1001793" class="Index">
+9. Backwards Compatibility for Classic Applets <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097088"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1001774" class="Index">Generating
+Application Modules From Classic Applets <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097090"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1004890" class="Index">Running
+the Normalizer From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097092"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1002464" class="Index"><kbd
+ class="Command">normalize</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097094"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1002514" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097096"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1002516" class="Index"><kbd
+ class="Command">help</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097098"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1004934" class="Index">Converting
+Class Files to CAP Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097100"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003467" class="Index">Conversion
+Process Sequence <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097102"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003483" class="Index">Specifying
+an Export Map <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097104"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003497" class="Index">Loading
+Export Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097106"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003505" class="Index">Creating
+a <kbd class="Filename">debug.msk</kbd> Output File <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097108"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003511" class="Index">Verification
+of Input and Output Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097110"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003519" class="Index">File
+and Directory Naming Conventions <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097112"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003524" class="Index">Input
+File Naming Conventions <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097114"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003530" class="Index">Output
+File Naming Conventions <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097116"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003538" class="Index">Running
+the Converter From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097118"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003548" class="Index"><kbd
+ class="Command">converter</kbd> Command Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097120"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003633" class="Index">Using
+a Command Configuration File <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097122"></a><a
+ href="normalizer-connected.html#50565149_pgfId-1003645" class="Index">Using
+Delimiters with Command Line Options <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097124"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003356" class="Index">
+10. Using the APDU Tool <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097126"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003360" class="Index">Running
+the APDU Tool From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097128"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003427" class="Index">Examples
+of Using the APDU Tool <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097130"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003429" class="Index">Directing
+Output to the Console <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097132"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003432" class="Index">Directing
+Output to a File <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097134"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1003435" class="Index">Using
+APDU Script Files <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097136"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1004340" class="Index">APDU
+Script File Commands <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097138"></a><a
+ href="apdutool-connected.html#50565192_pgfId-1004297" class="Index">APDU
+Script Preprocessor Commands <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097140"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1003475" class="Index">
+11. Debugging Applications <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097142"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1005548" class="Index">Debugger
+Architecture <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097144"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1005949" class="Index">Running
+the Debugger From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097146"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1008250" class="Index"><kbd
+ class="Command">debug</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097148"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1008267" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097150"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1008269" class="Index"><kbd
+ class="Command">help</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097152"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1006410" class="Index">Debugging
+a Java Card 3 Platform Application <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097154"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1006411" class="Index">Compile
+the Source Code <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097156"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1008457" class="Index">Start
+the Debugger <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097158"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1007916" class="Index">Attach
+the Debugger to the IDE <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097160"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1005806" class="Index">Run
+<kbd class="Command">cjcre.exe</kbd> With <kbd class="Command">-debug</kbd>
+Option <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097162"></a><a
+ href="debuggertool-connected.html#50565190_pgfId-1006688" class="Index">Set
+Break Points <span class="Z-PageNumber"></span></a></p>
+<p class="PartTitleTOC"><a name="50565121_pgfId-1097164"></a><a
+ href="part2.html#50565156_pgfId-3388" class="Index">Part II
+Programming With the Development Kit</a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097166"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1002807"
+ class="Index"> 12. Configuring the RI <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097168"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1002838"
+ class="Index">Configuring Authenticators <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097170"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1002851"
+ class="Index">Creating Custom Protection Domains <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097172"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1009198"
+ class="Index">Creating a Custom Keystore <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097174"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1003050"
+ class="Index">Configuring SSL Support <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097176"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1009800"
+ class="Index">Adding SSL Support <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097178"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1009781"
+ class="Index">Custom Certificates and Keys <span class="Z-PageNumber"></span></a></p>
+<p class="Head3-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1097180"></a><a
+ href="configuringRI-connected.html#50565159_pgfId-1009785"
+ class="Index">Generating an SSL Certificate <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097182"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002807" class="Index">
+13. Building the RI From Sources <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097184"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002929" class="Index">Prerequisites
+to Building the RI <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097186"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002939" class="Index">Contents
+of <i class="Variable">JC_CONNECTED_HOME</i><kbd class="Filename">\src</kbd>
+Folder <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097188"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002953" class="Index">Running
+the ROMizer Tool From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097190"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003497" class="Index"><kbd
+ class="Command">romize</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097192"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003500" class="Index"><kbd
+ class="Command">romize</kbd> Subcommand Options <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097194"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003696" class="Index"><kbd
+ class="Command">romize</kbd> Subcommand Example <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097196"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003600" class="Index"><kbd
+ class="Command">copyright</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097198"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003602" class="Index"><kbd
+ class="Command">help</kbd> Subcommand <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097200"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003595" class="Index">Apps
+list File Contents <span class="Z-PageNumber"></span></a></p>
+<p class="Head3TOC"><a name="50565121_pgfId-1097202"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002993" class="Index">Example
+Contents of Apps List File <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097204"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1002998" class="Index">Romizer
+Tool Output <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097206"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003005" class="Index">Building
+a Custom <kbd class="Filename">cjcre.exe </kbd> <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097208"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003026" class="Index">Preprocessor
+Symbols to Customize the VM <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1097210"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003038" class="Index">Build
+a Custom RI From the Command Line <span class="Z-PageNumber"></span></a></p>
+<p class="Head2-ProcedureTOC"><img class="Icon" title="procedure icon"
+ alt="procedure icon" src="shared/downtriangle_sm.gif"><img
+ src="shared/sm-space.gif" title="small space" alt="small space"><a
+ name="50565121_pgfId-1097212"></a><a
+ href="buildCJCRE-connected.html#50565146_pgfId-1003049" class="Index">Test
+the Custom RI <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleTOC"><a name="50565121_pgfId-1097214"></a><a
+ href="apduio-classic.html#50565158_pgfId-9178" class="Index"> 14.
+Working with APDU I/O <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097216"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005048" class="Index">The
+APDU I/O API <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097218"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005476" class="Index">APDU
+I/O Classes and Interfaces <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097220"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005570" class="Index">Exceptions
+<span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097222"></a><a
+ href="apduio-classic.html#50565158_pgfId-1006212" class="Index">Two-interface
+Card Simulation <span class="Z-PageNumber"></span></a></p>
+<p class="Head1TOC"><a name="50565121_pgfId-1097224"></a><a
+ href="apduio-classic.html#50565158_pgfId-1006202" class="Index">Examples
+of Use <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097226"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005657" class="Index">To
+Connect To a Simulator <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097228"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005719" class="Index">To
+Establish a T=0 Connection To a Card <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097230"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005856" class="Index">To
+Power Up And Power Down the Card <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097232"></a><a
+ href="apduio-classic.html#50565158_pgfId-1006854" class="Index">To
+Exchange APDUs <span class="Z-PageNumber"></span></a></p>
+<p class="Head2TOC"><a name="50565121_pgfId-1097234"></a><a
+ href="apduio-classic.html#50565158_pgfId-1005954" class="Index">To
+Print the APDU <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleATOC"><a name="50565121_pgfId-1097236"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003603" class="Index">
+A. Application Module and Library Formats <span class="Z-PageNumber"></span></a></p>
+<p class="Head1ATOC"><a name="50565121_pgfId-1097238"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003631" class="Index">Web
+Application Module Format <span class="Z-PageNumber"></span></a></p>
+<p class="Head1ATOC"><a name="50565121_pgfId-1097240"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003654" class="Index">Extended
+Applet Application Module Distribution Format <span
+ class="Z-PageNumber"></span></a></p>
+<p class="Head1ATOC"><a name="50565121_pgfId-1097242"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003676" class="Index">Classic
+Applet Application Module Format <span class="Z-PageNumber"></span></a></p>
+<p class="Head1ATOC"><a name="50565121_pgfId-1097244"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003697" class="Index">Extension
+Library Format <span class="Z-PageNumber"></span></a></p>
+<p class="Head1ATOC"><a name="50565121_pgfId-1097246"></a><a
+ href="cap-manifest-connected.html#50565145_pgfId-1003715" class="Index">Classic
+Library Format <span class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleGTOC"><a name="50565121_pgfId-1097248"></a><a
+ href="jcgloss.html#50565195_pgfId-4995" class="Index">Glossary <span
+ class="Z-PageNumber"></span></a></p>
+<p class="ChapTitleITOC"><a name="50565121_pgfId-1097250"></a><a
+ href="ix.html#50565124_pgfId-1440" class="Index">Index <span
+ class="Z-PageNumber"></span></a></p>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script><!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center"><br>
+<br>
+<table
+ summary="Navigation bar, includes the book title and navigation buttons"
+ border="0" cellpadding="0" cellspacing="0" dir="ltr" width="100%">
+  <colgroup span="3"><col id="1" span="1" width="45%"><col id="2"
+ span="1" width="25%"><col id="3" span="1" width="30%"></colgroup><tbody>
+    <tr bgcolor="#cccccc">
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="ChapTitle"
+ align="left">Development Kit User’s Guide, Java Card 3 Platform,
+Version 3.0.2, Connected Edition </td>
+      <td class="navbartitle" rowspan="1" colspan="1" abbr="PartNum"
+ align="right">12-14-09 </td>
+      <td rowspan="1" colspan="1" abbr="NavButtons" align="right"
+ valign="top"><a href="index.html"><img src="shared/toc01.gif"
+ title="Table Of Contents" alt="Table Of Contents" border="0"
+ height="26" width="30"></a><a href="copyright.html"><img
+ src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter"
+ border="0" height="26" width="30"></a><a href="connectedUGLOF.html"><img
+ src="shared/next01.gif" title="Next Chapter" alt="Next Chapter"
+ border="0" height="26" width="30"></a><a href="ix.html"><img
+ src="shared/index01.gif" title="Book Index" alt="Book Index" border="0"
+ height="26" width="30"></a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<p class="copyrightlink"><a href="copyright.html">Copyright</a> © 2009
+Sun Microsystems, Inc. All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.hibernateweb">
+    <module_version install_time="1475191722034" last="true" origin="installer" specification_version="1.26.1">
+        <file crc="3463540416" name="config/Modules/org-netbeans-modules-hibernateweb.xml"/>
+        <file crc="425883683" name="modules/locale/org-netbeans-modules-hibernateweb_ja.jar"/>
+        <file crc="83232587" name="modules/locale/org-netbeans-modules-hibernateweb_pt_BR.jar"/>
+        <file crc="3453374552" name="modules/locale/org-netbeans-modules-hibernateweb_ru.jar"/>
+        <file crc="964161137" name="modules/locale/org-netbeans-modules-hibernateweb_zh_CN.jar"/>
+        <file crc="2890630477" name="modules/org-netbeans-modules-hibernateweb.jar"/>
+    </module_version>
+</module>

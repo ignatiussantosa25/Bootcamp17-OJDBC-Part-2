@@ -1,0 +1,5 @@
+com.sun.javacard.spi.cardmgmt
+com.sun.javacard.spi.security
+javacardx.spi.cardmgmt
+javacardx.spi.framework
+javacardx.spi.security

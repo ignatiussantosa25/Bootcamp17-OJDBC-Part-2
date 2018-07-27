@@ -1,0 +1,7 @@
+<applet-app xmlns="http://java.sun.com/xml/ns/javacard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javacard http://java.sun.com/xml/ns/javacard/applet-app_3_0.xsd">
+    <applet>
+        <display-name>Hello World Extended Applet</display-name>
+        <applet-class>com.sun.jchowto.helloworld.HelloWorldApplet</applet-class>
+        <applet-AID>//aid/A000000062/03010C0101</applet-AID>
+    </applet>
+</applet-app>

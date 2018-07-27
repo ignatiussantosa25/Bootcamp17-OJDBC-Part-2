@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.html.parser/1">
+    <module_version install_time="1475191224899" last="true" origin="installer" specification_version="1.34.1.1">
+        <file crc="3195027192" name="config/Modules/org-netbeans-modules-html-parser.xml"/>
+        <file crc="1738579797" name="docs/html5doc.zip"/>
+        <file crc="1108872894" name="modules/ext/html5-parser.jar"/>
+        <file crc="3337002264" name="modules/ext/icu4j-4_4_2.jar"/>
+        <file crc="850981514" name="modules/locale/org-netbeans-modules-html-parser_ja.jar"/>
+        <file crc="2230653964" name="modules/locale/org-netbeans-modules-html-parser_pt_BR.jar"/>
+        <file crc="2043346825" name="modules/locale/org-netbeans-modules-html-parser_ru.jar"/>
+        <file crc="311490042" name="modules/locale/org-netbeans-modules-html-parser_zh_CN.jar"/>
+        <file crc="453937659" name="modules/org-netbeans-modules-html-parser.jar"/>
+    </module_version>
+</module>

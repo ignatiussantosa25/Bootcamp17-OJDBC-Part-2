@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.hints/1">
+    <module_version install_time="1475191520307" last="true" origin="installer" specification_version="1.40.1">
+        <file crc="2933392708" name="config/Modules/org-netbeans-modules-maven-hints.xml"/>
+        <file crc="298738130" name="modules/locale/org-netbeans-modules-maven-hints_ja.jar"/>
+        <file crc="1188923984" name="modules/locale/org-netbeans-modules-maven-hints_pt_BR.jar"/>
+        <file crc="1822520677" name="modules/locale/org-netbeans-modules-maven-hints_ru.jar"/>
+        <file crc="2286038887" name="modules/locale/org-netbeans-modules-maven-hints_zh_CN.jar"/>
+        <file crc="823636571" name="modules/org-netbeans-modules-maven-hints.jar"/>
+    </module_version>
+</module>

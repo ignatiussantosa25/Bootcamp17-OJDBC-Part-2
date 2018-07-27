@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.parsing.lucene/2">
+    <module_version install_time="1475191156627" last="true" origin="installer" specification_version="2.35.1.1">
+        <file crc="3780388565" name="config/Modules/org-netbeans-modules-parsing-lucene.xml"/>
+        <file crc="4109885926" name="modules/locale/org-netbeans-modules-parsing-lucene_ja.jar"/>
+        <file crc="2129363826" name="modules/locale/org-netbeans-modules-parsing-lucene_pt_BR.jar"/>
+        <file crc="1765740961" name="modules/locale/org-netbeans-modules-parsing-lucene_ru.jar"/>
+        <file crc="1860099391" name="modules/locale/org-netbeans-modules-parsing-lucene_zh_CN.jar"/>
+        <file crc="451493" name="modules/org-netbeans-modules-parsing-lucene.jar"/>
+    </module_version>
+</module>

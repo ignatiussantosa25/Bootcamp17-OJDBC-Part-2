@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.glassfish_logging/1">
+    <module_version install_time="1475191818031" last="true" origin="installer" specification_version="1.28.1.20">
+        <file crc="826183127" name="config/Modules/org-netbeans-libs-glassfish_logging.xml"/>
+        <file crc="2215987826" name="modules/ext/glassfish-logging-2.0.jar"/>
+        <file crc="2428675941" name="modules/locale/org-netbeans-libs-glassfish_logging_ja.jar"/>
+        <file crc="894117744" name="modules/locale/org-netbeans-libs-glassfish_logging_pt_BR.jar"/>
+        <file crc="313722834" name="modules/locale/org-netbeans-libs-glassfish_logging_ru.jar"/>
+        <file crc="1614793374" name="modules/locale/org-netbeans-libs-glassfish_logging_zh_CN.jar"/>
+        <file crc="3165090958" name="modules/org-netbeans-libs-glassfish_logging.jar"/>
+    </module_version>
+</module>

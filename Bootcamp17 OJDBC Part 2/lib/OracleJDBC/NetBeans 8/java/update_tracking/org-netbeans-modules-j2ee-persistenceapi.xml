@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.persistenceapi/1">
+    <module_version install_time="1475191442951" last="true" origin="installer" specification_version="1.34.1.1">
+        <file crc="2691299637" name="config/Modules/org-netbeans-modules-j2ee-persistenceapi.xml"/>
+        <file crc="4101582748" name="modules/locale/org-netbeans-modules-j2ee-persistenceapi_ja.jar"/>
+        <file crc="655920229" name="modules/locale/org-netbeans-modules-j2ee-persistenceapi_pt_BR.jar"/>
+        <file crc="1732413150" name="modules/locale/org-netbeans-modules-j2ee-persistenceapi_ru.jar"/>
+        <file crc="2047419515" name="modules/locale/org-netbeans-modules-j2ee-persistenceapi_zh_CN.jar"/>
+        <file crc="1348140181" name="modules/org-netbeans-modules-j2ee-persistenceapi.jar"/>
+    </module_version>
+</module>

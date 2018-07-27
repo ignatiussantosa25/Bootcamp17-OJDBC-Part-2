@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript.karma/0">
+    <module_version install_time="1475191624124" last="true" origin="installer" specification_version="0.18.1">
+        <file crc="309590874" name="config/Modules/org-netbeans-modules-javascript-karma.xml"/>
+        <file crc="2915262954" name="karma/karma-netbeans-reporter/index.js"/>
+        <file crc="1007163265" name="karma/karma-netbeans-reporter/package.json"/>
+        <file crc="3542478566" name="karma/karma-netbeans.conf.js"/>
+        <file crc="693976955" name="modules/locale/org-netbeans-modules-javascript-karma_ja.jar"/>
+        <file crc="2488804815" name="modules/locale/org-netbeans-modules-javascript-karma_pt_BR.jar"/>
+        <file crc="1882847016" name="modules/locale/org-netbeans-modules-javascript-karma_ru.jar"/>
+        <file crc="1221382932" name="modules/locale/org-netbeans-modules-javascript-karma_zh_CN.jar"/>
+        <file crc="1762779940" name="modules/org-netbeans-modules-javascript-karma.jar"/>
+    </module_version>
+</module>

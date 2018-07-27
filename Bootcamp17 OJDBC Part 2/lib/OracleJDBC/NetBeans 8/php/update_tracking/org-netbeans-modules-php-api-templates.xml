@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.api.templates/0">
+    <module_version install_time="1475191898441" last="true" origin="installer" specification_version="0.11.1">
+        <file crc="2999972294" name="config/Modules/org-netbeans-modules-php-api-templates.xml"/>
+        <file crc="3097304722" name="modules/locale/org-netbeans-modules-php-api-templates_ja.jar"/>
+        <file crc="2377520004" name="modules/locale/org-netbeans-modules-php-api-templates_pt_BR.jar"/>
+        <file crc="3625245305" name="modules/locale/org-netbeans-modules-php-api-templates_ru.jar"/>
+        <file crc="107744869" name="modules/locale/org-netbeans-modules-php-api-templates_zh_CN.jar"/>
+        <file crc="2743743410" name="modules/org-netbeans-modules-php-api-templates.jar"/>
+    </module_version>
+</module>

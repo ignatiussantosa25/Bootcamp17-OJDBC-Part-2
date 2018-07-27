@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.glassfish.tooling/0">
+    <module_version install_time="1475191670759" last="true" origin="installer" specification_version="1.9.1">
+        <file crc="2917690634" name="config/Modules/org-netbeans-modules-glassfish-tooling.xml"/>
+        <file crc="792292712" name="modules/locale/org-netbeans-modules-glassfish-tooling_ja.jar"/>
+        <file crc="1797074870" name="modules/locale/org-netbeans-modules-glassfish-tooling_pt_BR.jar"/>
+        <file crc="2196106875" name="modules/locale/org-netbeans-modules-glassfish-tooling_ru.jar"/>
+        <file crc="3996788457" name="modules/locale/org-netbeans-modules-glassfish-tooling_zh_CN.jar"/>
+        <file crc="2901729544" name="modules/org-netbeans-modules-glassfish-tooling.jar"/>
+    </module_version>
+</module>

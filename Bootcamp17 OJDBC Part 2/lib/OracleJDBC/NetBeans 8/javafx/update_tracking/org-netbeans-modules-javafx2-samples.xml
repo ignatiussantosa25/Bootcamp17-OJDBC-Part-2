@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javafx2.samples">
+    <module_version install_time="1475191955632" last="true" origin="installer" specification_version="1.17.1">
+        <file crc="154085094" name="config/Modules/org-netbeans-modules-javafx2-samples.xml"/>
+        <file crc="3935475186" name="modules/locale/org-netbeans-modules-javafx2-samples_ja.jar"/>
+        <file crc="1642982746" name="modules/locale/org-netbeans-modules-javafx2-samples_pt_BR.jar"/>
+        <file crc="2090554294" name="modules/locale/org-netbeans-modules-javafx2-samples_ru.jar"/>
+        <file crc="3691741142" name="modules/locale/org-netbeans-modules-javafx2-samples_zh_CN.jar"/>
+        <file crc="140949041" name="modules/org-netbeans-modules-javafx2-samples.jar"/>
+    </module_version>
+</module>

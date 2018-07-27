@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Building the RI From Sources
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="configuringRI-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="apduio-classic.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565146_pgfId-1002806"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">13</SPAN><A NAME="50565146_85012"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565146_pgfId-1002807"></A><A NAME="50565146_Building the RI From Sources"></A>Building the RI From Sources
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002899"></A>This chapter describes how to build a customized Java Card 3 platform RI. This chapter is useful only if you have a source release of the development kit. The src folder under <I CLASS="Variable">JC_CONNECTED_HOME</I> contains all of the source files for the RI including VM code, and all tools (such as the packager and installer). You can modify or add to these files and build a customized Java Card 3 platform RI according to their specific requirements. The following actions are possible reasons a developer might have for building a custom RI:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002900"></A>Add additional classes or packages if a proprietary API or other implementation classes are used.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002901"></A>Fine tune the existing sources.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002902"></A>Update tools to work with target platform.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002903"></A>Romize the applications. Romizing masks the applications into the <KBD CLASS="Filename">cjcre.exe</KBD>.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002904"></A>This chapter contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002908"></A><A HREF="buildCJCRE-connected.html#50565146_15523" CLASS="XRef">Prerequisites to Building the RI</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002912"></A><A HREF="buildCJCRE-connected.html#50565146_31419" CLASS="XRef">Contents of JC_CONNECTED_HOME&#92;src Folder</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002916"></A><A HREF="buildCJCRE-connected.html#50565146_17208" CLASS="XRef">Running the ROMizer Tool From the Command Line</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002920"></A><A HREF="buildCJCRE-connected.html#50565146_96490" CLASS="XRef">Building a Custom cjcre.exe</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565146_pgfId-1002929"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565146_15523"></A><A NAME="50565146_47692"></A>Prerequisites to Building the RI</H2>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002930"></A>Before building the RI, the following software must be installed on the system:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002931"></A>MinGW
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002932"></A>JDK 6
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002933"></A>Ant
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002937"></A>See <A HREF="install-connected.html#50565183_99743" CLASS="XRef">Chapter 2</A> for more details on these requirements.
+</P><H2 CLASS="Head1"><A NAME="50565146_pgfId-1002939"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565146_31419"></A>Contents of <I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;src</KBD> Folder</H2>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002940"></A>The following describes the contents of the <KBD CLASS="Filename">src</KBD> folder.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002941"></A><STRONG CLASS="Lead-In2para">api</STRONG> - Contains all of the <KBD CLASS="Filename">.java</KBD> files required to build a custom RI. If a new package must be added, it is added under this folder.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002942"></A><STRONG CLASS="Lead-In2para">tools</STRONG> - Contains the source code of all shipped tools organized in separate folders. To make a tool to work with a target platform, edit the code of the corresponding tool.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002943"></A><STRONG CLASS="Lead-In2para">romized_apps</STRONG> - Contains the source files for the CardManager.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002944"></A><STRONG CLASS="Lead-In2para">vm</STRONG>&#92;c - Contains the source files of core VM.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002945"></A>vm&#92;h - Contains the header files of core VM.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002946"></A>vm&#92;lib - Contains configuration files <KBD CLASS="Filename">config.properties</KBD> and <KBD CLASS="Filename">system</KBD>. See <A HREF="configuringRI-connected.html#50565159_83714" CLASS="XRef">Chapter 12</A> for additional details.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002950"></A><KBD CLASS="Filename">vm&#92;ignore.list</KBD> - If a class must be excluded from romization, add its name in this file.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002951"></A><STRONG CLASS="Lead-In2para">build.xml</STRONG> - The main file used to build the tools and <KBD CLASS="Filename">cjcre.exe</KBD> in a single step.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003339"></A><STRONG CLASS="Lead-In2para">aplImpl.jar</STRONG>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003340"></A><STRONG CLASS="Lead-In2para">bat.template</STRONG>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003341"></A><STRONG CLASS="Lead-In2para">crypto.jar</STRONG>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565146_pgfId-1002953"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565146_17208"></A>Running the ROMizer Tool From the Command Line</H2>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002954"></A>When building a custom RI, the ROMizer tool takes system class files and application modules as input and creates a ROM image of these in an output ROM image file. The ROMizer tool converts the class files into C code, which is often called a ROM mask or simply a mask. For applications, the ROMizer tool stores non-class files in appropriate directories in the internal Java Card 3 platform file system, so that these files are available during the execution of the application. See <A HREF="buildCJCRE-connected.html#50565146_96490" CLASS="XRef">Building a Custom cjcre.exe</A> for detailed description of using the ROMizer tool.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003555"></A>The command line interface for the ROMizer has the following syntax:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003556"></A>romizer.bat <I CLASS="Variable">subcommand</I> [options]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003493"></A><A NAME="50565146_subcommands"></A>The following is a list of the subcommands for the ROMizer:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003494"></A><KBD CLASS="Command">romize</KBD> - Romizes the system class files and application modules
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003495"></A><KBD CLASS="Command">copyright</KBD> - Displays detailed copyright notice
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003496"></A><KBD CLASS="Command">help</KBD> - Displays information about the ROMizer command
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565146_pgfId-1003497"></A><KBD CLASS="Command">romize</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003499"></A>Use the <A NAME="50565146_options"></A><KBD CLASS="Command">romize</KBD> subcommand and its options to romize the system class files and application modules. Options are used with the <KBD CLASS="Command">romize</KBD> subcommand to specify files and directories.
+</P><H4 CLASS="Head3"><A NAME="50565146_pgfId-1003500"></A><KBD CLASS="Command">romize</KBD> Subcommand Options</H4>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003504"></A><A HREF="buildCJCRE-connected.html#50565146_12440" CLASS="XRef">TABLE 13-1</A> identifies the <KBD CLASS="Command">romize</KBD> subcommand options and provides their descriptions.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565146_pgfId-1003508"> </A> TABLE 13-1 	 <KBD CLASS="Command"> romize </KBD> <A NAME="50565146_12440"> </A>  Subcommand Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565146_pgfId-1003512"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565146_pgfId-1003514"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003656"></A><KBD CLASS="Command">-</KBD>a <I CLASS="Variable">apps-filename</I>
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003657"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003641"></A><KBD CLASS="Command">--apps</KBD> <I CLASS="Variable">apps-filename</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003643"></A>Specifies the file that contains the list of applications to be masked.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003516"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003670"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003518"></A><KBD CLASS="Command">--commandoptionsfile</KBD> command-options-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003520"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003534"></A><KBD CLASS="Command">-e </KBD><I CLASS="Variable">EEPROM- filename</I>
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003535"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003536"></A><KBD CLASS="Command">--e2pfile</KBD> <I CLASS="Variable">EEPROM- filename</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003538"></A>Specifies the file where the initial <KBD CLASS="Filename">eeprom</KBD> file is written.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003540"></A><KBD CLASS="Command">-o </KBD><I CLASS="Variable">ROM-output-filename</I>
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003541"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003542"></A><KBD CLASS="Command">--out </KBD><I CLASS="Variable">ROM-output-filename</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565146_pgfId-1003544"></A>Specifies the file where the mask is written.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H4 CLASS="Head3"><A NAME="50565146_pgfId-1003696"></A><KBD CLASS="Command">romize</KBD> Subcommand Example</H4>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003712"></A>Either of the following commands will run the ROMizer tool:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003713"></A>romizer.bat romize -o <I CLASS="Variable">ROM-output-filename</I> -e <I CLASS="Variable">EEPROM- filename</I> -a <I CLASS="Variable">apps-filename</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003714"></A>or
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003715"></A>romizer.bat romize --out <I CLASS="Variable">ROM-output- filename</I> <KBD CLASS="Command">--e2pfile</KBD> <I CLASS="Variable">EEPROM -filename</I> &#92;
+<A NAME="50565146_pgfId-1003716"></A>	--apps <I CLASS="Variable">apps-filename</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003594"></A>In the previous examples, the following options are used:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002964"></A><KBD CLASS="Command">-o</KBD> (or <KBD CLASS="Command">--out)</KBD> - Must be followed by the path to the output file where the mask is written<KBD CLASS="Filename">.</KBD> For example:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1002965"></A><KBD CLASS="Filename">--out MyROMJava.c</KBD>
+</PRE>
+<P CLASS="ParaIndent1"><A NAME="50565146_pgfId-1002969"></A>See <A HREF="buildCJCRE-connected.html#50565146_69396" CLASS="XRef">Romizer Tool Output</A> for a description of the ROM output file.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002970"></A><KBD CLASS="Command">-e</KBD> (or <KBD CLASS="Command">--e2pfile)</KBD> - Must be followed by the path to the initial <KBD CLASS="Filename">eeprom</KBD> file<KBD CLASS="Filename">. </KBD>For example:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1002971"></A><KBD CLASS="Command">--e2pfile</KBD><KBD CLASS="Filename"> myeeprom.eeprom</KBD>
+</PRE>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002972"></A><KBD CLASS="Command">-a</KBD> (or <KBD CLASS="Command">--apps)</KBD> - Must be followed by the path to the applications list file which contains the list of applications to be masked. For example:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1002973"></A><KBD CLASS="Command">--apps myapps.list</KBD>.
+</PRE>
+<P CLASS="ParaIndent1"><A NAME="50565146_pgfId-1002977"></A>See <A HREF="buildCJCRE-connected.html#50565146_25036" CLASS="XRef">Example Contents of Apps List File</A> for a description of the configuration file.
+</P><H3 CLASS="Head2"><A NAME="50565146_pgfId-1003600"></A><KBD CLASS="Command">copyright</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003601"></A>The <KBD CLASS="Command">copyright</KBD> subcommand displays the detailed copyright notice. There are no options associated with this subcommand.
+</P><H3 CLASS="Head2"><A NAME="50565146_pgfId-1003602"></A><KBD CLASS="Command">help</KBD> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003603"></A>The <KBD CLASS="Command">help</KBD> subcommand displays information about the ROMizer. Options are used with the <KBD CLASS="Command">help</KBD> subcommand to specify the information that is displayed about each sub-command.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003612"></A>For example, to see detailed help about the ROMizer tool, type:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003615"></A>romizer.bat help romize
+</PRE><H3 CLASS="Head2"><A NAME="50565146_pgfId-1003595"></A>Apps list File Contents</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002979"></A>The apps list file contains information about applications that need to be romized. All system classes and applications must be provided as input to the <KBD CLASS="Command">romizer</KBD> in compressed files (<KBD CLASS="Filename">.jar</KBD>, <KBD CLASS="Filename">.war</KBD>, or <KBD CLASS="Filename">.zip</KBD> files).
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002980"></A>Each application file must be specified in the apps list file on a new line. Each application module entry in the configuration file must provide additional information as noted in the following format example:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1002981"></A><I CLASS="Variable">application-module</I> -t &lt;web|classic-applet|extended-applet|classic-lib| &#92; 
+<A NAME="50565146_pgfId-1003289"></A>	extension-lib&gt; -s <I CLASS="Variable">signature-file</I> -n <I CLASS="Variable">module-name</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002983"></A>In the previous example, the following parameters are used:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002984"></A><I CLASS="Variable">application-module</I> is the <KBD CLASS="Filename">.jar</KBD>, <KBD CLASS="Filename">.war</KBD>, or <KBD CLASS="Filename">.zip</KBD> application module file.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002985"></A><KBD CLASS="Command">-t</KBD> followed by <KBD CLASS="Command">web</KBD>, <KBD CLASS="Command">classic-applet,</KBD> <KBD CLASS="Command">extended-applet,</KBD> <KBD CLASS="Command">classic-lib</KBD>, or <KBD CLASS="Command">extension-lib</KBD> to identify the type of application being romized.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002986"></A><KBD CLASS="Command">-s</KBD> followed by the name of the properties file that contains the BASE64 encoded certificate and signature, where <I CLASS="Variable">signature-file</I> represents the file name.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565146_pgfId-1002987"></A>This file is a simple properties file containing the following properties as name-value pairs:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565146_pgfId-1002988"></A><KBD CLASS="Command">signature</KBD>=<I CLASS="Variable">base64 encoded signature</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565146_pgfId-1002989"></A><KBD CLASS="Command">certificate</KBD>=<I CLASS="Variable">certificate to validate this group and digest</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1002990"></A><KBD CLASS="Command">-n</KBD> followed by the module name that will be referenced by <KBD CLASS="Filename">cjcre.exe</KBD> for this application module.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002991"></A>The following is an example of an entry in the configuration file:
+</P>
+<PRE CLASS="Codeline-"><A NAME="50565146_pgfId-1002992"></A>HelloWorld.war -t web 	-s mykey1.txt -n helloapp
+</PRE><H4 CLASS="Head3"><A NAME="50565146_pgfId-1002993"></A><A NAME="50565146_25036"></A>Example Contents of Apps List File</H4>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002994"></A>The following is an example of the contents of an apps list file:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1002995"></A>HelloWorld.war -t web 	-s key1.txt -n helloapp
+<A NAME="50565146_pgfId-1002996"></A>GCFClient.war -t web -s key2.txt -n gcfapp
+</PRE><H3 CLASS="Head2"><A NAME="50565146_pgfId-1002998"></A><A NAME="50565146_69396"></A>Romizer Tool Output</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1002999"></A>The output created by running the ROMizer tool is a preliminary EEPROM file and a C language source file that contains the ROM image of the input file including the following:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003000"></A>Java class files that contain the API implementation
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003001"></A>Implementation of containers
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003003"></A>Applications selected by the user for romization<A NAME="50565146_52104"></A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565146_pgfId-1003005"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565146_96490"></A>Building a Custom <KBD CLASS="Filename">cjcre.exe</KBD></H2>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003006"></A>The <KBD CLASS="Filename">build.xml</KBD> provided in the src folder build everything including tools and <KBD CLASS="Filename">cjcre.exe</KBD>. This section gives details on how the <KBD CLASS="Filename">cjcre.exe</KBD> is generated.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003007"></A>Developers can modify the RI by adding or modifying the reference implementation code and using the ROMizer tool. RI consists of .<KBD CLASS="Filename">java</KBD> and C source files. The core VM is written in C programming language and rest of the API and supported implementation is written in the Java programming language. The ROMizer tool converts the class files into C code, which is often called the ROM mask or simply the mask. Then all the C source code is compiled to an executable to generate <KBD CLASS="Filename">cjcre.exe.</KBD>
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003008"></A>The ROM image can include any supported application files (web, extended-applet, classic-applet, extension library, and classic library). ROMized applications can be instantiated without requiring download after the runtime environment starts up. The ROMizer tool takes system class files and application module as input and creates a ROM image of these in an output ROM image file.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003009"></A>For applications, the ROMizer tool stores the non-class files in appropriate directories in the internal Java Card 3 platform file system, so that these files are available during the execution of the application.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003010"></A><A HREF="buildCJCRE-connected.html#50565146_37561" CLASS="XRef">FIGURE 13-1</A> illustrates the procedure of building the <KBD CLASS="Filename">cjcre.exe</KBD> from sources.
+</P>
+<P CLASS="FigureCaption"><A NAME="50565146_pgfId-1003976"></A>FIGURE 13-1 	<A NAME="50565146_37561"></A>Building cjcre.exe From Sources
+</P>
+<BR><A NAME="50565146_pgfId-1010524"></A>
+<P CLASS="FigureBox"><A NAME="50565146_pgfId-1004007"></A>
+<P><IMG SRC="figures/buildCJCRE-connected-4.jpg" TITLE="diagram of building cjcre.exe from sources." ALT="diagram of building cjcre.exe from sources." ALIGN="BASELINE">
+</P><A NAME="50565146_pgfId-1010520"></A><A NAME="50565146_pgfId-1010523"></A>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1004001"></A>Java files are compiled into class files using the <KBD CLASS="Filename">javac</KBD> compiler. Details of applications to be ROMized are listed in a text file. The class files and the list file are given as input to the <KBD CLASS="Filename">romizer.bat</KBD> tool (see <A HREF="buildCJCRE-connected.html#50565146_37227" CLASS="XRef">Preprocessor Symbols to Customize the VM</A>). By default <KBD CLASS="Filename">romizer.bat</KBD> generates <KBD CLASS="Filename">ROMJava.c</KBD>, a <KBD CLASS="Command">C</KBD> file that contains the information about all classes and applications.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003021"></A>The GNU C compiler (<KBD CLASS="Command">gcc</KBD>) is used to build the final executable. The generated <KBD CLASS="Filename">ROMJava.c</KBD> and the rest of the <KBD CLASS="Command">C</KBD> files are compiled using <KBD CLASS="Command">gcc</KBD>, which generates <KBD CLASS="Filename">cjcre.exe</KBD>. Use the provided ANT build file to build custom <KBD CLASS="Filename">cjcre.exe</KBD>. See <A HREF="buildCJCRE-connected.html#50565146_34611" CLASS="XRef">Build a Custom RI From the Command Line</A>.
+</P><H3 CLASS="Head2"><A NAME="50565146_pgfId-1003026"></A><A NAME="50565146_37227"></A>Preprocessor Symbols to Customize the VM</H3>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003027"></A>The following preprocessor symbols can be used to customize the Java Card VM:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003028"></A><KBD CLASS="Command">INCLUDEDEBUGCODE=0</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003029"></A><KBD CLASS="Command">TRACE_EXCEPTIONS_NATIVE=1</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003030"></A><KBD CLASS="Command">INCLUDE_FIREWALL_DEBUG_CODE=0</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003031"></A><KBD CLASS="Command">ENABLE_JAVA_DEBUGGER=1</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565146_pgfId-1003032"></A>Enables the <KBD CLASS="Command">kdwp</KBD> code. Default is 1. If set to 0, then <KBD CLASS="Command">cjcre</KBD> can not be used to debug the applications.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003864"></A><KBD CLASS="Command">ENABLE_LOGGING=1</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565146_pgfId-1003865"></A>Enables the logging messages that are printed by using <KBD CLASS="Command">-loggerlevel=</KBD>&lt;value&gt;. Default is 1. If set to 0, then even if <KBD CLASS="Command">-loggerlevel</KBD> is set to <KBD CLASS="Command">all</KBD>, no logging messages are printed from native code.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003862"></A><KBD CLASS="Command">APDU_PROTOCOL_T=0</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565146_pgfId-1003034"></A>Controls the protocol that will be supported by cjcre. default is t=0. Valid values are 0, 1 for T=0, T=1 respectively.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565146_pgfId-1003035"></A><KBD CLASS="Command">APDU_INTERFACE=0</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565146_pgfId-1003036"></A>Contacted or contactless or both. Valid values are 0, 1, 2 for contacted, contactless and Dual respectively
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565146_pgfId-1003038"></A><A NAME="50565146_34611"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Build a Custom RI From the Command Line
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565146_pgfId-1003039"></A>	1.	Edit the files or add more files.
+</P>
+<P CLASS="Step1-"><A NAME="50565146_pgfId-1003040"></A>	2.	Update the tools source code if required.
+</P>
+<P CLASS="Step1-"><A NAME="50565146_pgfId-1003041"></A>	3.	From command line navigate to the <KBD CLASS="Filename">src</KBD> folder and run the <KBD CLASS="Command">ant</KBD> command.
+</P>
+<P CLASS="StepPara1"><A NAME="50565146_pgfId-1003042"></A>If there is a apps list file that contains the list of applications for ROMization, set the property <KBD CLASS="Command">apps_file_for_romizer</KBD> while running the <KBD CLASS="Command">ant</KBD> command as shown:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003043"></A>	ant -Dapps_file_for_romizer=<I CLASS="Variable">path-to-apps-file</I>
+</PRE>
+<P CLASS="StepPara1"><A NAME="50565146_pgfId-1003044"></A>The <KBD CLASS="Command">ant</KBD> command creates the <I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;custom_build</KBD> folder with a <KBD CLASS="Filename">bin</KBD> and <KBD CLASS="Filename">lib</KBD> folder under it.
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565146_pgfId-1003045"></A>The <KBD CLASS="Filename">bin</KBD> directory contains the new <KBD CLASS="Filename">cjcre.exe</KBD> and all of the other tool’s <KBD CLASS="Filename">.bat</KBD> files.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565146_pgfId-1003046"></A>The <KBD CLASS="Filename">lib</KBD> folder contains the .<KBD CLASS="Filename">jar</KBD> files and config files.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003047"></A><I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;custom_build&#92;bin</KBD> and 
+<BR><I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;custom_build&#92;lib</KBD> are similar to <I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;bin</KBD> and <I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Filename">&#92;lib</KBD>, except that <KBD CLASS="Filename">custom_build</KBD> contains the binaries from the updated source code.
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565146_pgfId-1003049"></A><A NAME="50565146_79291"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Test the Custom RI
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="StepSingle"><IMG CLASS="Icon" ALIGN="Middle" TITLE="single-step bullet" ALT="single-step bullet" SRC="shared/chars/bullet.gif">&nbsp;&nbsp;<A NAME="50565146_pgfId-1003050"></A>Use the following command to run the new <KBD CLASS="Filename">cjcre.exe</KBD> file stored in <I CLASS="Variable">JC_CONNECTED_HOME</I>&#92;<KBD CLASS="Filename">custom_build&#92;bin</KBD>.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565146_pgfId-1003051"></A><I CLASS="Variable">JC_CONNECTED_HOME</I>&#92;custom_build&#92;bin&#92;cjcre.exe [<I CLASS="Variable">options</I>]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003055"></A>See <A HREF="ri-connected.html#50565186_81304" CLASS="XRef">Chapter 5</A> for a description of the available options.
+</P>
+<P CLASS="Paragraph"><A NAME="50565146_pgfId-1003056"></A>Files created as a result of running or building the custom RI are stored in the <I CLASS="Variable">JC_CONNECTED_HOME</I>&#92;<KBD CLASS="Filename">custom_build&#92;bin</KBD> and <I CLASS="Variable">JC_CONNECTED_HOME</I>&#92;<KBD CLASS="Command">custom_build&#92;lib</KBD> directories. These directories are created the first time the RI is built and will be over written every time the RI is built.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="configuringRI-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="apduio-classic.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

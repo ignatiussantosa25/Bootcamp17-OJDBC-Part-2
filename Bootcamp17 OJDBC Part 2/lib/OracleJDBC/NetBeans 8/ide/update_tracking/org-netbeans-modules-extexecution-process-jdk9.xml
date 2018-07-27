@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.extexecution.process.jdk9">
+    <module_version install_time="1475191215838" last="true" origin="installer" specification_version="1.0.1">
+        <file crc="3575917766" name="config/Modules/org-netbeans-modules-extexecution-process-jdk9.xml"/>
+        <file crc="3366168192" name="modules/locale/org-netbeans-modules-extexecution-process-jdk9_ja.jar"/>
+        <file crc="2408799139" name="modules/locale/org-netbeans-modules-extexecution-process-jdk9_pt_BR.jar"/>
+        <file crc="1472270003" name="modules/locale/org-netbeans-modules-extexecution-process-jdk9_ru.jar"/>
+        <file crc="2839806805" name="modules/locale/org-netbeans-modules-extexecution-process-jdk9_zh_CN.jar"/>
+        <file crc="2011568294" name="modules/org-netbeans-modules-extexecution-process-jdk9.jar"/>
+    </module_version>
+</module>

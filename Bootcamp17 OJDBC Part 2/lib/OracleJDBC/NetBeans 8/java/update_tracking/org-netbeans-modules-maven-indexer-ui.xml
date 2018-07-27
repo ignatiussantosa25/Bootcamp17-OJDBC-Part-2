@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.indexer.ui/2">
+    <module_version install_time="1475191405992" last="true" origin="installer" specification_version="2.34.1">
+        <file crc="3537569385" name="config/Modules/org-netbeans-modules-maven-indexer-ui.xml"/>
+        <file crc="1023866542" name="modules/locale/org-netbeans-modules-maven-indexer-ui_ja.jar"/>
+        <file crc="1063981643" name="modules/locale/org-netbeans-modules-maven-indexer-ui_pt_BR.jar"/>
+        <file crc="3498752695" name="modules/locale/org-netbeans-modules-maven-indexer-ui_ru.jar"/>
+        <file crc="744180506" name="modules/locale/org-netbeans-modules-maven-indexer-ui_zh_CN.jar"/>
+        <file crc="3842730452" name="modules/org-netbeans-modules-maven-indexer-ui.jar"/>
+    </module_version>
+</module>

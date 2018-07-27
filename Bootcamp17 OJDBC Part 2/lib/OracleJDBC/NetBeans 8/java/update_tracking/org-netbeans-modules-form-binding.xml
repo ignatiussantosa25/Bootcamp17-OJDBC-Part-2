@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.form.binding/0">
+    <module_version install_time="1475191440675" last="true" origin="installer" specification_version="0.17.1.1.4.1">
+        <file crc="1273251949" name="config/Modules/org-netbeans-modules-form-binding.xml"/>
+        <file crc="570423030" name="modules/locale/org-netbeans-modules-form-binding_ja.jar"/>
+        <file crc="1155464801" name="modules/locale/org-netbeans-modules-form-binding_pt_BR.jar"/>
+        <file crc="1328758386" name="modules/locale/org-netbeans-modules-form-binding_ru.jar"/>
+        <file crc="2926666653" name="modules/locale/org-netbeans-modules-form-binding_zh_CN.jar"/>
+        <file crc="1871726518" name="modules/org-netbeans-modules-form-binding.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.netserver">
+    <module_version install_time="1475191596567" last="true" origin="installer" specification_version="1.15.1">
+        <file crc="2169691515" name="config/Modules/org-netbeans-modules-netserver.xml"/>
+        <file crc="2659877146" name="modules/locale/org-netbeans-modules-netserver_ja.jar"/>
+        <file crc="3511258923" name="modules/locale/org-netbeans-modules-netserver_pt_BR.jar"/>
+        <file crc="1555936082" name="modules/locale/org-netbeans-modules-netserver_ru.jar"/>
+        <file crc="1098836204" name="modules/locale/org-netbeans-modules-netserver_zh_CN.jar"/>
+        <file crc="1084388665" name="modules/org-netbeans-modules-netserver.jar"/>
+    </module_version>
+</module>

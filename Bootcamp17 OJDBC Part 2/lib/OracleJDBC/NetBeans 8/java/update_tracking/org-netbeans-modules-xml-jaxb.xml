@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.jaxb/1">
+    <module_version install_time="1475191536973" last="true" origin="installer" specification_version="1.30.1">
+        <file crc="3971039400" name="config/Modules/org-netbeans-modules-xml-jaxb.xml"/>
+        <file crc="1401242475" name="modules/locale/org-netbeans-modules-xml-jaxb_ja.jar"/>
+        <file crc="774168848" name="modules/locale/org-netbeans-modules-xml-jaxb_pt_BR.jar"/>
+        <file crc="2225964560" name="modules/locale/org-netbeans-modules-xml-jaxb_ru.jar"/>
+        <file crc="462036051" name="modules/locale/org-netbeans-modules-xml-jaxb_zh_CN.jar"/>
+        <file crc="2341932541" name="modules/org-netbeans-modules-xml-jaxb.jar"/>
+    </module_version>
+</module>

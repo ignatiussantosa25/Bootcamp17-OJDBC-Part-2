@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.eclipselink/1">
+    <module_version install_time="1475191441914" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="51242465" name="config/Modules/org-netbeans-modules-j2ee-eclipselink.xml"/>
+        <file crc="59485539" name="modules/ext/docs/javax.persistence-2.1.0-doc.zip"/>
+        <file crc="3552562718" name="modules/ext/eclipselink/eclipselink.jar"/>
+        <file crc="3720097765" name="modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar"/>
+        <file crc="3119286176" name="modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar"/>
+        <file crc="1291937718" name="modules/locale/org-netbeans-modules-j2ee-eclipselink_ja.jar"/>
+        <file crc="97603785" name="modules/locale/org-netbeans-modules-j2ee-eclipselink_pt_BR.jar"/>
+        <file crc="2325557610" name="modules/locale/org-netbeans-modules-j2ee-eclipselink_ru.jar"/>
+        <file crc="3213962731" name="modules/locale/org-netbeans-modules-j2ee-eclipselink_zh_CN.jar"/>
+        <file crc="1651082696" name="modules/org-netbeans-modules-j2ee-eclipselink.jar"/>
+    </module_version>
+</module>

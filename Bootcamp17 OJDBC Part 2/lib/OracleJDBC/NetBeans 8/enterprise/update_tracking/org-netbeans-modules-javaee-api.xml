@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.api">
+    <module_version install_time="1475191804046" last="true" origin="installer" specification_version="1.23.1">
+        <file crc="4060549942" name="config/Modules/org-netbeans-modules-javaee-api.xml"/>
+        <file crc="515434150" name="modules/ext/javaee-api-6.0-license.txt"/>
+        <file crc="1741522891" name="modules/ext/javaee-api-6.0.jar"/>
+        <file crc="569796766" name="modules/ext/javaee-web-api-6.0-license.txt"/>
+        <file crc="3625824083" name="modules/ext/javaee-web-api-6.0.jar"/>
+        <file crc="2685932447" name="modules/ext/javaee6-endorsed/javax.annotation-license.txt"/>
+        <file crc="3094057925" name="modules/ext/javaee6-endorsed/javax.annotation.jar"/>
+        <file crc="3900752907" name="modules/ext/javaee6-endorsed/jaxb-api-osgi-license.txt"/>
+        <file crc="3705475811" name="modules/ext/javaee6-endorsed/jaxb-api-osgi.jar"/>
+        <file crc="4015979249" name="modules/ext/javaee6-endorsed/webservices-api-osgi-license.txt"/>
+        <file crc="3183794029" name="modules/ext/javaee6-endorsed/webservices-api-osgi.jar"/>
+        <file crc="4038632405" name="modules/locale/org-netbeans-modules-javaee-api_ja.jar"/>
+        <file crc="2877097716" name="modules/locale/org-netbeans-modules-javaee-api_pt_BR.jar"/>
+        <file crc="4131167618" name="modules/locale/org-netbeans-modules-javaee-api_ru.jar"/>
+        <file crc="1276097589" name="modules/locale/org-netbeans-modules-javaee-api_zh_CN.jar"/>
+        <file crc="962951036" name="modules/org-netbeans-modules-javaee-api.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.owsm">
+    <module_version install_time="1475191884496" last="true" origin="installer" specification_version="1.16.1">
+        <file crc="1567152457" name="config/Modules/org-netbeans-modules-websvc-owsm.xml"/>
+        <file crc="4253537132" name="modules/locale/org-netbeans-modules-websvc-owsm_ja.jar"/>
+        <file crc="2098634594" name="modules/locale/org-netbeans-modules-websvc-owsm_pt_BR.jar"/>
+        <file crc="1535611895" name="modules/locale/org-netbeans-modules-websvc-owsm_ru.jar"/>
+        <file crc="2957151447" name="modules/locale/org-netbeans-modules-websvc-owsm_zh_CN.jar"/>
+        <file crc="3120094246" name="modules/org-netbeans-modules-websvc-owsm.jar"/>
+    </module_version>
+</module>

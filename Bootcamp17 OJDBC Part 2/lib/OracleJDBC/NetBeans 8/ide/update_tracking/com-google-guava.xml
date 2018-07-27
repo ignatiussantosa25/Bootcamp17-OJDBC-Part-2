@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.google.guava">
+    <module_version install_time="1475191155135" last="true" origin="installer" specification_version="15.0.0">
+        <file crc="1871726708" name="config/Modules/com-google-guava.xml"/>
+        <file crc="3512384743" name="modules/com-google-guava.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.metro.lib/1">
+    <module_version install_time="1475191877992" last="true" origin="installer" specification_version="1.30.1">
+        <file crc="4244718433" name="config/Modules/org-netbeans-modules-websvc-metro-lib.xml"/>
+        <file crc="2965998493" name="docs/metro-1.4-doc.zip"/>
+        <file crc="1658174368" name="modules/ext/metro/webservices-api.jar"/>
+        <file crc="1914538828" name="modules/ext/metro/webservices-extra-api.jar"/>
+        <file crc="2942267940" name="modules/ext/metro/webservices-extra.jar"/>
+        <file crc="732106643" name="modules/ext/metro/webservices-rt.jar"/>
+        <file crc="1637851410" name="modules/ext/metro/webservices-tools.jar"/>
+        <file crc="1939502099" name="modules/locale/org-netbeans-modules-websvc-metro-lib_ja.jar"/>
+        <file crc="2629259722" name="modules/locale/org-netbeans-modules-websvc-metro-lib_pt_BR.jar"/>
+        <file crc="3418546980" name="modules/locale/org-netbeans-modules-websvc-metro-lib_ru.jar"/>
+        <file crc="3633355748" name="modules/locale/org-netbeans-modules-websvc-metro-lib_zh_CN.jar"/>
+        <file crc="364296241" name="modules/org-netbeans-modules-websvc-metro-lib.jar"/>
+    </module_version>
+</module>

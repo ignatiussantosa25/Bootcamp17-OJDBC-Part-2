@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javawebstart">
+    <module_version install_time="1475191509853" last="true" origin="installer" specification_version="1.33.1">
+        <file crc="2182237827" name="ant/extra/org-netbeans-modules-javawebstart-anttasks.jar"/>
+        <file crc="1063575411" name="ant/nblib/org-netbeans-modules-javawebstart.jar"/>
+        <file crc="1634614976" name="config/Modules/org-netbeans-modules-javawebstart.xml"/>
+        <file crc="60561636" name="modules/locale/org-netbeans-modules-javawebstart_ja.jar"/>
+        <file crc="3692025379" name="modules/locale/org-netbeans-modules-javawebstart_pt_BR.jar"/>
+        <file crc="1547752384" name="modules/locale/org-netbeans-modules-javawebstart_ru.jar"/>
+        <file crc="3612339475" name="modules/locale/org-netbeans-modules-javawebstart_zh_CN.jar"/>
+        <file crc="1871897915" name="modules/org-netbeans-modules-javawebstart.jar"/>
+    </module_version>
+</module>

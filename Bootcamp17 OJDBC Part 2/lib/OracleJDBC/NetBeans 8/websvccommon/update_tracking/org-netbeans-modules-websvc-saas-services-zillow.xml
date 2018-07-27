@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.saas.services.zillow">
+    <module_version install_time="1475191384996" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="1393047306" name="config/Modules/org-netbeans-modules-websvc-saas-services-zillow.xml"/>
+        <file crc="4046406953" name="modules/locale/org-netbeans-modules-websvc-saas-services-zillow_ja.jar"/>
+        <file crc="2788000168" name="modules/locale/org-netbeans-modules-websvc-saas-services-zillow_pt_BR.jar"/>
+        <file crc="242670850" name="modules/locale/org-netbeans-modules-websvc-saas-services-zillow_ru.jar"/>
+        <file crc="944047023" name="modules/locale/org-netbeans-modules-websvc-saas-services-zillow_zh_CN.jar"/>
+        <file crc="3063729857" name="modules/org-netbeans-modules-websvc-saas-services-zillow.jar"/>
+    </module_version>
+</module>

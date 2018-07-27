@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.resources">
+    <module_version install_time="1475191729644" last="true" origin="installer" specification_version="1.13.1">
+        <file crc="3056246286" name="config/Modules/org-netbeans-modules-javaee-resources.xml"/>
+        <file crc="3496086240" name="modules/locale/org-netbeans-modules-javaee-resources_ja.jar"/>
+        <file crc="930272418" name="modules/locale/org-netbeans-modules-javaee-resources_pt_BR.jar"/>
+        <file crc="2416478862" name="modules/locale/org-netbeans-modules-javaee-resources_ru.jar"/>
+        <file crc="3688510011" name="modules/locale/org-netbeans-modules-javaee-resources_zh_CN.jar"/>
+        <file crc="3315316436" name="modules/org-netbeans-modules-javaee-resources.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.debugger.jpda/2">
+    <module_version install_time="1475191426475" last="false" origin="installer" specification_version="1.99.1.80">
+        <file crc="2639665929" name="config/Modules/org-netbeans-modules-debugger-jpda.xml"/>
+        <file crc="1092701662" name="modules/locale/org-netbeans-modules-debugger-jpda_ja.jar"/>
+        <file crc="4107604467" name="modules/locale/org-netbeans-modules-debugger-jpda_pt_BR.jar"/>
+        <file crc="1992682300" name="modules/locale/org-netbeans-modules-debugger-jpda_ru.jar"/>
+        <file crc="441633003" name="modules/locale/org-netbeans-modules-debugger-jpda_zh_CN.jar"/>
+        <file crc="2496796246" name="modules/org-netbeans-modules-debugger-jpda.jar"/>
+    </module_version>
+    <module_version install_time="1518892651895" last="true" origin="NetBeans Distribution" specification_version="1.99.2.80">
+        <file crc="2639665929" name="config/Modules/org-netbeans-modules-debugger-jpda.xml"/>
+        <file crc="948279318" name="modules/locale/org-netbeans-modules-debugger-jpda_ja.jar"/>
+        <file crc="1810479820" name="modules/locale/org-netbeans-modules-debugger-jpda_pt_BR.jar"/>
+        <file crc="3394672853" name="modules/locale/org-netbeans-modules-debugger-jpda_ru.jar"/>
+        <file crc="894223786" name="modules/locale/org-netbeans-modules-debugger-jpda_zh_CN.jar"/>
+        <file crc="1938926549" name="modules/org-netbeans-modules-debugger-jpda.jar"/>
+    </module_version>
+</module>

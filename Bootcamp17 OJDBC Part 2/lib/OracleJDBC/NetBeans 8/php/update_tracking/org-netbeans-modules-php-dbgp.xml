@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.dbgp">
+    <module_version install_time="1475191931192" last="true" origin="installer" specification_version="1.42.1">
+        <file crc="3110430785" name="config/Modules/org-netbeans-modules-php-dbgp.xml"/>
+        <file crc="1581270703" name="modules/locale/org-netbeans-modules-php-dbgp_ja.jar"/>
+        <file crc="570269325" name="modules/locale/org-netbeans-modules-php-dbgp_pt_BR.jar"/>
+        <file crc="2544542318" name="modules/locale/org-netbeans-modules-php-dbgp_ru.jar"/>
+        <file crc="4242592194" name="modules/locale/org-netbeans-modules-php-dbgp_zh_CN.jar"/>
+        <file crc="2344751680" name="modules/org-netbeans-modules-php-dbgp.jar"/>
+    </module_version>
+</module>

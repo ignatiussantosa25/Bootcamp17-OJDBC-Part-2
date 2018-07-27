@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Compiling Source Code
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="ri-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="packagertool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565187_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">6</SPAN><A NAME="50565187_10980"></A><A NAME="50565187_marker-1005608"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565187_pgfId-999553"></A><A NAME="50565187_Compiling Source Code"></A>Compiling Source Code
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1002425"></A>This chapter describes the use of the Java Card 3 platform Compiler tool (<A NAME="50565187_marker-1005612"></A><KBD CLASS="Filename">javacardc.bat</KBD>) in compiling the source code of applications outside of an IDE. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1005867"></A>See <A HREF="developing-javacardApps.html#50565152_44097" CLASS="XRef">Chapter 3</A> to better understand the role and relationship between the Compiler tool and the other development kit tools used in developing applications for the Java Card 3 platform.
+</P><H2 CLASS="Head1"><A NAME="50565187_pgfId-1002648"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565187_marker-1005609"></A>Running the Compiler Tool from the Command Line</H2>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1003803"></A>The Compiler tool provides a wrapper for <A NAME="50565187_marker-1005613"></A><KBD CLASS="Filename">javac</KBD> (the JDK compiler) and includes an annotation processor for the Java Card 3 platform to check for unsupported language features, such as the use of <A NAME="50565187_marker-1005614"></A><KBD CLASS="Command">float</KBD> and <KBD CLASS="Command">double</KBD>.
+</P><H3 CLASS="Head2"><A NAME="50565187_pgfId-1003826"></A><A NAME="50565187_marker-1005610"></A>Compiler Tool Options</H3>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1004121"></A>In addition to Java Card 3 platform specific options, all standard <KBD CLASS="Command">javac</KBD> options for JDK 1.6 can be used:
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565187_pgfId-1004354"> </A> TABLE 6-1 	Compiler Tool Options  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565187_pgfId-1004412"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565187_pgfId-1004356"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004414"></A><KBD CLASS="Command">-g </KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004404"></A>Generate all debugging info
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004416"></A><KBD CLASS="Command">-g:none </KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004358"></A>Generate no debugging info
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004418"></A><KBD CLASS="Command">-g:{lines,vars,source} </KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004360"></A>Generate only some debugging info
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004420"></A><KBD CLASS="Command">-nowarn</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004362"></A>Generate no warnings
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004422"></A><KBD CLASS="Command">-verbose</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004364"></A>Output messages about what the compiler is doing
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004424"></A><KBD CLASS="Command">-deprecation</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004366"></A>Output source locations where deprecated APIs are used
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004426"></A><KBD CLASS="Command">-classpath</KBD> <I CLASS="Variable">path</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004368"></A>Specify where to find user class files and annotation processors
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004428"></A><KBD CLASS="Command">-cp</KBD> <I CLASS="Variable">path</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004370"></A>Specify where to find user class files and annotation processors.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004430"></A><KBD CLASS="Command">-sourcepath</KBD> <I CLASS="Variable">path</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004372"></A>Specify where to find input source files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004432"></A><KBD CLASS="Command">-bootclasspath</KBD> <I CLASS="Variable">path</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004374"></A>Override location of bootstrap class files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004434"></A><KBD CLASS="Command">-extdirs</KBD> <I CLASS="Variable">dirs</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004376"></A>Override location of installed extensions.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004436"></A><KBD CLASS="Command">-endorseddirs</KBD> <I CLASS="Variable">dirs</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004378"></A>Override location of endorsed standards path.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004438"></A><KBD CLASS="Command">-proc:{none,only} </KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004380"></A>Control whether annotation processing and/or compilation is done.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004440"></A><KBD CLASS="Command">-processor</KBD> <I CLASS="Variable">class1</I>[,<I CLASS="Variable">class2</I>,<I CLASS="Variable">class3</I>...]<KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004382"></A>Names of the annotation processors to run; bypasses default discovery process.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004442"></A><KBD CLASS="Command">-processorpath</KBD> <I CLASS="Variable">path</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004384"></A>Specify where to find annotation processors.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004444"></A><KBD CLASS="Command">-d</KBD> <I CLASS="Variable">directory</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004386"></A>Specify where to place generated class files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004446"></A><KBD CLASS="Command">-s</KBD> <I CLASS="Variable">directory</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004388"></A>Specify where to place generated source files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004448"></A><KBD CLASS="Command">-implicit:{none,class}</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004390"></A>Specify whether or not to generate class files for implicitly referenced files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004450"></A><KBD CLASS="Command">-encoding</KBD> <I CLASS="Variable">encoding</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004392"></A>Specify character encoding used by source files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004452"></A><KBD CLASS="Command">-source</KBD> <I CLASS="Variable">release</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004394"></A>Provide source compatibility with specified release.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004794"></A><KBD CLASS="Command">-target</KBD> <I CLASS="Variable">release</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004796"></A>Generate class files for specific VM version.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004790"></A><KBD CLASS="Command">-version</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004792"></A>Version information.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004786"></A>-<KBD CLASS="Command">help</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004788"></A>Print a synopsis of standard options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004782"></A><KBD CLASS="Command">-Akey[=value]</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004784"></A>Options to pass to annotation processors.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004778"></A><KBD CLASS="Command">-X</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004780"></A>Print a synopsis of nonstandard options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004774"></A><KBD CLASS="Command">-J</KBD><I CLASS="Variable">flag</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565187_pgfId-1004776"></A>Pass <I CLASS="Variable">flag</I> directly to the runtime system.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H3 CLASS="Head2"><A NAME="50565187_pgfId-1004122"></A><A NAME="50565187_marker-1005611"></A>Format</H3>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1004136"></A>The following is an example of the Compiler tool command format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565187_pgfId-1004133"></A><KBD CLASS="Filename">javacardc.bat</KBD> [<I CLASS="Variable">options</I>] [<I CLASS="Variable">sourcefiles</I>] [<I CLASS="Variable">@list_files</I>]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1004147"></A>In the format example:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565187_pgfId-1005013"></A><I CLASS="Variable">options</I> - standard javac options, 
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565187_pgfId-1005014"></A><I CLASS="Variable">sourcefiles</I> - <KBD CLASS="Filename">.java</KBD> files to be compiled
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565187_pgfId-1005015"></A><I CLASS="Variable">@list_files - </I>plain text file containing a list of all java files that need to be compiled
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565187_pgfId-1005054"></A><A NAME="50565187_marker-1005615"></A>Examples</H3>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1005060"></A>A <KBD CLASS="Filename">.java</KBD> file named <KBD CLASS="Filename">UsesFloat.java</KBD> contains the following source:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565187_pgfId-1005061"></A>public class UsesFloat {
+<A NAME="50565187_pgfId-1005062"></A>    float f = 0;
+<A NAME="50565187_pgfId-1005063"></A>}
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1005064"></A>It uses <KBD CLASS="Command">float</KBD>, which is not supported by the Java Card 3 platform. Compiling this file with standard javac generates a class file without any errors. However, <KBD CLASS="Filename">javacardc.bat</KBD> fails the compilation with an error such as the following:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565187_pgfId-1005067"></A>C:&#92;JCDK3.0.2_ConnectedEdition&#92;bin&gt;javacardc.bat UsesFloat.java
+<A NAME="50565187_pgfId-1005068"></A>Java Card 3.0.2 Compiler
+<A NAME="50565187_pgfId-1005069"></A><KBD CLASS="UserType">UsesFloat.java:2: float keyword used</KBD>
+<A NAME="50565187_pgfId-1005070"></A><KBD CLASS="UserType">    float f = 0;</KBD>
+<A NAME="50565187_pgfId-1005071"></A><KBD CLASS="UserType">    ^</KBD>
+<A NAME="50565187_pgfId-1005072"></A><KBD CLASS="UserType">1 error</KBD>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565187_pgfId-1004103"></A>The bold text in the example output indicates the error message text.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="ri-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="packagertool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

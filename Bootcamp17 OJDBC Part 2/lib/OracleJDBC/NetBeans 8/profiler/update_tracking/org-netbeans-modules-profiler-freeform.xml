@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.profiler.freeform/1">
+    <module_version install_time="1475191591674" last="true" origin="installer" specification_version="1.35.1">
+        <file crc="715900111" name="config/Modules/org-netbeans-modules-profiler-freeform.xml"/>
+        <file crc="1227547709" name="modules/locale/org-netbeans-modules-profiler-freeform_ja.jar"/>
+        <file crc="2261338582" name="modules/locale/org-netbeans-modules-profiler-freeform_pt_BR.jar"/>
+        <file crc="53727900" name="modules/locale/org-netbeans-modules-profiler-freeform_ru.jar"/>
+        <file crc="3946223647" name="modules/locale/org-netbeans-modules-profiler-freeform_zh_CN.jar"/>
+        <file crc="3389938073" name="modules/org-netbeans-modules-profiler-freeform.jar"/>
+    </module_version>
+</module>

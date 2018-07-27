@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.settings.storage/1">
+    <module_version install_time="1475191143196" last="true" origin="installer" specification_version="1.51.1.1">
+        <file crc="256801136" name="config/ModuleAutoDeps/org-netbeans-modules-editor-settings-storage.xml"/>
+        <file crc="417708896" name="config/Modules/org-netbeans-modules-editor-settings-storage.xml"/>
+        <file crc="2580566771" name="modules/locale/org-netbeans-modules-editor-settings-storage_ja.jar"/>
+        <file crc="427806588" name="modules/locale/org-netbeans-modules-editor-settings-storage_pt_BR.jar"/>
+        <file crc="2077484842" name="modules/locale/org-netbeans-modules-editor-settings-storage_ru.jar"/>
+        <file crc="935135019" name="modules/locale/org-netbeans-modules-editor-settings-storage_zh_CN.jar"/>
+        <file crc="919755600" name="modules/org-netbeans-modules-editor-settings-storage.jar"/>
+    </module_version>
+</module>

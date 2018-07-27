@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript2.react">
+    <module_version install_time="1475191632790" last="true" origin="installer" specification_version="0.1.1">
+        <file crc="1565923607" name="config/Modules/org-netbeans-modules-javascript2-react.xml"/>
+        <file crc="3073463369" name="modules/locale/org-netbeans-modules-javascript2-react_ja.jar"/>
+        <file crc="1150072102" name="modules/locale/org-netbeans-modules-javascript2-react_pt_BR.jar"/>
+        <file crc="1709085334" name="modules/locale/org-netbeans-modules-javascript2-react_ru.jar"/>
+        <file crc="1000083523" name="modules/locale/org-netbeans-modules-javascript2-react_zh_CN.jar"/>
+        <file crc="2747638152" name="modules/org-netbeans-modules-javascript2-react.jar"/>
+    </module_version>
+</module>

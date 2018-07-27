@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.hudson.maven">
+    <module_version install_time="1475191474351" last="true" origin="installer" specification_version="1.29.1">
+        <file crc="2158437288" name="config/Modules/org-netbeans-modules-hudson-maven.xml"/>
+        <file crc="3503051490" name="modules/locale/org-netbeans-modules-hudson-maven_ja.jar"/>
+        <file crc="1380420482" name="modules/locale/org-netbeans-modules-hudson-maven_pt_BR.jar"/>
+        <file crc="4197641065" name="modules/locale/org-netbeans-modules-hudson-maven_ru.jar"/>
+        <file crc="676938798" name="modules/locale/org-netbeans-modules-hudson-maven_zh_CN.jar"/>
+        <file crc="1664609209" name="modules/org-netbeans-modules-hudson-maven.jar"/>
+    </module_version>
+</module>

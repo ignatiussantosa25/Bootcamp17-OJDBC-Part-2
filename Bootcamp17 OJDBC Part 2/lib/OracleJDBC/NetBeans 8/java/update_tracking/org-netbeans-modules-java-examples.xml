@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.examples/1">
+    <module_version install_time="1475191478381" last="true" origin="installer" specification_version="1.36.1">
+        <file crc="1661208696" name="config/Modules/org-netbeans-modules-java-examples.xml"/>
+        <file crc="3206397360" name="modules/locale/org-netbeans-modules-java-examples_ja.jar"/>
+        <file crc="3165213503" name="modules/locale/org-netbeans-modules-java-examples_pt_BR.jar"/>
+        <file crc="2945307352" name="modules/locale/org-netbeans-modules-java-examples_ru.jar"/>
+        <file crc="2245943245" name="modules/locale/org-netbeans-modules-java-examples_zh_CN.jar"/>
+        <file crc="2319183963" name="modules/org-netbeans-modules-java-examples.jar"/>
+    </module_version>
+</module>

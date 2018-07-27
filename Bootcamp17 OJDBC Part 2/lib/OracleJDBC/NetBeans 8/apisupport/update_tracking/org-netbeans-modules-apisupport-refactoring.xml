@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.apisupport.refactoring">
+    <module_version install_time="1475191569648" last="true" origin="installer" specification_version="1.37.1">
+        <file crc="2414731012" name="config/Modules/org-netbeans-modules-apisupport-refactoring.xml"/>
+        <file crc="303552353" name="modules/locale/org-netbeans-modules-apisupport-refactoring_ja.jar"/>
+        <file crc="1160464373" name="modules/locale/org-netbeans-modules-apisupport-refactoring_pt_BR.jar"/>
+        <file crc="1059899631" name="modules/locale/org-netbeans-modules-apisupport-refactoring_ru.jar"/>
+        <file crc="1470557782" name="modules/locale/org-netbeans-modules-apisupport-refactoring_zh_CN.jar"/>
+        <file crc="3674501374" name="modules/org-netbeans-modules-apisupport-refactoring.jar"/>
+    </module_version>
+</module>

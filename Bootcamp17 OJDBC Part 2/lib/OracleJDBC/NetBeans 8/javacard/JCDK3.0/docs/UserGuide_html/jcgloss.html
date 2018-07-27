@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Glossary
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="cap-manifest-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><A HREF="ix.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a></td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565195_pgfId-4995"></A><A NAME="50565195_58117"></A>Glossary
+</TD>
+</TR>
+</TABLE>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001114"></A>3GPP
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001115"></A>Third Generation Partnership Project (3GPP) formed by telecommunications associations to develop 3rd Generation Mobile System specifications for systems deployed across the GSM market. These specifications are available on the 3GPP web site.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1002982"></A><A NAME="50565195_marker-1002980"></A><A NAME="50565195_78520"></A>AID (application identifier)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1002983"></A>defined by ISO 7816, a string used to uniquely identify card applet applications and certain types of files in card file systems. An AID consists of two distinct pieces: a 5-byte RID (resource identifier) and a 0 to 11-byte PIX (proprietary identifier extension). The RID is a resource identifier assigned to companies by ISO. The PIX identifiers are assigned by companies.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1002984"></A>A unique AID is associated with each applet class in an applet application module. In addition, a unique AID is assigned to each applet instance during installation. This applet instance AID is used by an off-card client to select the applet instance for APDU communication sessions.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1002985"></A>Applet instance URIs are constructed from their applet instance AID using the &quot;aid&quot; registry-based namespace authority as follows:
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1002986"></A><KBD CLASS="Filename">//aid/&lt;RID&gt;/&lt;PIX&gt;</KBD>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1002987"></A>where <KBD CLASS="Filename">&lt;RID&gt;</KBD> (resource identifier) and <KBD CLASS="Filename">&lt;PIX&gt;</KBD> (proprietary identifier extension) are components of the AID.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001112"></A>Ant
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000921"></A>a platform-independent software tool written in the Java programming language that is used for automating build processes.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001041"></A>APDU
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001042"></A>an acronym for Application Protocol Data Unit as defined by ISO 7816-4 specifications. ISO 7816-4 defines the application protocol data unit (APDU) protocol as an application-level protocol between a smart card and an application on the device. There are two types of APDU messages, command APDUs and response APDUs. For detailed information on the APDU protocol see the ISO 7816-4 specifications.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1002999"></A><A NAME="50565195_marker-1002998"></A>APDU-based application environment
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003000"></A>consists of all the functionalities and system services available to applet applications, such as the services provided by the applet container.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003002"></A><A NAME="50565195_marker-1003001"></A>API
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003003"></A>an acronym for Application Programming Interface. The API defines calling conventions by which an application program accesses the operating system and other services.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003005"></A><A NAME="50565195_marker-1003004"></A>applet
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003006"></A>a stateless software component that can only execute in a container on the client platform. Within the context of this document, a Java Card applet, which is the basic component of applet-based applications and which runs in the APDU application environment.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003008"></A><A NAME="50565195_marker-1003007"></A>applet application
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003009"></A>an application that consists of one or more applets.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003011"></A><A NAME="50565195_marker-1003010"></A>applet container
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003012"></A>contains applet-based applications and manages their lifecycles through the applet framework API. Also provides the communication services over which APDU commands and responses are sent.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003014"></A><A NAME="50565195_marker-1003013"></A>applet framework
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003015"></A>an API that enables applet applications to be built.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003031"></A><A NAME="50565195_marker-1003030"></A>application descriptor
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003035"></A>see <A HREF="jcgloss.html#50565195_17860" CLASS="XRef">descriptor</A>.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003037"></A><A NAME="50565195_marker-1003036"></A>application developer 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003038"></A>The producer of an application. The output of an application developer is a set of application classes and resources, and supporting libraries and files for the application. The application developer is typically an application domain expert. The developer is required to be aware of the application environment and its consequences when programming, including concurrency considerations, and create the application accordingly.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003043"></A><A NAME="50565195_marker-1003042"></A>application group 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003044"></A>a set of one or more applications executing in a common group context.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003095"></A><A NAME="50565195_marker-1003094"></A>application URI
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003096"></A>a URI uniquely identifying an application instance on the platform.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000917"></A>atomicity
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000918"></A>a property of transactions that requires all operations of a transaction be performed successfully for the transaction to be considered complete. If all of a transaction’s operations cannot be performed, none of them can be performed.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003108"></A><A NAME="50565195_marker-1003107"></A>classic applet
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003109"></A>applets with the same capabilities as those in previous versions of the Java Card platform and in the Classic Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003114"></A><A NAME="50565195_marker-1003113"></A>Classic Edition
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003105"></A>one of the two editions in the Java Card 3 Platform. The Classic Edition is based on an evolution of the Java Card Platform, Version 2.2.2 and is backward compatible with it, targeting resource-constrained devices that solely support applet-based applications.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003121"></A><A NAME="50565195_marker-1003120"></A>Connected Edition
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003118"></A>one of the two editions in the Java Card 3 Platform. The Connected Edition has a significantly enhanced runtime environment and a new virtual machine. It includes new network-oriented features, such as support for web applications, including the Java<IMG SRC=shared/chars/tm.gif TITLE="trademark" ALT="trademark"> Servlet APIs, and also support for applets with extended and advanced capabilities. An application written for or an implementation of the Connected Edition may use features found in the Classic Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1007661"></A><A NAME="50565195_marker-1007734"></A>Converter
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1007790"></A>a piece of software that preprocesses all of the Java programming language class files of a classic applet application that make up a package, and converts the package into a standalone classic applet application module distribution format (CAP file). The Converter also produces an export file.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000947"></A><A NAME="50565195_84972"></A>create
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000948"></A>indicates that a web application of a <A HREF="jcgloss.html#50565195_98131" CLASS="XRef">module</A> or an application group, that was loaded by <A HREF="jcgloss.html#50565195_71625" CLASS="XRef">load</A>, needs to be created. As a result, the required application is accessible through some Web-Context root.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001305"></A>delete
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000950"></A>indicates that a web application instance created by <A HREF="jcgloss.html#50565195_84972" CLASS="XRef">create</A> needs to be deleted.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001103"></A>ETSI
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001104"></A>the European Telecommunications Standards Institute (ETSI) is an official European Standards Organization that develops and publishes standards for information and communications technologies. Additional information is available on the ETSI web site.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003073"></A><A NAME="50565195_17860"></A>descriptor
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003074"></A>a document that describes the configuration and deployment information of an application. A deployment descriptor conveys the elements and configuration information of an application between application developers, application assemblers, and deployers. A runtime descriptor describes the configuration and deployment information of an application that are specific to an operating environment to which the application is to be deployed.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003154"></A><A NAME="50565195_marker-1003153"></A>distribution format
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003155"></A>structure and encoding of a distribution or deployment unit intended for public distribution.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003101"></A><A NAME="50565195_marker-1003100"></A>extended applet<STRONG CLASS="Lead-In2para"> </STRONG>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003102"></A>an applet with extended and advanced capabilities (compared to a classic applet) such as the capabilities to manipulate <KBD CLASS="Filename">String</KBD> objects and open network connections.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003243"></A><A NAME="50565195_garbage collection"></A>garbage collection
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003244"></A>the process by which dynamically allocated storage is automatically reclaimed during the execution of a program.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003250"></A><A NAME="50565195_global array"></A>global array
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003251"></A>an applet environment array objects accessible from any context.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003253"></A><A NAME="50565195_global authentication"></A>global authentication
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003254"></A>the scope of a user authentication that can be tracked globally (card-wide). Global authentication is restricted to card-holder-users. Authorization to access resources protected by a globally authenticated card-holder-user identity is granted to all users.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003274"></A>GlobalPlatform (GP)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003275"></A>an international association of companies and organizations that establish and maintain interoperable specifications for single and multi-application smart cards, acceptance devices, and infrastructure systems. Additional information is available on the GlobalPlatform web site.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003256"></A><A NAME="50565195_group context"></A>group context
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003257"></A>protected object space associated with each application group and Java Card RE. All objects owned by an application belong to the context of the application group.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003247"></A>&nbsp;
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001010"></A>ISO
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001011"></A>the International Standards Organization (ISO) is a non-governmental organization of national standards institutes that develops and publishes international standards for both public and private sectors. Additional information is available on the ISO web site.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003237"></A><A NAME="50565195_JAR file"></A>JAR file
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003238"></A>an acronym for Java Archive file, which is a file format used for aggregating and compressing many files into one.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003230"></A><A NAME="50565195_Java Card Runtime Environment (Java Card RE)"></A>Java Card Runtime Environment 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003231"></A>consists of the Java Card virtual machine and the associated native methods.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003223"></A><A NAME="50565195_Java Card Virtual Machine (Java Card VM)"></A>Java Card Virtual Machine (Java Card VM)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003224"></A>a subset of the Java virtual machine, which is designed to be run on smart cards and other resource-constrained devices. The Java Card VM acts an engine that loads Java class files and executes them with a particular set of semantics.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003171"></A><A NAME="50565195_JDK™ software"></A>JDK software
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003172"></A>an acronym for Java Development Kit. The JDK software is a Sun Microsystems, Inc. product that provides the environment required for software development in the Java programming language. The JDK software is available for a variety of operating systems, for example Sun Microsystems Solaris OS and Microsoft Windows.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001033"></A>KVM
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001034"></A>a virtual machine for small devices, the KVM is derived from the Java virtual machine (JVM) but is written in the C programming language and has a smaller footprint than the JVM. The KVM supports a subset of the JVM features.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000978"></A>list
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000979"></A>indicates that the client is requesting information about all loaded application groups and instances.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000985"></A><A NAME="50565195_71625"></A>load
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000986"></A>indicates that a <A HREF="jcgloss.html#50565195_98131" CLASS="XRef">module</A> or an application group needs to be deployed onto the card but not yet made accessible.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003286"></A><STRONG CLASS="Lead-In2para">mask production</STRONG><A NAME="50565195_mask production (masking)"></A> (masking)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003287"></A>refers to embedding the Java Card virtual machine, runtime environment, and applications in the read-only memory of a smart card during manufacture.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003294"></A><A NAME="50565195_mode (communication)"></A>mode (communication)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003295"></A>designates the type or protocol of communication (HTTPS, SSL/TLS, SIO...) and the mode of operation (client or server) that characterizes a communication endpoint.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000992"></A><A NAME="50565195_98131"></A>module
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001509"></A>a unit of distribution and deployment of component applications. Modules or component applications are individual applications (standalone) and can be assembled into application groups. Applications that rely on a single component application can be deployed directly as standalone application modules in addition to deployment as application groups.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001499"></A>MMC
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001500"></A>MultiMediaCard (MMC) is a flash memory card standard developed and published by the MultiMediaCard Association.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003303"></A><A NAME="50565195_namespace"></A>namespace
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003304"></A>a set of names in which all names are unique.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003309"></A><A NAME="50565195_non-volatile memory"></A>non-volatile memory
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003310"></A>memory that is expected to retain its contents between card tear and power up events or across a reset event on the smart card device.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003213"></A><A NAME="50565195_normalization (classic applet)"></A>normalization (classic applet)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003214"></A>the process of transforming and repackaging a Java application packaged for the Java Card Platform, Version 2.2.2, for deployment on both the Java Card 3 Platform, Connected Edition and the Java Card 3 Platform, Classic Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003315"></A><A NAME="50565195_normalization (URI)"></A>normalization (URI)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003316"></A>the process of removing unnecessary &quot;.&quot;  and &quot;..&quot; segments from the path component of a hierarchical URI.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1007492"></A>Normalizer
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1007533"></A>in the Connected Edition, a backwards compatibility tool that allows Java applications programmed for the Java Card Platform, Version 2.2.2, to be deployed on both the Java Card 3 Platform, Connected Edition and on the Java Card 3 Platform, Classic Edition. It also allows Java applications packaged for Version 2.2.2 to be transformed through the normalization process and then repackaged for deployment on both the Connected and Classic Editions. 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1007983"></A>In the Classic Edition, a compatibility tool that enables developers to generate application modules for Java Card 3 platform classic applets they are creating or from classic applets created for previous versions of the Java Card platform. These application modules contain CAP files and are downloadable on both the Java Card 3 platform Classic Edition and Connected Edition smart cards.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003323"></A><A NAME="50565195_off-card client"></A>off-card client 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003327"></A>see <A HREF="jcgloss.html#50565195_37362" CLASS="XRef">off-card client application</A>.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003329"></A><A NAME="50565195_37362"></A>off-card client application
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003330"></A>an application that is not resident on the card, but runs at the request of a user’s actions.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003200"></A><A NAME="50565195_off-card installer"></A>off-card installer
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003201"></A>the off-card application that transmits the application and library executables to the card manager application running on the card.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003206"></A><A NAME="50565195_package"></A>package
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003207"></A>a namespace within the Java programming language that can have classes and interfaces. 
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003188"></A><A NAME="50565195_platform protection domain"></A>platform protection domain
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003189"></A>a set of permissions granted to an application or group of applications by the platform security policy. A platform protection domain is defined by two sets of permissions: a set of included permissions that are granted and a set of excluded permissions that are denied and can never be granted.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003191"></A><A NAME="50565195_platform security policy"></A>platform security policy
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003192"></A>the permission-based security policy that maps application models to sets of permissions granted to applications implementing these application models. For each of the application models, the platform security policy guarantees the consistency and integrity of the applications implementing the application model.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003339"></A><A NAME="50565195_marker-1003338"></A>protected content
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003343"></A>see <A HREF="jcgloss.html#50565195_protected resource" CLASS="XRef">protected resource</A>.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003345"></A><A NAME="50565195_protected resource"></A>protected resource
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003346"></A>an application or system resource that is protected by an access control mechanism.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003181"></A><A NAME="50565195_protection domain"></A>protection domain
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003182"></A>a set of permissions granted to an application or group of applications.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003351"></A><A NAME="50565195_RAM (random access memory)"></A>RAM (random access memory)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003352"></A>temporary working space for storing and modifying data. RAM is non-persistent memory; that is, the information content is not preserved when power is removed from the memory cell. RAM can be accessed an unlimited number of times and none of the restrictions of EEPROM apply.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003132"></A><A NAME="50565195_reference implementation"></A>reference implementation
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003133"></A>a fully functional and compatible implementation of a given technology. It enables developers to build prototypes of applications based on the technology.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003129"></A>reference applications 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003140"></A>blue print-like applications that demonstrate the interactions between various applications on the card using advanced features such as SIO and events.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003361"></A><A NAME="50565195_remote user"></A>remote user
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003362"></A>an user whose identity may be assumed by a remote entity, such as a remote card administrator.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003364"></A><A NAME="50565195_remotely accessible web application"></A>remotely accessible web application
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003365"></A>an application that is not expected to interact with the card holder but with other-users, potentially remote.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003455"></A><A NAME="50565195_restartable task"></A>restartable task
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003456"></A>an object implementing the <KBD CLASS="Filename">Runnable</KBD> interface that has been registered for recurrent execution over card sessions. A task executes in its own thread.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003458"></A><A NAME="50565195_restartable task registry"></A>restartable task registry
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003459"></A>a Java Card RE facility that is used for registering tasks for recurrent execution over card sessions.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003420"></A><A NAME="50565195_security requirements"></A>security requirements
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003421"></A>the required security characteristics for a particular secure communication being established by either an application or by the web container on behalf of a web application.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003423"></A><A NAME="50565195_server application"></A>server application
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003424"></A>an on-card application that provides a service to its clients.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003426"></A><A NAME="50565195_42455"></A>service
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003427"></A>a shareable interface object that a server application uses to provide a set of well-defined functionalities to its clients.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003429"></A><A NAME="50565195_45978"></A>service facility
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003430"></A>a Java Card RE facility (or subsystem) that is used for inter-application communications.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003432"></A><A NAME="50565195_service factory"></A>service factory
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003433"></A>an object that the Java Card RE invokes to create a service - on behalf of the server application that registered that service - for a client application that looked up the service.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003435"></A><A NAME="50565195_service registry"></A>service registry
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003436"></A>the core component of the service facility. The service facility is used for registering and looking up services.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003438"></A><A NAME="50565195_service URI"></A>service URI
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003439"></A>a URI that uniquely identifies a service provided by a server application.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001148"></A><A NAME="50565195_32912"></A>servlet
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001396"></A>a web application component, managed by a container, that generates dynamic web content and that runs in the web application environment.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003380"></A><A NAME="50565195_servlet container"></A>servlet container	 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003384"></A>see <STRONG CLASS="Lead-In2para"><A HREF="jcgloss.html#50565195_89986" CLASS="XRef">web application container</A>.</STRONG>
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003386"></A><A NAME="50565195_servlet context"></A>servlet context
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003387"></A>a container-managed object that defines a servlet’s view of the web application within which the servlet is running. A servlet context is rooted at a known path within a web server: a context path.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003398"></A><A NAME="50565195_servlet mapping"></A>servlet mapping<STRONG CLASS="Lead-In2para"> </STRONG>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003399"></A>a servlet definition that is associated by a servlet container with a URL path pattern. All requests to that path pattern are handled by the servlet associated with the servlet definition. See Java Servlet Specification, Connected Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003404"></A><A NAME="50565195_shareable interface"></A>shareable interface
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003405"></A>an interface that defines a set of shared methods. These interface methods can be invoked from an application in one group context when the object implementing them is owned by an application in another group context.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003148"></A><A NAME="50565195_shareable interface object (SIO)"></A>shareable interface object (SIO)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003149"></A>an object that implements the shareable interface.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003410"></A><A NAME="50565195_shareable interface object-based service"></A>shareable interface object-based service
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003414"></A>see <A HREF="jcgloss.html#50565195_42455" CLASS="XRef">service</A>.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003448"></A><STRONG CLASS="Lead-In2para">smart card</STRONG><A NAME="50565195_smart card"></A>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003449"></A>a card that stores and processes information through the electronic circuits embedded in silicon in the substrate of its body. Unlike magnetic stripe cards, smart cards carry both processing power and information. They do not require access to remote databases at the time of a transaction.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001056"></A><A NAME="50565195_28850"></A>SSL
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001057"></A>Secure Socket Layer (SSL), like the later <A HREF="jcgloss.html#50565195_75720" CLASS="XRef">TLS</A> protocol, is a cryptographic protocol for securely transmitting documents by using a two key cryptographic system (a public key and a private key) to encrypt and decrypt data. 
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003478"></A><STRONG CLASS="Lead-In2para">terminal</STRONG><A NAME="50565195_terminal"></A>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003479"></A>is typically a computer in its own right with an interface which connects with a smart card to exchange and process data.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003481"></A><A NAME="50565195_thread"></A>thread
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003482"></A>the basic unit of program execution. A process can have several threads running concurrently each performing a different job, such as waiting for events or performing a time consuming job that the program doesn't need to complete before going on. When a thread has finished its job, it is suspended or destroyed.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003484"></A><A NAME="50565195_marker-1003483"></A>thread’s active context
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003485"></A>when an object instance method is invoked, the owning context of the object becomes the currently active context for that particular thread of execution. Synonymous with currently active context.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003487"></A><A NAME="50565195_transaction"></A>transaction
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003488"></A>an atomic operation in which the developer defines the extent of the operation by indicating in the program code the beginning and end of the transaction.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003496"></A><A NAME="50565195_transaction facility"></A>transaction facility
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003497"></A>a Java Card RE facility that enables an application to complete a single logical operation on application data atomically, consistently and durably within a transaction.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003499"></A><A NAME="50565195_transient object"></A>transient object
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003500"></A>the state of transient objects do not persist from one card session to the next, and are reset to a default state at specified intervals. Updates to the values of transient objects are not atomic and are not affected by transactions.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003505"></A><A NAME="50565195_transferable classes"></A>transferable classes
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003506"></A>classes whose instances can have their ownership transferred to a context different from their currently owning context. Transferable classes are of two types:
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003507"></A><STRONG>Implicitly transferable classes</STRONG> - Classes whose instances are not bound to any context (group contexts or Java Card RE context) and can, therefore, be passed and shared between contexts without any firewall restrictions. Examples are <KBD CLASS="Filename">Boolean</KBD> and literal <KBD CLASS="Filename">String</KBD> objects.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003508"></A><STRONG>Explicitly transferable classes</STRONG> - Classes whose instances must have their ownership explicitly transferred to another application’s group context in order to be accessible to that other application. Examples are arrays and newly created <KBD CLASS="Filename">String</KBD> objects.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003510"></A><A NAME="50565195_transfer of ownership"></A>transfer of ownership
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003511"></A>a Java Card RE facility that allows for an application to transfer the ownership of objects it owns to an other application. Only instances of transferable classes can have their ownership transferred.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003513"></A><A NAME="50565195_trusted client"></A>trusted client<STRONG CLASS="Lead-In2para"> </STRONG>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003514"></A>an on-card or off-card application client that an on-card application trusts on the basis of credentials presented by the client.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003516"></A><A NAME="50565195_trusted client credentials"></A>trusted client credentials
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003517"></A>credentials that an on-card application uses to ascertain the identity of clients it trusts.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001048"></A><A NAME="50565195_75720"></A>TLS
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001049"></A>Transport Layer Security (TLS), like the earlier <A HREF="jcgloss.html#50565195_28850" CLASS="XRef">SSL</A> protocol, is a cryptographic protocol for securely transmitting documents either by endpoint authentication of the server or by mutual authentication of the server and the client. 
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000997"></A>unload
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000998"></A>indicates that the module or application group that was loaded by load needs to be removed completely from the card. By default, if there are some instance(s) created, then unload will fail. Optional -f (or -force) will attempt to delete all instances before unloading.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003541"></A><A NAME="50565195_uniform resource identifier (URI)"></A>uniform resource identifier (URI)
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003542"></A>a compact string of characters used to identify or name an abstract or physical resource. A URI can be further classified as a uniform resource locator (URL), a uniform resource name (URN), or both. See RFC 3986 for more information.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003549"></A><A NAME="50565195_uniform resource locator (URL)"></A>uniform resource locator (URL) 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003550"></A>a compact string representation used to locate resources available via network protocols or other protocols. Once the resource represented by a URL has been accessed, various operations may be performed on that resource. See RFC 1738 for more information. A URL is a type of uniform resource identifier (URI).
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1001018"></A>USB
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1001019"></A>Universal Serial Bus (USB) is a serial bus specification developed and published by the USB Implementers Forum that when implemented enables external devices such as flash drives, PDAs, and printers to connect to a host controller.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003525"></A><A NAME="50565195_verification"></A>verification
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003526"></A>a process performed on an application or library executable that ensures that the binary representation of the application or library is structurally correct.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003528"></A><A NAME="50565195_volatile memory"></A>volatile memory
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003529"></A>memory that is not expected to retain its contents between card tear and power up events or across a reset event on the smart card device.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003531"></A><STRONG CLASS="Lead-In2para">volatile object</STRONG><A NAME="50565195_volatile object"></A>
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003532"></A>an object that is ideally suited to be stored in volatile memory. This type of object is intended for a short-lived object or an object which requires frequent updates. A volatile object is garbage collected on card tear (or reset).
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003049"></A><STRONG CLASS="Lead-In2para">web application</STRONG><A NAME="50565195_web application"></A> 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003050"></A>a collection of servlets, HTML documents, and other web resources that might include image files, compressed archives, and other data. A web application is packaged into a web application archive.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003051"></A>All compatible servlet containers must accept a web application and perform a deployment of its contents into their runtime. This may mean that a container can run the application directly from a web application archive file or it may mean that it will move the contents of a web application into the appropriate locations for that particular container. See Java Servlet Specification, Connected Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003056"></A><A NAME="50565195_web application archive"></A>web application archive 
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003057"></A>the physical representation of a web application module. A single file that contains all of the components of a web application. This archive file is created by using standard JAR file tools, which allow any or all of the web components to be signed.
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003058"></A>A web application archive file is identified by the <KBD CLASS="Filename">.war</KBD> extension and is often referred to as a WAR file. A new extension is used instead of <KBD CLASS="Filename">.jar</KBD> because that extension is reserved for files which contain a set of class files and that can be placed in the classpath. As the contents of a web application archive are not suitable for such use, a new extension was required. See Java Servlet Specification, Connected Edition.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003060"></A><A NAME="50565195_89986"></A>web application container
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003061"></A>contains and manages web applications and their components (for example, servlets) through their lifecycle. Also provides the network services over which HTTP requests and responses are sent and manages security of web applications.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003063"></A><A NAME="50565195_web application environment"></A>web application environment
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1003064"></A>in addition to the Java Card RE, consists of all the functionalities and system services available to web applications, such as the services provided by the web application container.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1003066"></A><A NAME="50565195_web client"></A>web client
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-1000890"></A>an off-card entity that requests services from an on-card web application. A typical example is a web browser.
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000830"></A>&nbsp;
+</P>
+<P CLASS="GlossTerm"><A NAME="50565195_pgfId-1000831"></A>&nbsp;
+</P>
+<P CLASS="Paragraph"><A NAME="50565195_pgfId-1000825"></A>&nbsp;
+</P>
+<P CLASS="GlossText"><A NAME="50565195_pgfId-996800"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="cap-manifest-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><A HREF="ix.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a></td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.refactoring">
+    <module_version install_time="1475191523590" last="true" origin="installer" specification_version="1.20.1">
+        <file crc="2164271570" name="config/Modules/org-netbeans-modules-maven-refactoring.xml"/>
+        <file crc="2951111397" name="modules/locale/org-netbeans-modules-maven-refactoring_ja.jar"/>
+        <file crc="3368561681" name="modules/locale/org-netbeans-modules-maven-refactoring_pt_BR.jar"/>
+        <file crc="1246309229" name="modules/locale/org-netbeans-modules-maven-refactoring_ru.jar"/>
+        <file crc="3965208252" name="modules/locale/org-netbeans-modules-maven-refactoring_zh_CN.jar"/>
+        <file crc="931898750" name="modules/org-netbeans-modules-maven-refactoring.jar"/>
+    </module_version>
+</module>

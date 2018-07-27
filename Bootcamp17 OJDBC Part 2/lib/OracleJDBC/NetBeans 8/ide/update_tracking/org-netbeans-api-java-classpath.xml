@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.api.java.classpath/1">
+    <module_version install_time="1475191127916" last="true" origin="installer" specification_version="1.52.1">
+        <file crc="4102554259" name="config/Modules/org-netbeans-api-java-classpath.xml"/>
+        <file crc="4032824367" name="modules/locale/org-netbeans-api-java-classpath_ja.jar"/>
+        <file crc="1098141205" name="modules/locale/org-netbeans-api-java-classpath_pt_BR.jar"/>
+        <file crc="3384326430" name="modules/locale/org-netbeans-api-java-classpath_ru.jar"/>
+        <file crc="3354955895" name="modules/locale/org-netbeans-api-java-classpath_zh_CN.jar"/>
+        <file crc="1770630755" name="modules/org-netbeans-api-java-classpath.jar"/>
+    </module_version>
+</module>

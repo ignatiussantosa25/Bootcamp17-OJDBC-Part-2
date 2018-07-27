@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Introduction
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="part.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="install-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565182_pgfId-1009015"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">1</SPAN><A NAME="50565182_42788"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565182_pgfId-1009016"></A><A NAME="50565182_Introduction"></A>Introduction
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009623"></A>The Java Card 3 Platform, Version 3.0.2 consists of two editions, the Classic Edition and the Connected Edition.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009624"></A>The Classic Edition is based on an evolution of the Java Card Platform, Version 2.2.2 and is backward compatible with it, targeting resource-constrained devices that solely support applet-based applications. Applets that run on the Classic Edition are referred to as classic applets. The classic applets have the same capabilities as applets in previous versions of the development kit.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009628"></A>The Connected Edition contains a new architecture that enables developers to integrate smart cards within IP networks and web services architectures. The Connected Edition supports extended applets and servlets to allow for these new capabilities. In addition, the Connected Edition also supports classic applets.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009629"></A>This document applies to the Connected Edition. References to components, such as the Java Card runtime environment (RE), refer to the component as it exists in the Connected Edition. However, the development kit for the Connected Edition, and the NetBeans IDE can be used to create classic applets that will also run on the Classic Edition RE.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009630"></A>The Java Card development kit ships in binary-only bundles or bundles with both binary and source versions of the kit. This document pertains to both binary and source bundles, except where noted. In addition, cryptography extensions are available in some bundles. Cryptography issues are described in this document.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009487"></A><EM CLASS="Emphasis"></EM>This chapter contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009611"></A><A HREF="intro-connected.html#50565182_44856" CLASS="XRef">Platform Architecture</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009491"></A><A HREF="intro-connected.html#50565182_13734" CLASS="XRef">Development Kit Description</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009495"></A><A HREF="intro-connected.html#50565182_85404" CLASS="XRef">System Requirements</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009499"></A><A HREF="intro-connected.html#50565182_59953" CLASS="XRef">Additional Software</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009503"></A><A HREF="intro-connected.html#50565182_23020" CLASS="XRef">Java Card TCK</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565182_pgfId-1009637"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565182_44856"></A>Platform Architecture</H2>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009640"></A>The Connected Edition contains a new architecture that enables developers to integrate smart cards within IP networks and web services architectures and features an enhanced runtime environment and virtual machine, with network-oriented features that support web applications. The Connected Edition supports both a web application model and an applet application model. The applet application model supports two types of applet applications - legacy applets and extended applets. Extended applets leverage the Connected Edition features while continuing to use the APDU communication model.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009641"></A>Java Card 3 Platform, Connected Edition technology provides high-end smart cards with improved connectivity and integration into all-IP networks. A high-end, Java Card 3 technology-enabled smart card can act as a secure network node, capable of providing security services to the network or requesting access to network resources. It also allows for the convergence of smart-card services by handling multiple, concurrent communications through contact interfaces, using IP or ISO 7816-4 protocols, and through contactless interfaces, using the ISO 14443 protocol.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009642"></A>The high-level architecture of the Java Card 3 Platform, Connected Edition is illustrated in <A HREF="intro-connected.html#50565182_90779" CLASS="XRef">FIGURE 1-1</A>. Notice the classic APIs in a Connected Edition are built on smart cards that implement a view of the strict, classic Java Card VM, which supports only classic applet applications. However, the Connected Edition Java Card VM also supports extended applets and servlets, which are for web applications.
+</P>
+<P CLASS="FigureCaption-Wide"><A NAME="50565182_pgfId-1010123"></A>FIGURE 1-1 	<A NAME="50565182_90779"></A>Architecture of Connected Edition
+</P>
+<BR><A NAME="50565182_pgfId-1016688"></A>
+<P CLASS="FigureBox-Wide"><A NAME="50565182_pgfId-1010127"></A>
+<P><IMG SRC="figures/intro-connected-4.jpg" TITLE="architecture diagram of java card stack." ALT="architecture diagram of java card stack." ALIGN="BASELINE">
+</P><A NAME="50565182_pgfId-1016684"></A><A NAME="50565182_pgfId-1016687"></A>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1010128"></A>The development kit ships with a default Java Card RE that simulates a Java Card Platform, Connected Edition as it would be implemented onto a smart card. The default Java Card RE is the reference implementation (RI), and is invoked on the command line with <KBD CLASS="Command">cjcre.exe</KBD>. The RI implements the ISO 7816-4:2005 specification, including support for up to twenty logical channels, as well as the extended APDU extensions as defined in ISO 7816-3.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009560"></A>The RI was designed to simulate a dual T=1 contacted and T=CL contactless concurrent interface implementation of the Java Card runtime environment, with the capability to operate on both interfaces simultaneously. The RI source code can be built and configured to support all the ISO 7816-3 and ISO 14443-4 smart card protocols, including T=0 single interface, T=1 single interface, T=CL single contactless interface and T=1/T=CL dual concurrent interface.
+</P><H2 CLASS="Head1"><A NAME="50565182_pgfId-1001441"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565182_13734"></A>Development Kit Description</H2>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009667"></A>This development kit describes how to use the command-line tools included in this bundle. It enables you to create applications that utilize the Connected Edition new network-oriented features, such as support for web applications, including the Java<IMG SRC=shared/chars/tm.gif TITLE="trademark" ALT="trademark"> Servlet APIs, as well as applets with extended and advanced capabilities. Any valid application written for, or any valid implementation of, the Connected Edition may also use features found in the Classic Edition.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565182_pgfId-1009899"></A>In this release, you will be able to use the development kit command-line tools or the NetBeans IDE to create applications for both Classic and Connected Editions. The NetBeans IDE is the suggested development environment. For details on using the NetBeans IDE for development, see the Java Card platform-specific online help provided in version 6.8 of the NetBeans IDE under Help &gt; Help Contents. For details on programming for the Classic Edition, please see the user’s guide in the Classic Edition development kit. 
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009900"></A>This development kit includes a suite of tools, a reference implementation, and the associated documentation for developers to use when developing Java Card technology-based applications (Java Card 3 platform applications), servlets, and extended applets for the Connected Edition. Developers can use the development kit tools to create applications that fully utilize the features of the Connected Edition.
+</P><H3 CLASS="Head2"><A NAME="50565182_pgfId-1006511"></A>Connected Edition Features<A NAME="50565182_marker-1006510"></A></H3>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1006429"></A>Developers creating implementations or applications for the Connected Edition should be aware of the following features of the Connected Edition that represent key security and usability characteristics of Java Card technology-based smart cards and ensure the backward-compatibility and scalability of the platform:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004027"></A>File system
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009932"></A>Security for the Java Card 3 platform (Java Card security)
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003132"></A>Firewall mechanism
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003133"></A>Secure application update and upgrade
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003134"></A>Support for transactions, atomicity
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003135"></A>Card lifecycle-aware runtime environment
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003136"></A>Persistent memory model
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003140"></A>Standards alignment
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003141"></A>ISO 7816 compliance
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003040"></A>T=0, T=1, T=CL, USB, and MMC protocols support
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003041"></A>GP, ETSI/3GPP support
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003043"></A>Binary compatibility for Java Card 3 platform classic products
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003044"></A>Tools-automated application migration to Connected Edition products
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003045"></A>Legacy applications can be modified to use Connected Edition features
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003046"></A>Scalability
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003049"></A>Optional features optimize footprint
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003050"></A>Unified distribution file format
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003052"></A>TCK- enforced interoperability
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1003069"></A>Developers using the development kit to create applications for the Connected Edition should also be aware that the following features are exclusive to the Connected Edition:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003073"></A>KVM-level VM technology
+</LI>
+<P CLASS="Linebreak">
+</P>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003074"></A>32-bit VM
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003075"></A>Dynamic <KBD CLASS="Filename">.class</KBD> file loading
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003076"></A>Concurrent execution of applications
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003077"></A>On-card and off-card bytecode verification
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003078"></A>Automatic GC
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003079"></A>Network-oriented communication 
+</LI>
+<P CLASS="Linebreak">
+</P>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003080"></A>Embedded web server
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003081"></A>Service static and dynamic content through HTTP(s)
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003082"></A>APDU and non-APDU comm support
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003083"></A>Generic Communication API
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003084"></A>Communication over USB, MMC
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003085"></A>Management of concurrent contacted/contactless card access
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003086"></A>Client mode
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1003087"></A>Connected Edition APIs
+</LI>
+<P CLASS="Linebreak">
+</P>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003088"></A>Support for additional Java language types <KBD CLASS="Command">char</KBD> and <KBD CLASS="Command">long</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003089"></A>String support
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003090"></A>Multi-dimensional arrays
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003091"></A>Object collections and large data structures 
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003093"></A>Generic event framework
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565182_pgfId-1003070"></A>Application code and data sharing enhancements
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL><H4 CLASS="Head3"><A NAME="50565182_pgfId-1001444"></A>Connected Edition Security Model</H4>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1004077"></A>The Connected Edition security model includes the following components and features:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004078"></A>Class file verification
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004079"></A>Code isolation
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004080"></A>Context isolation (firewall)
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004081"></A>Policy-based access control
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004082"></A>Enhanced shareable interface mechanism
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004083"></A>Transport-level (SSL/TLS) web application security
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004084"></A>Web application client and card holder authentication
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004085"></A>Per-application declarative security
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004086"></A>Key and trust management
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H4 CLASS="Head3"><A NAME="50565182_pgfId-1008073"></A>Application Models</H4>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1008650"></A>The Connected Edition provides support for web applications, extended applets and legacy applet-based applications.
+</P><H5 CLASS="Head4"><A NAME="50565182_pgfId-1008074"></A>Web Applications</H5>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1006443"></A>The Connected Edition provides support for typical web applications including servlets, filters, and listeners. The web application model is only available on implementations for the Connected Edition.
+</P><H5 CLASS="Head4"><A NAME="50565182_pgfId-1010044"></A>Extended Applets and Legacy Applet-Based Applications</H5>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1007367"></A>For developers, the extended applet application model of the Connected Edition provides a migration path for legacy, applet-based applications to the Connected Edition.
+</P><H3 CLASS="Head2"><A NAME="50565182_pgfId-1004054"></A><A NAME="50565182_29028"></A>Development Kit Contents<A NAME="50565182_marker-1001551"></A></H3>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1002779"></A>The development kit is delivered in executable Java archive (JAR) files. Each JAR file bundle includes the binaries of a Java Card virtual machine, APDU tool, compiler tool, converter tool, debugger tool, installer tool, normalizer tool, packager tool, ROMizer tool, and uninstaller tool for the development kit. The source bundles include the binaries, and also include the source files used to build the binaries.
+</P><H4 CLASS="Head3"><A NAME="50565182_pgfId-1008165"></A><A NAME="50565182_93301"></A>Reference Implementation<A NAME="50565182_marker-1008163"></A><A NAME="50565182_marker-1008164"></A></H4>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1008169"></A>The Connected Edition reference implementation is located in the <KBD CLASS="Filename">bin</KBD> directory with a program name of <KBD CLASS="Filename">cjcre.exe</KBD>. See <A HREF="ri-connected.html#50565186_81304" CLASS="XRef">Chapter 5</A> for detailed information about running the reference implementation from the command line.
+</P><H4 CLASS="Head3"><A NAME="50565182_pgfId-1001449"></A><KBD CLASS="Filename"></KBD>Development KitDevelopment KitCommand Line Tools<A NAME="50565182_marker-1001566"></A></H4>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1007224"></A><A HREF="developing-javacardApps.html#50565152_44097" CLASS="XRef">Chapter 3</A> describes the sequence of development activities and the tool chain used in developing Java Card 3 applications.
+</P>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1009180"></A>The development kit bundle contains the following tools:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1005260"></A><STRONG CLASS="Lead-In2para">Compiler Tool</STRONG>- Compiles Java Card 3 platform application source files.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1005268"></A>See <A HREF="compilertool-connected.html#50565187_10980" CLASS="XRef">Chapter 6</A> for information about using the Compiler tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1004880"></A><STRONG CLASS="Lead-In2para">Packager Tool </STRONG>- Packages application modules and libraries into a deployable application group.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1004887"></A>See <A HREF="packagertool-connected.html#50565188_10980" CLASS="XRef">Chapter 7</A> for information about using the Packager tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1002818"></A><STRONG CLASS="Lead-In2para">Installer Tool </STRONG>- Interacts with the on-card card manager to install applications and applets.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="StepPara1"><A NAME="50565182_pgfId-1004891"></A>See <A HREF="cardinstaller-connected.html#50565189_85312" CLASS="XRef">Chapter 8</A> for information about using the Installer tool as a stand-alone application.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1007638"></A><STRONG CLASS="Lead-In2para">APDU Tool </STRONG>- When loading an applet, reads a script file containing Application Protocol Data Unit (APDU) commands and sends them to the C Java Card Runtime Environment where each APDU command is processed and returned to <KBD CLASS="Filename">apdutool</KBD>, which displays both the command and response APDU commands on the console as a stand-alone application.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1007647"></A>See <A HREF="apdutool-connected.html#50565192_APDUtool chapter 10" CLASS="XRef">Chapter 10</A> for information about using the APDU tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1008679"></A><STRONG CLASS="Lead-In2para">Normalizer Tool</STRONG> - Generates application modules for a Java Card 3 platform smart card from a converted applet format.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1008686"></A>See <A HREF="normalizer-connected.html#50565149_72569" CLASS="XRef">Chapter 9</A> for information about using the Normalizer tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1008387"></A><STRONG CLASS="Lead-In2para">Converter Tool</STRONG> - Converts Java class files into a format that can be loaded onto and run on a Java Card 3 platform smart card.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1008391"></A>See <A HREF="normalizer-connected.html#50565149_72569" CLASS="XRef">Chapter 9</A> for information about using the Converter tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1008401"></A><STRONG CLASS="Lead-In2para">Debugger Tool</STRONG> - Used during development of Java Card 3 platform applications to suspend the VM, step over source code, and inspect variables.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="StepPara1"><A NAME="50565182_pgfId-1008405"></A>See <A HREF="debuggertool-connected.html#50565190_16869" CLASS="XRef">Chapter 11</A> for information about using the Debugger tool.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1008505"></A><STRONG CLASS="Lead-In2para">ROMizer Tool</STRONG> - Creates a ROM image to use in building a custom <KBD CLASS="Filename">cjcre.exe.</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565182_pgfId-1008509"></A>See <A HREF="buildCJCRE-connected.html#50565146_85012" CLASS="XRef">Chapter 13</A> for detailed information about creating a ROM image file and building a custom <KBD CLASS="Filename">cjcre.exe</KBD>.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009878"></A><STRONG CLASS="Lead-In2para">Uninstaller Tool</STRONG> - Safely uninstalls this development kit. See <A HREF="install-connected.html#50565183_uninstall" CLASS="XRef">Uninstall the Development Kit</A>.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H4 CLASS="Head3"><A NAME="50565182_pgfId-1003885"></A><STRONG CLASS="Lead-In2para"></STRONG>Samples<A NAME="50565182_marker-1001567"></A></H4>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1005186"></A>The Java Card 3 platform samples provide a demonstration of the features in the Connected Edition and source code that gives an introduction to Java Card 3 platform programming. See <A HREF="samples-connected.html#50565164_29899" CLASS="XRef">Chapter 4</A> for a description of the samples included with this development kit and where to find additional samples on <KBD CLASS="URL"><A HREF="http://kenai.com" CLASS="URL">http://kenai.com</A></KBD>. The Connected Edition samples must be run from within the plugin provided with the NetBeans IDE, version 6.8, which is available for download from <KBD CLASS="URL"><A HREF="http://netbeans.org" CLASS="URL">http://netbeans.org</A></KBD>. 
+</P><H2 CLASS="Head1"><A NAME="50565182_pgfId-1002390"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565182_85404"></A>System Requirements<A NAME="50565182_marker-1002389"></A></H2>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1002391"></A>This release of the development kit executes on the Microsoft Windows XP SP2 operating system with an IDE of the developer’s choice. However, the NetBeans IDE is strongly recommended because without it, you cannot run the samples.
+</P><H2 CLASS="Head1"><A NAME="50565182_pgfId-1001452"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565182_59953"></A>Additional Software<A NAME="50565182_marker-1001570"></A></H2>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1002357"></A>The following additional software is required by the development kit. See <A HREF="install-connected.html#50565183_99743" CLASS="XRef">Chapter 2</A> for download and installation information.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009695"></A><STRONG CLASS="Lead-In2para">Apache ANT - Apache Ant 1.6.5 or higher is required to run the samples or build the </STRONG><KBD CLASS="Filename">cjcre.exe</KBD><STRONG CLASS="Lead-In2para"> from source code.</STRONG>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009736"></A><STRONG CLASS="Lead-In2para">Firefox browser</STRONG> - The trusted agent for running the RI.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009813"></A><STRONG CLASS="Lead-In2para">Internet Explorer 7 browser</STRONG> - Used as a remote client and not the trusted agent.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1002358"></A><STRONG CLASS="Lead-In2para">GCC compiler</STRONG> - If you are using the source bundle, the Minimal GNU for Windows (MinGW) version 5.1.4 is required to build the <KBD CLASS="Filename">cjcre.exe</KBD> or tools from source code. If you are using a binary bundle, MinGW is not required.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565182_pgfId-1009675"></A>MinGW is not required to run or to develop applications.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009728"></A><STRONG CLASS="Lead-In2para">Java Development Kit</STRONG> - The commercial version of Java Development Kit (JDK<IMG SRC=shared/chars/tm.gif TITLE="trademark" ALT="trademark">) version 6 update 10 or higher (JDK version 1.6) is required.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565182_pgfId-1009710"></A><STRONG CLASS="Lead-In2para">NetBeans IDE </STRONG>- The NetBeans IDE 6.8, including the Java Card platform plugin, can be used to develop applications and run the samples.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565182_pgfId-1001454"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565182_23020"></A>Java Card TCK<A NAME="50565182_marker-1001571"></A></H2>
+<P CLASS="Paragraph"><A NAME="50565182_pgfId-1001522"></A>The Java Card Technology Compatibility Kit (Java Card TCK) is a portable, configurable automated test suite for verifying the compliance of your implementation with the Java Card specification. To be in compliance, an implementation of the Java Card 3 platform, Connected Edition specification must pass the Java Card TCK 3.0.2 tests as described in <I CLASS="Title">Java Card Technology Compatibility Kit, Version 3.0.2 User’s Guide</I>.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="part.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="install-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

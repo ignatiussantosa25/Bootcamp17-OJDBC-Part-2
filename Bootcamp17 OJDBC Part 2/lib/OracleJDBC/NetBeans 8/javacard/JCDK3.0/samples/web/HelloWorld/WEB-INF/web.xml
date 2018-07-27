@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Copyright (c) 2009 Sun Microsystems, Inc.
+    All rights reserved.
+    Use is subject to license terms.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/javacard/jcweb-app_3_0.xsd">
+    <display-name>HelloWorld</display-name>
+    <!-- Servlet classes -->
+    <servlet>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <servlet-class>com.sun.jchowto.helloworld.HelloWorldServlet</servlet-class>
+    </servlet>
+    <!-- Servlet Mappings -->
+    <servlet-mapping>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <url-pattern>/sayhello</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.sun.jchowto.helloworld.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+</web-app>
