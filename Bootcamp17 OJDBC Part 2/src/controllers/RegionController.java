@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class RegionController {
 
-    public RegionDAO rdao;
+    private final RegionDAO rdao;
     
     public RegionController(Connection connection) {
         this.rdao = new RegionDAO(connection);
@@ -30,8 +30,8 @@ public class RegionController {
         return this.rdao.update(new Region(Integer.parseInt(regionId), regionName));
     }
     
-    public boolean drop(int regionId){
-        return this.rdao.delete(regionId);
+    public boolean drop(String regionId){
+        return this.rdao.delete(Integer.parseInt(regionId));
     }
     
     public List<Object[]> binding(){

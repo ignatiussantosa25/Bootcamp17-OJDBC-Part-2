@@ -23,7 +23,7 @@ public class RegionDAO {
 
     public boolean insert(Region region) {
         return this.fdao.executeDML("INSERT INTO Regions VALUES("
-                + region.getRegionId() + "," + region.getRegionName() + ")");
+                + region.getRegionId() + ",'" + region.getRegionName() + "')");
     }
 
     public boolean update(Region region) {

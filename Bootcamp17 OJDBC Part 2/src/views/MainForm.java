@@ -40,6 +40,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("HR Database");
 
         javax.swing.GroupLayout dskMasterLayout = new javax.swing.GroupLayout(dskMaster);
         dskMaster.setLayout(dskMasterLayout);
@@ -79,11 +80,11 @@ public class MainForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dskMaster)
+            .addComponent(dskMaster, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dskMaster)
+            .addComponent(dskMaster, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();

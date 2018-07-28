@@ -7,6 +7,7 @@ package views;
 
 import controllers.RegionController;
 import java.sql.Connection;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,8 +29,9 @@ public final class RegionView extends javax.swing.JInternalFrame {
         this.categories = new String[]{"region_id", "region_name"};
         initComponents();
         this.regionController = new RegionController(connection);
-        viewProccess = new ViewProccess();
-        reset();
+        this.viewProccess = new ViewProccess();
+        this.loadSearchComboBox();
+        this.reset();
     }
 
     /**
@@ -191,16 +193,7 @@ public final class RegionView extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-//        boolean flag = this.regionController.save(txtId.getText(),
-//                txtName.getText());
-//        String message = "Failed to save data...";
-//        if (flag) {
-//            message = "Success to save data...";
-//        }
-//        JOptionPane.showMessageDialog(this, message, "Allert / Notification",
-//                JOptionPane.INFORMATION_MESSAGE);
-//        bindingTable();
-//        reset();
+        this.saveOrEdit(txtId.getText(), txtName.getText(), txtId.isEnabled());
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
@@ -208,24 +201,11 @@ public final class RegionView extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnFindActionPerformed
 
     private void tblRegionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblRegionMouseClicked
-        int row = tblRegion.getSelectedRow();
-        txtId.setText(tblRegion.getValueAt(row, 0).toString());
-        txtName.setText(tblRegion.getValueAt(row, 1).toString());
+        this.mouseClicked(tblRegion.getSelectedRow());
     }//GEN-LAST:event_tblRegionMouseClicked
 
     private void btnDropActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDropActionPerformed
-//        String message = "Failed to drop data...";
-//        int flag = JOptionPane.showConfirmDialog(this, "Really?", "ARE U SURE?",
-//                JOptionPane.YES_NO_OPTION);
-//        if (flag == 0) {
-//            if (regionController.drop(Integer.parseInt(txtId.getText()))) {
-//                message = "Success to drop data...";
-//            }
-//            JOptionPane.showMessageDialog(this, message, "Notification",
-//                    JOptionPane.QUESTION_MESSAGE);
-//        }
-//        bindingTable();
-//        reset();
+        this.drop(txtId.getText());
     }//GEN-LAST:event_btnDropActionPerformed
 
     private void txtSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyPressed
@@ -268,6 +248,24 @@ public final class RegionView extends javax.swing.JInternalFrame {
         this.viewProccess.loadSearchComboBox(cmbCategory, header);
     }
 
+    public void drop(String regionId) {
+        if (this.viewProccess.dropConfirm(this)) {
+            this.viewProccess.dropData(this, this.regionController.drop(regionId));
+        }
+        this.reset();
+    }
+
+    public void saveOrEdit(String regionId, String regionName, boolean isSave) {
+        boolean flag = false;
+        if (isSave) {
+            flag = this.regionController.save(regionId,regionName);
+        } else {
+            flag = this.regionController.edit(regionId, regionName);
+        }
+        this.viewProccess.saveData(this, flag, isSave);
+        this.reset();
+    }
+
     public void reset() {
         txtId.setEnabled(true);
         txtId.setEditable(false);
@@ -275,8 +273,13 @@ public final class RegionView extends javax.swing.JInternalFrame {
         txtName.setText("");
         txtSearch.setText("");
         this.bindingTable();
-        loadSearchComboBox();
         btnDrop.setEnabled(false);
     }
 
+    public void mouseClicked(int row){
+        txtId.setEnabled(false);
+        btnDrop.setEnabled(true);
+        txtId.setText(tblRegion.getValueAt(row, 0).toString());
+        txtName.setText(tblRegion.getValueAt(row, 1).toString());
+    }
 }
