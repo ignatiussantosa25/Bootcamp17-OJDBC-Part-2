@@ -5,6 +5,8 @@
  */
 package entities;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Ignatius
@@ -15,6 +17,15 @@ public class Job {
     private int minSalary;
     private int maxSalary;
 
+    public Job(String jobId, String jobTitle, int minSalary, int maxSalary) {
+        this.jobId = jobId;
+        this.jobTitle = jobTitle;
+        this.minSalary = minSalary;
+        this.maxSalary = maxSalary;
+    }
+
+
+    
     /**
      * @return the jobId
      */

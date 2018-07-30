@@ -15,6 +15,15 @@ public class Department {
     private Employee managerId;
     private Location locationId;
 
+    public Department(int departmentId, String departmentName, Employee managerId, Location locationId) {
+        this.departmentId = departmentId;
+        this.departmentName = departmentName;
+        this.managerId = managerId;
+        this.locationId = locationId;
+    }
+
+    
+    
     /**
      * @return the departmentId
      */
