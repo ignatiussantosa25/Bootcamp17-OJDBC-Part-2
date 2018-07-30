@@ -16,6 +16,7 @@ public class MyConnection {
 
     private Connection connect;
 
+    
     public Connection getConnection() {
         try {
             OracleDataSource ods = new OracleDataSource();
@@ -25,7 +26,7 @@ public class MyConnection {
             ods.setPortNumber(1521);
             ods.setDatabaseName("HR");
             ods.setUser("System");
-            ods.setPassword("goce2256");
+            ods.setPassword("k1R3aw5G");
             connect = ods.getConnection();
             connect.createStatement()
                     .execute("alter session set " + "current_schema=hr");

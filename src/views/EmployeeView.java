@@ -431,6 +431,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
+    
     public void bindingTable() {
         this.viewProccess.viewTable(employeeTabel, header,
                 this.employeeController.bindingSort(categories[0], "asc"));
@@ -479,20 +480,28 @@ public class EmployeeView extends javax.swing.JInternalFrame {
 
         employeeComboDepartment.getSelectedIndex();
     }
-
+/**
+ * fungsi menampilkan nama combobox
+ */
     public void loadCombobox() {
         this.viewProccess.loadSearchComboBox(employeeSearchComboList, header);
 
     }
-
+  /**
+   * fungsi menampikan detail job
+   */
     public void loadDetailJob() {
         this.viewProccess.loadDetails(employeeComboJOB, new EmployeeController(connection).binding(), 6);
     }
-
+ /**
+  * fungsi menampilkan data detaildepartment
+  */
     public void loadDetailDepartment() {
         this.viewProccess.loadDetails(employeeComboDepartment, new EmployeeController(connection).binding(), 10);
     }
-
+/**
+ * fungsi mereset semua kolom 
+ */
     public void reset() {
         employeeIdTextField.setEnabled(true);
         employeeIdTextField.setEditable(false);
