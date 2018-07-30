@@ -35,7 +35,6 @@ public class CountryController {
         System.out.println(regionId);
         Object[] object = (Object[])this.rdao.getById(Integer.parseInt(regionId));
         Region region = new Region(Integer.parseInt(object[0].toString()), (String)object[1]);
-        System.out.println(region.getRegionId()+", "+region.getRegionName());
         return this.cdao.insert(new Country(countryId, countryName,region));
     }
     

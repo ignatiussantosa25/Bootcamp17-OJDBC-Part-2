@@ -86,4 +86,16 @@ public class ViewProccess {
     public void saveData(Component component, boolean flag, boolean isSave) {
         this.showInformation(component, this.getMessage(this.getAction(isSave), flag));
     }
+
+    public void loadData(Component component, JTable table, String[] header, List<Object[]> datas) {
+        if (datas!=null) {
+            this.viewTable(table, header, datas);
+        } else {
+            this.showInformation(component, this.getMessage("load", false));
+        }
+    }    
+    
+    public String getIdfromComboBox(List<Object[]> datas, int index){
+        return datas.get(index)[0].toString();
+    }
 }

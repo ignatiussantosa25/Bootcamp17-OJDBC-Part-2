@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tools.MyConnection;
 
 /**
  *
@@ -61,7 +62,7 @@ public class FunctionDAO implements InterfaceDAO {
             while (resultSet.next()) {
                 Object item[] = new Object[column];
                 for (int i = 0; i < column; i++) {
-                    item[i] = resultSet.getObject(i+1);
+                    item[i] = resultSet.getObject(i + 1);
                 }
                 datas.add(item);
             }
@@ -78,16 +79,16 @@ public class FunctionDAO implements InterfaceDAO {
      * @return Object from table
      */
     @Override
-    public Object getDataByID(String query) {
-        Object data = new Object();
+    public Object[] getDataByID(String query) {
+        Object[] data = null;
         try {
             PreparedStatement preparedStatement = this.connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             int column = resultSet.getMetaData().getColumnCount();
+            data = new Object[column];
             while (resultSet.next()) {
-                Object item[] = new Object[column];
                 for (int i = 0; i < column; i++) {
-                    item[i] = resultSet.getObject(i);
+                    data[i] = resultSet.getObject(i+1);
                 }
             }
         } catch (SQLException ex) {
@@ -98,6 +99,7 @@ public class FunctionDAO implements InterfaceDAO {
 
     /**
      * Function for generate ID automatically
+     *
      * @param query - query for get auto id
      * @return String auto id that must be unique
      */

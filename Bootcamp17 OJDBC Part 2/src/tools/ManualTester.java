@@ -5,9 +5,11 @@
  */
 package tools;
 
+import controllers.CountryController;
 import controllers.RegionController;
-import entities.Region;
+import entities.Country;
 import java.sql.Connection;
+import java.util.List;
 
 /**
  *
@@ -35,7 +37,15 @@ public class ManualTester {
 //        });
 //        System.out.println(regionController.findById(9).getRegionName());
 
-        System.out.println((char)48);
-        System.out.println((char)57);
+//        System.out.println((char)48);
+//        System.out.println((char)57);
+
+        List<Object[]> datas = new CountryController(connection).binding();
+        for (Object[] data : datas) {
+            for (Object object : data) {
+                System.out.print(object+" ");
+            }
+            System.out.println("");
+        }
     }
 }

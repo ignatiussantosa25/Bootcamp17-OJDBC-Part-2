@@ -15,12 +15,14 @@ import tools.MyConnection;
 public class MainForm extends javax.swing.JFrame {
 
     private final Connection connection;
+    private final ViewProccess viewProccess;
     /**
      * Creates new form MainForm
      */
     public MainForm() {
         initComponents();
         this.connection = new MyConnection().getConnection();
+        this.viewProccess = new ViewProccess();
     }
 
     /**
@@ -34,8 +36,9 @@ public class MainForm extends javax.swing.JFrame {
 
         dskMaster = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        mnCountry = new javax.swing.JMenu();
         mnRegion = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
@@ -53,7 +56,7 @@ public class MainForm extends javax.swing.JFrame {
             .addGap(0, 785, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Master");
+        mnCountry.setText("Master");
 
         mnRegion.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
         mnRegion.setText("Regions");
@@ -62,9 +65,18 @@ public class MainForm extends javax.swing.JFrame {
                 mnRegionActionPerformed(evt);
             }
         });
-        jMenu1.add(mnRegion);
+        mnCountry.add(mnRegion);
 
-        jMenuBar1.add(jMenu1);
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Country");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnCountry.add(jMenuItem2);
+
+        jMenuBar1.add(mnCountry);
 
         jMenu2.setText("About");
 
@@ -91,8 +103,12 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnRegionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnRegionActionPerformed
-        new ViewProccess().callForm(dskMaster, new RegionView(connection));
+        this.viewProccess.callForm(dskMaster, new RegionView(connection));
     }//GEN-LAST:event_mnRegionActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        this.viewProccess.callForm(dskMaster, new CountryView(connection));
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,10 +147,11 @@ public class MainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane dskMaster;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu mnCountry;
     private javax.swing.JMenuItem mnRegion;
     // End of variables declaration//GEN-END:variables
 }

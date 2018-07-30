@@ -44,11 +44,11 @@ public class RegionDAO {
     }
 
     public List<Object[]> search(String category, String data) {
-        return this.fdao.getAll("SELECT * FROM Regions WHERE " + category + " LIKE '%" + data + "%'");
+        return this.fdao.getAll("SELECT * FROM Regions WHERE REGEXP_LIKE("+category+", '"+data+"','i')");
     }
     
-    public Object getById(int regionId){
-        return this.fdao.getDataByID("SELECT * FROM Regions WHERE region_id="+regionId);
+    public Object[] getById(int regionId){
+        return this.fdao.getDataByID("SELECT * FROM Regions WHERE region_id='"+regionId+"'");
     }
     
     public String getAutoId(){

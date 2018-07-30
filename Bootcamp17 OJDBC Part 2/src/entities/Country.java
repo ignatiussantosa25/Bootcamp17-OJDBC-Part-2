@@ -10,15 +10,22 @@ package entities;
  * @author Ignatius
  */
 public class Country {
+    
     private String countryId;
     private String countryName;
-    private Region regionId;
+    private Region region;
     
     /**
      * @return the countryId
      */
     public String getCountryId() {
         return countryId;
+    }
+
+    public Country(String countryId, String countryName, Region region) {
+        this.countryId = countryId;
+        this.countryName = countryName;
+        this.region = region;
     }
 
     /**
@@ -43,16 +50,16 @@ public class Country {
     }
 
     /**
-     * @return the regionId
+     * @return the region
      */
-    public Region getRegionId() {
-        return regionId;
+    public Region getRegion() {
+        return region;
     }
 
     /**
-     * @param regionId the regionId to set
+     * @param region the region to set
      */
-    public void setRegionId(Region regionId) {
-        this.regionId = regionId;
+    public void setRegion(Region region) {
+        this.region = region;
     }
 }
