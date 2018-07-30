@@ -32,7 +32,6 @@ public class CountryController {
     }
     
     public boolean save(String countryId, String countryName, String regionId){
-        System.out.println(regionId);
         Object[] object = (Object[])this.rdao.getById(Integer.parseInt(regionId));
         Region region = new Region(Integer.parseInt(object[0].toString()), (String)object[1]);
         return this.cdao.insert(new Country(countryId, countryName,region));
