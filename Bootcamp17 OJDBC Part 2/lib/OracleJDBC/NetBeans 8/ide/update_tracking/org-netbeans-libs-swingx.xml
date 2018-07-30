@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.swingx/1">
+    <module_version install_time="1475191195197" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="1452133379" name="config/Modules/org-netbeans-libs-swingx.xml"/>
+        <file crc="3758216773" name="modules/ext/swingx-all-1.6.4.jar"/>
+        <file crc="3885098119" name="modules/locale/org-netbeans-libs-swingx_ja.jar"/>
+        <file crc="1581037204" name="modules/locale/org-netbeans-libs-swingx_pt_BR.jar"/>
+        <file crc="929019418" name="modules/locale/org-netbeans-libs-swingx_ru.jar"/>
+        <file crc="503877891" name="modules/locale/org-netbeans-libs-swingx_zh_CN.jar"/>
+        <file crc="4044049900" name="modules/org-netbeans-libs-swingx.jar"/>
+    </module_version>
+</module>

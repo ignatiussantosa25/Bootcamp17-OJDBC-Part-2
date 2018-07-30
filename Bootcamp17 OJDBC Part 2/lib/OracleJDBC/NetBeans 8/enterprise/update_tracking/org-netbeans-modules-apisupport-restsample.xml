@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.apisupport.restsample">
+    <module_version install_time="1475191664643" last="true" origin="installer" specification_version="1.21.1">
+        <file crc="1637459330" name="config/Modules/org-netbeans-modules-apisupport-restsample.xml"/>
+        <file crc="920748494" name="modules/locale/org-netbeans-modules-apisupport-restsample_ja.jar"/>
+        <file crc="4093009618" name="modules/locale/org-netbeans-modules-apisupport-restsample_pt_BR.jar"/>
+        <file crc="2242715174" name="modules/locale/org-netbeans-modules-apisupport-restsample_ru.jar"/>
+        <file crc="1579527978" name="modules/locale/org-netbeans-modules-apisupport-restsample_zh_CN.jar"/>
+        <file crc="178714719" name="modules/org-netbeans-modules-apisupport-restsample.jar"/>
+    </module_version>
+</module>

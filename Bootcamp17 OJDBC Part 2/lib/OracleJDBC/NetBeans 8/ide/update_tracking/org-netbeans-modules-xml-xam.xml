@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.xam/1">
+    <module_version install_time="1475191275087" last="true" origin="installer" specification_version="1.32.1.1">
+        <file crc="2361317231" name="config/Modules/org-netbeans-modules-xml-xam.xml"/>
+        <file crc="3164463583" name="modules/locale/org-netbeans-modules-xml-xam_ja.jar"/>
+        <file crc="3721915296" name="modules/locale/org-netbeans-modules-xml-xam_pt_BR.jar"/>
+        <file crc="4183169141" name="modules/locale/org-netbeans-modules-xml-xam_ru.jar"/>
+        <file crc="2406309763" name="modules/locale/org-netbeans-modules-xml-xam_zh_CN.jar"/>
+        <file crc="4222570275" name="modules/org-netbeans-modules-xml-xam.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript2.requirejs">
+    <module_version install_time="1475191633776" last="false" origin="installer" specification_version="0.9.1">
+        <file crc="2562950255" name="config/Modules/org-netbeans-modules-javascript2-requirejs.xml"/>
+        <file crc="2063983902" name="modules/locale/org-netbeans-modules-javascript2-requirejs_ja.jar"/>
+        <file crc="1976843999" name="modules/locale/org-netbeans-modules-javascript2-requirejs_pt_BR.jar"/>
+        <file crc="4085274110" name="modules/locale/org-netbeans-modules-javascript2-requirejs_ru.jar"/>
+        <file crc="3670713463" name="modules/locale/org-netbeans-modules-javascript2-requirejs_zh_CN.jar"/>
+        <file crc="1633880187" name="modules/org-netbeans-modules-javascript2-requirejs.jar"/>
+    </module_version>
+    <module_version install_time="1518892662873" last="true" origin="NetBeans Distribution" specification_version="0.9.2">
+        <file crc="2562950255" name="config/Modules/org-netbeans-modules-javascript2-requirejs.xml"/>
+        <file crc="1866696585" name="modules/locale/org-netbeans-modules-javascript2-requirejs_ja.jar"/>
+        <file crc="4013500872" name="modules/locale/org-netbeans-modules-javascript2-requirejs_pt_BR.jar"/>
+        <file crc="3851990934" name="modules/locale/org-netbeans-modules-javascript2-requirejs_ru.jar"/>
+        <file crc="3408841773" name="modules/locale/org-netbeans-modules-javascript2-requirejs_zh_CN.jar"/>
+        <file crc="2683323034" name="modules/org-netbeans-modules-javascript2-requirejs.jar"/>
+    </module_version>
+</module>

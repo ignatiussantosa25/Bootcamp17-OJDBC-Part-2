@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.beanvalidation">
+    <module_version install_time="1475191804885" last="true" origin="installer" specification_version="1.22.1">
+        <file crc="3953264494" name="config/Modules/org-netbeans-modules-javaee-beanvalidation.xml"/>
+        <file crc="983387686" name="modules/locale/org-netbeans-modules-javaee-beanvalidation_ja.jar"/>
+        <file crc="3253590932" name="modules/locale/org-netbeans-modules-javaee-beanvalidation_pt_BR.jar"/>
+        <file crc="1566529450" name="modules/locale/org-netbeans-modules-javaee-beanvalidation_ru.jar"/>
+        <file crc="3538713056" name="modules/locale/org-netbeans-modules-javaee-beanvalidation_zh_CN.jar"/>
+        <file crc="721790200" name="modules/org-netbeans-modules-javaee-beanvalidation.jar"/>
+    </module_version>
+</module>

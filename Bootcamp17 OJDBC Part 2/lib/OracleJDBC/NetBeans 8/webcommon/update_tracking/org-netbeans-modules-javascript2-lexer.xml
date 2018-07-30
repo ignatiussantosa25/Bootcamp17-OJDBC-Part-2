@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript2.lexer/1">
+    <module_version install_time="1475191603514" last="false" origin="installer" specification_version="1.5.1">
+        <file crc="868960659" name="config/Modules/org-netbeans-modules-javascript2-lexer.xml"/>
+        <file crc="3807478714" name="modules/locale/org-netbeans-modules-javascript2-lexer_ja.jar"/>
+        <file crc="3464824125" name="modules/locale/org-netbeans-modules-javascript2-lexer_pt_BR.jar"/>
+        <file crc="2838264150" name="modules/locale/org-netbeans-modules-javascript2-lexer_ru.jar"/>
+        <file crc="398249563" name="modules/locale/org-netbeans-modules-javascript2-lexer_zh_CN.jar"/>
+        <file crc="2358774119" name="modules/org-netbeans-modules-javascript2-lexer.jar"/>
+    </module_version>
+    <module_version install_time="1518892678360" last="true" origin="NetBeans Distribution" specification_version="1.5.2">
+        <file crc="868960659" name="config/Modules/org-netbeans-modules-javascript2-lexer.xml"/>
+        <file crc="4288808056" name="modules/locale/org-netbeans-modules-javascript2-lexer_ja.jar"/>
+        <file crc="194175486" name="modules/locale/org-netbeans-modules-javascript2-lexer_pt_BR.jar"/>
+        <file crc="2302984216" name="modules/locale/org-netbeans-modules-javascript2-lexer_ru.jar"/>
+        <file crc="2697219472" name="modules/locale/org-netbeans-modules-javascript2-lexer_zh_CN.jar"/>
+        <file crc="233439442" name="modules/org-netbeans-modules-javascript2-lexer.jar"/>
+    </module_version>
+</module>

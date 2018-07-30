@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.clientproject">
+    <module_version install_time="1475191729093" last="true" origin="installer" specification_version="1.49.1.1">
+        <file crc="3228646151" name="config/Modules/org-netbeans-modules-j2ee-clientproject.xml"/>
+        <file crc="460984548" name="modules/locale/org-netbeans-modules-j2ee-clientproject_ja.jar"/>
+        <file crc="2541477627" name="modules/locale/org-netbeans-modules-j2ee-clientproject_pt_BR.jar"/>
+        <file crc="2788871" name="modules/locale/org-netbeans-modules-j2ee-clientproject_ru.jar"/>
+        <file crc="338352005" name="modules/locale/org-netbeans-modules-j2ee-clientproject_zh_CN.jar"/>
+        <file crc="3626292207" name="modules/org-netbeans-modules-j2ee-clientproject.jar"/>
+    </module_version>
+</module>

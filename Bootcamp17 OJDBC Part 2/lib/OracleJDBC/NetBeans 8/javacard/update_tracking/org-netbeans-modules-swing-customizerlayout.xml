@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.swing.customizerlayout/1">
+    <module_version install_time="1475191551492" last="true" origin="installer" specification_version="1.20.1">
+        <file crc="3163724659" name="config/Modules/org-netbeans-modules-swing-customizerlayout.xml"/>
+        <file crc="2541680649" name="modules/locale/org-netbeans-modules-swing-customizerlayout_ja.jar"/>
+        <file crc="3208843894" name="modules/locale/org-netbeans-modules-swing-customizerlayout_pt_BR.jar"/>
+        <file crc="3739680442" name="modules/locale/org-netbeans-modules-swing-customizerlayout_ru.jar"/>
+        <file crc="2076092532" name="modules/locale/org-netbeans-modules-swing-customizerlayout_zh_CN.jar"/>
+        <file crc="756244555" name="modules/org-netbeans-modules-swing-customizerlayout.jar"/>
+    </module_version>
+</module>

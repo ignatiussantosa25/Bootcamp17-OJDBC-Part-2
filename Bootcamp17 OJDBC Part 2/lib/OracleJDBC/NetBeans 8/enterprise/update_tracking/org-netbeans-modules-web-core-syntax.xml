@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.core.syntax/2">
+    <module_version install_time="1475191852732" last="true" origin="installer" specification_version="2.46.1.2.12">
+        <file crc="3093713987" name="config/Modules/org-netbeans-modules-web-core-syntax.xml"/>
+        <file crc="3599587995" name="docs/jsf12-tlddoc.zip"/>
+        <file crc="4210062601" name="docs/jstl11-doc.zip"/>
+        <file crc="520843622" name="docs/struts-tags.zip"/>
+        <file crc="236151112" name="docs/syntaxref20.zip"/>
+        <file crc="930622839" name="modules/locale/org-netbeans-modules-web-core-syntax_ja.jar"/>
+        <file crc="856827279" name="modules/locale/org-netbeans-modules-web-core-syntax_pt_BR.jar"/>
+        <file crc="3819124688" name="modules/locale/org-netbeans-modules-web-core-syntax_ru.jar"/>
+        <file crc="821559809" name="modules/locale/org-netbeans-modules-web-core-syntax_zh_CN.jar"/>
+        <file crc="1665818673" name="modules/org-netbeans-modules-web-core-syntax.jar"/>
+    </module_version>
+</module>

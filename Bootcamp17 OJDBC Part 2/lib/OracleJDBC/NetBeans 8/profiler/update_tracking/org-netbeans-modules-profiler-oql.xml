@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.profiler.oql/2">
+    <module_version install_time="1475191584868" last="true" origin="installer" specification_version="2.16.1">
+        <file crc="1708968237" name="config/Modules/org-netbeans-modules-profiler-oql.xml"/>
+        <file crc="2379071339" name="modules/locale/org-netbeans-modules-profiler-oql_ja.jar"/>
+        <file crc="4042019725" name="modules/locale/org-netbeans-modules-profiler-oql_pt_BR.jar"/>
+        <file crc="137272768" name="modules/locale/org-netbeans-modules-profiler-oql_ru.jar"/>
+        <file crc="1312805910" name="modules/locale/org-netbeans-modules-profiler-oql_zh_CN.jar"/>
+        <file crc="4042841828" name="modules/org-netbeans-modules-profiler-oql.jar"/>
+    </module_version>
+</module>

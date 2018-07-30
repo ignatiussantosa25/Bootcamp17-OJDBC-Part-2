@@ -1,0 +1,900 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Loading and Managing Applications
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="packagertool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="normalizer-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565189_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">8</SPAN><A NAME="50565189_85312"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565189_pgfId-1008731"></A><A NAME="50565189_Loading and Managing Applications"></A>Loading and Managing Applications<A NAME="50565189_marker-1015580"></A>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1008736"></A>This chapter describes the use of the <A NAME="50565189_marker-1008732"></A>card installer in loading, creating, unloading, and deleting applications on a card. The card installer consists of two components, an on-card installer and an off-card Installer tool (Installer tool) provided by the development kit. The two installers work in conjunction to provide card application management functions.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1008967"></A>See <A HREF="developing-javacardApps.html#50565152_44097" CLASS="XRef">Chapter 3</A> to better understand the role and relationship between the Installer tool and the other development kit tools used in developing and deploying applications for the Java Card 3 platform.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1005488"></A>This chapter consists of the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1005471"></A><A HREF="cardinstaller-connected.html#50565189_74738" CLASS="XRef">Description of the On-Card Installer</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1005476"></A><A HREF="cardinstaller-connected.html#50565189_68572" CLASS="XRef">Description of the Installer Tool</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1005481"></A><A HREF="cardinstaller-connected.html#50565189_49516" CLASS="XRef">Card Installer Use Case</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565189_pgfId-1001436"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565189_74738"></A>Description of the On-Card Installer<A NAME="50565189_marker-1001451"></A> </H2>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002549"></A>The on-card installer is a ROMized servlet responsible for handling requests received from the off-card installer, extracting the command and data, forwarding them to the card manager. Upon the return of the card manager, the installer forms the response to send back to the off-card installer.
+</P><H3 CLASS="Head2"><A NAME="50565189_pgfId-1002551"></A><A NAME="50565189_marker-1008616"></A>On-card Installer Operation</H3>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002552"></A>The on-card installer provides the interface between the Installer tool and the card manager and provides a request handling function for the card manager to perform card management tasks. The on-card installer assumes the <KBD CLASS="Filename">/cardmanager</KBD> context to represent the on-card card manager. All <KBD CLASS="Command">/cardmanager/</KBD><I CLASS="Variable">command</I> URIs (in which <I CLASS="Variable">command</I> represents load, create, delete, unload, or list) are mapped to one context <KBD CLASS="Filename">/cardmanager</KBD> assigned to the on-card installer.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1005330"></A>The on-card installer parses and extracts the command, name, and data information in the multi-part POST requests. The information is passed on by calling the appropriate card manager’s API. The on-card installer and the filter are registered and started with the web container at card initialization.
+</P><H3 CLASS="Head2"><A NAME="50565189_pgfId-1005461"></A><A NAME="50565189_marker-1008617"></A>On-card Installer Functionality</H3>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1005319"></A>The on-card installer provides the following functionality:
+</P>
+<P CLASS="List1"><A NAME="50565189_pgfId-1002553"></A>1.	Handles requests received from the off-card installer.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565189_pgfId-1004609"></A>These requests include the command for card application management and the data (application module JAR file).
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002554"></A>	2. 	Extracts data (JAR file) contained in the HTTP request and saves it to an on-card file.
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002555"></A>	3. 	Passes the <KBD CLASS="Command">load</KBD>, <KBD CLASS="Command">create</KBD>, <KBD CLASS="Command">delete</KBD>, <KBD CLASS="Command">unload</KBD>, or <KBD CLASS="Command">list</KBD> command, parameters and the location of the saved JAR file to the Card Manager.
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002556"></A>	4. 	Handles the return from the Card Manager.
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002557"></A>	5. 	Builds the response content and sending the response back to the off-card installer.
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002558"></A>	6. 	Can be configured to require PIN authentication of the off-card installer via basic HTTP authentication:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565189_pgfId-1002560"></A><KBD CLASS="Command">load</KBD>, <KBD CLASS="Command">create</KBD>, <KBD CLASS="Command">delete</KBD>, or <KBD CLASS="Command">unload</KBD> are protected with session-scoped authentication.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565189_pgfId-1002561"></A><KBD CLASS="Command">list</KBD> is protected with global card holder authentication.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565189_pgfId-1002562"></A><KBD CLASS="Command">load</KBD>, <KBD CLASS="Command">create</KBD>, <KBD CLASS="Command">delete</KBD>, or <KBD CLASS="Command">unload</KBD> require card holder authorization.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL><H2 CLASS="Head1"><A NAME="50565189_pgfId-1001457"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565189_marker-1008765"></A><A NAME="50565189_68572"></A>Description of the Installer Tool<A NAME="50565189_marker-1001456"></A></H2>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002858"></A>The Installer tool (off-card Installer) works on behalf of the on-card installer to perform various card management tasks, such as deploying an application and listing all applications. The communication between the Installer tool and on-card installer is proprietary. For the RI, HTTP POST is used as the communication protocol.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002860"></A><A NAME="50565189_marker-1008620"></A>The following functions are performed by the Installer tool:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002861"></A>Loads an application module onto the card.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002862"></A>Creates an instance of an application.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002863"></A>Deletes (deactivates) an instance of an application.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002864"></A>Completely removes a module or application from the card.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002591"></A>Displays information about loaded applications and instances.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565189_pgfId-1002846"></A><A NAME="50565189_marker-1008621"></A>Running the Installer Tool From the Command Line</H3>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1015344"></A>The Installer tool is a command-line tool, implemented using Java SE. The command line interface for the Installer tool has the following syntax:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1015345"></A>installer.bat <I CLASS="Variable">subcommand</I> [options] [arguments]
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002942"></A>In the command line, the subcommand must be the first argument after the <KBD CLASS="Command">installer.bat</KBD> command. Options and arguments can be in any order.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002980"></A>In the command line, subcommands and options can be specified in either a short form or a long form. The short form is a single character preceded by a hyphen (-). The long form uses a meaningful name preceded by two hyphens (--). Each subcommand can take one or more options or arguments that must follow the subcommand but can be in any order. For example, <KBD CLASS="Command">-i</KBD> <I CLASS="Variable">instance-name</I> or
+<BR><KBD CLASS="Command">--instance</KBD> <I CLASS="Variable">instance-name</I>.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002978"></A>Arguments are command line arguments that are not bound to an option. For example, an application or module file name used in the <KBD CLASS="Command">load</KBD> command is an argument.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003021"></A><A NAME="50565189_marker-1008622"></A>The following subcommands are available for the <KBD CLASS="Command">installer.bat</KBD> command:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002970"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_44068" CLASS="XRef">load Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002971"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_30776" CLASS="XRef">create Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002972"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_39666" CLASS="XRef">delete Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002973"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_35114" CLASS="XRef">unload Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002974"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_93325" CLASS="XRef">list Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002967"></A><KBD CLASS="Command"><A HREF="cardinstaller-connected.html#50565189_98626" CLASS="XRef">help Subcommand</A></KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H4 CLASS="Head3"><A NAME="50565189_pgfId-1003051"></A><KBD CLASS="Command">load</KBD><A NAME="50565189_44068"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1005501"></A>Causes the Installer tool to load a specified application module or library file. The <KBD CLASS="Command">load</KBD> subcommand can have one or more options and arguments.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003081"></A><KBD CLASS="Command">load</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003229"></A><A HREF="cardinstaller-connected.html#50565189_78498" CLASS="XRef">TABLE 8-1</A> lists and describes the available <KBD CLASS="Command">load</KBD> subcommand options.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565189_pgfId-1003084"> </A> TABLE 8-1 	 <KBD CLASS="Command"> load </KBD> <A NAME="50565189_78498"> </A>  Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003088"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003090"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003474"></A><KBD CLASS="Command">-c</KBD> oncardinstaller-url
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005599"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005600"></A><KBD CLASS="Command">--cardmanager </KBD>oncardinstaller-url
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003094"></A>Specifies the location of the on-card installer where oncardinstaller-url represents the complete URL of the on-card installer.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015473"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015474"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015475"></A><KBD CLASS="Command">--</KBD>commandoptionsfile command-options-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015477"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006470"></A><KBD CLASS="Command">-n</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006471"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006472"></A><KBD CLASS="Command">--name</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006474"></A>Specifies the name of the module or library on the card, where <I CLASS="Variable">module-or-library-name</I> represents the module or library name.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006476"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006477"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006478"></A><KBD CLASS="Command">--password </KBD><I CLASS="Variable">password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006481"></A>Optional. Used when authentication is required. Specifies the password for the user set by the <KBD CLASS="Command">--user</KBD> or <KBD CLASS="Command">-u</KBD> subcommand, where <I CLASS="Variable">password</I> represents the required user password.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006483"></A><KBD CLASS="Command">-s</KBD> signature-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006484"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006485"></A><KBD CLASS="Command">--signature</KBD> signature-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006487"></A>Specifies the name of the properties file that contains the BASE64 encoded certificate and signature, where signature-file represents the file name.
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006488"></A>This file is a simple properties file with properties:
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006489"></A><KBD CLASS="Command">signature=</KBD><I CLASS="Variable">base64-encoded-signature</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006490"></A><KBD CLASS="Command">certificate=</KBD><I CLASS="Variable">certificate-to-validate-the module-and-digest</I>
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005535"></A><KBD CLASS="Command">-t</KBD> <I CLASS="Variable">file-type</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005593"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005594"></A><KBD CLASS="Command">--type</KBD> <I CLASS="Variable">file-type</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1005537"></A>Specifies the<I CLASS="Variable"> </I>type of file being loaded, where <I CLASS="Variable">file-type</I> represents one of the following values:
+</P>
+<UL>
+<LI CLASS="TableBullet"><A NAME="50565189_pgfId-1008596"></A><KBD CLASS="Command">web</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565189_pgfId-1008597"></A><KBD CLASS="Command">classic-applet</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565189_pgfId-1008598"></A><KBD CLASS="Command">extended-applet</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565189_pgfId-1008599"></A><KBD CLASS="Command">classic-lib</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565189_pgfId-1008600"></A><KBD CLASS="Command">extension-lib</KBD>
+</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003166"></A><KBD CLASS="Command">-u</KBD> <I CLASS="Variable">user-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003245"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003246"></A><KBD CLASS="Command">--use</KBD>r <I CLASS="Variable">user-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003168"></A>Optional. Used when authentication is required to access the card manager. Specifies the<I CLASS="Variable"> </I>user name, where <I CLASS="Variable">user-id</I> represents the user name.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003065"></A><KBD CLASS="Command">load</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003295"></A>Command line arguments available for the <KBD CLASS="Command">load</KBD> subcommand are the module or application group file name.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003067"></A><KBD CLASS="Command">load</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1007621"></A>The following is an example of the <KBD CLASS="Command">load</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1007622"></A>installer.bat load -c <I CLASS="Variable">oncardinstaller-url </I>-s <I CLASS="Variable">signature-file </I>-t <I CLASS="Variable">file-type </I>&#92;
+<A NAME="50565189_pgfId-1007762"></A>	-n <I CLASS="Variable">module-or-library-name </I>[-u <I CLASS="Variable">user-id</I> -p <I CLASS="Variable">password</I>] &#92;
+<A NAME="50565189_pgfId-1007763"></A>	<I CLASS="Variable">application-module (or library-file)</I>
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1007765"></A><A NAME="50565189_85951"></A><KBD CLASS="Command">load</KBD> Subcommand Example</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003349"></A>In the following example, the Installer loads the file <KBD CLASS="Filename">Calculator.war</KBD> with the name <KBD CLASS="Command">calc</KBD>.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003221"></A>installer.bat load -c http://localhost:8019/cardmanager &#92;
+<A NAME="50565189_pgfId-1003358"></A>	-s mysig.properties -n calc -t web Calculator.war
+</PRE><H4 CLASS="Head3"><A NAME="50565189_pgfId-1003366"></A><KBD CLASS="Command">create</KBD><A NAME="50565189_30776"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003367"></A>Causes the Installer to create an instance of an application from a specified group with a specified context. The <KBD CLASS="Command">create</KBD> subcommand can have one or more options but has no arguments.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003402"></A><KBD CLASS="Command">create</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003456"></A><A HREF="cardinstaller-connected.html#50565189_93711" CLASS="XRef">TABLE 8-2</A> lists and describes the available <KBD CLASS="Command">create</KBD> subcommand options.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565189_pgfId-1003409"> </A> TABLE 8-2 	 <KBD CLASS="Command"> create </KBD> <A NAME="50565189_93711"> </A>  Options  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003413"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003415"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1008425"></A><KBD CLASS="Command">-a</KBD> <I CLASS="Variable">applet</I>-<I CLASS="Variable">name-or-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1008449"></A>(or)
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1008448"></A><KBD CLASS="Command">--applet</KBD> <I CLASS="Variable">applet</I>-<I CLASS="Variable">name-or-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1008427"></A>Specifies the name of the applet loaded by <KBD CLASS="Command">load</KBD> command, where <I CLASS="Variable">applet</I>-<I CLASS="Variable">name-or-id</I> represents the applet name.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003417"></A><KBD CLASS="Command">-c</KBD> oncardinstaller-url
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003418"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003419"></A><KBD CLASS="Command">--cardmanager</KBD> oncardinstaller-url
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003421"></A>Specifies the location of the on-card installer, where oncardinstaller-url represents the complete URL.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015467"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015468"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015469"></A><KBD CLASS="Command">--</KBD>commandoptionsfile command-options-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015471"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1014971"></A><KBD CLASS="Command">-d</KBD> <I CLASS="Variable">install-parameters</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1014975"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1014987"></A><KBD CLASS="Command">--data</KBD> <I CLASS="Variable">install-parameters</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1008971"></A>Optional. Install parameters (printable hex string) that will be passed to the install method of a classic or extended applet.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015067"></A><KBD CLASS="Command">-i </KBD><I CLASS="Variable">name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015068"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015069"></A><KBD CLASS="Command">--instance</KBD><I CLASS="Variable"> name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006919"></A>Specifies the name or ID of the instance, where <I CLASS="Variable">name</I> represents the name or ID. For web applications, a context name used to create the web application. If none is specified, then the default <I CLASS="Variable">Web-Context-Path</I> from JCRD is used.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006932"></A><KBD CLASS="Command">-n</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006933"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006934"></A><KBD CLASS="Command">--name</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006936"></A>Specifies the name of the module or library loaded by <KBD CLASS="Command">load</KBD> command, where <I CLASS="Variable">module-or-library-name</I> represents the module or library name.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006962"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006963"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006964"></A><KBD CLASS="Command">--password </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006965"></A>&nbsp;
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1006967"></A>Optional. Used when authentication is required. Sets the password for the user specified by the <KBD CLASS="Command">--user</KBD> or <KBD CLASS="Command">-u</KBD> subcommand.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003436"></A><KBD CLASS="Command">-u</KBD> <I CLASS="Variable">user-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003437"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003438"></A><KBD CLASS="Command">--user</KBD> <I CLASS="Variable">user-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003441"></A>Optional. If authentication is required to access the card manager, specifies the authorized user, where <I CLASS="Variable">user-id</I> represents the required user name.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003457"></A><KBD CLASS="Command">create</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003368"></A>There are no command line arguments for the <KBD CLASS="Command">create</KBD> subcommand.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003614"></A><KBD CLASS="Command">create</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003659"></A>The following is an example of the <KBD CLASS="Command">create</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1015013"></A>installer.bat create -c <I CLASS="Variable">oncardinstaller-url</I> -n <I CLASS="Variable">module-or-library-name </I>&#92;
+<A NAME="50565189_pgfId-1015032"></A>	[-a <I CLASS="Variable">applet-name-or-id</I>] [<KBD CLASS="Command">-d</KBD> <I CLASS="Variable">install-parameters</I>] [-i <I CLASS="Variable">name</I>] &#92;
+<A NAME="50565189_pgfId-1015042"></A>	[-u <I CLASS="Variable">user-id</I> -p <I CLASS="Variable">password</I>]
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003621"></A><KBD CLASS="Command">create</KBD> Command Example 1</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003670"></A>The following example assumes that a module was previously loaded and named <KBD CLASS="Command">calc</KBD>. See <A HREF="cardinstaller-connected.html#50565189_85951" CLASS="XRef">load Subcommand Example</A>. The Web-Context-Path in RD is <KBD CLASS="Command">/Calculator</KBD>.
+</P>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003859"></A>This example of the <KBD CLASS="Command">create</KBD> command registers the web application with a web container using <KBD CLASS="Command">/Calculator</KBD> as the context. Users access this web application by using <KBD CLASS="Filename">http://cardip:cardport/Calculator</KBD>.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003622"></A>installer.bat create -c http://localhost:8019/cardmanager -n calc
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003725"></A><KBD CLASS="Command">create</KBD> Command Example 2</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003729"></A>Similar to Command Example 1, the following example assumes that a module was previously loaded and named <KBD CLASS="Command">calc</KBD>, with the exception that instead of using the default <KBD CLASS="Command">/Calculator</KBD>, the application is registered with a web-container using the context <KBD CLASS="Command">/Mycalc</KBD>.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003625"></A>installer.bat create -c http://localhost:8019/cardmanager -n calc &#92;
+<A NAME="50565189_pgfId-1005773"></A>	-i /MyCalc
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1008545"></A><KBD CLASS="Command">create</KBD> Command Example 3</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1008546"></A>Similar to Command Example 2, the following example assumes that a module was previously loaded and named <KBD CLASS="Command">calc</KBD>, with the exception that the application is registered as an applet instead of a web-container and has an instance ID of <KBD CLASS="Command">/01</KBD>.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1015054"></A>installer.bat create -c http://localhost:8019/cardmanager -n calc &#92;
+<A NAME="50565189_pgfId-1015058"></A>	-a //aid/A000000062/03010C0201 -d a000f0
+</PRE><H4 CLASS="Head3"><A NAME="50565189_pgfId-1003883"></A><KBD CLASS="Command">delete</KBD><A NAME="50565189_39666"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002852"></A>Causes the installer to delete an instance that was created by the <KBD CLASS="Command">create</KBD> subcommand. The <KBD CLASS="Command">delete</KBD> subcommand can have one or more options but no arguments.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003896"></A><KBD CLASS="Command">delete</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003950"></A><A HREF="cardinstaller-connected.html#50565189_53433" CLASS="XRef">TABLE 8-3</A> lists and describes the available <KBD CLASS="Command">delete</KBD> subcommand options.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565189_pgfId-1003903"> </A> TABLE 8-3 	 <KBD CLASS="Command"> delete </KBD> <A NAME="50565189_53433"> </A>  Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003907"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1003909"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003911"></A><KBD CLASS="Command">-c</KBD> oncardinstaller-url
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003912"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003913"></A><KBD CLASS="Command">--cardmanager</KBD> oncardinstaller-url
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007062"></A>Specifies the location of the on-card installer, where oncardinstaller-url represents the complete URL.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015413"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015414"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015415"></A><KBD CLASS="Command">--</KBD>commandoptionsfile command-options-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015417"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015087"></A><KBD CLASS="Command">-i</KBD><I CLASS="Variable"> name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015088"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015089"></A><KBD CLASS="Command">--instance</KBD><I CLASS="Variable"> name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015090"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015091"></A><KBD CLASS="Command">-i</KBD><I CLASS="Variable"> name;name1;name2; ...</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015092"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003973"></A><KBD CLASS="Command">--instance</KBD><I CLASS="Variable"> name;name1;name2; ...</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1003922"></A>Specifies the instance of the application or multiple instances of applications to be deleted, where <I CLASS="Variable">name</I> represents the instance name of the application.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007101"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007102"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007103"></A><KBD CLASS="Command">--password </KBD><I CLASS="Variable">password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007106"></A>Optional. Used when authentication is required. Sets the password for the user specified by the <KBD CLASS="Command">--user</KBD> or <KBD CLASS="Command">-u</KBD> subcommand.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007114"></A><KBD CLASS="Command">-u</KBD> <I CLASS="Variable">user-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007115"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007116"></A><KBD CLASS="Command">--user</KBD> <I CLASS="Variable">user-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007118"></A>Optional. If authentication is required to access the card manager, specifies the authorized user, where <I CLASS="Variable">user-id</I> represents the required user name.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003984"></A><KBD CLASS="Command">delete</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003985"></A>There are no command line arguments for the <KBD CLASS="Command">delete</KBD> subcommand.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1003986"></A><KBD CLASS="Command">delete</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003987"></A>The following is an example of the <KBD CLASS="Command">delete</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003999"></A>installer.bat delete -c on<I CLASS="Variable">cardinstaller-url</I> -i <I CLASS="Variable">name</I> [-u <I CLASS="Variable">user-id</I> -p <I CLASS="Variable">password</I>]
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004008"></A><KBD CLASS="Command">delete</KBD> Command Example</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002854"></A>In the following example, the installer deletes the instance<KBD CLASS="Command"> /MyCalc.</KBD>
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004025"></A>installer.bat delete -c http://localhost:8019/cardmanager -i /MyCalc
+</PRE><H4 CLASS="Head3"><A NAME="50565189_pgfId-1003635"></A><KBD CLASS="Command">unload</KBD><A NAME="50565189_35114"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003636"></A>Causes the installer to unload (remove) the specified module or application from the card including all instances created by the <KBD CLASS="Command">create</KBD> command. The <KBD CLASS="Command">delete</KBD> subcommand can have one or more options but no arguments.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004062"></A><KBD CLASS="Command">unload</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004109"></A><A HREF="cardinstaller-connected.html#50565189_50895" CLASS="XRef">TABLE 8-4</A> lists and describes the available <KBD CLASS="Command">unload</KBD> subcommand options.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565189_pgfId-1004069"> </A> TABLE 8-4 	 <KBD CLASS="Command"> unload </KBD> <A NAME="50565189_50895"> </A>  Options </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1004073"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1004075"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007136"></A><KBD CLASS="Command">-c</KBD> oncardinstaller-url
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007137"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007138"></A><KBD CLASS="Command">--cardmanager</KBD> oncardinstaller-url
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007140"></A>Specifies the location of the on-card installer, where oncardinstaller-url represents the complete URL.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015479"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015480"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015481"></A><KBD CLASS="Command">--</KBD>commandoptionsfile command-options-file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015483"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007142"></A><KBD CLASS="Command">-n</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007143"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007144"></A><KBD CLASS="Command">--name</KBD> <I CLASS="Variable">module-or-library-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007146"></A>Specifies the name of the module or library loaded by <KBD CLASS="Command">load</KBD> command, where <I CLASS="Variable">module-name</I> represents the module or library name.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007148"></A><KBD CLASS="Command">-f</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007149"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007150"></A><KBD CLASS="Command">--force</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007153"></A>Optional. Forces an attempt to delete any instances before unloading.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007155"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007156"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007157"></A><KBD CLASS="Command">--password </KBD><I CLASS="Variable">password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007159"></A>Optional. Used when authentication is required. Sets the password for the user specified by the <KBD CLASS="Command">--user</KBD> or <KBD CLASS="Command">-u</KBD> subcommand.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007167"></A><KBD CLASS="Command">-u</KBD> <I CLASS="Variable">user-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007168"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007169"></A><KBD CLASS="Command">--user</KBD> <I CLASS="Variable">user-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007171"></A>Optional. If authentication is required to access the card manager, specifies the authorized user, where <I CLASS="Variable">user-id</I> represents the required user name.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004164"></A><KBD CLASS="Command">unload</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004165"></A>There are no command line arguments for the <KBD CLASS="Command">unload</KBD> subcommand.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004166"></A><KBD CLASS="Command">unload</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004167"></A>The following is an example of the <KBD CLASS="Command">unload</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003637"></A>installer.bat unload -c <I CLASS="Variable">oncardinstaller-url</I> -n <I CLASS="Variable">module-or-library-name</I> [-f] &#92;	[-u <I CLASS="Variable">user-id</I> -p <I CLASS="Variable">password</I>]
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004197"></A><KBD CLASS="Command">unload</KBD> Command Example</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004198"></A>In the following example, the installer completely removes the <KBD CLASS="Command">calc</KBD> module and all of its instances.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1003638"></A>installer.bat unload -c http://localhost:8019/cardmanager -n calc
+</PRE><H4 CLASS="Head3"><A NAME="50565189_pgfId-1004255"></A><KBD CLASS="Command">list</KBD><A NAME="50565189_93325"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1003639"></A>Causes the installer to display summary or detailed information about loaded application modules, instances, and libraries.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004274"></A><KBD CLASS="Command">list</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004328"></A><A HREF="cardinstaller-connected.html#50565189_97021" CLASS="XRef">TABLE 8-5</A> lists and describes the available <KBD CLASS="Command">list</KBD> subcommand options.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565189_pgfId-1004281"> </A> TABLE 8-5 	 <KBD CLASS="Command"> list </KBD> <A NAME="50565189_97021"> </A>  Options  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1004285"></A>Option
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565189_pgfId-1004287"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007189"></A><KBD CLASS="Command">-c</KBD> <I CLASS="Variable">oncardinstaller-url</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007190"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007191"></A><KBD CLASS="Command">--cardmanager</KBD> <I CLASS="Variable">oncardinstaller-url</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007193"></A>Specifies the location of the on-card installer, where oncardinstaller-url represents the complete URL.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015485"></A><KBD CLASS="Command">-</KBD>C command-options-file
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015486"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015487"></A><KBD CLASS="Command">--</KBD>commandoptionsfile <I CLASS="Variable">command-options-file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1015489"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007195"></A><KBD CLASS="Command">-d</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007196"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007197"></A><KBD CLASS="Command">--detailed</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007200"></A>Optional. Displays complete details of the application-modules, instances, and libraries.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007208"></A><KBD CLASS="Command">-p </KBD><I CLASS="Variable">password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007209"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007210"></A><KBD CLASS="Command">--password </KBD><I CLASS="Variable">password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007212"></A>Optional. Used when authentication is required. Sets the password for the user specified by the <KBD CLASS="Command">--user</KBD> or <KBD CLASS="Command">-u</KBD> subcommand.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007220"></A><KBD CLASS="Command">-u</KBD> <I CLASS="Variable">user-id</I>
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007221"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007222"></A><KBD CLASS="Command">--user</KBD> <I CLASS="Variable">user-id</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565189_pgfId-1007224"></A>Optional. If authentication is required to access the card manager, specifies the authorized user, where <I CLASS="Variable">user-id</I> represents the required user name.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004355"></A><KBD CLASS="Command">list</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004356"></A>There are no command line arguments for the <KBD CLASS="Command">list</KBD> subcommand.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004357"></A><KBD CLASS="Command">list</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004358"></A>The following is an example of the <KBD CLASS="Command">list</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004249"></A>installer.bat list -c <I CLASS="Variable">oncardinstaller-url</I> [-d] [-u <I CLASS="Variable">user-id</I> -p <I CLASS="Variable">password</I>]
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004374"></A><KBD CLASS="Command">list</KBD> Command Example 1</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004375"></A>In the following example, the installer displays summary information about modules, applications, and libraries.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004250"></A>installer.bat list -c http://localhost:8019/cardmanager
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004395"></A><KBD CLASS="Command">list</KBD> Command Example 2</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004396"></A>In the following example, the installer displays detailed information about modules, applications, and libraries.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004398"></A>installer.bat list -d -c http://localhost:8019/cardmanager
+</PRE><H4 CLASS="Head3"><A NAME="50565189_pgfId-1004251"></A><KBD CLASS="Command">help</KBD><A NAME="50565189_98626"></A> Subcommand</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004426"></A>Causes the installer to display summary or detailed information about one or more installer subcommands.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004427"></A><KBD CLASS="Command">help</KBD> Subcommand Options</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004438"></A>There are no command line options for the <KBD CLASS="Command">help</KBD> subcommand.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004431"></A><KBD CLASS="Command">help</KBD> Subcommand Arguments</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004432"></A>Command line arguments for the <KBD CLASS="Command">help</KBD> command are optional and consist of the name of the subcommand for which detailed help is requested.
+</P><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004433"></A><KBD CLASS="Command">help</KBD> Subcommand Format</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004434"></A>The following is an example of the <KBD CLASS="Command">list</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004253"></A>installer.bat help [<I CLASS="Variable">subcommand</I>]
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004488"></A><KBD CLASS="Command">help</KBD> Command Example 1</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002855"></A>In the following example, the installer displays summary help about all of its subcommands.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004477"></A>installer.bat help
+</PRE><H5 CLASS="Head4"><A NAME="50565189_pgfId-1004506"></A><KBD CLASS="Command">help</KBD> Command Example 2</H5>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004507"></A>In the following example, the installer displays detailed help about the <KBD CLASS="Command">load</KBD> subcommand.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1004524"></A>installer.bat help load
+</PRE><H2 CLASS="Head1"><A NAME="50565189_pgfId-1002600"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565189_marker-1008623"></A><A NAME="50565189_49516"></A>Card Installer Use Case</H2>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004707"></A>The following use case, <A HREF="cardinstaller-connected.html#50565189_67378" CLASS="XRef">Load an Application</A>, illustrates a common use of the card installer.
+</P><H3 CLASS="Head2"><A NAME="50565189_pgfId-1004578"></A><A NAME="50565189_67378"></A>Load an Application</H3>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002602"></A>This use case loads an application module to the card.
+</P><H4 CLASS="Head3"><A NAME="50565189_pgfId-1002603"></A>Pre-Conditions</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1004710"></A>The following preconditions must be satisfied for this use case:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002604"></A>A valid module file available (in this use case, <KBD CLASS="Command">mymodule.war</KBD>). 
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002605"></A>A signature details file containing Base64 encoded signature and certificate is available (in this use case, <KBD CLASS="Command">sig.properties</KBD>).
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565189_pgfId-1002606"></A>The on-card installer application must be accessible to the off-card installer client via an http connection (in this use case, <KBD CLASS="Filename">http://localhost:8019/cardmanager</KBD>).
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H4 CLASS="Head3"><A NAME="50565189_pgfId-1002607"></A>Post-Conditions</H4>
+<P CLASS="Paragraph"><A NAME="50565189_pgfId-1002608"></A>The module is loaded and ready to be created.
+</P><H4 CLASS="Head3"><A NAME="50565189_pgfId-1002609"></A>Sequence of Events</H4>
+<P CLASS="List1"><A NAME="50565189_pgfId-1002610"></A>1.	The user executes the following command:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565189_pgfId-1002611"></A>installer.bat load -c http://localhost:8019/cardmanager &#92;
+<A NAME="50565189_pgfId-1015282"></A>	-s sig.properties -n app1 -t web mymodule.war
+</PRE>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002615"></A>	2. 	The off-card installer connects to the on-card installer servlet and POSTs the required information.
+</P>
+<P CLASS="List1-"><A NAME="50565189_pgfId-1002616"></A>	3. 	A message is displayed on the console with the success information.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="packagertool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="normalizer-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

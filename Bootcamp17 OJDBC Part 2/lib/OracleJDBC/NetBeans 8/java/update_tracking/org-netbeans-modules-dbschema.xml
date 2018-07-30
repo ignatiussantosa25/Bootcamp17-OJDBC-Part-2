@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.dbschema/1">
+    <module_version install_time="1475191424305" last="true" origin="installer" specification_version="1.41.1.4.30">
+        <file crc="4017415711" name="config/Modules/org-netbeans-modules-dbschema.xml"/>
+        <file crc="471108270" name="modules/locale/org-netbeans-modules-dbschema_ja.jar"/>
+        <file crc="457554544" name="modules/locale/org-netbeans-modules-dbschema_pt_BR.jar"/>
+        <file crc="4192720436" name="modules/locale/org-netbeans-modules-dbschema_ru.jar"/>
+        <file crc="1672289696" name="modules/locale/org-netbeans-modules-dbschema_zh_CN.jar"/>
+        <file crc="2459159655" name="modules/org-netbeans-modules-dbschema.jar"/>
+    </module_version>
+</module>

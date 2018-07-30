@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.libs.groovy">
+    <module_version install_time="1475191541972" last="true" origin="installer" specification_version="1.7.1">
+        <file crc="586793793" name="config/Modules/org-netbeans-modules-libs-groovy.xml"/>
+        <file crc="1538706834" name="modules/ext/groovy-all.jar"/>
+        <file crc="4153758134" name="modules/locale/org-netbeans-modules-libs-groovy_ja.jar"/>
+        <file crc="2288526589" name="modules/locale/org-netbeans-modules-libs-groovy_pt_BR.jar"/>
+        <file crc="875057831" name="modules/locale/org-netbeans-modules-libs-groovy_ru.jar"/>
+        <file crc="3338092973" name="modules/locale/org-netbeans-modules-libs-groovy_zh_CN.jar"/>
+        <file crc="2102420279" name="modules/org-netbeans-modules-libs-groovy.jar"/>
+    </module_version>
+</module>

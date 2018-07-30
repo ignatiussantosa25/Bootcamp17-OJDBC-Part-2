@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Creating and Validating Application Modules
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="compilertool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="cardinstaller-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565188_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">7</SPAN><A NAME="50565188_10980"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565188_pgfId-999553"></A><A NAME="50565188_Creating and Validating Application Modules"></A>Creating and Validating Application Modules
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002425"></A>This chapter describes creating and validating a Java Card technology-based application module with the Packager tool (Packager). See <A HREF="developing-javacardApps.html#50565152_44097" CLASS="XRef">Chapter 3</A> to better understand the role and relationship between the Packager and the other development kit tools used in developing applications for the Java Card 3 platform.
+</P>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1006980"></A>This chapter contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1005009"></A><A HREF="packagertool-connected.html#50565188_30907" CLASS="XRef">Packager Operation</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1005014"></A><A HREF="packagertool-connected.html#50565188_31756" CLASS="XRef">Running the Packager From the Command Line</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565188_pgfId-1002648"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565188_marker-1006783"></A><A NAME="50565188_30907"></A>Packager Operation</H2>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005841"></A>When creating an application module, the Packager takes a specified folder containing the files for the application module, validates the input files and creates the application module archive file. If a web application contains JAR files in the <KBD CLASS="Filename">lib</KBD> directory, the Packager creates a corresponding library module in the application module.
+</P>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005110"></A>Each application module can have a descriptor as a part of the <KBD CLASS="Filename">MANIFEST.MF</KBD> file that specifies application module declarative items. In cases where an application module has a descriptor, the descriptor information must be validated and preserved.
+</P><H3 CLASS="Head2"><A NAME="50565188_pgfId-1002430"></A><A NAME="50565188_marker-1006784"></A>Options</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002766"></A>The following are options of the Packager:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1002431"></A>Modules can be passed to the Packager as paths to directories containing the corresponding structure.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1002432"></A>Manifest files with information contained in an input module folder are preserved without change.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565188_pgfId-1002433"></A>Basic Packaging Sequence</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002434"></A>The Packager creates an application module JAR file from input by performing the following actions:
+</P>
+<P CLASS="List1"><A NAME="50565188_pgfId-1002780"></A>1.	Input files are extracted into a <KBD CLASS="Filename">temp</KBD> folder under a folder named either with the input file name or a name specified as a command line parameter.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1002785"></A>	2. 	Application module file types are checked and the application module type is determined.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1002786"></A>	3. 	A type entry is added to the application module.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1002787"></A>	4. 	The application module is placed under the <KBD CLASS="Command">temp</KBD> folder.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565188_pgfId-1002788"></A>If an optional keystore file is specified in the command line parameter, verified information from it is added to the resulting application module.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1002837"></A>	5. 	The entire contents are grouped together to create the final application module JAR file.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1002435"></A><A NAME="50565188_marker-1006785"></A>Use Cases</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002436"></A><A HREF="packagertool-connected.html#50565188_94539" CLASS="XRef">TABLE 7-1</A> provides a description of the possible Packager input files and corresponding output conditions.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565188_pgfId-1002852"> </A> TABLE 7-1 	 <A NAME="50565188_94539"> </A> Packager Tool Input Files and Expected Output </CAPTION>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1002439"></A>Input
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1002441"></A>Expected Output
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002443"></A>A valid JAR file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002445"></A>A valid application module JAR file
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002447"></A>A malformated JAR file
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002449"></A>Packager warns the user and exits
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002451"></A>Files of the same type
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002453"></A>A valid application module JAR file
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002455"></A>Files of different types
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002457"></A>Packager warns the user and exits
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002459"></A>Files of the same type but the type contradicts the passed <KBD CLASS="Command">--type</KBD> argument
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002461"></A>Packager warns the user and exits
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H3 CLASS="Head2"><A NAME="50565188_pgfId-1002463"></A><A NAME="50565188_marker-1006786"></A>Signing</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002464"></A>The Packager can invoke the appropriate tools automatically to sign the application module JAR file. See <A HREF="packagertool-connected.html#50565188_34126" CLASS="XRef">create Subcommand</A>. For information about creating a custom keystore that can be used to sign the application module JAR file, see <A HREF="configuringRI-connected.html#50565159_83714" CLASS="XRef">Chapter 12</A>. External signing tools can also be used to sign the modules if the user knows about those tools.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1002466"></A>Use Cases</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002886"></A><A HREF="packagertool-connected.html#50565188_13565" CLASS="XRef">TABLE 7-2</A> provides a description of the possible Packager signing input and corresponding output conditions
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565188_pgfId-1002888"> </A> TABLE 7-2 	 <A NAME="50565188_13565"> </A> Packager Tool Signing Results </CAPTION>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1002469"></A>Input
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1002471"></A>Expected Output
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002473"></A>Valid keystore passed
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002475"></A>Application module JAR file is signed successfully
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002477"></A>Invalid keystore passed or invalid keystore username or password
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1002480"></A>Packager warns the user and exits
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H2 CLASS="Head1"><A NAME="50565188_pgfId-1007022"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565188_Packager tool"></A><A NAME="50565188_31756"></A>Running the Packager From the Command Line</H2>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1002486"></A><A NAME="50565188_marker-1006791"></A>The command line interface for the Packager has the following syntax:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1002487"></A>packager.bat <I CLASS="Variable">subcommand</I> [options] <I CLASS="Variable">module-or-folder</I>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003816"></A>The following is a list of the available subcommands for the Packager:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1003835"></A><A HREF="packagertool-connected.html#50565188_34126" CLASS="XRef">create Subcommand</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1007867"></A><A HREF="packagertool-connected.html#50565188_25162" CLASS="XRef">validate Subcommand</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1003836"></A><A HREF="packagertool-connected.html#50565188_69928" CLASS="XRef">copyright Subcommand</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1003812"></A><A HREF="packagertool-connected.html#50565188_75159" CLASS="XRef">help Subcommand</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565188_pgfId-1003052"></A><KBD CLASS="Command">create</KBD><A NAME="50565188_34126"></A> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003888"></A>Creates the application module or library from a given module or folder.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1008331"></A><KBD CLASS="Command">create</KBD> Subcommand Format</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1008332"></A>The following is an example of the <KBD CLASS="Command">create</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline1"><A NAME="50565188_pgfId-1008333"></A>packager.bat create --out <I CLASS="Variable">file-name</I> [--type <I CLASS="Variable">file-type</I>] 
+<A NAME="50565188_pgfId-1008389"></A>[--exportpath <I CLASS="Variable">path-of-export-files</I>] [--packageaid <I CLASS="Variable">package-AID-for-classic-lib</I>]
+<A NAME="50565188_pgfId-1008587"></A>[--sign] --storepass <I CLASS="Variable">keystore-password</I> --passkey <I CLASS="Variable">key-password </I>
+<A NAME="50565188_pgfId-1008588"></A>[--alias <I CLASS="Variable">alias</I>] [--compress] [--force] [--keepproxysource <I CLASS="Variable">directory</I>]
+<A NAME="50565188_pgfId-1008618"></A>--useproxyclass <I CLASS="Variable">classpath</I> [--nowarn] <I CLASS="Variable">module-file-or-folder</I>
+</PRE><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004338"></A><KBD CLASS="Command">create</KBD> Subcommand Options</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1008016"></A><A HREF="packagertool-connected.html#50565188_39178" CLASS="XRef">TABLE 7-3</A> identifies the <KBD CLASS="Command">create</KBD> subcommand options and provides their descriptions.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565188_pgfId-1008023"> </A> TABLE 7-3 	 <A NAME="50565188_39178"> </A> <KBD CLASS="Command"> create </KBD>  Subcommand Options  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1008027"></A>Options
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1008029"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008031"></A><KBD CLASS="Command">-A</KBD> <I CLASS="Variable">alias</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008032"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008033"></A><KBD CLASS="Command">--alias</KBD> <I CLASS="Variable">alias</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008035"></A>Application signing attribute, where alias is the name used to retrieve the key from the keystore.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008037"></A><KBD CLASS="Command">-c</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008038"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008039"></A><KBD CLASS="Command">--compress</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008041"></A>Optional. If specified, the tool compresses the output application module file with DEFLATE algorithm. Otherwise creates an uncompressed application module file.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008043"></A><KBD CLASS="Command">-</KBD>C <I CLASS="Variable">command-options-file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008044"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008045"></A><KBD CLASS="Command">--</KBD>commandoptionsfile <I CLASS="Variable">command-options-file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008047"></A>Optional. Specifies a file containing command line options.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008049"></A>-e <I CLASS="Variable">path-of-export-files</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008050"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008051"></A><KBD CLASS="Command">--exportpath</KBD> <I CLASS="Variable">path-of-export-files</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008053"></A>Specifies the export files path. System’s <KBD CLASS="Command">api_export</KBD> files are implicitly loaded.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008055"></A><KBD CLASS="Command">-f</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008056"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008057"></A><KBD CLASS="Command">--force</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008059"></A>Optional. If specified, overwrite the output file. See <A HREF="packagertool-connected.html#50565188_92859" CLASS="XRef">--force Option Behavior</A>.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<PRE CLASS="TableTextCode"><A NAME="50565188_pgfId-1008455"></A>-k <I CLASS="Variable">directory</I>
+</PRE>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008467"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008468"></A>--keepproxysource <I CLASS="Variable">directory</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008621"></A>Optional. Cannot be used with <KBD CLASS="Command">-useproxyclass</KBD>. Creates the proxy source files and other stub files in the specified directory. 
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008064"></A><KBD CLASS="Command">-K</KBD> <I CLASS="Variable">keystore-file</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008065"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008066"></A><KBD CLASS="Command">--keystore</KBD> <I CLASS="Variable">keystore-file</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008068"></A>Required only when the <KBD CLASS="Command">--sign</KBD> option is specified. Application signing attribute, where <I CLASS="Variable">keystore-file</I> is the path and filename where the private keys are stored. A key utility (such as the JDK keytool) must be used to create and maintain this file. See <A HREF="configuringRI-connected.html#50565159_83714" CLASS="XRef">Chapter 12</A>, <A HREF="configuringRI-connected.html#50565159_50007" CLASS="XRef">Creating a Custom Keystore</A>.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008076"></A>-n
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008077"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008078"></A>--nowarn
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008080"></A>Suppresses the warning messages.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008082"></A><KBD CLASS="Command">-o</KBD> <I CLASS="Variable">file-name</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008083"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008084"></A><KBD CLASS="Command">--out</KBD> <I CLASS="Variable">file-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008086"></A>Specifies the output application module file where <I CLASS="Variable">file-name</I> is the name of the output file.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008088"></A>-P <I CLASS="Variable">key-password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008089"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008090"></A>--passkey <I CLASS="Variable">key-password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008092"></A>Application signing attribute, where <I CLASS="Variable">key-password </I>is the password for the private key.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008094"></A>-p <I CLASS="Variable">package-AID-for-classic-lib</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008095"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008096"></A>--packageaid <I CLASS="Variable">package-AID-for-classic-lib</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008098"></A>Specifies the package AID in //AID/&lt;RID&gt;/&lt;PIX&gt; format for <KBD CLASS="Command">classic-lib</KBD>. Ignored if type is not classic-lib.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008100"></A><KBD CLASS="Command">-s</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008101"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008102"></A><KBD CLASS="Command">--sign</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008104"></A>Optional. Specifies that the Packager sign the application.
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008105"></A>If <KBD CLASS="Command">--sign</KBD> is specified, <KBD CLASS="Command">--keystore</KBD> <I CLASS="Variable">keystore-file</I>, 
+<BR><KBD CLASS="Command">--storepass</KBD> <I CLASS="Variable">keystore-password</I>, <KBD CLASS="Command">--</KBD>passkey <I CLASS="Variable">key-password</I>, and <KBD CLASS="Command">--alias</KBD> <I CLASS="Variable">alias</I> are required.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008107"></A> <KBD CLASS="Command">-S</KBD> <I CLASS="Variable">keystore-password</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008108"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008109"></A><KBD CLASS="Command">--storepass</KBD> <I CLASS="Variable">keystore-password</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008111"></A>Application signing attribute, where <I CLASS="Variable">keystore-password</I> is the password for the keystore.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008113"></A><KBD CLASS="Command">-t</KBD> <I CLASS="Variable">file-type</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008114"></A>or 
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008115"></A><KBD CLASS="Command">--type</KBD> <I CLASS="Variable">file-type</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008117"></A>Specifies the application module file type, where <I CLASS="Variable">file-type</I> can be <KBD CLASS="Command">web</KBD>, <KBD CLASS="Command">extended-applet</KBD>, <KBD CLASS="Command">classic-applet</KBD>, <KBD CLASS="Command">classic-lib</KBD>, or <KBD CLASS="Command">extension-lib.</KBD> The default value is <KBD CLASS="Command">web</KBD>.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008529"></A>-u <I CLASS="Variable">classpath</I>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008549"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008550"></A>--useproxyclass <I CLASS="Variable">classpath</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008531"></A> Specifies the user-supplied proxy classes (these proxy classes are not generated by Converter).
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H5 CLASS="Head4"><A NAME="50565188_pgfId-1008119"></A><KBD CLASS="Command">--force</KBD><A NAME="50565188_92859"></A> Option Behavior</H5>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004141"></A>The <KBD CLASS="Command">--force</KBD> option causes the output file to be overwritten.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004292"></A><KBD CLASS="Command">create</KBD> Subcommand Examples</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005865"></A>Two examples are provided, an example of the output option and an example of the signing option.
+</P><H5 CLASS="Head4"><A NAME="50565188_pgfId-1005868"></A>Output Option Example</H5>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004306"></A>The following is an example of the <KBD CLASS="Command">create</KBD> subcommand with the output option:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1005496"></A>packager.bat create -o mymodule.jar -t web -c c:&#92;mymodulefolder
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004520"></A>In this command line example, the Packager performs the following tasks:
+</P>
+<P CLASS="List1"><A NAME="50565188_pgfId-1004489"></A>1.	Extracts the contents of <KBD CLASS="Filename">mymodulefolder</KBD> directory to a temporary folder under the subdirectory <KBD CLASS="Filename">mymodulefolder</KBD>.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1004495"></A>	2. 	Creates corresponding Web Application Module object and performs validation and canonicalization of all xml descriptors.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1004496"></A>	3. 	Creates a <KBD CLASS="Filename">META-INF/MANIFEST.MF</KBD> file with required information (such as application name).
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1004498"></A>	4. 	Compresses the contents of the temporary folder to <KBD CLASS="Filename">c:&#92;temp&#92;mymodule.jar</KBD>.
+</P><H5 CLASS="Head4"><A NAME="50565188_pgfId-1005862"></A>Signing Option Example</H5>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005874"></A>The following is an example of the <KBD CLASS="Command">create</KBD> subcommand with the output option:
+</P>
+<PRE CLASS="Codeline1"><A NAME="50565188_pgfId-1005875"></A>packager.bat create -o mymodule.jar -t web <KBD CLASS="Command">--sign</KBD> <KBD CLASS="Command">--keystore </KBD>
+<A NAME="50565188_pgfId-1008406"></A>c:&#92;mykeystore&#92;c.keystore <KBD CLASS="Command">--storepass</KBD> demo<I CLASS="Variable"> </I><KBD CLASS="Command">--keypass</KBD> mykey 
+<A NAME="50565188_pgfId-1008409"></A><KBD CLASS="Command">--alias</KBD> jckey<I CLASS="Variable"> </I>-c c:&#92;mymodulefolder
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005914"></A>in addition to those tasks described in the previous example, the Packager in this command line example signs the application using the keystore from c:&#92;mykeystore&#92;c.keystore by performing the following:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1005930"></A>Provides the password (<KBD CLASS="Command">demo</KBD>) for the <KBD CLASS="Command">mykeystore</KBD> keystore.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1005931"></A>Provides the password (<KBD CLASS="Command">mykey</KBD>) for the private <KBD CLASS="Command">c.keystore</KBD> key.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565188_pgfId-1005932"></A>Provides the name (jckey) required to retrieve the key from the keystore.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565188_pgfId-1002545"></A><KBD CLASS="Command">validate</KBD><A NAME="50565188_25162"></A> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003822"></A>Validates an application module.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1008314"></A><KBD CLASS="Command">validate</KBD> Subcommand Format</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1008315"></A>The following is the <KBD CLASS="Command">validate</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline1"><A NAME="50565188_pgfId-1008316"></A>packager.bat validate [-e | --exportpath <I CLASS="Variable">path-of-export-files</I>] 
+<A NAME="50565188_pgfId-1008423"></A>[--type <I CLASS="Variable">type</I><KBD CLASS="Command">]</KBD> [-x | --exportfile <I CLASS="Variable">files-to-export</I>] 
+<A NAME="50565188_pgfId-1008440"></A><I CLASS="Variable">module-file-name | module-directory-name</I>
+</PRE><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004319"></A><KBD CLASS="Command">validate</KBD> Subcommand Options</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004320"></A>The <KBD CLASS="Command">validate</KBD> subcommand has the options described in <A HREF="packagertool-connected.html#50565188_44518" CLASS="XRef">TABLE 7-4</A>.
+</P>
+<TABLE CLASS="TitledNoRules" SUMMARY="Table that is not numbered or titled" BORDER="0" CELLSPACING="0"><CAPTION CLASS="TableCaption"> <A NAME="50565188_pgfId-1008126"> </A> TABLE 7-4 	 <KBD CLASS="Command"> validate </KBD> <A NAME="50565188_44518"> </A>  Subcommand Options </CAPTION>
+<TR>
+<TH ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1008130"></A>Options
+</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1008132"></A>Description
+</P>
+</TH>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008183"></A><KBD CLASS="Command">-e</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008184"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008134"></A><KBD CLASS="Command">--exportpath </KBD><I CLASS="Variable">path-of-export-files</I><KBD CLASS="Command"></KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008136"></A>Specifies the path to use for the files to be exported.
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008278"></A><I CLASS="Variable">module-file-name|module-directory-name</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008280"></A>Specifies the module’s file or directory.
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008138"></A><KBD CLASS="Command">-t</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008164"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008165"></A><KBD CLASS="Command">--type</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008140"></A>Specifies the type of application module or group to be validated. The type can be web, extended-applet, classic-applet, classic-lib, or extension-lib.
+</P>
+</TD>
+</TR>
+<TR>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008197"></A><KBD CLASS="Command">-x</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008198"></A>or
+</P>
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008199"></A><KBD CLASS="Command">--exportfile </KBD><I CLASS="Variable">files-to-export</I>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1008195"></A>Specifies the files to use for the export.
+</P>
+</TD>
+</TR>
+</TABLE><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004331"></A><KBD CLASS="Command">validate</KBD> Subcommand Example</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004388"></A>The following is an example of the <KBD CLASS="Command">validate</KBD> subcommand:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1004317"></A>packager.bat validate -t web myapp.war
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1005578"></A>In this command line example, the Packager performs the following tasks:
+</P>
+<P CLASS="List1"><A NAME="50565188_pgfId-1006149"></A>1.	Extracts the contents of <KBD CLASS="Filename">myapp.war</KBD> application module to a temporary folder.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1005580"></A>	2. 	Validates the contents of the descriptors.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1006162"></A>	3. 	Validates that the classes specified in the descriptors actually exist in the application module.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1005585"></A>	4. 	Cross validates the descriptors.
+</P>
+<P CLASS="List1-"><A NAME="50565188_pgfId-1005586"></A>	5. 	Displays results of validation.
+</P><H3 CLASS="Head2"><A NAME="50565188_pgfId-1003823"></A><KBD CLASS="Command">copyright</KBD><A NAME="50565188_69928"></A> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003824"></A>Displays the detailed copyright notice.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1008351"></A><KBD CLASS="Command">copyright</KBD> Subcommand Format</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1008352"></A>The following is an example of the <KBD CLASS="Command">copyright</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1008353"></A>packager.bat copyright
+</PRE><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004399"></A><KBD CLASS="Command">copyright</KBD> Subcommand Options</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004400"></A>There are no options for the <KBD CLASS="Command">copyright</KBD> subcommand.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004405"></A><KBD CLASS="Command">copyright</KBD> Subcommand Example</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004406"></A>The following is an example of the <KBD CLASS="Command">copyright</KBD> subcommand:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1004407"></A>packager.bat copyright
+</PRE><H3 CLASS="Head2"><A NAME="50565188_pgfId-1003825"></A><KBD CLASS="Command">help</KBD><A NAME="50565188_75159"></A> Subcommand</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003831"></A>Prints information about using subcommands. 
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1008366"></A><KBD CLASS="Command">help</KBD> Subcommand Format</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1008367"></A>The following is an example of the <KBD CLASS="Command">help</KBD> subcommand format:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1008368"></A>packager.bat help <I CLASS="Variable">subcommand</I>
+</PRE><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004451"></A><KBD CLASS="Command">help</KBD> Subcommand Options</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004453"></A>While there are no options for the <KBD CLASS="Command">help</KBD> subcommand, it does accept a topic attribute consisting of a specific subcommand name for which detailed information is displayed.
+</P><H4 CLASS="Head3"><A NAME="50565188_pgfId-1004456"></A><KBD CLASS="Command">help</KBD> Subcommand Example</H4>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1004457"></A>The following is an example of the <KBD CLASS="Command">help</KBD> subcommand:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565188_pgfId-1004458"></A>packager.bat help validate
+</PRE><H3 CLASS="Head2"><A NAME="50565188_pgfId-1002558"></A>Use Cases</H3>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1003550"></A><A HREF="packagertool-connected.html#50565188_79972" CLASS="XRef">TABLE 7-5</A> provides use cases for the command line arguments and describes the expected output for each.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565188_pgfId-1003554"> </A> TABLE 7-5 	 <A NAME="50565188_79972"> </A> Use Cases for Command Line Arguments  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1003558"></A>Input
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565188_pgfId-1003560"></A>Expected Output
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003562"></A>Valid arguments are passed for all specified types (<KBD CLASS="Command">web</KBD>, <KBD CLASS="Command">extended-applet</KBD>, 
+<BR><KBD CLASS="Command">classic-applet</KBD>, <KBD CLASS="Command">extension-lib, or classic-lib</KBD>), <KBD CLASS="Command">-o</KBD> specified.
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003564"></A>Valid application module of corresponding type is created.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003566"></A>Valid arguments are passed for all specified types (<KBD CLASS="Command">web</KBD>, <KBD CLASS="Command">extended-applet</KBD>, 
+<BR><KBD CLASS="Command">classic-applet, extension-lib, or classic-lib</KBD>), <KBD CLASS="Command">-o</KBD> not specified.
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003568"></A>Packager performs xml validation. No application module is created.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003570"></A>The same name is specified for several application modules using the <I CLASS="Variable">filename</I> argument.
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003572"></A>Error message and modules are renamed automatically.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003582"></A><KBD CLASS="Command">-f</KBD> is specified, descriptors contain unsupported tags.
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003584"></A>Warns developer, cuts out unsupported tags.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003586"></A><KBD CLASS="Command">-s</KBD> is specified, valid signing related arguments passed.
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565188_pgfId-1003588"></A>Signs the resulting JAR file.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+<P CLASS="Paragraph"><A NAME="50565188_pgfId-1001546"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="compilertool-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="cardinstaller-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

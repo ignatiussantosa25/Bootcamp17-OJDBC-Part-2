@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.primefaces">
+    <module_version install_time="1475191869774" last="true" origin="installer" specification_version="1.75.1">
+        <file crc="1351266665" name="config/Modules/org-netbeans-modules-web-primefaces.xml"/>
+        <file crc="3763826670" name="modules/ext/primefaces/primefaces-5.0.jar"/>
+        <file crc="2283353361" name="modules/locale/org-netbeans-modules-web-primefaces_ja.jar"/>
+        <file crc="4103960500" name="modules/locale/org-netbeans-modules-web-primefaces_pt_BR.jar"/>
+        <file crc="3192438921" name="modules/locale/org-netbeans-modules-web-primefaces_ru.jar"/>
+        <file crc="2634755567" name="modules/locale/org-netbeans-modules-web-primefaces_zh_CN.jar"/>
+        <file crc="3276562702" name="modules/org-netbeans-modules-web-primefaces.jar"/>
+    </module_version>
+</module>

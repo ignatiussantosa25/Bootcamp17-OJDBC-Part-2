@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.schema.model/1">
+    <module_version install_time="1475191276088" last="true" origin="installer" specification_version="1.32.1.1">
+        <file crc="1408122385" name="config/Modules/org-netbeans-modules-xml-schema-model.xml"/>
+        <file crc="130501196" name="modules/locale/org-netbeans-modules-xml-schema-model_ja.jar"/>
+        <file crc="2455448779" name="modules/locale/org-netbeans-modules-xml-schema-model_pt_BR.jar"/>
+        <file crc="684394132" name="modules/locale/org-netbeans-modules-xml-schema-model_ru.jar"/>
+        <file crc="1992322119" name="modules/locale/org-netbeans-modules-xml-schema-model_zh_CN.jar"/>
+        <file crc="3129165421" name="modules/org-netbeans-modules-xml-schema-model.jar"/>
+    </module_version>
+</module>

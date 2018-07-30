@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.testrunner">
+    <module_version install_time="1475191506590" last="true" origin="installer" specification_version="1.19.1">
+        <file crc="4128543691" name="config/Modules/org-netbeans-modules-java-testrunner.xml"/>
+        <file crc="2759699697" name="modules/locale/org-netbeans-modules-java-testrunner_ja.jar"/>
+        <file crc="2802096715" name="modules/locale/org-netbeans-modules-java-testrunner_pt_BR.jar"/>
+        <file crc="205344230" name="modules/locale/org-netbeans-modules-java-testrunner_ru.jar"/>
+        <file crc="1089720763" name="modules/locale/org-netbeans-modules-java-testrunner_zh_CN.jar"/>
+        <file crc="325880249" name="modules/org-netbeans-modules-java-testrunner.jar"/>
+    </module_version>
+</module>

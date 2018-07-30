@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.source.queries">
+    <module_version install_time="1475191434990" last="true" origin="installer" specification_version="1.18.1">
+        <file crc="3342417573" name="config/Modules/org-netbeans-modules-java-source-queries.xml"/>
+        <file crc="2443430250" name="modules/locale/org-netbeans-modules-java-source-queries_ja.jar"/>
+        <file crc="1476756645" name="modules/locale/org-netbeans-modules-java-source-queries_pt_BR.jar"/>
+        <file crc="1806866516" name="modules/locale/org-netbeans-modules-java-source-queries_ru.jar"/>
+        <file crc="519797854" name="modules/locale/org-netbeans-modules-java-source-queries_zh_CN.jar"/>
+        <file crc="4236959051" name="modules/org-netbeans-modules-java-source-queries.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.mobility.cldcplatform">
+    <module_version install_time="1475191889111" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="3446411130" name="config/Modules/org-netbeans-modules-mobility-cldcplatform.xml"/>
+        <file crc="359704029" name="modules/locale/org-netbeans-modules-mobility-cldcplatform_ja.jar"/>
+        <file crc="1416666510" name="modules/locale/org-netbeans-modules-mobility-cldcplatform_pt_BR.jar"/>
+        <file crc="1608721769" name="modules/locale/org-netbeans-modules-mobility-cldcplatform_ru.jar"/>
+        <file crc="1658428979" name="modules/locale/org-netbeans-modules-mobility-cldcplatform_zh_CN.jar"/>
+        <file crc="994392127" name="modules/org-netbeans-modules-mobility-cldcplatform.jar"/>
+    </module_version>
+</module>

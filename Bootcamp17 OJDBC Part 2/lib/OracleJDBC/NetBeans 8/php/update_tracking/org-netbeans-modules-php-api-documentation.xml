@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.api.documentation/0">
+    <module_version install_time="1475191900297" last="true" origin="installer" specification_version="0.15.1">
+        <file crc="2106179124" name="config/Modules/org-netbeans-modules-php-api-documentation.xml"/>
+        <file crc="2850504693" name="modules/locale/org-netbeans-modules-php-api-documentation_ja.jar"/>
+        <file crc="1587141146" name="modules/locale/org-netbeans-modules-php-api-documentation_pt_BR.jar"/>
+        <file crc="3334239021" name="modules/locale/org-netbeans-modules-php-api-documentation_ru.jar"/>
+        <file crc="2982677979" name="modules/locale/org-netbeans-modules-php-api-documentation_zh_CN.jar"/>
+        <file crc="2021079326" name="modules/org-netbeans-modules-php-api-documentation.jar"/>
+    </module_version>
+</module>

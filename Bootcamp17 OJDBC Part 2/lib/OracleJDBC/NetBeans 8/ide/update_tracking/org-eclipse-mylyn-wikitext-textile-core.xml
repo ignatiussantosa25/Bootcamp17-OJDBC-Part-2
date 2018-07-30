@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.eclipse.mylyn.wikitext.textile.core">
+    <module_version install_time="1475191250220" last="true" origin="installer" specification_version="2.6.0.v20150901-2143">
+        <file crc="2131150018" name="config/Modules/org-eclipse-mylyn-wikitext-textile-core.xml"/>
+        <file crc="1655135411" name="modules/org-eclipse-mylyn-wikitext-textile-core.jar"/>
+    </module_version>
+</module>

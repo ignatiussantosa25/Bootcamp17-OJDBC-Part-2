@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Display-Name: HelloWorld
+Application-Type: extended-applet
+Runtime-Descriptor-Version: 3.0
+Created-By: Sun Microsystems, Inc.
+

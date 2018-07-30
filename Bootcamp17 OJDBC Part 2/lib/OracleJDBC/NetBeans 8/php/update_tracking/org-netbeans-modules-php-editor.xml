@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.php.editor">
+    <module_version install_time="1475191929606" last="false" origin="installer" specification_version="1.71.1.2">
+        <file crc="1004887788" name="config/Modules/org-netbeans-modules-php-editor.xml"/>
+        <file crc="85434726" name="docs/predefined_vars.zip"/>
+        <file crc="2583201842" name="modules/locale/org-netbeans-modules-php-editor_ja.jar"/>
+        <file crc="4025455749" name="modules/locale/org-netbeans-modules-php-editor_pt_BR.jar"/>
+        <file crc="199053601" name="modules/locale/org-netbeans-modules-php-editor_ru.jar"/>
+        <file crc="3565630113" name="modules/locale/org-netbeans-modules-php-editor_zh_CN.jar"/>
+        <file crc="2690338633" name="modules/org-netbeans-modules-php-editor.jar"/>
+    </module_version>
+    <module_version install_time="1518892639727" last="true" origin="NetBeans Distribution" specification_version="1.71.2.2">
+        <file crc="1004887788" name="config/Modules/org-netbeans-modules-php-editor.xml"/>
+        <file crc="85434726" name="docs/predefined_vars.zip"/>
+        <file crc="2479768079" name="modules/locale/org-netbeans-modules-php-editor_ja.jar"/>
+        <file crc="2568276213" name="modules/locale/org-netbeans-modules-php-editor_pt_BR.jar"/>
+        <file crc="3328919313" name="modules/locale/org-netbeans-modules-php-editor_ru.jar"/>
+        <file crc="1607379394" name="modules/locale/org-netbeans-modules-php-editor_zh_CN.jar"/>
+        <file crc="2578789506" name="modules/org-netbeans-modules-php-editor.jar"/>
+    </module_version>
+</module>

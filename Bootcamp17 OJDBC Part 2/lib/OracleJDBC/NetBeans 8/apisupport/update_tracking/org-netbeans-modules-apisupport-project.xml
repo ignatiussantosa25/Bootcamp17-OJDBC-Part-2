@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.apisupport.project/1">
+    <module_version install_time="1475191562890" last="true" origin="installer" specification_version="1.76.1">
+        <file crc="2782782661" name="config/Modules/org-netbeans-modules-apisupport-project.xml"/>
+        <file crc="2541637527" name="modules/locale/org-netbeans-modules-apisupport-project_ja.jar"/>
+        <file crc="2242286040" name="modules/locale/org-netbeans-modules-apisupport-project_pt_BR.jar"/>
+        <file crc="1315621687" name="modules/locale/org-netbeans-modules-apisupport-project_ru.jar"/>
+        <file crc="1405457030" name="modules/locale/org-netbeans-modules-apisupport-project_zh_CN.jar"/>
+        <file crc="643831977" name="modules/org-netbeans-modules-apisupport-project.jar"/>
+    </module_version>
+</module>

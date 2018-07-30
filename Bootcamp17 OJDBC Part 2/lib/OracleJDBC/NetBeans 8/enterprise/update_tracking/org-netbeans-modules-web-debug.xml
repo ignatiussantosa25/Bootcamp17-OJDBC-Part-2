@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.debug/1">
+    <module_version install_time="1475191853614" last="true" origin="installer" specification_version="2.39.1">
+        <file crc="1657809924" name="config/Modules/org-netbeans-modules-web-debug.xml"/>
+        <file crc="2315220674" name="modules/locale/org-netbeans-modules-web-debug_ja.jar"/>
+        <file crc="2245028548" name="modules/locale/org-netbeans-modules-web-debug_pt_BR.jar"/>
+        <file crc="239224708" name="modules/locale/org-netbeans-modules-web-debug_ru.jar"/>
+        <file crc="2938800341" name="modules/locale/org-netbeans-modules-web-debug_zh_CN.jar"/>
+        <file crc="2855073685" name="modules/org-netbeans-modules-web-debug.jar"/>
+    </module_version>
+</module>

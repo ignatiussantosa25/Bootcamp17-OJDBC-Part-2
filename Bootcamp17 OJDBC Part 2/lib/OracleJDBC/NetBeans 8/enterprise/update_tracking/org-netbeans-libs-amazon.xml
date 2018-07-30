@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.amazon/1">
+    <module_version install_time="1475191664906" last="true" origin="installer" specification_version="1.13.1">
+        <file crc="1636377766" name="config/Modules/org-netbeans-libs-amazon.xml"/>
+        <file crc="372389253" name="modules/ext/aws-sdk/aws-java-sdk-1.2.1.jar"/>
+        <file crc="2057006953" name="modules/ext/aws-sdk/commons-codec-1.3.jar"/>
+        <file crc="2136411430" name="modules/ext/aws-sdk/commons-logging-1.1.1.jar"/>
+        <file crc="4012311597" name="modules/ext/aws-sdk/httpclient-4.1.1.jar"/>
+        <file crc="4111496535" name="modules/ext/aws-sdk/httpcore-4.1.jar"/>
+        <file crc="4247884411" name="modules/locale/org-netbeans-libs-amazon_ja.jar"/>
+        <file crc="621554372" name="modules/locale/org-netbeans-libs-amazon_pt_BR.jar"/>
+        <file crc="74845897" name="modules/locale/org-netbeans-libs-amazon_ru.jar"/>
+        <file crc="4185868338" name="modules/locale/org-netbeans-libs-amazon_zh_CN.jar"/>
+        <file crc="1332449182" name="modules/org-netbeans-libs-amazon.jar"/>
+    </module_version>
+</module>

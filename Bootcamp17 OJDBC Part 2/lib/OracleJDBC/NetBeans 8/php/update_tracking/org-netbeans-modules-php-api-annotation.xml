@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.api.annotation/0">
+    <module_version install_time="1475191899793" last="true" origin="installer" specification_version="0.20.1">
+        <file crc="569591892" name="config/Modules/org-netbeans-modules-php-api-annotation.xml"/>
+        <file crc="624104443" name="modules/locale/org-netbeans-modules-php-api-annotation_ja.jar"/>
+        <file crc="928711308" name="modules/locale/org-netbeans-modules-php-api-annotation_pt_BR.jar"/>
+        <file crc="1977469896" name="modules/locale/org-netbeans-modules-php-api-annotation_ru.jar"/>
+        <file crc="1578832228" name="modules/locale/org-netbeans-modules-php-api-annotation_zh_CN.jar"/>
+        <file crc="1370130986" name="modules/org-netbeans-modules-php-api-annotation.jar"/>
+    </module_version>
+</module>

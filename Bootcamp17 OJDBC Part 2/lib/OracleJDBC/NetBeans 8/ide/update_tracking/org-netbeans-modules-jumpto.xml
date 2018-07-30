@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.jumpto/1">
+    <module_version install_time="1475191168146" last="true" origin="installer" specification_version="1.53.2.1">
+        <file crc="771737990" name="config/Modules/org-netbeans-modules-jumpto.xml"/>
+        <file crc="3951598131" name="modules/locale/org-netbeans-modules-jumpto_ja.jar"/>
+        <file crc="2716990381" name="modules/locale/org-netbeans-modules-jumpto_pt_BR.jar"/>
+        <file crc="1908630133" name="modules/locale/org-netbeans-modules-jumpto_ru.jar"/>
+        <file crc="327273599" name="modules/locale/org-netbeans-modules-jumpto_zh_CN.jar"/>
+        <file crc="403158362" name="modules/org-netbeans-modules-jumpto.jar"/>
+    </module_version>
+</module>

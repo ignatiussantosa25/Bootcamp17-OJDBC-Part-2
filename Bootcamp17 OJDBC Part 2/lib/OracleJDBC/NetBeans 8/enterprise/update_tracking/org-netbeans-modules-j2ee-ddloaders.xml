@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.ddloaders/1">
+    <module_version install_time="1475191737115" last="true" origin="installer" specification_version="1.40.1.2">
+        <file crc="546901540" name="config/Modules/org-netbeans-modules-j2ee-ddloaders.xml"/>
+        <file crc="3322589205" name="modules/locale/org-netbeans-modules-j2ee-ddloaders_ja.jar"/>
+        <file crc="1915700940" name="modules/locale/org-netbeans-modules-j2ee-ddloaders_pt_BR.jar"/>
+        <file crc="4122085954" name="modules/locale/org-netbeans-modules-j2ee-ddloaders_ru.jar"/>
+        <file crc="825964867" name="modules/locale/org-netbeans-modules-j2ee-ddloaders_zh_CN.jar"/>
+        <file crc="1845910253" name="modules/org-netbeans-modules-j2ee-ddloaders.jar"/>
+    </module_version>
+</module>

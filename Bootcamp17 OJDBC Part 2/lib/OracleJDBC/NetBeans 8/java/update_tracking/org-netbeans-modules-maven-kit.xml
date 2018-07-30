@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.kit/1">
+    <module_version install_time="1475191521673" last="true" origin="installer" specification_version="4.31.1">
+        <file crc="4258591221" name="config/Modules/org-netbeans-modules-maven-kit.xml"/>
+        <file crc="129742649" name="modules/locale/org-netbeans-modules-maven-kit_ja.jar"/>
+        <file crc="3002519833" name="modules/locale/org-netbeans-modules-maven-kit_pt_BR.jar"/>
+        <file crc="2851134850" name="modules/locale/org-netbeans-modules-maven-kit_ru.jar"/>
+        <file crc="2701446593" name="modules/locale/org-netbeans-modules-maven-kit_zh_CN.jar"/>
+        <file crc="2188349323" name="modules/org-netbeans-modules-maven-kit.jar"/>
+    </module_version>
+</module>

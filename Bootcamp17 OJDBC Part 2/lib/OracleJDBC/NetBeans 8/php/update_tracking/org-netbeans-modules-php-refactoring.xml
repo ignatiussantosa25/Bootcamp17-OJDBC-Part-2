@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.refactoring">
+    <module_version install_time="1475191939935" last="true" origin="installer" specification_version="1.33.1">
+        <file crc="2570953812" name="config/Modules/org-netbeans-modules-php-refactoring.xml"/>
+        <file crc="941816953" name="modules/locale/org-netbeans-modules-php-refactoring_ja.jar"/>
+        <file crc="1514358674" name="modules/locale/org-netbeans-modules-php-refactoring_pt_BR.jar"/>
+        <file crc="3357486886" name="modules/locale/org-netbeans-modules-php-refactoring_ru.jar"/>
+        <file crc="1821569734" name="modules/locale/org-netbeans-modules-php-refactoring_zh_CN.jar"/>
+        <file crc="4237146240" name="modules/org-netbeans-modules-php-refactoring.jar"/>
+    </module_version>
+</module>

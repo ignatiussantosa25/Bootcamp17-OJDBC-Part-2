@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.image/1">
+    <module_version install_time="1475191230610" last="true" origin="installer" specification_version="1.48.1">
+        <file crc="3486416273" name="config/Modules/org-netbeans-modules-image.xml"/>
+        <file crc="1040853376" name="modules/locale/org-netbeans-modules-image_ja.jar"/>
+        <file crc="4131360728" name="modules/locale/org-netbeans-modules-image_pt_BR.jar"/>
+        <file crc="3087481812" name="modules/locale/org-netbeans-modules-image_ru.jar"/>
+        <file crc="3782244752" name="modules/locale/org-netbeans-modules-image_zh_CN.jar"/>
+        <file crc="1366840225" name="modules/org-netbeans-modules-image.jar"/>
+    </module_version>
+</module>

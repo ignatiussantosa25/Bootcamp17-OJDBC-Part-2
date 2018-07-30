@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript.gulp">
+    <module_version install_time="1475191621607" last="true" origin="installer" specification_version="0.15.1">
+        <file crc="2853163515" name="config/Modules/org-netbeans-modules-javascript-gulp.xml"/>
+        <file crc="252272957" name="modules/locale/org-netbeans-modules-javascript-gulp_ja.jar"/>
+        <file crc="2441790173" name="modules/locale/org-netbeans-modules-javascript-gulp_pt_BR.jar"/>
+        <file crc="4010772078" name="modules/locale/org-netbeans-modules-javascript-gulp_ru.jar"/>
+        <file crc="14868363" name="modules/locale/org-netbeans-modules-javascript-gulp_zh_CN.jar"/>
+        <file crc="4098001754" name="modules/org-netbeans-modules-javascript-gulp.jar"/>
+    </module_version>
+</module>

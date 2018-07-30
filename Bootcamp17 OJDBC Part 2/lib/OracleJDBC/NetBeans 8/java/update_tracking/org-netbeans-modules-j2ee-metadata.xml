@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.metadata/0">
+    <module_version install_time="1475191440981" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="1967465328" name="config/Modules/org-netbeans-modules-j2ee-metadata.xml"/>
+        <file crc="1102528053" name="modules/locale/org-netbeans-modules-j2ee-metadata_ja.jar"/>
+        <file crc="153338580" name="modules/locale/org-netbeans-modules-j2ee-metadata_pt_BR.jar"/>
+        <file crc="1559744868" name="modules/locale/org-netbeans-modules-j2ee-metadata_ru.jar"/>
+        <file crc="3378010571" name="modules/locale/org-netbeans-modules-j2ee-metadata_zh_CN.jar"/>
+        <file crc="2528968084" name="modules/org-netbeans-modules-j2ee-metadata.jar"/>
+    </module_version>
+</module>

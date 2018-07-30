@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.project.ant.compat8/1">
+    <module_version install_time="1475191254664" last="true" origin="installer" specification_version="1.66.1">
+        <file crc="1430216077" name="config/Modules/org-netbeans-modules-project-ant-compat8.xml"/>
+        <file crc="1386865124" name="modules/locale/org-netbeans-modules-project-ant-compat8_ja.jar"/>
+        <file crc="2605955076" name="modules/locale/org-netbeans-modules-project-ant-compat8_pt_BR.jar"/>
+        <file crc="3401374740" name="modules/locale/org-netbeans-modules-project-ant-compat8_ru.jar"/>
+        <file crc="1939893231" name="modules/locale/org-netbeans-modules-project-ant-compat8_zh_CN.jar"/>
+        <file crc="3106416244" name="modules/org-netbeans-modules-project-ant-compat8.jar"/>
+    </module_version>
+</module>

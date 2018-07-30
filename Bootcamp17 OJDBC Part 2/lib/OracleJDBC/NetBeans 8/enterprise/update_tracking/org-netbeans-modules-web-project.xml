@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.project">
+    <module_version install_time="1475191743629" last="true" origin="installer" specification_version="1.77.1.1">
+        <file crc="806859648" name="ant/extra/jspcompile.jar"/>
+        <file crc="2901806140" name="ant/sources/org/netbeans/modules/web/project/ant/JspC.java"/>
+        <file crc="1129253255" name="ant/sources/org/netbeans/modules/web/project/ant/JspCSingle.java"/>
+        <file crc="1171210220" name="config/Modules/org-netbeans-modules-web-project.xml"/>
+        <file crc="1402248903" name="modules/locale/org-netbeans-modules-web-project_ja.jar"/>
+        <file crc="2329944548" name="modules/locale/org-netbeans-modules-web-project_pt_BR.jar"/>
+        <file crc="494628895" name="modules/locale/org-netbeans-modules-web-project_ru.jar"/>
+        <file crc="2740254516" name="modules/locale/org-netbeans-modules-web-project_zh_CN.jar"/>
+        <file crc="149202512" name="modules/org-netbeans-modules-web-project.jar"/>
+    </module_version>
+</module>

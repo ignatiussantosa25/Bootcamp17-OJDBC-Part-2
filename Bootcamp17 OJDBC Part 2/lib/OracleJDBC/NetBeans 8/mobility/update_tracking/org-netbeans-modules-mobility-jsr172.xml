@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.mobility.jsr172">
+    <module_version install_time="1475191895094" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="1219309950" name="config/Modules/org-netbeans-modules-mobility-jsr172.xml"/>
+        <file crc="2635383086" name="modules/locale/org-netbeans-modules-mobility-jsr172_ja.jar"/>
+        <file crc="1641722231" name="modules/locale/org-netbeans-modules-mobility-jsr172_pt_BR.jar"/>
+        <file crc="3699072282" name="modules/locale/org-netbeans-modules-mobility-jsr172_ru.jar"/>
+        <file crc="1973012781" name="modules/locale/org-netbeans-modules-mobility-jsr172_zh_CN.jar"/>
+        <file crc="961774462" name="modules/org-netbeans-modules-mobility-jsr172.jar"/>
+    </module_version>
+</module>

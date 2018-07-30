@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.code.analysis/0">
+    <module_version install_time="1475191161637" last="true" origin="installer" specification_version="1.26.1">
+        <file crc="291988240" name="config/Modules/org-netbeans-modules-code-analysis.xml"/>
+        <file crc="4229027318" name="modules/locale/org-netbeans-modules-code-analysis_ja.jar"/>
+        <file crc="1992561472" name="modules/locale/org-netbeans-modules-code-analysis_pt_BR.jar"/>
+        <file crc="2438414558" name="modules/locale/org-netbeans-modules-code-analysis_ru.jar"/>
+        <file crc="3826038993" name="modules/locale/org-netbeans-modules-code-analysis_zh_CN.jar"/>
+        <file crc="455237885" name="modules/org-netbeans-modules-code-analysis.jar"/>
+    </module_version>
+</module>

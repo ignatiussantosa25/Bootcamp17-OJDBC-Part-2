@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.php.doctrine2">
+    <module_version install_time="1475191932433" last="false" origin="installer" specification_version="1.28.1">
+        <file crc="2754433748" name="config/Modules/org-netbeans-modules-php-doctrine2.xml"/>
+        <file crc="3603045174" name="modules/locale/org-netbeans-modules-php-doctrine2_ja.jar"/>
+        <file crc="3621847248" name="modules/locale/org-netbeans-modules-php-doctrine2_pt_BR.jar"/>
+        <file crc="3932220468" name="modules/locale/org-netbeans-modules-php-doctrine2_ru.jar"/>
+        <file crc="175480603" name="modules/locale/org-netbeans-modules-php-doctrine2_zh_CN.jar"/>
+        <file crc="1250101083" name="modules/org-netbeans-modules-php-doctrine2.jar"/>
+    </module_version>
+    <module_version install_time="1518892638680" last="true" origin="NetBeans Distribution" specification_version="1.28.2">
+        <file crc="2754433748" name="config/Modules/org-netbeans-modules-php-doctrine2.xml"/>
+        <file crc="2750230072" name="modules/locale/org-netbeans-modules-php-doctrine2_ja.jar"/>
+        <file crc="1654940400" name="modules/locale/org-netbeans-modules-php-doctrine2_pt_BR.jar"/>
+        <file crc="1869848040" name="modules/locale/org-netbeans-modules-php-doctrine2_ru.jar"/>
+        <file crc="603065800" name="modules/locale/org-netbeans-modules-php-doctrine2_zh_CN.jar"/>
+        <file crc="3009611883" name="modules/org-netbeans-modules-php-doctrine2.jar"/>
+    </module_version>
+</module>

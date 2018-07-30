@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.rest/0">
+    <module_version install_time="1475191846400" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="3769566704" name="config/Modules/org-netbeans-modules-websvc-rest.xml"/>
+        <file crc="1672095992" name="modules/locale/org-netbeans-modules-websvc-rest_ja.jar"/>
+        <file crc="3584563327" name="modules/locale/org-netbeans-modules-websvc-rest_pt_BR.jar"/>
+        <file crc="721762248" name="modules/locale/org-netbeans-modules-websvc-rest_ru.jar"/>
+        <file crc="1770559487" name="modules/locale/org-netbeans-modules-websvc-rest_zh_CN.jar"/>
+        <file crc="2749112223" name="modules/org-netbeans-modules-websvc-rest.jar"/>
+    </module_version>
+</module>

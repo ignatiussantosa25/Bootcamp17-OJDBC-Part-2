@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.core.utilities/0">
+    <module_version install_time="1475191441630" last="true" origin="installer" specification_version="1.33.1">
+        <file crc="3756701607" name="config/Modules/org-netbeans-modules-j2ee-core-utilities.xml"/>
+        <file crc="677672287" name="modules/locale/org-netbeans-modules-j2ee-core-utilities_ja.jar"/>
+        <file crc="2991868560" name="modules/locale/org-netbeans-modules-j2ee-core-utilities_pt_BR.jar"/>
+        <file crc="2503633296" name="modules/locale/org-netbeans-modules-j2ee-core-utilities_ru.jar"/>
+        <file crc="4036357409" name="modules/locale/org-netbeans-modules-j2ee-core-utilities_zh_CN.jar"/>
+        <file crc="4049769284" name="modules/org-netbeans-modules-j2ee-core-utilities.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.simple.project.templates">
+    <module_version install_time="1475191555720" last="true" origin="installer" specification_version="1.24.1">
+        <file crc="4104946292" name="config/Modules/org-netbeans-modules-simple-project-templates.xml"/>
+        <file crc="1601790903" name="modules/locale/org-netbeans-modules-simple-project-templates_ja.jar"/>
+        <file crc="21995589" name="modules/locale/org-netbeans-modules-simple-project-templates_pt_BR.jar"/>
+        <file crc="1099835404" name="modules/locale/org-netbeans-modules-simple-project-templates_ru.jar"/>
+        <file crc="3299769123" name="modules/locale/org-netbeans-modules-simple-project-templates_zh_CN.jar"/>
+        <file crc="2810480042" name="modules/org-netbeans-modules-simple-project-templates.jar"/>
+    </module_version>
+</module>

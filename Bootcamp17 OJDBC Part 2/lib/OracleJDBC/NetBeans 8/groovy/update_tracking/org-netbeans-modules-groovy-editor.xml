@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.groovy.editor/2">
+    <module_version install_time="1475191544369" last="true" origin="installer" specification_version="1.65.1">
+        <file crc="1236435685" name="config/Modules/org-netbeans-modules-groovy-editor.xml"/>
+        <file crc="1415070892" name="modules/locale/org-netbeans-modules-groovy-editor_ja.jar"/>
+        <file crc="1917222724" name="modules/locale/org-netbeans-modules-groovy-editor_pt_BR.jar"/>
+        <file crc="917322989" name="modules/locale/org-netbeans-modules-groovy-editor_ru.jar"/>
+        <file crc="2087532848" name="modules/locale/org-netbeans-modules-groovy-editor_zh_CN.jar"/>
+        <file crc="3840816486" name="modules/org-netbeans-modules-groovy-editor.jar"/>
+    </module_version>
+</module>

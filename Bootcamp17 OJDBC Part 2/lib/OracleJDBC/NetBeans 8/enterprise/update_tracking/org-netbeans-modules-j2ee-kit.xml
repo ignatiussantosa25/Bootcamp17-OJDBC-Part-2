@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.kit">
+    <module_version install_time="1475191752863" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="4021882005" name="config/Modules/org-netbeans-modules-j2ee-kit.xml"/>
+        <file crc="1545305515" name="modules/locale/org-netbeans-modules-j2ee-kit_ja.jar"/>
+        <file crc="1160284421" name="modules/locale/org-netbeans-modules-j2ee-kit_pt_BR.jar"/>
+        <file crc="3099271588" name="modules/locale/org-netbeans-modules-j2ee-kit_ru.jar"/>
+        <file crc="3173732688" name="modules/locale/org-netbeans-modules-j2ee-kit_zh_CN.jar"/>
+        <file crc="2574775083" name="modules/org-netbeans-modules-j2ee-kit.jar"/>
+    </module_version>
+</module>

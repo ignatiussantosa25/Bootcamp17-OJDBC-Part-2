@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javacard.oberthur">
+    <module_version install_time="1475191555013" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="112464758" name="config/Modules/org-netbeans-modules-javacard-oberthur.xml"/>
+        <file crc="3143472560" name="modules/locale/org-netbeans-modules-javacard-oberthur_ja.jar"/>
+        <file crc="4173759175" name="modules/locale/org-netbeans-modules-javacard-oberthur_pt_BR.jar"/>
+        <file crc="3189325814" name="modules/locale/org-netbeans-modules-javacard-oberthur_ru.jar"/>
+        <file crc="2564162759" name="modules/locale/org-netbeans-modules-javacard-oberthur_zh_CN.jar"/>
+        <file crc="3280425397" name="modules/org-netbeans-modules-javacard-oberthur.jar"/>
+    </module_version>
+</module>

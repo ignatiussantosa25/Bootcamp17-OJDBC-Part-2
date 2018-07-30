@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.jaxws21/1">
+    <module_version install_time="1475191535282" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="3073185714" name="config/Modules/org-netbeans-modules-websvc-jaxws21.xml"/>
+        <file crc="2204157762" name="docs/jaxws-api-doc.zip"/>
+        <file crc="1849384539" name="modules/ext/jaxws22/FastInfoset.jar"/>
+        <file crc="4171145083" name="modules/ext/jaxws22/gmbal-api-only.jar"/>
+        <file crc="4031393775" name="modules/ext/jaxws22/ha-api.jar"/>
+        <file crc="382074749" name="modules/ext/jaxws22/javax.mail_1.4.jar"/>
+        <file crc="4215263902" name="modules/ext/jaxws22/jaxws-rt.jar"/>
+        <file crc="3486473188" name="modules/ext/jaxws22/jaxws-tools.jar"/>
+        <file crc="3466035522" name="modules/ext/jaxws22/management-api.jar"/>
+        <file crc="2822031947" name="modules/ext/jaxws22/mimepull.jar"/>
+        <file crc="2632119689" name="modules/ext/jaxws22/policy.jar"/>
+        <file crc="1749984449" name="modules/ext/jaxws22/saaj-impl.jar"/>
+        <file crc="1406891524" name="modules/ext/jaxws22/stax-ex.jar"/>
+        <file crc="306929072" name="modules/ext/jaxws22/stax2-api.jar"/>
+        <file crc="993560507" name="modules/ext/jaxws22/streambuffer.jar"/>
+        <file crc="1015266316" name="modules/ext/jaxws22/woodstox-core-asl.jar"/>
+        <file crc="1890284254" name="modules/locale/org-netbeans-modules-websvc-jaxws21_ja.jar"/>
+        <file crc="1197884524" name="modules/locale/org-netbeans-modules-websvc-jaxws21_pt_BR.jar"/>
+        <file crc="259121047" name="modules/locale/org-netbeans-modules-websvc-jaxws21_ru.jar"/>
+        <file crc="4050950578" name="modules/locale/org-netbeans-modules-websvc-jaxws21_zh_CN.jar"/>
+        <file crc="624219759" name="modules/org-netbeans-modules-websvc-jaxws21.jar"/>
+    </module_version>
+</module>

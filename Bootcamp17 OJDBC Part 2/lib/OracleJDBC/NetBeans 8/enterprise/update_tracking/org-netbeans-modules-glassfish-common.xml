@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.glassfish.common/0">
+    <module_version install_time="1475191672481" last="true" origin="installer" specification_version="1.75.1">
+        <file crc="284820107" name="config/Modules/org-netbeans-modules-glassfish-common.xml"/>
+        <file crc="2719492114" name="modules/locale/org-netbeans-modules-glassfish-common_ja.jar"/>
+        <file crc="1172918346" name="modules/locale/org-netbeans-modules-glassfish-common_pt_BR.jar"/>
+        <file crc="3064977616" name="modules/locale/org-netbeans-modules-glassfish-common_ru.jar"/>
+        <file crc="3478907166" name="modules/locale/org-netbeans-modules-glassfish-common_zh_CN.jar"/>
+        <file crc="3563439983" name="modules/org-netbeans-modules-glassfish-common.jar"/>
+    </module_version>
+</module>

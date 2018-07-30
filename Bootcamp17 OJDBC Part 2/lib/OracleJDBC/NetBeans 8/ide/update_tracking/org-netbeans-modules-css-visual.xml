@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.css.visual/3">
+    <module_version install_time="1475191192064" last="true" origin="installer" specification_version="3.32.1">
+        <file crc="841146648" name="config/Modules/org-netbeans-modules-css-visual.xml"/>
+        <file crc="4081826627" name="modules/locale/org-netbeans-modules-css-visual_ja.jar"/>
+        <file crc="4026231449" name="modules/locale/org-netbeans-modules-css-visual_pt_BR.jar"/>
+        <file crc="2535240696" name="modules/locale/org-netbeans-modules-css-visual_ru.jar"/>
+        <file crc="2347161105" name="modules/locale/org-netbeans-modules-css-visual_zh_CN.jar"/>
+        <file crc="1390730786" name="modules/org-netbeans-modules-css-visual.jar"/>
+    </module_version>
+</module>

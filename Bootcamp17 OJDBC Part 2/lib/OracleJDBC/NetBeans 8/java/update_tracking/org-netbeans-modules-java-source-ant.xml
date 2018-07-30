@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.source.ant">
+    <module_version install_time="1475191505394" last="true" origin="installer" specification_version="1.31.1.1.2">
+        <file crc="1672924329" name="ant/nblib/org-netbeans-modules-java-source-ant.jar"/>
+        <file crc="108073265" name="config/Modules/org-netbeans-modules-java-source-ant.xml"/>
+        <file crc="2575210139" name="modules/locale/org-netbeans-modules-java-source-ant_ja.jar"/>
+        <file crc="2312588905" name="modules/locale/org-netbeans-modules-java-source-ant_pt_BR.jar"/>
+        <file crc="3852610805" name="modules/locale/org-netbeans-modules-java-source-ant_ru.jar"/>
+        <file crc="2462224645" name="modules/locale/org-netbeans-modules-java-source-ant_zh_CN.jar"/>
+        <file crc="3215026071" name="modules/org-netbeans-modules-java-source-ant.jar"/>
+    </module_version>
+</module>

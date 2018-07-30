@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.wildfly/1">
+    <module_version install_time="1475191815584" last="true" origin="installer" specification_version="1.5.1">
+        <file crc="1171290859" name="config/Modules/org-netbeans-modules-javaee-wildfly.xml"/>
+        <file crc="644378325" name="modules/locale/org-netbeans-modules-javaee-wildfly_ja.jar"/>
+        <file crc="109025862" name="modules/locale/org-netbeans-modules-javaee-wildfly_pt_BR.jar"/>
+        <file crc="427088789" name="modules/locale/org-netbeans-modules-javaee-wildfly_ru.jar"/>
+        <file crc="2713946284" name="modules/locale/org-netbeans-modules-javaee-wildfly_zh_CN.jar"/>
+        <file crc="320757994" name="modules/org-netbeans-modules-javaee-wildfly.jar"/>
+    </module_version>
+</module>

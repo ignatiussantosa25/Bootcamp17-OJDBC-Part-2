@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.junit.ant">
+    <module_version install_time="1475191513646" last="true" origin="installer" specification_version="1.3.1">
+        <file crc="593694189" name="config/Modules/org-netbeans-modules-junit-ant.xml"/>
+        <file crc="3093648371" name="modules/locale/org-netbeans-modules-junit-ant_ja.jar"/>
+        <file crc="3144212105" name="modules/locale/org-netbeans-modules-junit-ant_pt_BR.jar"/>
+        <file crc="204307304" name="modules/locale/org-netbeans-modules-junit-ant_ru.jar"/>
+        <file crc="1146266524" name="modules/locale/org-netbeans-modules-junit-ant_zh_CN.jar"/>
+        <file crc="769291720" name="modules/org-netbeans-modules-junit-ant.jar"/>
+    </module_version>
+</module>

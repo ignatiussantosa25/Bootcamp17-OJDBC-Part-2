@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.search">
+    <module_version install_time="1475191524860" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="375073793" name="config/Modules/org-netbeans-modules-maven-search.xml"/>
+        <file crc="4217712596" name="modules/locale/org-netbeans-modules-maven-search_ja.jar"/>
+        <file crc="3012140692" name="modules/locale/org-netbeans-modules-maven-search_pt_BR.jar"/>
+        <file crc="1736415335" name="modules/locale/org-netbeans-modules-maven-search_ru.jar"/>
+        <file crc="3242305419" name="modules/locale/org-netbeans-modules-maven-search_zh_CN.jar"/>
+        <file crc="4125223323" name="modules/org-netbeans-modules-maven-search.jar"/>
+    </module_version>
+</module>

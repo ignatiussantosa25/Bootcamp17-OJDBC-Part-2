@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.nette2/1">
+    <module_version install_time="1475191935588" last="true" origin="installer" specification_version="1.11.1">
+        <file crc="2424182614" name="config/Modules/org-netbeans-modules-php-nette2.xml"/>
+        <file crc="2569194232" name="modules/locale/org-netbeans-modules-php-nette2_ja.jar"/>
+        <file crc="1738711665" name="modules/locale/org-netbeans-modules-php-nette2_pt_BR.jar"/>
+        <file crc="7235879" name="modules/locale/org-netbeans-modules-php-nette2_ru.jar"/>
+        <file crc="1189812978" name="modules/locale/org-netbeans-modules-php-nette2_zh_CN.jar"/>
+        <file crc="3177882132" name="modules/org-netbeans-modules-php-nette2.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javaee.specs.support/0">
+    <module_version install_time="1475191674088" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="2708558995" name="config/Modules/org-netbeans-modules-javaee-specs-support.xml"/>
+        <file crc="3872403666" name="modules/locale/org-netbeans-modules-javaee-specs-support_ja.jar"/>
+        <file crc="3043233072" name="modules/locale/org-netbeans-modules-javaee-specs-support_pt_BR.jar"/>
+        <file crc="3409716802" name="modules/locale/org-netbeans-modules-javaee-specs-support_ru.jar"/>
+        <file crc="1802368063" name="modules/locale/org-netbeans-modules-javaee-specs-support_zh_CN.jar"/>
+        <file crc="3177870317" name="modules/org-netbeans-modules-javaee-specs-support.jar"/>
+    </module_version>
+</module>

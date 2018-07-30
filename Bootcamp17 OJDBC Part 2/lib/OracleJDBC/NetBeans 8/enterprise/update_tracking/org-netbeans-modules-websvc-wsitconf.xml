@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.wsitconf">
+    <module_version install_time="1475191882077" last="true" origin="installer" specification_version="3.34.1">
+        <file crc="3558541589" name="config/Modules/org-netbeans-modules-websvc-wsitconf.xml"/>
+        <file crc="2427891875" name="modules/locale/org-netbeans-modules-websvc-wsitconf_ja.jar"/>
+        <file crc="2626809487" name="modules/locale/org-netbeans-modules-websvc-wsitconf_pt_BR.jar"/>
+        <file crc="531660901" name="modules/locale/org-netbeans-modules-websvc-wsitconf_ru.jar"/>
+        <file crc="794546023" name="modules/locale/org-netbeans-modules-websvc-wsitconf_zh_CN.jar"/>
+        <file crc="211157654" name="modules/org-netbeans-modules-websvc-wsitconf.jar"/>
+    </module_version>
+</module>

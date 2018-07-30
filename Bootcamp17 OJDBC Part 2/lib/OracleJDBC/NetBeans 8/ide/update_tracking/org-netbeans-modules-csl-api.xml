@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.csl.api/2">
+    <module_version install_time="1475191170712" last="true" origin="installer" specification_version="2.54.1.2.1.1.8.1">
+        <file crc="23927813" name="config/ModuleAutoDeps/org-netbeans-modules-csl-api.xml"/>
+        <file crc="2308193102" name="config/Modules/org-netbeans-modules-csl-api.xml"/>
+        <file crc="939780235" name="modules/locale/org-netbeans-modules-csl-api_ja.jar"/>
+        <file crc="3326517781" name="modules/locale/org-netbeans-modules-csl-api_pt_BR.jar"/>
+        <file crc="2966067870" name="modules/locale/org-netbeans-modules-csl-api_ru.jar"/>
+        <file crc="3629347500" name="modules/locale/org-netbeans-modules-csl-api_zh_CN.jar"/>
+        <file crc="255984623" name="modules/org-netbeans-modules-csl-api.jar"/>
+    </module_version>
+</module>

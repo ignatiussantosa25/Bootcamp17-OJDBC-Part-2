@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.php.smarty">
+    <module_version install_time="1475191941947" last="true" origin="installer" specification_version="1.88.1">
+        <file crc="1597519002" name="config/Modules/org-netbeans-modules-php-smarty.xml"/>
+        <file crc="3479179612" name="modules/locale/org-netbeans-modules-php-smarty_ja.jar"/>
+        <file crc="431401881" name="modules/locale/org-netbeans-modules-php-smarty_pt_BR.jar"/>
+        <file crc="2832374583" name="modules/locale/org-netbeans-modules-php-smarty_ru.jar"/>
+        <file crc="639845642" name="modules/locale/org-netbeans-modules-php-smarty_zh_CN.jar"/>
+        <file crc="1501987873" name="modules/org-netbeans-modules-php-smarty.jar"/>
+    </module_version>
+</module>

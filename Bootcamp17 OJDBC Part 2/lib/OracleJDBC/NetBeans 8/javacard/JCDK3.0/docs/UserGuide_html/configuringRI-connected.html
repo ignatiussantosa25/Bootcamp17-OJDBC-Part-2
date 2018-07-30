@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Configuring the RI
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="part2.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="buildCJCRE-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565159_pgfId-1002806"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">12</SPAN><A NAME="50565159_83714"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565159_pgfId-1002807"></A><A NAME="50565159_Configuring the RI"></A>Configuring the RI
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002820"></A>This chapter describes the options used to configure a custom RI. This chapter is useful only if you have a source release of the development kit. For real cards, there are a few items such as Protection Domains and Certificates that must be setup at manufacturing time. The RI provides a means of configuring some factory settings by using the <KBD CLASS="Filename">config.properties</KBD> file under the <KBD CLASS="Filename">lib</KBD> folder.
+</P>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002821"></A>This chapter contains the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002825"></A><A HREF="configuringRI-connected.html#50565159_15523" CLASS="XRef">Configuring Authenticators</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002829"></A><A HREF="configuringRI-connected.html#50565159_91682" CLASS="XRef">Creating Custom Protection Domains</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002833"></A><A HREF="configuringRI-connected.html#50565159_87840" CLASS="XRef">Configuring SSL Support</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565159_pgfId-1002838"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565159_15523"></A>Configuring Authenticators</H2>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002839"></A>In the <KBD CLASS="Filename">lib&#92;config.properties</KBD> file, the following properties must be added to add an authenticator:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002840"></A><KBD CLASS="Filename">authenticator</KBD>.<I CLASS="Variable">index</I>.<KBD CLASS="Filename">uri</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002841"></A><KBD CLASS="Filename">authenticator</KBD>.<I CLASS="Variable">index</I>.<KBD CLASS="Filename">factory</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002842"></A><KBD CLASS="Filename">authenticator</KBD>.<I CLASS="Variable">index</I>.<KBD CLASS="Filename">pin</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002843"></A><KBD CLASS="Filename">authenticator</KBD>.<I CLASS="Variable">index</I>.<KBD CLASS="Filename">digest</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002844"></A>The following items describe the contents of the preceding list of properties:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002845"></A><I CLASS="Variable">index</I> is a zero based number. At startup, the RI starts reading these properties beginning with index zero and creates authenticators until the sequence is broken.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002846"></A>The <KBD CLASS="Filename">URI</KBD> property provides the SIO uri used for this authenticator.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002847"></A>The <KBD CLASS="Filename">factory</KBD> property provides the factory class. For example, <KBD CLASS="Filename">com.sun.javacard.security.PINSessionAuthenticatorFactory.</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002848"></A>The <KBD CLASS="Filename">pin</KBD> property provides the pin for this authenticator.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002849"></A>The <KBD CLASS="Command">digest</KBD> property is set to <KBD CLASS="Command">true</KBD> or <KBD CLASS="Command">false</KBD> depending on if the provided authenticator is of type <KBD CLASS="Command">digest</KBD> or not.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565159_pgfId-1002851"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565159_91682"></A>Creating Custom Protection Domains</H2>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002852"></A>The Java Card 3 platform RI assigns a protection domain to an application based on the certificate used to sign the application bundle with the Packager tool. In the <KBD CLASS="Filename">lib&#92;config.properties</KBD> file the following properties must be added to add a new protection domain:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002853"></A><KBD CLASS="Filename">pd.</KBD><I CLASS="Variable">pd-index</I><KBD CLASS="Filename">.certificate</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002854"></A><KBD CLASS="Filename">pd.</KBD><I CLASS="Variable">pd-index</I><KBD CLASS="Filename">.include.</KBD><I CLASS="Variable">include-index</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002855"></A><KBD CLASS="Filename">pd.</KBD><I CLASS="Variable">pd-index</I><KBD CLASS="Filename">.exclude.</KBD><I CLASS="Variable">exclude-index</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1002856"></A>The following items describe the contents of the preceding list of properties:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002857"></A>All the indexes (<I CLASS="Variable">pd-index</I>, <I CLASS="Variable">include-index</I>, and <I CLASS="Variable">exclude-index</I>) are zero based numbers.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002858"></A>The <KBD CLASS="Command">certificate</KBD> property provides the BASE-64 encoded certificate.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1002859"></A>The include.<I CLASS="Variable">include-index </I>property provides a list of permissions that should be included for this protection domain.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1003047"></A>The exclude.<I CLASS="Variable">exclude-index </I>property provides a list of permissions that should be excluded for this protection domain.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565159_pgfId-1009198"></A><A NAME="50565159_50007"></A>Creating a Custom Keystore</H3>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009857"></A>A custom keystore can be crested by using the <KBD CLASS="Command">keytool</KBD> command to generate the certificates and private keys. The <KBD CLASS="Command">keytool</KBD> command runs in batch mode without prompting for input values.
+</P>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009520"></A>Enter the following <KBD CLASS="Command">keytool</KBD> command and options on the command line:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565159_pgfId-1009434"></A>keytool -genkey -alias <I CLASS="Variable">alias</I> -keyalg RSA
+<A NAME="50565159_pgfId-1009441"></A>keytool -selfcert -alias <I CLASS="Variable">alias</I>
+<A NAME="50565159_pgfId-1009445"></A>keytool -list -rfc
+<A NAME="50565159_pgfId-1009451"></A>java DumpPrivateKey
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009457"></A>This is how the <KBD CLASS="Filename">PolicyManager.java</KBD> certificate and key were generated. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009870"></A>For scripting, use the following <KBD CLASS="Command">keytool</KBD> command:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565159_pgfId-1009472"></A>keytool -keystore <I CLASS="Variable">keystore</I> -storepass <I CLASS="Variable">keystore-password</I> &#92;
+<A NAME="50565159_pgfId-1009482"></A>	-alias <I CLASS="Variable">alias</I> -keypass <I CLASS="Variable">alias-password</I> -genkey &#92;
+<A NAME="50565159_pgfId-1009486"></A>	-keyalg RSA -dname &quot;cn=X, ou=U, o=O, c=US&quot;
+</PRE><H2 CLASS="Head1"><A NAME="50565159_pgfId-1003050"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565159_87840"></A>Configuring SSL Support</H2>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009757"></A>An SSL implementation requires four algorithms: 
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009804"></A>digital signature
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009801"></A>key establishment
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009802"></A>bulk encryption 
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009803"></A>message digest 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565159_pgfId-1009809"></A>It is beyond the scope of this document to fully describe SSL configuration and setup. There are many excellent books on this subject, and we direct advanced users to this literature. 
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR><H3 CLASS="Head2"><A NAME="50565159_pgfId-1009800"></A>Adding SSL Support</H3>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009821"></A>The Java Card 3 platform implements the SSL key establishment algorithm through the use of the following set of certificates and keys as <I CLASS="Variable">key</I>=<I CLASS="Variable">value</I> pairs in <KBD CLASS="Filename">lib&#92;config.properties</KBD>. In the file <KBD CLASS="Filename">lib&#92;config.properties</KBD>, the following properties must be added to add SSL support:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009604"></A><KBD CLASS="Command">ssl.trusted.ca.#</KBD> - Index-based property to specify BASE-64 encoded certificates of the CA root that Java Card 3 RI trusts. Used in the normal SSL handshake. This property is index based. User can configure multiple CA roots by appending the index at the end of the property, such as <KBD CLASS="Command">ssl.trusted.ca.0</KBD>, <KBD CLASS="Command">ssl.trusted.ca.1</KBD>, and <KBD CLASS="Command">ssl.trusted.ca.2</KBD>. The indexes are assumed to be in sequence starting with zero. When the sequence is broken, it is assumed the properties have ended.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009608"></A><KBD CLASS="Command">ssl.accepted.issuer.#</KBD> - Index based property to specify BASE-64 encoded accepted issuer's certificates. Used only in client authentication handshake. User can configure multiple issuer certificates by appending the index at the end of the property, such as <KBD CLASS="Command">ssl.accepted.issuer.0</KBD>, <KBD CLASS="Command">ssl.accepted.issuer.1</KBD>, and <KBD CLASS="Command">ssl.accepted.issuer.2</KBD>. The indexes are assumed to be in sequence starting with zero. When the sequence is broken, it is assumed the properties have ended.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009610"></A><KBD CLASS="Command">ssl.selfIdentityAsServer</KBD> - BASE-64 encoded server certificate. This is the certificate that the Java Card 3 platform uses to identify itself when operating in SSL server mode.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009612"></A><KBD CLASS="Command">ssl.selfIdentitySSLPrivateKeyExp</KBD> - BASE-64 encoded private key (exponent) of the server certificate.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009614"></A><KBD CLASS="Command">ssl.selfIdentitySSLPrivateKeyMod</KBD> - BASE-64 encoded private key (modulus) of the server certificate.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565159_pgfId-1009602"></A>PSKIdentityHint - String value used in the PSK protocol as a server side identity hint.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H3 CLASS="Head2"><A NAME="50565159_pgfId-1009781"></A>Custom Certificates and Keys</H3>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009817"></A>Custom implementations require that the developer generate corresponding custom certificates and keys. The certificates and keys are used by the Card Manager to verify the digital signature of a WAR file and are used in SSL and HTTPS transactions.
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<P CLASS="Head3ProcTitle"><A NAME="50565159_pgfId-1009785"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Generating an SSL Certificate
+</P>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565159_pgfId-1009786"></A>	1.	Generate a server key and certificate signing request (csr):
+</P>
+<P CLASS="StepPara1"><A NAME="50565159_pgfId-1009787"></A><KBD CLASS="Command">openssl genrsa -out s.key 1024</KBD>
+</P>
+<P CLASS="StepPara1"><A NAME="50565159_pgfId-1009788"></A><KBD CLASS="Command">openssl req -new -key s.key -out server.csr</KBD>
+</P>
+<P CLASS="Step1-"><A NAME="50565159_pgfId-1009789"></A>	2.	Generate a CA key and self-signed certificate:
+</P>
+<P CLASS="StepPara1"><A NAME="50565159_pgfId-1009790"></A><KBD CLASS="Command">openssl genrsa -out ca.key 1024</KBD>
+</P>
+<P CLASS="StepPara1"><A NAME="50565159_pgfId-1009791"></A><KBD CLASS="Command">openssl -req new -x509 -days 365 -key ca.key -out ca.crt</KBD>
+</P>
+<P CLASS="Step1-"><A NAME="50565159_pgfId-1009792"></A>	3.	Sign the csr and create the certificate:
+</P>
+<P CLASS="StepPara1"><A NAME="50565159_pgfId-1009793"></A><KBD CLASS="Command">sign.sh server.csr </KBD>
+</P>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009778"></A>&nbsp;
+</P>
+<P CLASS="Paragraph"><A NAME="50565159_pgfId-1009779"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="part2.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="buildCJCRE-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

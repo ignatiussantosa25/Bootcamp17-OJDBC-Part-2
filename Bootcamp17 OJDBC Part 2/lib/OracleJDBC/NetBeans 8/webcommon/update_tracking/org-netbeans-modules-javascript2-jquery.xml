@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript2.jquery">
+    <module_version install_time="1475191631303" last="false" origin="installer" specification_version="1.11.1">
+        <file crc="520119103" name="config/Modules/org-netbeans-modules-javascript2-jquery.xml"/>
+        <file crc="4021727325" name="docs/jquery-api.xml"/>
+        <file crc="1472864061" name="docs/jquery-propertyNames.xml"/>
+        <file crc="3215812907" name="modules/locale/org-netbeans-modules-javascript2-jquery_ja.jar"/>
+        <file crc="2845294843" name="modules/locale/org-netbeans-modules-javascript2-jquery_pt_BR.jar"/>
+        <file crc="2693942224" name="modules/locale/org-netbeans-modules-javascript2-jquery_ru.jar"/>
+        <file crc="2638958218" name="modules/locale/org-netbeans-modules-javascript2-jquery_zh_CN.jar"/>
+        <file crc="1004189121" name="modules/org-netbeans-modules-javascript2-jquery.jar"/>
+    </module_version>
+    <module_version install_time="1518892674703" last="true" origin="NetBeans Distribution" specification_version="1.11.2">
+        <file crc="520119103" name="config/Modules/org-netbeans-modules-javascript2-jquery.xml"/>
+        <file crc="4021727325" name="docs/jquery-api.xml"/>
+        <file crc="1472864061" name="docs/jquery-propertyNames.xml"/>
+        <file crc="988239480" name="modules/locale/org-netbeans-modules-javascript2-jquery_ja.jar"/>
+        <file crc="3037316001" name="modules/locale/org-netbeans-modules-javascript2-jquery_pt_BR.jar"/>
+        <file crc="4282510106" name="modules/locale/org-netbeans-modules-javascript2-jquery_ru.jar"/>
+        <file crc="3510365345" name="modules/locale/org-netbeans-modules-javascript2-jquery_zh_CN.jar"/>
+        <file crc="2671362019" name="modules/org-netbeans-modules-javascript2-jquery.jar"/>
+    </module_version>
+</module>

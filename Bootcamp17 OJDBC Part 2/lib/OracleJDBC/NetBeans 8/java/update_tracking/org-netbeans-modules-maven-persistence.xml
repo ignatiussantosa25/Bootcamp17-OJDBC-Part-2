@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.maven.persistence/1">
+    <module_version install_time="1475191523024" last="true" origin="installer" specification_version="1.29.1">
+        <file crc="1874365929" name="config/Modules/org-netbeans-modules-maven-persistence.xml"/>
+        <file crc="1428611414" name="modules/locale/org-netbeans-modules-maven-persistence_ja.jar"/>
+        <file crc="812861704" name="modules/locale/org-netbeans-modules-maven-persistence_pt_BR.jar"/>
+        <file crc="2219557315" name="modules/locale/org-netbeans-modules-maven-persistence_ru.jar"/>
+        <file crc="1398848163" name="modules/locale/org-netbeans-modules-maven-persistence_zh_CN.jar"/>
+        <file crc="2271061441" name="modules/org-netbeans-modules-maven-persistence.jar"/>
+    </module_version>
+</module>

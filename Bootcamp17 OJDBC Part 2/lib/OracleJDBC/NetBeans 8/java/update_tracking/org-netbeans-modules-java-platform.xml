@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.platform/1">
+    <module_version install_time="1475191390236" last="true" origin="installer" specification_version="1.41.1">
+        <file crc="379050353" name="config/ModuleAutoDeps/org-netbeans-modules-java-platform.xml"/>
+        <file crc="3178966345" name="config/Modules/org-netbeans-modules-java-platform.xml"/>
+        <file crc="1234842559" name="modules/locale/org-netbeans-modules-java-platform_ja.jar"/>
+        <file crc="1467348674" name="modules/locale/org-netbeans-modules-java-platform_pt_BR.jar"/>
+        <file crc="2589257837" name="modules/locale/org-netbeans-modules-java-platform_ru.jar"/>
+        <file crc="3947354038" name="modules/locale/org-netbeans-modules-java-platform_zh_CN.jar"/>
+        <file crc="3597262402" name="modules/org-netbeans-modules-java-platform.jar"/>
+    </module_version>
+</module>

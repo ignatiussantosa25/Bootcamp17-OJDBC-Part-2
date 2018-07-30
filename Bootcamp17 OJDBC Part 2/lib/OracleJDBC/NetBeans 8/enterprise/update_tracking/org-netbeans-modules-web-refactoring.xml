@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.refactoring">
+    <module_version install_time="1475191870586" last="true" origin="installer" specification_version="1.29.1.45">
+        <file crc="1283863720" name="config/Modules/org-netbeans-modules-web-refactoring.xml"/>
+        <file crc="823012744" name="modules/locale/org-netbeans-modules-web-refactoring_ja.jar"/>
+        <file crc="4215130730" name="modules/locale/org-netbeans-modules-web-refactoring_pt_BR.jar"/>
+        <file crc="4753779" name="modules/locale/org-netbeans-modules-web-refactoring_ru.jar"/>
+        <file crc="3789559200" name="modules/locale/org-netbeans-modules-web-refactoring_zh_CN.jar"/>
+        <file crc="3059751323" name="modules/org-netbeans-modules-web-refactoring.jar"/>
+    </module_version>
+</module>

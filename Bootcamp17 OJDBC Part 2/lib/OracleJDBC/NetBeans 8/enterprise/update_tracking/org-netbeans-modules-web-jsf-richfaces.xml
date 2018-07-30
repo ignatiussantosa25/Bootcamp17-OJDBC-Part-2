@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.jsf.richfaces">
+    <module_version install_time="1475191866165" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="2005546119" name="config/Modules/org-netbeans-modules-web-jsf-richfaces.xml"/>
+        <file crc="2859720583" name="modules/locale/org-netbeans-modules-web-jsf-richfaces_ja.jar"/>
+        <file crc="2850743063" name="modules/locale/org-netbeans-modules-web-jsf-richfaces_pt_BR.jar"/>
+        <file crc="449659424" name="modules/locale/org-netbeans-modules-web-jsf-richfaces_ru.jar"/>
+        <file crc="3265155941" name="modules/locale/org-netbeans-modules-web-jsf-richfaces_zh_CN.jar"/>
+        <file crc="1952690726" name="modules/org-netbeans-modules-web-jsf-richfaces.jar"/>
+    </module_version>
+</module>

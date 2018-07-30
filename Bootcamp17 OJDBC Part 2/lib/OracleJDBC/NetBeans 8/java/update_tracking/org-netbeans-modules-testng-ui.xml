@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.testng.ui">
+    <module_version install_time="1475191534728" last="true" origin="installer" specification_version="1.8.1">
+        <file crc="1204341871" name="config/Modules/org-netbeans-modules-testng-ui.xml"/>
+        <file crc="2438314637" name="modules/locale/org-netbeans-modules-testng-ui_ja.jar"/>
+        <file crc="3731458345" name="modules/locale/org-netbeans-modules-testng-ui_pt_BR.jar"/>
+        <file crc="3231994476" name="modules/locale/org-netbeans-modules-testng-ui_ru.jar"/>
+        <file crc="668241032" name="modules/locale/org-netbeans-modules-testng-ui_zh_CN.jar"/>
+        <file crc="1077749412" name="modules/org-netbeans-modules-testng-ui.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Starting the Java Card Runtime Environment
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="samples-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="compilertool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565186_pgfId-998523"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">5</SPAN><A NAME="50565186_81304"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565186_pgfId-999553"></A><A NAME="50565186_Starting the Java Card RE"></A>Starting the Java Card Runtime Environment<A NAME="50565186_marker-1001448"></A>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1002176"></A>The Connected Edition reference implementation is written in the Java and C programming languages and is called the <A NAME="50565186_marker-1006352"></A>C Java Card Runtime Environment (Java Card runtime environment). It is a simulator that can be built with a pre-built ROM mask, much as a Java Card technology-based implementation. It has the ability to simulate persistent memory (<A NAME="50565186_marker-1002177"></A>EEPROM) as well as to save and restore the contents of EEPROM to and from disk files. The Java Card runtime environment performs I/O via a socket interface, simulating the interaction with a card reader or host machine implementing HTTP(S) communication with the card reader or host machine.
+</P>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1004387"></A>The Java Card runtime environment is supplied by the development kit as the pre-built executable, <KBD CLASS="Filename">cjcre.exe</KBD>. The executable, <KBD CLASS="Filename">cjcre.exe</KBD>, is run from the command line.
+</P>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1008369"></A>This chapter includes the following sections:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1008441"></A><A HREF="ri-connected.html#50565186_17596" CLASS="XRef">Starting cjcre.exe from the Command Line</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1008668"></A><A HREF="ri-connected.html#50565186_72919" CLASS="XRef">Java Card Runtime Environment Configuration Files</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1008673"></A><A HREF="ri-connected.html#50565186_82092" CLASS="XRef">Adding Proprietary Packages</A>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565186_pgfId-1008403"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565186_marker-1002988"></A><A NAME="50565186_17596"></A>Starting <KBD CLASS="Filename">cjcre.exe</KBD> from the Command Line</H2>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1002476"></A>The Java Card runtime environment can be run from the command line by using the following command and options:
+</P>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1002604"></A><I CLASS="Variable">JC_CONNECTED_HOME</I><KBD CLASS="Command">&#92;bin&#92;cjcre.exe</KBD> [<I CLASS="Variable">options</I>]
+</P><H3 CLASS="Head2"><A NAME="50565186_pgfId-1002615"></A><KBD CLASS="Filename">cjcre.exe</KBD><A NAME="50565186_89236"></A> Command Line Options</H3>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1006179"></A>The following command line options are listed in order of their expected frequency of use (most frequently used to less frequently used):
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009020"></A><KBD CLASS="Command">-config</KBD> <I CLASS="Variable">config file</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009021"></A>Sets a new configuration file. The default is <KBD CLASS="Filename">lib&#92;config.properties.</KBD>
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009022"></A><KBD CLASS="Command">-contactedport</KBD> <I CLASS="Variable">portnumber</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009023"></A>Sets the port used to simulate the contacted interface for APDU. The default value for <KBD CLASS="Command">-contactedport</KBD> is 9025.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009024"></A><KBD CLASS="Command">-contactedprotocol</KBD> <I CLASS="Variable">protocol</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009025"></A>Sets the APDU protocol on this port, either <KBD CLASS="Command">T=0</KBD> or <KBD CLASS="Command">T=1</KBD>. The default value for the <KBD CLASS="Command">-contactedprotocol</KBD> is <KBD CLASS="Command">T=1</KBD>.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009026"></A><KBD CLASS="Command">-contactlessport </KBD><I CLASS="Variable">port-number</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009027"></A>Port number used to simulate contactless interface. Default is 9026. The protocol, T=CL, cannot be changed.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009028"></A>-<KBD CLASS="Filename">corsize</KBD> <I CLASS="Variable">size</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009029"></A>Sets the Clear On Reset (COR) memory size in which a portion of RAM is dedicated to COR memory. The range of values that the Java Card runtime environment can accept from the command line is <KBD CLASS="Command">2K</KBD> to <KBD CLASS="Command">8K</KBD>. The default value is <KBD CLASS="Command">4K</KBD>. <I CLASS="Variable">size</I> is set as a value in bytes (<KBD CLASS="Command">2345</KBD>) or kilobytes (<KBD CLASS="Command">2K</KBD>).
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009030"></A><KBD CLASS="Command">-D</KBD><I CLASS="Variable">name</I>=<I CLASS="Variable">value</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009031"></A>Supplies a system property (such as <KBD CLASS="Command">-D</KBD><I CLASS="Variable">myproperty</I>=<I CLASS="Variable">myvalue</I>). System properties set in this manner can be retrieved using the API’s <KBD CLASS="Command">System.getProperty(&quot;myproperty&quot;)</KBD> method. A maximum of 50 <KBD CLASS="Command">-D</KBD> properties can be passed in the command line.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009039"></A><KBD CLASS="Command">-debug &lt;yes|true|no|false&gt;</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009040"></A>Runs <KBD CLASS="Filename">cjcre</KBD> in debug mode if you specify <KBD CLASS="Command">yes</KBD> or <KBD CLASS="Command">true</KBD>. Otherwise, the default is <KBD CLASS="Command">no</KBD> and <KBD CLASS="Filename">cjcre</KBD> will not be run in debug mode. The values <KBD CLASS="Command">yes</KBD> and <KBD CLASS="Command">true</KBD> are equivalent. The values <KBD CLASS="Command">no</KBD> and <KBD CLASS="Command">false</KBD> are equivalent.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009041"></A><KBD CLASS="Command">-debugport</KBD> <I CLASS="Variable">portnumber</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009042"></A>Sets the debug port where the Debug proxy communicates. Valid only when -<KBD CLASS="Command">debug</KBD> is set to <KBD CLASS="Command">yes</KBD>. The default value for <KBD CLASS="Command">-debugport</KBD> is 7019.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009043"></A><KBD CLASS="Command">-e2pfile</KBD> <I CLASS="Variable">filename</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009044"></A>Supplies the file name in which the EEPROM image is stored.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009045"></A><KBD CLASS="Command">-e2psize</KBD> <I CLASS="Variable">size</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009046"></A>Configures the amount of EEPROM used. <I CLASS="Variable">size</I> is set as a value in bytes (<KBD CLASS="Command">2345</KBD>), kilobytes (<KBD CLASS="Command">32K</KBD>), or megabytes (<KBD CLASS="Command">4M</KBD>). The specified size is rounded up to a multiple of 4. For example, a size specified at 253, is rounded up to 256.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009047"></A>The range of values that the Java Card runtime environment can accept from the command line is <KBD CLASS="Command">1M</KBD> to <KBD CLASS="Command">32M</KBD>. The default value used is <KBD CLASS="Command">4M</KBD>. The value required to run the samples is between <KBD CLASS="Command">2M</KBD> and <KBD CLASS="Command">32M</KBD>.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009048"></A><KBD CLASS="Command">-enableassertions</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009049"></A>Enables Java code assertions (the assert keyword in Java code).
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009050"></A><KBD CLASS="Command">-exactlogger</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009051"></A>Displays only the log messages that match the level set by the <KBD CLASS="Command">-loggerlevel</KBD> option.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009052"></A><KBD CLASS="Command">-help</KBD> [<KBD CLASS="Command">copyright</KBD>]
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009053"></A>Prints help and copyright messages.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009054"></A><KBD CLASS="Command">-httpport</KBD> <I CLASS="Variable">portnumber</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009055"></A>Sets the HTTP port number on which <KBD CLASS="Command">cjcre</KBD> will be listening. The default value for <KBD CLASS="Command">-httpport</KBD> is 8019.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009057"></A><KBD CLASS="Command">-loggerlevel</KBD><A NAME="50565186_49468"></A> &lt;<KBD CLASS="Command">none|fatal|error|warn|info|verbose|debug|all</KBD>&gt; 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009058"></A>Sets the type of log messages output. All log messages up to the specified level are displayed.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009064"></A><KBD CLASS="Command">-ramsize</KBD> <I CLASS="Variable">size</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009065"></A>Configures the amount of RAM used. <I CLASS="Variable">size</I> is set as a value in bytes (<KBD CLASS="Command">2345</KBD>), kilobytes (<KBD CLASS="Command">32K</KBD>), or megabytes (<KBD CLASS="Command">4M</KBD>).
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009066"></A>The range of values that the Java Card runtime environment can accept from the command line is <KBD CLASS="Command">64K</KBD> to <KBD CLASS="Command">32M</KBD>. The default value used is <KBD CLASS="Command">1M</KBD>. The value required to run the samples is between <KBD CLASS="Command">128K</KBD> and <KBD CLASS="Command">32M</KBD>.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009067"></A><KBD CLASS="Command">-resume</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009254"></A>Restores the VM state from the previously saved EEPROM image and continues VM execution. When <KBD CLASS="Command">-resume</KBD> is specified, other options such as <KBD CLASS="Command">-ramsize and -e2psize </KBD>are ignored and the corresponding values are obtained from the EEPROM image. However, the debug related options (<KBD CLASS="Command">-debug</KBD>, <KBD CLASS="Command">-debug</KBD>port, and <KBD CLASS="Command">-suspend</KBD>) must be specified along with <KBD CLASS="Command">-resume</KBD> to resume the VM in debug mode. The range is 256 bytes to 8K.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009140"></A><KBD CLASS="Command">-suspend &lt;yes|true|no|false&gt;</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009141"></A>Suspends the threads at <KBD CLASS="Command">cjcre</KBD> startup if set to <KBD CLASS="Command">yes</KBD> or <KBD CLASS="Command">true</KBD>. The default is <KBD CLASS="Command">yes</KBD>. The values <KBD CLASS="Command">yes</KBD> and <KBD CLASS="Command">true</KBD> are equivalent. However, <KBD CLASS="Command">yes</KBD> and <KBD CLASS="Command">true</KBD> are valid only when <KBD CLASS="Command">-debug</KBD> is also set to <KBD CLASS="Command">yes</KBD> or <KBD CLASS="Command">true</KBD>. The values <KBD CLASS="Command">no</KBD> and <KBD CLASS="Command">false</KBD> are equivalent.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009069"></A><KBD CLASS="Command">-version</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009070"></A>Displays version information.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565186_pgfId-1009071"></A><KBD CLASS="Command">-X</KBD><I CLASS="Variable">name</I>=<I CLASS="Variable">value</I>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1009072"></A>Sets a single configuration property such as: 
+<BR><KBD CLASS="Command">-Xmyproperty=myvalue</KBD>
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565186_pgfId-1006239"></A>System properties set in this manner can be retrieved using the API’s <KBD CLASS="Command">System.getProperty(&quot;myproperty&quot;)</KBD> method. A maximum of 50 <KBD CLASS="Command">-D</KBD> properties can be passed in the command line. These are visible using <KBD CLASS="Command">JCRuntime.getConfigProperty()</KBD>.
+</P><H2 CLASS="Head1"><A NAME="50565186_pgfId-1008590"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565186_72919"></A>Java Card Runtime Environment Configuration Files</H2>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1008482"></A>If you installed the development kit source bundle, the configuration files for the Java Card runtime environment (<KBD CLASS="Filename">config.properties</KBD> and <KBD CLASS="Filename">system.config)</KBD> files are located in the <KBD CLASS="Filename">lib</KBD> folder. These configuration files contain internal configuration information that must not be changed unless specified. Java Card runtime environment execution requires properly configured <KBD CLASS="Filename">config.properties</KBD> and <KBD CLASS="Filename">system.config</KBD> files. Incorrect changes to these files will prevent execution of the Java Card runtime environment. See <A HREF="configuringRI-connected.html#50565159_83714" CLASS="XRef">Chapter 12</A> for details on configuring the Java Card runtime environment.
+</P>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1008634"></A>If you installed the development kit binary bundle, you cannot change the configuration files for the Java Card runtime environment.
+</P><H2 CLASS="Head1"><A NAME="50565186_pgfId-1008597"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565186_82092"></A>Adding Proprietary Packages</H2>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1008499"></A>If you installed the development kit source bundle, you can add proprietary packages to the ROM mask for the Java Card runtime environment by building a custom <KBD CLASS="Filename">cjcre.exe</KBD>. See <A HREF="buildCJCRE-connected.html#50565146_85012" CLASS="XRef">Chapter 13</A> for additional information and procedures.
+</P>
+<P CLASS="Paragraph"><A NAME="50565186_pgfId-1008641"></A>If you installed the development kit binary bundle, you cannot add proprietary packages.
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="samples-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="compilertool-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

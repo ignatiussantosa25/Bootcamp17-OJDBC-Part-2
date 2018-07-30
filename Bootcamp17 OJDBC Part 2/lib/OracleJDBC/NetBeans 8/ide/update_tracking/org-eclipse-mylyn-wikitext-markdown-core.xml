@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.eclipse.mylyn.wikitext.markdown.core">
+    <module_version install_time="1475191250133" last="true" origin="installer" specification_version="2.6.0.v20150901-2143">
+        <file crc="1437986891" name="config/Modules/org-eclipse-mylyn-wikitext-markdown-core.xml"/>
+        <file crc="878171655" name="modules/org-eclipse-mylyn-wikitext-markdown-core.jar"/>
+    </module_version>
+</module>

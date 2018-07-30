@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.spellchecker.kit">
+    <module_version install_time="1475191264399" last="true" origin="installer" specification_version="1.25.1">
+        <file crc="828845662" name="config/Modules/org-netbeans-modules-spellchecker-kit.xml"/>
+        <file crc="183542919" name="modules/locale/org-netbeans-modules-spellchecker-kit_ja.jar"/>
+        <file crc="3660335782" name="modules/locale/org-netbeans-modules-spellchecker-kit_pt_BR.jar"/>
+        <file crc="3263912777" name="modules/locale/org-netbeans-modules-spellchecker-kit_ru.jar"/>
+        <file crc="2355355878" name="modules/locale/org-netbeans-modules-spellchecker-kit_zh_CN.jar"/>
+        <file crc="1568070783" name="modules/org-netbeans-modules-spellchecker-kit.jar"/>
+    </module_version>
+</module>

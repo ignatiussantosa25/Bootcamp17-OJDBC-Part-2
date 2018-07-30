@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javacard.console/1">
+    <module_version install_time="1475191553206" last="true" origin="installer" specification_version="1.24.1">
+        <file crc="1852037382" name="config/Modules/org-netbeans-modules-javacard-console.xml"/>
+        <file crc="1346496667" name="modules/locale/org-netbeans-modules-javacard-console_ja.jar"/>
+        <file crc="3382532219" name="modules/locale/org-netbeans-modules-javacard-console_pt_BR.jar"/>
+        <file crc="1608455497" name="modules/locale/org-netbeans-modules-javacard-console_ru.jar"/>
+        <file crc="948228130" name="modules/locale/org-netbeans-modules-javacard-console_zh_CN.jar"/>
+        <file crc="1932356686" name="modules/org-netbeans-modules-javacard-console.jar"/>
+    </module_version>
+</module>

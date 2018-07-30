@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.api.web.webmodule">
+    <module_version install_time="1475191664252" last="true" origin="installer" specification_version="1.41.1">
+        <file crc="3979377833" name="config/Modules/org-netbeans-api-web-webmodule.xml"/>
+        <file crc="506632079" name="modules/locale/org-netbeans-api-web-webmodule_ja.jar"/>
+        <file crc="1018492518" name="modules/locale/org-netbeans-api-web-webmodule_pt_BR.jar"/>
+        <file crc="806727167" name="modules/locale/org-netbeans-api-web-webmodule_ru.jar"/>
+        <file crc="1479048430" name="modules/locale/org-netbeans-api-web-webmodule_zh_CN.jar"/>
+        <file crc="319818168" name="modules/org-netbeans-api-web-webmodule.jar"/>
+    </module_version>
+</module>

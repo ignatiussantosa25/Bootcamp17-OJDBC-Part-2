@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.docker.editor/0">
+    <module_version install_time="1475191207668" last="true" origin="installer" specification_version="1.0.1">
+        <file crc="2074874214" name="config/Modules/org-netbeans-modules-docker-editor.xml"/>
+        <file crc="2849915258" name="modules/locale/org-netbeans-modules-docker-editor_ja.jar"/>
+        <file crc="4059276568" name="modules/locale/org-netbeans-modules-docker-editor_pt_BR.jar"/>
+        <file crc="760055866" name="modules/locale/org-netbeans-modules-docker-editor_ru.jar"/>
+        <file crc="2987991191" name="modules/locale/org-netbeans-modules-docker-editor_zh_CN.jar"/>
+        <file crc="1191798603" name="modules/org-netbeans-modules-docker-editor.jar"/>
+    </module_version>
+</module>

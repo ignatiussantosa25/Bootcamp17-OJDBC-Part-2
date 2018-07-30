@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.java.source">
+    <module_version install_time="1475191398178" last="true" origin="installer" specification_version="0.158.1.32.2.25.2.1">
+        <file crc="394523303" name="config/ModuleAutoDeps/org-netbeans-modules-java-source.xml"/>
+        <file crc="4176813532" name="config/Modules/org-netbeans-modules-java-source.xml"/>
+        <file crc="3485266287" name="modules/locale/org-netbeans-modules-java-source_ja.jar"/>
+        <file crc="3396798014" name="modules/locale/org-netbeans-modules-java-source_pt_BR.jar"/>
+        <file crc="915016700" name="modules/locale/org-netbeans-modules-java-source_ru.jar"/>
+        <file crc="2588112978" name="modules/locale/org-netbeans-modules-java-source_zh_CN.jar"/>
+        <file crc="4158190805" name="modules/org-netbeans-modules-java-source.jar"/>
+    </module_version>
+</module>

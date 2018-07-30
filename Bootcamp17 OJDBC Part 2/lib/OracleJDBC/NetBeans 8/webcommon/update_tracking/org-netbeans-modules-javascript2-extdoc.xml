@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript2.extdoc">
+    <module_version install_time="1475191629392" last="false" origin="installer" specification_version="1.0.1">
+        <file crc="4192456931" name="config/Modules/org-netbeans-modules-javascript2-extdoc.xml"/>
+        <file crc="1039058428" name="modules/locale/org-netbeans-modules-javascript2-extdoc_ja.jar"/>
+        <file crc="3959443983" name="modules/locale/org-netbeans-modules-javascript2-extdoc_pt_BR.jar"/>
+        <file crc="2852256671" name="modules/locale/org-netbeans-modules-javascript2-extdoc_ru.jar"/>
+        <file crc="1542494201" name="modules/locale/org-netbeans-modules-javascript2-extdoc_zh_CN.jar"/>
+        <file crc="2299131456" name="modules/org-netbeans-modules-javascript2-extdoc.jar"/>
+    </module_version>
+    <module_version install_time="1518892660021" last="true" origin="NetBeans Distribution" specification_version="1.0.2">
+        <file crc="4192456931" name="config/Modules/org-netbeans-modules-javascript2-extdoc.xml"/>
+        <file crc="791536767" name="modules/locale/org-netbeans-modules-javascript2-extdoc_ja.jar"/>
+        <file crc="3958917382" name="modules/locale/org-netbeans-modules-javascript2-extdoc_pt_BR.jar"/>
+        <file crc="1398617862" name="modules/locale/org-netbeans-modules-javascript2-extdoc_ru.jar"/>
+        <file crc="1559204327" name="modules/locale/org-netbeans-modules-javascript2-extdoc_zh_CN.jar"/>
+        <file crc="1401062919" name="modules/org-netbeans-modules-javascript2-extdoc.jar"/>
+    </module_version>
+</module>

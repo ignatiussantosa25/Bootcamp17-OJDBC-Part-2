@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.web.freeform">
+    <module_version install_time="1475191854506" last="true" origin="installer" specification_version="1.35.1">
+        <file crc="1020096217" name="config/Modules/org-netbeans-modules-web-freeform.xml"/>
+        <file crc="3756549204" name="modules/locale/org-netbeans-modules-web-freeform_ja.jar"/>
+        <file crc="3127860019" name="modules/locale/org-netbeans-modules-web-freeform_pt_BR.jar"/>
+        <file crc="1711821409" name="modules/locale/org-netbeans-modules-web-freeform_ru.jar"/>
+        <file crc="3893652436" name="modules/locale/org-netbeans-modules-web-freeform_zh_CN.jar"/>
+        <file crc="2888150486" name="modules/org-netbeans-modules-web-freeform.jar"/>
+    </module_version>
+</module>

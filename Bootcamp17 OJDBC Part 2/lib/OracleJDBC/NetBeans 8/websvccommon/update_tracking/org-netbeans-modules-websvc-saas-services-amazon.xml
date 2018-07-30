@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.saas.services.amazon">
+    <module_version install_time="1475191383813" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="3564986708" name="config/Modules/org-netbeans-modules-websvc-saas-services-amazon.xml"/>
+        <file crc="961464523" name="modules/locale/org-netbeans-modules-websvc-saas-services-amazon_ja.jar"/>
+        <file crc="334233152" name="modules/locale/org-netbeans-modules-websvc-saas-services-amazon_pt_BR.jar"/>
+        <file crc="3098217930" name="modules/locale/org-netbeans-modules-websvc-saas-services-amazon_ru.jar"/>
+        <file crc="950839348" name="modules/locale/org-netbeans-modules-websvc-saas-services-amazon_zh_CN.jar"/>
+        <file crc="3962402714" name="modules/org-netbeans-modules-websvc-saas-services-amazon.jar"/>
+    </module_version>
+</module>

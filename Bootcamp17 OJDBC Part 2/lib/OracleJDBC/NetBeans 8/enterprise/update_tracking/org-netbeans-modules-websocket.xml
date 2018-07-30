@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websocket">
+    <module_version install_time="1475191873550" last="true" origin="installer" specification_version="1.9.1">
+        <file crc="2381634834" name="config/Modules/org-netbeans-modules-websocket.xml"/>
+        <file crc="1552082092" name="modules/locale/org-netbeans-modules-websocket_ja.jar"/>
+        <file crc="3923919314" name="modules/locale/org-netbeans-modules-websocket_pt_BR.jar"/>
+        <file crc="460773412" name="modules/locale/org-netbeans-modules-websocket_ru.jar"/>
+        <file crc="3156880751" name="modules/locale/org-netbeans-modules-websocket_zh_CN.jar"/>
+        <file crc="3268202385" name="modules/org-netbeans-modules-websocket.jar"/>
+    </module_version>
+</module>

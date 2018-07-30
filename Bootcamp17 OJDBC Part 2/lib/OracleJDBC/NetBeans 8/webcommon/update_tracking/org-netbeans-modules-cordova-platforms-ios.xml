@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cordova.platforms.ios">
+    <module_version install_time="1475191601764" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="2943310819" name="bin/ios-sim"/>
+        <file crc="543530653" name="bin/libiDeviceNativeBinding.dylib"/>
+        <file crc="1630261991" name="bin/libimobiledevice.4.dylib"/>
+        <file crc="1762823334" name="bin/libplist.1.dylib"/>
+        <file crc="2253309562" name="bin/libusbmuxd.2.dylib"/>
+        <file crc="4003337134" name="config/Modules/org-netbeans-modules-cordova-platforms-ios.xml"/>
+        <file crc="3688270906" name="modules/locale/org-netbeans-modules-cordova-platforms-ios_ja.jar"/>
+        <file crc="166610960" name="modules/locale/org-netbeans-modules-cordova-platforms-ios_pt_BR.jar"/>
+        <file crc="3741246556" name="modules/locale/org-netbeans-modules-cordova-platforms-ios_ru.jar"/>
+        <file crc="847949803" name="modules/locale/org-netbeans-modules-cordova-platforms-ios_zh_CN.jar"/>
+        <file crc="4268665878" name="modules/org-netbeans-modules-cordova-platforms-ios.jar"/>
+    </module_version>
+</module>

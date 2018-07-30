@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.j2ee.earproject">
+    <module_version install_time="1475191745288" last="true" origin="installer" specification_version="1.54.1">
+        <file crc="2490954521" name="config/Modules/org-netbeans-modules-j2ee-earproject.xml"/>
+        <file crc="1293882159" name="modules/locale/org-netbeans-modules-j2ee-earproject_ja.jar"/>
+        <file crc="3866497714" name="modules/locale/org-netbeans-modules-j2ee-earproject_pt_BR.jar"/>
+        <file crc="3783795417" name="modules/locale/org-netbeans-modules-j2ee-earproject_ru.jar"/>
+        <file crc="2133086076" name="modules/locale/org-netbeans-modules-j2ee-earproject_zh_CN.jar"/>
+        <file crc="2921180269" name="modules/org-netbeans-modules-j2ee-earproject.jar"/>
+    </module_version>
+</module>

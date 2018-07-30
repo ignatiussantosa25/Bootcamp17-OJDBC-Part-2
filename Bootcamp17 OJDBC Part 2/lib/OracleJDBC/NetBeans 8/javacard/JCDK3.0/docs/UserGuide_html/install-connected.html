@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Installation
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="intro-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="developing-javacardApps.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565183_pgfId-998523"></A>C H A P T E R   </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">2</SPAN><A NAME="50565183_99743"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565183_pgfId-1005465"></A><A NAME="50565183_Installation"></A>Installation<A NAME="50565183_marker-1005464"></A>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1005469"></A>This chapter describes the prerequisites you need to install on your system before you use the development kit, how to install the development kit and the NetBeans IDE, how to set system variables, and how to uninstall the development kit. This chapter also lists the files installed onto your system by the Connected Edition of the development kit. You can run both a Classic and Connected development kit simultaneously.
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1002801"></A>Binary and source code development kits are available for the Microsoft Windows XP SP2 operating system. Source code bundles allow you to change the development kit’s reference implementation, whereas the binary bundles allow you only to use the reference implementation. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1009352"></A>Each development kit is provided in an executable JAR file bundle. See <A HREF="intro-connected.html#50565182_42788" CLASS="XRef">Chapter 1</A> for a description of this development kit bundle and a list of all the files installed by this development kit.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565183_pgfId-1009306"></A>The Java Card specifications are not included in the development kit bundle. The specifications must be downloaded separately.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR><H2 CLASS="Head1"><A NAME="50565183_pgfId-1001996"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565183_90451"></A>Prerequisites to Installing the Development Kit</H2>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1011400"></A>The following software must be installed before installing the development kit:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565183_pgfId-1011401"></A><STRONG CLASS="Lead-In2para">Apache ANT - </STRONG>download and install Apache Ant version 1.6.5 or higher from <KBD CLASS="URL"><A HREF="http://ant.apache.org" CLASS="URL">http://ant.apache.org</A></KBD>.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565183_pgfId-1009459"></A><STRONG CLASS="Lead-In2para">Firefox browser</STRONG> - download the Firefox browser from <KBD CLASS="URL"><A HREF="http://www.mozilla.com" CLASS="URL">http://www.mozilla.com</A></KBD>.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565183_pgfId-1002082"></A><STRONG CLASS="Lead-In2para">GCC compiler</STRONG> - download and install MinGW from <KBD CLASS="URL"><A HREF="http://sourceforge.net/projects/mingw" CLASS="URL">http://sourceforge.net/projects/mingw </A></KBD>and install it according to the instructions on the <KBD CLASS="URL"><A HREF="http://www.mingw.org" CLASS="URL">http://www.mingw.org</A></KBD> web site.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565183_pgfId-1009452"></A><STRONG CLASS="Lead-In2para">Java Development Kit</STRONG> - download the JDK software from <KBD CLASS="URL"><A HREF="http://java.sun.com/javase/downloads" CLASS="URL">http://java.sun.com/javase/downloads</A></KBD> and install it according to the instructions on the web site.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565183_pgfId-1006023"></A><STRONG CLASS="Lead-In2para">NetBeans IDE (optional IDE, required to run samples) </STRONG>- download the NetBeans IDE version 6.8 from <KBD CLASS="URL"><A HREF="http://www.netbeans.org/downloads" CLASS="URL">http://www.netbeans.org/downloads</A></KBD> and install it according to the instructions on the web site. 
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565183_pgfId-1009194"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565183_94704"></A>Install and Setup the Development Kit</H2>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1009198"></A>This section describes how to install and set up the development kit.
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565183_pgfId-1009199"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Installing the Development Kit
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565183_pgfId-1002150"></A>	1.	Verify that the additional software required by the development kit is installed on the development system.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1002379"></A>See <A HREF="install-connected.html#50565183_90451" CLASS="XRef">Prerequisites to Installing the Development Kit</A> for the download location and installation instructions of the required additional software.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1002162"></A>	2.	Download an appropriate development kit JAR file to a directory of your choice.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1002525"></A>	3.	Launch the development kit installer.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1002417"></A>The development kit can be launched automatically when you download the JAR file or by using the Windows file manager tool to navigate to the directory containing the development kit JAR file and double clicking the file name or icon.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1003136"></A>The development kit can also be launched by opening a Command Prompt window, navigating to the directory containing the development kit JAR file, and executing the following command from the command line:
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1002182"></A><KBD CLASS="Command">java</KBD> <KBD CLASS="Command">-jar</KBD> <I CLASS="Variable">Bundle-Filename</I>
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1002188"></A>In the command, <I CLASS="Variable">Bundle-Filename</I> is the name of the downloaded development kit JAR file.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1007323"></A>The installation wizard displays the following screen.
+</P>
+<BR><A NAME="50565183_pgfId-1018459"></A>
+<P CLASS="FigureBox"><A NAME="50565183_pgfId-1007333"></A>
+<P><IMG SRC="figures/install-connected-5.jpg" TITLE="Installation screen" ALT="Installation screen">
+</P><A NAME="50565183_pgfId-1018445"></A><A NAME="50565183_pgfId-1018458"></A>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1002194"></A>	4.	Complete each action requested by the installer.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1003155"></A>By default, the development kit for the Connected Edition is installed in:
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565183_pgfId-1008326"></A><KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD>
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565183_pgfId-1008328"></A>If you specify a different installation directory, the names of the installation directory and its parent must not contain a space.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1007738"></A>For example, the installation directory cannot be located in <KBD CLASS="Filename">C:&#92;program files</KBD> because of the space in the <KBD CLASS="Filename">program files</KBD> directory name.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565183_pgfId-1003003"></A>The installation directory (either the default directory or the alternate installation directory you specify) is referred to as JC_CONNECTED_HOME.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1003309"></A>	5.	Click the Finish button to complete installation.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1007743"></A>The bundle installs files and directories containing the binary files and source code described in <A HREF="install-connected.html#50565183_17934" CLASS="XRef">Directories and Files Installed From All Bundles</A>. The files and directories are installed under the root installation directory, either <KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD> or the directory you specified during installation. The root installation directory is referred to as JC_CONNECTED_HOME in this document.
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565183_pgfId-1010351"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Setting Up the System Variables
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565183_pgfId-1003343"></A>	1.	Set the <KBD CLASS="Command">JAVA_HOME</KBD> system variable to the JDK root directory.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1003359"></A>Before running the development kit, you must set the <KBD CLASS="Command">JAVA_HOME</KBD> environment variable permanently in the Windows Control Panel or temporarily from the command line:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1003491"></A>To permanently set <KBD CLASS="Command">JAVA_HOME</KBD>, go to Windows Control Panel &gt; System &gt; Advanced &gt; Environment Variables dialog and either create or edit a System variable named <KBD CLASS="Command">JAVA_HOME</KBD> with the literal value of the JDK root directory on your system. For example, in the System variables box enter the following:
+</LI>
+<P CLASS="Linebreak">
+</P>
+<DIV CLASS="Code">
+<BR>
+<TABLE CLASS="Code" SUMMARY="Table for code examples and code output" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR">
+<TBODY>
+<TR>
+<TD SCOPE="ROW">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009610"></A>Variable
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009612"></A>Value
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009614"></A><KBD CLASS="Command">JAVA_HOME</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009616"></A><KBD CLASS="Filename">C:&#92;JAVA&#92;jdk1.6.0_10</KBD>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</DIV>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1007357"></A>To temporarily set <KBD CLASS="Command">JAVA_HOME</KBD>, enter the following command in a Command Prompt window:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1008108"></A><KBD CLASS="Command">set JAVA_HOME=C:&#92;</KBD><I CLASS="Variable">java_home_path</I><KBD CLASS="Command">;</KBD>
+</PRE>
+<P CLASS="ParaIndent2"><A NAME="50565183_pgfId-1008116"></A>For example, if the Java platform software is stored in the <KBD CLASS="Filename">c:&#92;jdk6</KBD> directory, enter:
+</P>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1007629"></A><KBD CLASS="Command">set JAVA_HOME=C:&#92;jdk6;</KBD>
+</PRE>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565183_pgfId-1007378"></A>If using the Category view, choose Windows Control Panel &gt; Performance and Maintenance &gt; System &gt; Advanced to open the Environment Variables panel.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1007586"></A>	2.	Set the <KBD CLASS="Command">ANT_HOME</KBD> system variable to the Ant root directory.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1009626"></A>Before running the development kit, you must set the <KBD CLASS="Command">ANT_HOME</KBD> environment variable permanently in the Windows Control Panel or temporarily from the command line:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1009680"></A>To permanently set <KBD CLASS="Command">ANT_HOME</KBD>, go to Windows Control Panel &gt; System &gt; Advanced &gt; Environment Variables dialog and either create or edit a System variable named <KBD CLASS="Command">ANT_HOME</KBD> so that its value is the Apache Ant folder. For example, in the System variables box enter the following:
+</LI>
+<P CLASS="Linebreak">
+</P>
+<DIV CLASS="Code">
+<BR>
+<TABLE CLASS="Code" SUMMARY="Table for code examples and code output" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR">
+<TBODY>
+<TR>
+<TD SCOPE="ROW">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009673"></A>Variable
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009675"></A>Value
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009677"></A><KBD CLASS="Command">ANT_HOME</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009679"></A><KBD CLASS="Filename">C:&#92;ant&#92;apache-ant-1.6.5</KBD>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</DIV>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1008145"></A>To temporarily set <KBD CLASS="Command">ANT_HOME</KBD>, enter the following command in a Command Prompt window:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1008146"></A><KBD CLASS="Command">set ANT_HOME=C:&#92;</KBD><I CLASS="Variable">ANT_HOME_path</I><KBD CLASS="Command">;</KBD>
+</PRE>
+<P CLASS="ParaIndent2"><A NAME="50565183_pgfId-1008166"></A>For example if Ant was installed in <KBD CLASS="Filename">C:&#92;ant&#92;apache-ant1.6.5</KBD>, enter:
+</P>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1008148"></A><KBD CLASS="Command">set ANT_HOME=C:&#92;</KBD><KBD CLASS="Filename">ant&#92;apache-ant1.6.5</KBD><KBD CLASS="Command">;</KBD>
+</PRE>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1007905"></A>	3.	Set the <KBD CLASS="Command">JC_CONNECTED_HOME</KBD> system variable to the development kit root directory.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1009732"></A>Before running the development kit, you must set the <KBD CLASS="Command">JC_CONNECTED_HOME</KBD> environment variable permanently in the Windows Control Panel or temporarily from the command line:
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565183_pgfId-1008204"></A>Some of the command line tools require that the <KBD CLASS="Command">JC_CONNECTED_HOME</KBD> variable is set correctly.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1007906"></A>To permanently set <KBD CLASS="Command">JC_CONNECTED_HOME</KBD>, go to Windows Control Panel &gt; System &gt; Advanced &gt; Environment Variables dialog and either create or edit a system variable named <KBD CLASS="Command">JC_CONNECTED_HOME</KBD> variable so that its value is either <KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD> or the directory you specified during installation. For example, in the System variables box enter the following:
+</LI>
+<P CLASS="Linebreak">
+</P>
+<DIV CLASS="Code">
+<BR>
+<TABLE CLASS="Code" SUMMARY="Table for code examples and code output" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR">
+<TBODY>
+<TR>
+<TD SCOPE="ROW">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009758"></A>Variable
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009760"></A>Value
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009762"></A><KBD CLASS="Command">JC_CONNECTED_HOME</KBD>
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1009764"></A><KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</DIV>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1008194"></A>To temporarily set <KBD CLASS="Command">JC_CONNECTED_HOME</KBD>, enter the following command in a Command Prompt window:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1008195"></A><KBD CLASS="Command">set JC_CONNECTED_HOME=C:&#92;</KBD><I CLASS="Variable">JC_CONNECTED_HOME_path</I><KBD CLASS="Command">;</KBD>
+</PRE>
+<P CLASS="ParaIndent2"><A NAME="50565183_pgfId-1011502"></A>For example if you installed in <KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD>, enter:
+</P>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1011503"></A><KBD CLASS="Command">set JC_CONNECTED_HOME=</KBD><KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD><KBD CLASS="Command">;</KBD>
+</PRE>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1011504"></A>	4.	Add <KBD CLASS="Command">%JAVA_HOME%,</KBD> <KBD CLASS="Command">%JC_CONNECTED_HOME%</KBD>, and <KBD CLASS="Command">%ANT_HOME%</KBD> to the <KBD CLASS="Command">Path</KBD> variable displayed in the Environment Variables panel.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1007656"></A>	5.	Add MinGW to the <KBD CLASS="Command">Path</KBD> variable.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1007640"></A>MinGW is not required if only the development kit binary bundle is installed. If the development kit source bundle is installed, set the <KBD CLASS="Command">MinGW</KBD> environment variable permanently in the Windows Control Panel or temporarily from the command line:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1003514"></A>To permanently set the MinGW path, edit the <KBD CLASS="Command">Path</KBD> variable in the System variables box to include the location of <KBD CLASS="Filename">MinGW&#92;bin</KBD>:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1007671"></A><KBD CLASS="Command">C:&#92;</KBD><KBD CLASS="Filename">MinGW&#92;bin</KBD><KBD CLASS="Command">;</KBD>
+</PRE>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565183_pgfId-1003532"></A>To temporarily set the MinGW path, enter the following command in a Command Prompt window:
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1003551"></A><KBD CLASS="Command">set PATH=C:&#92;</KBD><I CLASS="Variable">MinGW_path</I><KBD CLASS="Command">;%PATH%</KBD>
+</PRE>
+<P CLASS="StepPara2"><A NAME="50565183_pgfId-1003564"></A>For example, if MinGW is installed in the <KBD CLASS="Filename">C:&#92;MinGW</KBD> directory, enter: 
+</P>
+<PRE CLASS="Codeline2"><A NAME="50565183_pgfId-1009825"></A><KBD CLASS="Command">set PATH=C:&#92;MinGW&#92;bin;%PATH%</KBD>
+</PRE>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565183_pgfId-1009963"></A>If you choose to set the <KBD CLASS="Command">JAVA_HOME</KBD> variable and MinGW <KBD CLASS="Command">PATH</KBD> each time you run the development kit, place the appropriate <KBD CLASS="Command">JAVA_HOME</KBD> variable and MinGW <KBD CLASS="Command">PATH</KBD> commands in a batch file.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR><H2 CLASS="Head1"><A NAME="50565183_pgfId-1010376"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>Installed Directories and Files</H2>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1010390"></A>A development kit binary bundle installs the subdirectories and files described in <A HREF="install-connected.html#50565183_83512" CLASS="XRef">TABLE 2-1</A>. A development kit source bundle installs all the subdirectories and files described in <A HREF="install-connected.html#50565183_83512" CLASS="XRef">TABLE 2-1</A>, plus the source subdirectories and files described in <A HREF="install-connected.html#50565183_30018" CLASS="XRef">TABLE 2-2</A>. 
+</P><H3 CLASS="Head2"><A NAME="50565183_pgfId-1011020"></A><A NAME="50565183_17934"></A>Directories and Files Installed From All Bundles</H3>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1011033"></A>These files and directories are installed by the development kit under the root installation directory, <KBD CLASS="Filename">C:&#92;JCDK3.0.2_ConnectedEdition</KBD>, or in the directory that you specified during installation.
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565183_pgfId-1010406"> </A> TABLE 2-1 	 <A NAME="50565183_83512"> </A> Directories and Files Installed From All Bundles  </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565183_pgfId-1010410"></A>Directory or File
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565183_pgfId-1010412"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010414"></A><KBD CLASS="Filename">COPYRIGHT-software.html</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010416"></A>The copyright file for the Java Card 3 platform.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010418"></A><KBD CLASS="Filename">COPYRIGHT-docs.html</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010420"></A>The copyright file for the documentation of the Java Card 3 platform.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010422"></A><KBD CLASS="Filename">RELEASENOTES.html</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010424"></A>The release notes for this Java Card 3 platform development kit.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010426"></A><KBD CLASS="Filename">document.css</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010428"></A>The style sheet for the HTML documentation.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010430"></A><KBD CLASS="Filename">platform.properties</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010432"></A>Specifies properties of the Java Card 3 platform RI that are used by the tools.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010434"></A><KBD CLASS="Filename">api_export_files&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010436"></A>Contains <KBD CLASS="Filename">java</KBD>, <KBD CLASS="Filename">javacard</KBD>, and <KBD CLASS="Filename">javacardx</KBD> directories of API export files.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010438"></A><KBD CLASS="Filename">bin&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010440"></A>Contains all shell scripts and batch files (including the <KBD CLASS="Filename">cjcre.exe</KBD> binary executable) used in running the tools.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010442"></A><KBD CLASS="Filename">docs&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010444"></A>Contains the following:
+</P>
+<UL>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010933"></A><KBD CLASS="Filename">api</KBD> folder - The Javadoc tool files for the RI API in HTML format.
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010942"></A><KBD CLASS="Filename">JCDevKitUG-Connected-3_0_2.pdf</KBD> - This user’s guide.
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010959"></A><KBD CLASS="Filename">UserGuide_html</KBD> folder - The HTML version of this user’s guide.
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1011007"></A><KBD CLASS="Filename">apduio</KBD> folder - The Javadoc tool files for the publicly available APDU I/O client classes.
+</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010454"></A><KBD CLASS="Filename">legal&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010456"></A>Contains three files:
+</P>
+<UL>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010457"></A><KBD CLASS="Filename">TechnologyEvaluationLicense.txt</KBD> - License for the Java Card 3 platform.
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010458"></A><KBD CLASS="Filename">THIRDPARTYREADME.txt</KBD> - License for the Jetty HTTP Server.
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010459"></A><KBD CLASS="Filename">Distribution_ReadME.txt</KBD> - Describes the terms and conditions for redistribution of the Java Card development kit.
+</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010461"></A><KBD CLASS="Filename">lib&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010463"></A>Contains all Java programming language JAR files and <KBD CLASS="Filename">config</KBD> files required for the tools:
+</P>
+<UL>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010464"></A><KBD CLASS="Filename">ant-contrib-1.0b3.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010465"></A><KBD CLASS="Filename">api_classic.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010466"></A><KBD CLASS="Filename">api_connected.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010965"></A>asm-all-3.1.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010467"></A>bcel-5.2.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010468"></A><KBD CLASS="Filename">commons-cli-1.0.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010469"></A><KBD CLASS="Filename">commons-codec-1.3.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010470"></A><KBD CLASS="Filename">commons-httpclient-3.0.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010471"></A><KBD CLASS="Filename">commons-logging-1.1.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010472"></A>config.properties
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010473"></A><KBD CLASS="Filename">jcapt.jar</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010474"></A>jctasks.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010475"></A>nbtasks.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010476"></A>nbutils.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010478"></A>romizer.jar
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010479"></A>system.properties
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010480"></A>tools.jar
+</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010967"></A><KBD CLASS="Filename">Uninstaller&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010969"></A>Contains the file <KBD CLASS="Filename">uninstaller.jar</KBD> to safely uninstall this development kit.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010482"></A><KBD CLASS="Filename">samples&#92;classic_applets</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010484"></A>Contains the sample HelloWorld classic applet application adapted to run on the Connected Edition.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010486"></A><KBD CLASS="Filename">samples&#92;extended_applets</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010488"></A>Contains the sample extended applet application.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010490"></A><KBD CLASS="Filename">samples&#92;keystore</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010492"></A>Contains keystore and other certificate files for use by the samples provided in this release. These keystore and other certificate files are for demonstration purposes only and cannot be used for developing deployable applications.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010498"></A><KBD CLASS="Filename">samples&#92;web</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010500"></A>Contains the sample web application.
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H3 CLASS="Head2"><A NAME="50565183_pgfId-1010510"></A><A NAME="50565183_91813"></A>Subdirectories and Files Installed in the <KBD CLASS="Filename">src</KBD> Directory</H3>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1010514"></A>The <KBD CLASS="Filename">src</KBD> directory is installed only from a source bundle and contains the source code for the Java Card API, the romized applications, the development kit tools, and the Java Card virtual machine.
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1010704"></A><A HREF="install-connected.html#50565183_30018" CLASS="XRef">TABLE 2-2</A> describes the contents of the subdirectories and files installed under the <KBD CLASS="Filename">src</KBD> directory.<A NAME="50565183_30979"></A>
+</P>
+<BR>
+<TABLE CLASS="Titled" SUMMARY="Table that is numbered and titled" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR"><CAPTION CLASS="TableCaption"> <A NAME="50565183_pgfId-1010522"> </A> TABLE 2-2 	 <A NAME="50565183_30018"> </A> Contents of the  <KBD CLASS="Filename"> src </KBD>  Directory   </CAPTION>
+<THEAD>
+<TR>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565183_pgfId-1010526"></A>Directory or File
+</P>
+</TH>
+<TH SCOPE="COL" ROWSPAN="1" COLSPAN="1" BGCOLOR="#CCCCCC">
+<P CLASS="TableHead"><A NAME="50565183_pgfId-1010528"></A>Description
+</P>
+</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010530"></A><KBD CLASS="Filename">build.xml</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010532"></A>Resource file for rebuilding the development kit source bundle.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010534"></A><KBD CLASS="Filename">apiImpl.jar</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010536"></A>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010538"></A><KBD CLASS="Filename">bat.template</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010540"></A>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010542"></A><KBD CLASS="Filename">crypto.jar</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010544"></A>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010546"></A><KBD CLASS="Filename">api&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010548"></A>Sources for the Java Card API version 3.0.2 in the following subdirectories:
+</P>
+<UL>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010549"></A><KBD CLASS="Filename">com&#92;sun</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010550"></A><KBD CLASS="Filename">java</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010551"></A><KBD CLASS="Filename">javacard</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010552"></A><KBD CLASS="Filename">javacardx</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010553"></A><KBD CLASS="Filename">javax</KBD>
+</LI>
+<LI CLASS="TableBullet"><A NAME="50565183_pgfId-1010554"></A><KBD CLASS="Filename">org&#92;mortbay</KBD>
+</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010556"></A><KBD CLASS="Filename">romized_apps&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010558"></A>Sources for the CardManager servlet.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010560"></A><KBD CLASS="Filename">tools&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010562"></A>Sources for development kit tools.
+</P>
+</TD>
+</TR>
+<TR>
+<TD SCOPE="ROW" ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010564"></A><KBD CLASS="Filename">vm&#92;</KBD>
+</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010566"></A>Sources for the Java Card virtual machine in the following subdirectories and file:
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010567"></A><KBD CLASS="Filename">c </KBD>- C programming language sources.
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010568"></A><KBD CLASS="Filename">h </KBD>- Header files for the C programming language sources.
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010569"></A><KBD CLASS="Filename">lib </KBD>- System and internal web configuration files
+</P>
+<P CLASS="TableText"><A NAME="50565183_pgfId-1010570"></A><KBD CLASS="Filename">ignore.list </KBD>- List of classes ignored by the ROMizer
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR><H2 CLASS="Head1"><A NAME="50565183_pgfId-1010382"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565183_uninstall"></A>Uninstall the Development Kit<A NAME="50565183_marker-1010375"></A></H2>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1011254"></A>To uninstall the development kit, Version 3.0.2, run the Uninstaller tool found in your development kit at Uninstaller&#92;uninstaller.jar. Do not change the location of this tool. Before running the Uninstaller, it is advisable to exit all development kit tools and the NetBeans IDE. Files under the control of your OS will not be uninstalled using the Uninstaller.
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1011678"></A>In the Uninstaller’s dialog box, selecting the check box or not will have the same result, the development kit directory that the Uninstaller is in will be deleted, including the Uninstaller itself, see <A HREF="install-connected.html#50565183_15617" CLASS="XRef">FIGURE 2-1</A>.
+</P>
+<P CLASS="FigureCaption"><A NAME="50565183_pgfId-1011682"></A>FIGURE 2-1 	<A NAME="50565183_15617"></A>Uninstalling the Development Kit
+</P>
+<BR><A NAME="50565183_pgfId-1018461"></A>
+<P CLASS="FigureBox"><A NAME="50565183_pgfId-1011686"></A>
+<P><IMG SRC="figures/install-connected-6.jpg" TITLE="dialog box for uninstaller" ALT="dialog box for uninstaller" ALIGN="BASELINE">
+</P><A NAME="50565183_pgfId-1018450"></A><A NAME="50565183_pgfId-1018460"></A>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1011693"></A>You can also uninstall a development kit for any Java Card Platform release by simply deleting all its directories and files from your hard drive. 
+</P><H2 CLASS="Head1"><A NAME="50565183_pgfId-1010373"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565183_Install and Setup the NetBeans IDE"></A>Install and Setup the NetBeans IDE</H2>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1009969"></A>The NetBeans IDE, version 6.8, is required to run the samples. It is also recommended as your development environment, although alternatively, the development kit tools can be used from the command line.
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1010090"></A>To use the Java Card platform-specific plugin in the NetBeans IDE, you must add and configure the Java Card Platform.
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565183_pgfId-1010081"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Installing the NetBeans IDE
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565183_pgfId-1010086"></A>	1.	Go to <KBD CLASS="URL"><A HREF="http://www.netbeans.org" CLASS="URL">http://www.netbeans.org</A></KBD>.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1010111"></A>	2.	Download version 6.8.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1011462"></A>Earlier versions of the NetBeans IDE and the plugin will not work with version 3.0.2 of the development kit. Within version 6.8 of the NetBeans IDE, the Java Card platform-specific plugin might already be installed. Check the installed plugins list and, if the Java card plugins are not installed, locate them on the NetBeans IDE update center and install them into the NetBeans IDE. 
+</P>
+<BR>
+<TABLE DIR="LTR" cellpadding="0" cellspacing="0" WIDTH="100%" SUMMARY="procedure">
+<COLGROUP SPAN="1">
+<TR align="left" valign="top">
+<TD valign="baseline" ROWSPAN="1" COLSPAN="1" ABBR="ProcIconTitle">
+<H3 CLASS="Head2ProcTitle"><A NAME="50565183_pgfId-1009972"></A><IMG CLASS="icon" TITLE="procedure icon" ALT="procedure icon" SRC="shared/downtriangle.gif">&nbsp;&nbsp;Setting Up the Java Card Platform
+</H3>
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Step1"><A NAME="50565183_pgfId-1009975"></A>	1.	In the NetBeans IDE, version 6.8, go to <KBD CLASS="Command">Tools &gt; Java Platforms</KBD> and click <KBD CLASS="Command">Add Platform</KBD>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1011742"></A>You setup the Java Card Platform as you would any other Java Platform. If the Java Card Platform does not appear on the list of platform types, you might need to exit the NetBeans IDE and restart it.
+</P>
+<BR><A NAME="50565183_pgfId-1018467"></A>
+<P CLASS="GraphicBox-Wide"><A NAME="50565183_pgfId-1011743"></A>
+<P><IMG SRC="figures/install-connected-7.jpg" TITLE="install Java Card platform dialog box" ALT="install Java Card platform dialog box" ALIGN="BASELINE">
+</P><A NAME="50565183_pgfId-1018455"></A><A NAME="50565183_pgfId-1018466"></A>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1009986"></A>	2.	Select <KBD CLASS="Filename">Java Card Platform</KBD> and click <KBD CLASS="Command">Next</KBD>.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1009987"></A>	3.	Navigate to and choose the directory where you installed the Java Card Platform development kit and click <KBD CLASS="Command">Next</KBD>.
+</P>
+<P CLASS="StepPara1"><A NAME="50565183_pgfId-1009988"></A>In the documentation for the development kit this directory is referred to as <EM CLASS="Emphasis">JC_CONNECTED_HOME</EM>.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1009989"></A>	4.	Click <KBD CLASS="Command">Finish</KBD>.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1009990"></A>	5.	Click <KBD CLASS="Command">Close</KBD>.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565183_pgfId-1010189"></A>Once the installation is complete, there will be a new node, <KBD CLASS="Command">Java Card Runtimes</KBD>, in the <KBD CLASS="Command">Services</KBD> window. If the <KBD CLASS="Command">Services</KBD> window is not already displayed, choose <KBD CLASS="Command">Window</KBD>, then choose <KBD CLASS="Command">Services</KBD> to activate it.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1009991"></A>	6.	Confirm <KBD CLASS="Filename">Java Card Platform</KBD> node is listed in <KBD CLASS="Command">Services</KBD> window below the <KBD CLASS="Filename">Java Card Runtimes</KBD> node.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1010184"></A>	7.	Confirm the Default Device instance is listed in the <KBD CLASS="Command">Services</KBD> window below the <KBD CLASS="Filename">Java Card Platform</KBD><KBD CLASS="Command"> </KBD>node.
+</P>
+<P CLASS="Step1-"><A NAME="50565183_pgfId-1010166"></A>	8.	In the <KBD CLASS="Command">Tools &gt; Plugins</KBD> dialog box, confirm the <KBD CLASS="Command">Available Plugins</KBD> Tab lists the Java Card platform-specific plugin.
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1004599"></A>&nbsp;
+</P>
+<P CLASS="Paragraph"><A NAME="50565183_pgfId-1010343"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="intro-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="developing-javacardApps.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

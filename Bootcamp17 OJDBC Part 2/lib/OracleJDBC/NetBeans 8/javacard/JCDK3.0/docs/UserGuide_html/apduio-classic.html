@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML LANG="en-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="en-US">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META NAME="GENERATOR" CONTENT="Adobe FrameMaker 7.0/HTML Export Filter">
+
+<LINK REL="STYLESHEET" HREF="unx_unstr_styles.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<meta name="dc.title" content="Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition">
+<meta name="description" content="This document describes how to use the development kit for the Java Card 3 Platform, Connected Edition, Version 3.0.2, to develop applet applications, web applications, servlets, and extended applets">
+<meta name="identifier" content="12-14-09">
+<meta name="date" content="December 2009">
+<meta name="issued" content="2009-12-07">
+<meta name="revision" content="Revision 04">
+<meta name="collection" content="reference">
+<meta name="publisher" content="Sun Microsystems, Inc.">
+<meta name="robots" content="index, follow">
+<TITLE>Working with APDU I/O
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<DIV>
+<div class="navbar" align="center">
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="2"><col id="1" span="1" width="50%"><col id="2" span="1" width="50%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="buildCJCRE-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="cap-manifest-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback">
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/app/css/oo_engine.js">
+</script><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+</DIV>
+<TABLE DIR="LTR" SUMMARY="Chapter Number" ABBR="ChapNum" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1">
+<TR>
+<TD ALIGN="right" CLASS="ChapNumber"><SPAN CLASS="ChapNumPrefix"><A NAME="50565158_pgfId-9095"></A>C H A P T E R  </SPAN>&nbsp;<SPAN CLASS="ChapNumNum">14</SPAN><A NAME="50565158_42333"></A>
+</TD>
+</TR>
+</TABLE>
+<TABLE DIR="LTR" SUMMARY="Chapter Title" ABBR="ChapTitle" WIDTH="100%" BORDER="0">
+<COLGROUP SPAN="1"><COL ID="1" SPAN="1" WIDTH="100%">
+<TR>
+<TD ALIGN="right" CLASS="ChapTitle">
+<HR SIZE=7 NOSHADE><A NAME="50565158_pgfId-9178"></A><A NAME="50565158_Working with APDU I/O"></A>Working with <A NAME="50565158_marker-1006239"></A>APDU I/O
+</TD>
+</TR>
+</TABLE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-997053"></A>This chapter describes the <A NAME="50565158_marker-1008014"></A>APDU I/O API, which is a library used by many Java Card development kit components, such as <KBD CLASS="Filename">apdutool</KBD>. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1008088"></A>The APDU I/O library can also be used by developers to develop Java Card client applications and Java Card platform simulators. It provides the means to exchange APDUs by using the T=0 protocol over TLP224, by using T=1.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1008089"></A>The library is located in the file <KBD CLASS="Filename">lib&#92;tools.jar</KBD>.
+</P><H2 CLASS="Head1"><A NAME="50565158_pgfId-1005048"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>The APDU I/O API</H2>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005049"></A>The following sections describe the APDU I/O API. All publicly available APDU I/O client classes are located in the package <KBD CLASS="Filename">com.sun.javacard.apduio</KBD>. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1008029"></A>Javadoc tool files for the APDU I/O APIs are located in this bundle at <KBD CLASS="Filename">JC_Connected_HOME&#92;docs&#92;apduio&#92;</KBD>.
+</P><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005476"></A>APDU I/O Classes and Interfaces</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006458"></A>The APDU I/O classes and interfaces are described in this section.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005304"></A><KBD CLASS="Filename">class Apdu</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565158_pgfId-1005369"></A>Represents a pair of APDUs (both C-APDU and R-APDU). Contains various helper methods to access APDU contents and constants providing standard offsets within the APDU.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005377"></A><KBD CLASS="Filename">interface CadClientInterface</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565158_pgfId-1005378"></A>Represents an interface from the client to the card reader or a simulator. Includes methods for powering up, powering down and exchanging APDUs.
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005380"></A><KBD CLASS="Command">void exchangeApdu(Apdu apdu)</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565158_pgfId-1005404"></A>Exchanges a single APDU with the card. Note that the APDU object contains both incoming and outgoing APDUs.
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005382"></A><KBD CLASS="Command">public byte[] powerUp()</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565158_pgfId-1005413"></A>Powers up the card and returns ATR (Answer-To-Reset) bytes.
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005384"></A><KBD CLASS="Command">void powerDown(boolean disconnect)</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565158_pgfId-1005422"></A>Powers down the card. The parameter, applicable only to communications with a simulator, means “close the socket”. Normally, it is <KBD CLASS="Command">true</KBD> for contacted connection, <KBD CLASS="Command">false</KBD> for contactless. See <A HREF="apduio-classic.html#50565158_12247" CLASS="XRef">Two-interface Card Simulation</A> for more details.
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005370"></A><KBD CLASS="Command">void powerDown()</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL>
+<P CLASS="ParaIndent2"><A NAME="50565158_pgfId-1005437"></A>Equivalent to <KBD CLASS="Command">powerDown(true)</KBD>.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005450"></A><KBD CLASS="Command">abstract class CadDevice</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+<P CLASS="ParaIndent1"><A NAME="50565158_pgfId-1005472"></A>Factory and a base class for all <KBD CLASS="Filename">CadClientInterface</KBD> implementations included with the APDU I/O library. Includes constants for the T=0 and T=1 clients.
+</P>
+<P CLASS="ParaIndent1"><A NAME="50565158_pgfId-1007774"></A>The factory method <KBD CLASS="Command">static CadClientInterface getCadClientInstance(byte protocolType, InputStream in, OutputStream out)</KBD> returns a new instance of <KBD CLASS="Filename">CadClientInterface</KBD>. The in and out streams correspond to a socket connection to a simulator. Protocol type can be one of:
+</P>
+<UL>
+<UL>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005454"></A><KBD CLASS="Command">CadDevice.PROTOCOL_T0</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet2"><A NAME="50565158_pgfId-1005455"></A><KBD CLASS="Command">CadDevice.PROTOCOL_T1</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL>
+</UL><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005570"></A>Exceptions</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005618"></A>Various exceptions may be thrown in case of system malfunction or protocol violations. In all cases, their <KBD CLASS="Command">toString()</KBD> method returns the cause of failure. In addition, <KBD CLASS="Filename">java.io.IOException</KBD> may be thrown at any time if the underlying socket connection is terminated or could not be established.
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005571"></A><KBD CLASS="Filename">CadTransportException</KBD> extends <KBD CLASS="Filename">Exception</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005572"></A><KBD CLASS="Filename">T1Exception</KBD> extends <KBD CLASS="Filename">CadTransportException</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1005573"></A><KBD CLASS="Filename">TLP224Exception</KBD> extends <KBD CLASS="Filename">CadTransportException</KBD>
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565158_pgfId-1006212"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV><A NAME="50565158_12247"></A>Two-interface Card Simulation</H2>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006213"></A>To simulate dual-interface cards with the RI the following model is used:
+</P>
+<UL>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006214"></A>The simulator (<KBD CLASS="Filename">cjcre</KBD>) listens for communication on two TCP sockets: (n) and (n+1), where n is the default (9025) or the socket number given in the command line.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006215"></A>The client creates two instances of the <KBD CLASS="Filename">CadClientInterface</KBD>, with protocols T=1 on both. One of these instances communicates on the port (n), while the other communicates on the port (n+1).
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006216"></A>Each of these client interfaces needs to issue the <KBD CLASS="Command">powerUp</KBD> command before being able to exchange APDUs.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006217"></A>Issuing the <KBD CLASS="Command">powerDown</KBD> command on the contactless interface closes all contactless logical channels. After this, the contacted interface is still available to exchange APDUs. The client also may issue <KBD CLASS="Command">powerUp</KBD> on a contactless interface again and continue exchanging APDUs on the contactless interface too.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006218"></A>Issuing the <KBD CLASS="Command">powerDown</KBD> command on the contacted interface closes all channels and causes the simulator (<KBD CLASS="Filename">cjcre</KBD>) to exit. That is, any activity after powering down the contacted interface requires restarting the simulator and reestablishing connections between the client and the simulator.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006219"></A>At most, one socket can be processing an APDU at any time. The client may send the next APDU only after the response of the previous APDU is received. This means, behavior of the client+simulator still remains deterministic and reproducible.
+</LI>
+<P CLASS="Linebreak">
+</P>
+<LI CLASS="Bullet1"><A NAME="50565158_pgfId-1006220"></A>If you have a source release of the Java Card development kit, you can see a sample implementation of such a dual-interface client in the file <KBD CLASS="Filename">ReaderWriter.java</KBD> inside the <KBD CLASS="Filename">apdutool</KBD> source tree.
+</LI>
+<P CLASS="Linebreak">
+</P>
+</UL><H2 CLASS="Head1"><A NAME="50565158_pgfId-1006202"></A>
+<DIV>
+<HR ALIGN=left SIZE=6 WIDTH=15% noshade>
+</DIV>Examples of Use</H2>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005656"></A>The following sections give examples of how to use the APDU I/O API.
+</P><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005657"></A>To Connect To a Simulator</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005664"></A>To establish a connection to a simulator such as <KBD CLASS="Filename">cjcre</KBD>, use the following code.
+</P>
+<DIV CLASS="Code">
+<BR>
+<TABLE CLASS="Code" SUMMARY="Table for code examples and code output" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR">
+<TBODY>
+<TR>
+<TD SCOPE="ROW">
+<PRE CLASS="TableTextCode"><A NAME="50565158_pgfId-1006348"></A>CadClientInterface cad;
+<A NAME="50565158_pgfId-1006349"></A>Socket sock;
+<A NAME="50565158_pgfId-1006350"></A>sock = new Socket(“localhost”, 9025);
+<A NAME="50565158_pgfId-1006351"></A>InputStream is = sock.getInputStream();
+<A NAME="50565158_pgfId-1006352"></A>OutputStream os = sock.getOutputStream();
+<A NAME="50565158_pgfId-1006353"></A>cad=CadDevice.getCadClientInstance(CadDevice.PROTOCOL_T0, is, os);
+</PRE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</DIV>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005286"></A>This code establishes a T=0 connection to a simulator listening to port <KBD CLASS="Command">9025</KBD> on <KBD CLASS="Command">localhost</KBD>. To open a T=1 connection instead, in the last line replace <KBD CLASS="Command">PROTOCOL_T0</KBD> with <KBD CLASS="Command">PROTOCOL_T1</KBD>.
+</P>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565158_pgfId-1005278"></A>For dual-interface simulation, open two T=1 connections on ports (n) and (n+1), as described in <A HREF="apduio-classic.html#50565158_12247" CLASS="XRef">Two-interface Card Simulation</A>.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005719"></A>To Establish a T=0 Connection To a Card</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005731"></A>To establish a T=0 connection to a card inserted in a TLP224 card reader, which is connected to a serial port, use the following code.
+</P>
+<DIV CLASS="Code">
+<BR>
+<TABLE CLASS="Code" SUMMARY="Table for code examples and code output" BORDER="1" CELLPADDING="5" CELLSPACING="0" DIR="LTR">
+<TBODY>
+<TR>
+<TD SCOPE="ROW">
+<PRE CLASS="TableTextCode"><A NAME="50565158_pgfId-1006372"></A>String port = “com1”;  // serial port's name
+<A NAME="50565158_pgfId-1006373"></A>CommPortIdentifier portId = CommPortIdentifier.getPortIdentifier(port);
+<A NAME="50565158_pgfId-1006374"></A>String appname = “Name of your application”;
+<A NAME="50565158_pgfId-1006375"></A>int timeout =  30000;
+<A NAME="50565158_pgfId-1006376"></A>CommPort commPort = portId.open(appname, timeout);
+<A NAME="50565158_pgfId-1006377"></A>InputStream is = commPort.getInputStream();
+<A NAME="50565158_pgfId-1006378"></A>OutputStream os = commPort.getOutputStream();
+<A NAME="50565158_pgfId-1006379"></A>cad=CadDevice.getCadClientInstance(CadDevice.PROTOCOL_T0, is, os);
+</PRE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</DIV>
+<BR>
+<HR NOSHADE SIZE=1>
+<TABLE CLASS="TipNote" DIR="LTR" WIDTH="100%" SUMMARY="TipNote">
+<COLGROUP SPAN="1">
+<TR ALIGN="left" VALIGN="top">
+<TD ROWSPAN="1" COLSPAN="1" ABBR="TipNoteText"><B CLASS="TipNote">Note - </B><A NAME="50565158_pgfId-1005732"></A>For this code to work, you need a TLP224-compatible card reader, which is not widely available. You also need the <KBD CLASS="Filename">javax.comm</KBD> library installed on your machine. See <A HREF="install-connected.html#50565183_90451" CLASS="XRef">Prerequisites to Installing the Development Kit</A> for details on how to obtain this library.
+</TD>
+</TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<BR><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005856"></A>To Power Up And Power Down the Card</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005874"></A>To power up the card, use the following code.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1005857"></A><KBD CLASS="Command">cad.powerUp();</KBD>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006756"></A>To power down the card and close the socket connection (for simulators only), use either of the following code lines.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1005859"></A>cad.powerDown(true);
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006152"></A>or
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1005860"></A>cad.powerDown();
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005861"></A>To power down, but leave the socket open, use the following code. If the simulator continues to run (which is true if this is contactless interface of the RI) you can issue <KBD CLASS="Command">powerUp()</KBD> on this card again and continue exchanging APDUs.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1005854"></A>cad.powerDown(false);
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006764"></A>The dual-interface RI is implemented in such a way that once the client establishes connection to a port, the next command must be <KBD CLASS="Command">powerUp</KBD> on that port. 
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006766"></A>For example, the following sequence is valid:
+</P>
+<P CLASS="Step1"><A NAME="50565158_pgfId-1006768"></A>	1.	<A NAME="50565158_54568"></A>Connect on &quot;contacted&quot; port.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006769"></A>	2.	<A NAME="50565158_40465"></A>Send <KBD CLASS="Command">powerUp</KBD> to it.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006770"></A>	3.	Exchange some APDUs.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006771"></A>	4.	Connect on &quot;contactless&quot; port.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006772"></A>	5.	Send <KBD CLASS="Command">powerUp</KBD> to it.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006773"></A>	6.	Exchange more APDUs.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006776"></A>However, the following sequence is not valid:
+</P>
+<P CLASS="Step1"><A NAME="50565158_pgfId-1006862"></A>	1.	Connect on &quot;contacted&quot; port.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006863"></A>	2.	Connect on &quot;contactless&quot; port.
+</P>
+<P CLASS="Step1-"><A NAME="50565158_pgfId-1006864"></A>	3.	Send <KBD CLASS="Command">powerUp</KBD> to any port.
+</P><H3 CLASS="Head2"><A NAME="50565158_pgfId-1006854"></A>To Exchange APDUs</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005945"></A>To exchange APDUs, first create a new APDU object using the following code:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1006536"></A>Apdu apdu = new Apdu();
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006537"></A>Copy the header <KBD CLASS="Command">(CLA, INS, P1, P2)</KBD> of the APDU to be sent into the <KBD CLASS="Command">apdu.command</KBD> field.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006519"></A>Set the data to be sent and the <KBD CLASS="Command">Lc</KBD> using the following code:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1006062"></A><KBD CLASS="Command">apdu.setDataIn(dataIn, Lc);</KBD>
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006084"></A>where the array <KBD CLASS="Command">dataIn</KBD> contains the C-APDU data, and the <KBD CLASS="Command">Lc</KBD> contains the data length.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006551"></A>Set the number of bytes expected into the <KBD CLASS="Command">apdu.Le</KBD> field.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006090"></A>Exchange the APDU with a card or simulator using the following code:
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1006570"></A>cad.exchangeApdu(apdu);
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006573"></A>After the exchange, <KBD CLASS="Command">apdu.Le</KBD> contains the number of bytes received from the card or simulator, <KBD CLASS="Command">apdu.dataOut</KBD> contains the data received, and <KBD CLASS="Command">apdu.sw1sw2</KBD> contains the SW1 and SW2 status bytes.
+</P>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006568"></A>These fields can be accessed through the corresponding <KBD CLASS="Command">get</KBD> methods.
+</P><H3 CLASS="Head2"><A NAME="50565158_pgfId-1005954"></A>To Print the APDU</H3>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1005968"></A>The following code prints both C-APDU and R-APDU in the <KBD CLASS="Command">apdutool</KBD> output format.
+</P>
+<PRE CLASS="Codeline"><A NAME="50565158_pgfId-1005930"></A>System.out.println(apdu)
+</PRE>
+<P CLASS="Paragraph"><A NAME="50565158_pgfId-1006209"></A>&nbsp;
+</P>
+<!--Begin SiteCatalyst code version: G.5.-->
+<script language="JavaScript" src="/s_code_remote.js">
+</script>
+<!--End SiteCatalyst code version: G.5.-->
+<div class="navbar" align="center">
+<br>
+<br>
+<table dir="LTR" summary="Navigation bar, includes the book title and navigation buttons" width=100% cellpadding="0" cellspacing="0" border="0"><colgroup span="3"><col id="1" span="1" width="45%"><col id="2" span="1" width="25%"><col id="3" span="1" width="30%">
+<tr bgcolor="#cccccc">
+<td class="navbartitle" align=left rowspan="1" colspan="1" abbr="ChapTitle">Development Kit User’s Guide, Java Card 3 Platform, Version 3.0.2, Connected Edition
+</td>
+<td class="navbartitle" align=right rowspan="1" colspan="1" abbr="PartNum">12-14-09
+</td>
+<td valign="top" align="right" rowspan="1" colspan="1" abbr="NavButtons"><a href="index.html"><img src="shared/toc01.gif" title="Table Of Contents" alt="Table Of Contents" width="30" height="26" border="0"></a><a href="buildCJCRE-connected.html"><img src="shared/prev01.gif" title="Previous Chapter" alt="Previous Chapter" width="30" height="26" border="0"></a><a href="cap-manifest-connected.html"><img src="shared/next01.gif" title="Next Chapter" alt="Next Chapter" width="30" height="26" border="0"></a><a href="ix.html"><img src="shared/index01.gif" title="Book Index" alt="Book Index" width="30" height="26" border="0"></a>
+</td>
+</tr>
+</table>
+</div><p class="feedback"><a>
+<script language="javascript" type="text/javascript" charset="UTF-8">O_GoT('<img src="/app/images/sm_3E6B8A_oo.gif" border="0" alt="Feedback link" title="Feedback">Feedback'); 
+</script></a></p>
+<P CLASS="copyrightlink"><A HREF="copyright.html">Copyright</a> &#169; 2009 Sun Microsystems, Inc.   All rights reserved.</P>
+</BODY>
+</HTML>

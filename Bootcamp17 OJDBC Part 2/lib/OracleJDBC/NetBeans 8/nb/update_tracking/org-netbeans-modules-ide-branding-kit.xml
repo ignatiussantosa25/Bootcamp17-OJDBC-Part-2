@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.ide.branding.kit">
+    <module_version install_time="1475191959747" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="3596558269" name="VERSION.txt"/>
+        <file crc="237125903" name="config/Modules/org-netbeans-modules-ide-branding-kit.xml"/>
+        <file crc="2740406711" name="modules/locale/org-netbeans-modules-ide-branding-kit_ja.jar"/>
+        <file crc="3775938835" name="modules/locale/org-netbeans-modules-ide-branding-kit_pt_BR.jar"/>
+        <file crc="2909963014" name="modules/locale/org-netbeans-modules-ide-branding-kit_ru.jar"/>
+        <file crc="3618328013" name="modules/locale/org-netbeans-modules-ide-branding-kit_zh_CN.jar"/>
+        <file crc="3068564637" name="modules/org-netbeans-modules-ide-branding-kit.jar"/>
+    </module_version>
+</module>

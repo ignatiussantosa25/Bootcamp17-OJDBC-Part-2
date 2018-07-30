@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.parsing.indexing">
+    <module_version install_time="1475191158826" last="true" origin="installer" specification_version="9.8.1.1.3.8">
+        <file crc="1478655218" name="config/Modules/org-netbeans-modules-parsing-indexing.xml"/>
+        <file crc="1331483155" name="modules/locale/org-netbeans-modules-parsing-indexing_ja.jar"/>
+        <file crc="2423294742" name="modules/locale/org-netbeans-modules-parsing-indexing_pt_BR.jar"/>
+        <file crc="252947675" name="modules/locale/org-netbeans-modules-parsing-indexing_ru.jar"/>
+        <file crc="1014984828" name="modules/locale/org-netbeans-modules-parsing-indexing_zh_CN.jar"/>
+        <file crc="2929671961" name="modules/org-netbeans-modules-parsing-indexing.jar"/>
+    </module_version>
+</module>

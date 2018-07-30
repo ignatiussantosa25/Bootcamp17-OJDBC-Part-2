@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.eclipse.mylyn.commons.repositories.core">
+    <module_version install_time="1475191249805" last="true" origin="installer" specification_version="1.9.0.v20150625-2042">
+        <file crc="4229295396" name="config/Modules/org-eclipse-mylyn-commons-repositories-core.xml"/>
+        <file crc="671680530" name="modules/org-eclipse-mylyn-commons-repositories-core.jar"/>
+    </module_version>
+</module>

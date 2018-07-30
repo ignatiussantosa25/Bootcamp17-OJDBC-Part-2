@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javascript.nodejs/0">
+    <module_version install_time="1475191628260" last="false" origin="installer" specification_version="0.31.1">
+        <file crc="578662322" name="config/Modules/org-netbeans-modules-javascript-nodejs.xml"/>
+        <file crc="2139712432" name="modules/locale/org-netbeans-modules-javascript-nodejs_ja.jar"/>
+        <file crc="1876762753" name="modules/locale/org-netbeans-modules-javascript-nodejs_pt_BR.jar"/>
+        <file crc="830503098" name="modules/locale/org-netbeans-modules-javascript-nodejs_ru.jar"/>
+        <file crc="885394236" name="modules/locale/org-netbeans-modules-javascript-nodejs_zh_CN.jar"/>
+        <file crc="2773387151" name="modules/org-netbeans-modules-javascript-nodejs.jar"/>
+    </module_version>
+    <module_version install_time="1518892670684" last="true" origin="NetBeans Distribution" specification_version="0.31.2">
+        <file crc="578662322" name="config/Modules/org-netbeans-modules-javascript-nodejs.xml"/>
+        <file crc="1620796533" name="modules/locale/org-netbeans-modules-javascript-nodejs_ja.jar"/>
+        <file crc="2342309265" name="modules/locale/org-netbeans-modules-javascript-nodejs_pt_BR.jar"/>
+        <file crc="2797735468" name="modules/locale/org-netbeans-modules-javascript-nodejs_ru.jar"/>
+        <file crc="806801855" name="modules/locale/org-netbeans-modules-javascript-nodejs_zh_CN.jar"/>
+        <file crc="584896507" name="modules/org-netbeans-modules-javascript-nodejs.jar"/>
+    </module_version>
+</module>

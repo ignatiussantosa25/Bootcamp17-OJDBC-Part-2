@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.groovy.gsp">
+    <module_version install_time="1475191547446" last="true" origin="installer" specification_version="1.36.1">
+        <file crc="4024844735" name="config/Modules/org-netbeans-modules-groovy-gsp.xml"/>
+        <file crc="437026800" name="modules/locale/org-netbeans-modules-groovy-gsp_ja.jar"/>
+        <file crc="701658761" name="modules/locale/org-netbeans-modules-groovy-gsp_pt_BR.jar"/>
+        <file crc="3356011507" name="modules/locale/org-netbeans-modules-groovy-gsp_ru.jar"/>
+        <file crc="4127479756" name="modules/locale/org-netbeans-modules-groovy-gsp_zh_CN.jar"/>
+        <file crc="2040402672" name="modules/org-netbeans-modules-groovy-gsp.jar"/>
+    </module_version>
+</module>

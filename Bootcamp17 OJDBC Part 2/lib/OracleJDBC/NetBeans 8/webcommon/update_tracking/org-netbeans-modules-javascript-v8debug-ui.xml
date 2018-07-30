@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.javascript.v8debug.ui/1">
+    <module_version install_time="1475191629100" last="true" origin="installer" specification_version="1.1.1.1">
+        <file crc="3072207405" name="config/Modules/org-netbeans-modules-javascript-v8debug-ui.xml"/>
+        <file crc="360801907" name="modules/locale/org-netbeans-modules-javascript-v8debug-ui_ja.jar"/>
+        <file crc="2690236502" name="modules/locale/org-netbeans-modules-javascript-v8debug-ui_pt_BR.jar"/>
+        <file crc="101383013" name="modules/locale/org-netbeans-modules-javascript-v8debug-ui_ru.jar"/>
+        <file crc="3791865705" name="modules/locale/org-netbeans-modules-javascript-v8debug-ui_zh_CN.jar"/>
+        <file crc="3317297093" name="modules/org-netbeans-modules-javascript-v8debug-ui.jar"/>
+    </module_version>
+</module>

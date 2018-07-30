@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.websvc.saas.services.strikeiron">
+    <module_version install_time="1475191384760" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="4226532377" name="config/Modules/org-netbeans-modules-websvc-saas-services-strikeiron.xml"/>
+        <file crc="1049904465" name="modules/locale/org-netbeans-modules-websvc-saas-services-strikeiron_ja.jar"/>
+        <file crc="2507288527" name="modules/locale/org-netbeans-modules-websvc-saas-services-strikeiron_pt_BR.jar"/>
+        <file crc="3348390051" name="modules/locale/org-netbeans-modules-websvc-saas-services-strikeiron_ru.jar"/>
+        <file crc="3468839446" name="modules/locale/org-netbeans-modules-websvc-saas-services-strikeiron_zh_CN.jar"/>
+        <file crc="1772299833" name="modules/org-netbeans-modules-websvc-saas-services-strikeiron.jar"/>
+    </module_version>
+</module>
