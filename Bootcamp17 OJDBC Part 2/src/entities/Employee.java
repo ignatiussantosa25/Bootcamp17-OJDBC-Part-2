@@ -21,10 +21,13 @@ public class Employee {
     private Job empjobId;
     private int salary;
     private double commissionPct;
-    private Employee empmanagerId;
+    private int empmanagerId;
     private Department empdepartmentId;
 
-    public Employee(int employeeId, String firstName, String lastName, String email, String phoneNumber, Date hireDate, Job empjobId, int salary, double commissionPct, Employee empmanagerId, Department empdepartmentId) {
+    public Employee() {
+    }
+
+    public Employee(int employeeId, String firstName, String lastName, String email, String phoneNumber, Date hireDate, Job empjobId, int salary, double commissionPct, int empmanagerId, Department empdepartmentId) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -38,8 +41,6 @@ public class Employee {
         this.empdepartmentId = empdepartmentId;
     }
 
-    
-    
     public int getEmployeeId() {
         return employeeId;
     }
@@ -112,11 +113,11 @@ public class Employee {
         this.commissionPct = commissionPct;
     }
 
-    public Employee getEmpmanagerId() {
+    public int getEmpmanagerId() {
         return empmanagerId;
     }
 
-    public void setEmpmanagerId(Employee empmanagerId) {
+    public void setEmpmanagerId(int empmanagerId) {
         this.empmanagerId = empmanagerId;
     }
 
