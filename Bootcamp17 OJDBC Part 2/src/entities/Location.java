@@ -17,6 +17,10 @@ public class Location {
     private String stateProvince;
     private Country countryId;
 
+    public Location(int parseInt, String stretAddress, String postalCode, String city, String stateProvince, Country country) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * @return the locationId
      */

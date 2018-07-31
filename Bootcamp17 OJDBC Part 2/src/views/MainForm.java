@@ -40,6 +40,7 @@ public class MainForm extends javax.swing.JFrame {
         mnRegion = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        mnLocation = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
@@ -86,6 +87,15 @@ public class MainForm extends javax.swing.JFrame {
         });
         mnCountry.add(jMenuItem3);
 
+        mnLocation.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
+        mnLocation.setText("Location");
+        mnLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnLocationActionPerformed(evt);
+            }
+        });
+        mnCountry.add(mnLocation);
+
         jMenuBar1.add(mnCountry);
 
         jMenu2.setText("About");
@@ -112,17 +122,21 @@ public class MainForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mnRegionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnRegionActionPerformed
-        this.viewProccess.callForm(dskMaster, new RegionView(connection));
-    }//GEN-LAST:event_mnRegionActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        this.viewProccess.callForm(dskMaster, new JobView(connection));
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         this.viewProccess.callForm(dskMaster, new CountryView(connection));
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        this.viewProccess.callForm(dskMaster, new JobView(connection));
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void mnRegionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnRegionActionPerformed
+        this.viewProccess.callForm(dskMaster, new RegionView(connection));
+    }//GEN-LAST:event_mnRegionActionPerformed
+
+    private void mnLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnLocationActionPerformed
+        this.viewProccess.callForm(dskMaster, new LocationView(connection));
+    }//GEN-LAST:event_mnLocationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,6 +181,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu mnCountry;
+    private javax.swing.JMenuItem mnLocation;
     private javax.swing.JMenuItem mnRegion;
     // End of variables declaration//GEN-END:variables
 }
