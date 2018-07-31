@@ -31,7 +31,7 @@ public class MyConnection {
             ods.setPortNumber(1521);
             ods.setServiceName("XE");
             ods.setUser("system");
-            ods.setPassword("dayinta11");
+            ods.setPassword("misbah10");
             connect = ods.getConnection();
             connect.createStatement()
                     .execute("alter session set "
