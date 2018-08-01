@@ -8,8 +8,13 @@ package tools;
 import controllers.CountryController;
 import controllers.RegionController;
 import entities.Country;
+import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Types;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -36,16 +41,29 @@ public class ManualTester {
 //            System.out.println(region.getRegionId()+" - "+region.getRegionName());
 //        });
 //        System.out.println(regionController.findById(9).getRegionName());
-
-//        System.out.println((char)48);
+        
+            //        System.out.println((char)48);
 //        System.out.println((char)57);
 
-        List<Object[]> datas = new CountryController(connection).binding();
-        for (Object[] data : datas) {
-            for (Object object : data) {
-                System.out.print(object+" ");
-            }
-            System.out.println("");
+//        List<Object[]> datas = new CountryController(connection).binding();
+//        for (Object[] data : datas) {
+//            for (Object object : data) {
+//                System.out.print(object+" ");
+//            }
+//            System.out.println("");
+//        }
+//    }
+    try {
+        CallableStatement cs = connection
+                .prepareCall("{CALL getAfectedRows(?,?)}");
+        cs.setString(1, "Coba");
+        cs.registerOutParameter(2, Types.INTEGER);
+        cs.execute();
+        int result = cs.getInt(2);
+        System.out.println("Hasil : " +result+ " rows afected");
+        } catch (SQLException ex) {
+            Logger.getLogger(ManualTester.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
+    
